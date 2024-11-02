@@ -1,0 +1,263 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Future Enrol - Search and List</title>
+<meta name="description" content="Search and List of Future enrolments to find existing and links to the student special Future admin page. Nov 2018">
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_STUDENT_ENROLMENT_STUDENT1_OnLoad @38-A138F3FB
+function page_STUDENT_ENROLMENT_STUDENT1_OnLoad(form)
+{
+    var result;
+//End page_STUDENT_ENROLMENT_STUDENT1_OnLoad
+
+//Set Focus @73-39A1CE4D
+    if (theForm.STUDENT_ENROLMENT_STUDENT1s_SURNAME) theForm.STUDENT_ENROLMENT_STUDENT1s_SURNAME.focus();
+//End Set Focus
+
+//Close page_STUDENT_ENROLMENT_STUDENT1_OnLoad @38-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_ENROLMENT_STUDENT1_OnLoad
+
+//bind_events @1-0E32D934
+function bind_events() {
+    if(document.getElementById("STUDENT_ENROLMENT_STUDENT1Holder"))
+    addEventHandler("STUDENT_ENROLMENT_STUDENT1","load",page_STUDENT_ENROLMENT_STUDENT1_OnLoad);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p align="center">
+<table class="MainTable" cellspacing="0" cellpadding="0" width="90%" border="0">
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Record STUDENT_ENROLMENT_STUDENT1 -->
+      <form id="STUDENT_ENROLMENT_STUDENT1" method="post" name="{HTMLFormName}" action="{Action}">
+        <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                  <th>Search </th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr id="{@error-block}" class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th>NAME<em>(any part)</em></th>
+ 
+                  <td><input type="text" id="STUDENT_ENROLMENT_STUDENT1s_SURNAME" maxlength="30" value="{s_SURNAME}" name="{s_SURNAME_Name}">&nbsp;<em>or</em></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>STUDENT ID</th>
+ 
+                  <td><input type="text" id="STUDENT_ENROLMENT_STUDENT1s_STUDENT_ID" maxlength="12" size="12" value="{s_STUDENT_ID}" name="{s_STUDENT_ID_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td><a href="{ClearParameters_Src}" id="STUDENT_ENROLMENT_STUDENT1ClearParameters">Clear</a></td> 
+                  <td style="TEXT-ALIGN: right">
+                    <!-- BEGIN Button Button_DoSearch --><input type="submit" id="STUDENT_ENROLMENT_STUDENT1Button_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record STUDENT_ENROLMENT_STUDENT1 --><br>
+    </td> 
+    <td valign="top">
+      <!-- BEGIN Record STUDENTSearch -->
+      <div align="left">
+        <form method="post" name="{HTMLFormName}" action="{Action}">
+          <table cellspacing="0" cellpadding="0" align="center" border="0">
+            <tr>
+              <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>Search and Add&nbsp;Student</th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <th>SURNAME</th>
+ 
+                    <td><input type="text" id="STUDENTSearchs_SURNAME" maxlength="30" value="{s_SURNAME}" name="{s_SURNAME_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>FIRST NAME</th>
+ 
+                    <td><input type="text" id="STUDENTSearchs_FIRST_NAME" maxlength="30" value="{s_FIRST_NAME}" name="{s_FIRST_NAME_Name}"></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>BIRTH DATE</th>
+ 
+                    <td><input type="text" id="STUDENTSearchs_BIRTH_DATE" maxlength="10" size="10" value="{s_BIRTH_DATE}" name="{s_BIRTH_DATE_Name}"><em>(dd/mm/yyyy)</em></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>Enrol Year&nbsp;</th>
+ 
+                    <td><input type="text" id="STUDENTSearchs_ENROL_YEAR" size="5" value="{s_ENROL_YEAR}" name="{s_ENROL_YEAR_Name}">&nbsp;</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th colspan="2">
+                    <p align="center"><strong><em>Enter ALL fields ABOVE </em></strong></p>
+                    </th>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_DoSearch --><input type="submit" id="STUDENTSearchButton_DoSearch" class="Button" value="Search and Add" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                  </tr>
+                </table>
+                <input type="hidden" id="STUDENTSearchHidden_NewStudentID" value="{Hidden_NewStudentID}" name="{Hidden_NewStudentID_Name}"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+ 
+      <div align="left">
+      </div>
+      <!-- END Record STUDENTSearch --></td>
+  </tr>
+</table>
+</p>
+<p align="center">&nbsp;</p>
+<p align="center">
+<!-- BEGIN Grid STUDENT_ENROLMENT_STUDENT -->
+<table id="STUDENT_ENROLMENT_STUDENT" class="MainTable" cellspacing="0" cellpadding="0" width="80%" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>List of Future Student Enrolments </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="6">Total Records:&nbsp;{STUDENT_ENROLMENT_STUDENT_TotalRecords}</td> 
+          <td></td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_STUDENT_STUDENT_ID --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_ENROLMENT_STUDENTSorter_STUDENT_STUDENT_ID">STUDENT ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_STUDENT_STUDENT_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_FIRST_NAME --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_ENROLMENT_STUDENTSorter_FIRST_NAME">FIRST NAME</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SURNAME --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_ENROLMENT_STUDENTSorter_SURNAME">SURNAME</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SURNAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_CATEGORY_CODE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_ENROLMENT_STUDENTSorter_CATEGORY_CODE">CATEGORY CODE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_CATEGORY_CODE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_ENROLMENT_STUDENTSorter_YEAR_LEVEL">YEAR LEVEL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROLMENT_DATE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_ENROLMENT_STUDENTSorter_ENROLMENT_DATE">ENROLMENT DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ENROLMENT_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROLMENT_YEAR --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_ENROLMENT_STUDENTSorter_ENROLMENT_YEAR">ENROLMENT YEAR</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ENROLMENT_YEAR --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{STUDENT_STUDENT_ID_Src}" id="STUDENT_ENROLMENT_STUDENTSTUDENT_STUDENT_ID_{STUDENT_ENROLMENT_STUDENT:rowNumber}">{STUDENT_STUDENT_ID}</a>&nbsp;</td> 
+          <td>{FIRST_NAME}&nbsp;</td> 
+          <td>{SURNAME}&nbsp;</td> 
+          <td>{CATEGORY_CODE}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{YEAR_LEVEL}&nbsp;</td> 
+          <td>{ENROLMENT_DATE}&nbsp;</td> 
+          <td>{ENROLMENT_YEAR}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No Future Students found!</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="7">
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid STUDENT_ENROLMENT_STUDENT --></p>
+<p align="center"><br>
+</p>
+</body>
+</html>

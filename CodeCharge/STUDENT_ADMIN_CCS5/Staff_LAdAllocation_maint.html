@@ -1,0 +1,274 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Learning Advisor Allocations maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<meta name="description" content="Page to allow AP or similar to manage the Teaching Learning Advisors Allocations from a single page instead of checking each separately. The data is stored with the STAFF_LAD_ALLOCATION table for simplicity.">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_SUBJECT_SUBJECT_TEACHER_ButtonResetLAdsMax_OnClick @120-61EE171D
+function page_SUBJECT_SUBJECT_TEACHER_ButtonResetLAdsMax_OnClick()
+{
+    var result;
+//End page_SUBJECT_SUBJECT_TEACHER_ButtonResetLAdsMax_OnClick
+
+//Confirmation Message @122-4BFC1CBF
+    return confirm('This will reset ALL LAds in the table to the entered Max Students?\n(you must also select 'Yes' on Confirm Reset first)');
+//End Confirmation Message
+
+//Close page_SUBJECT_SUBJECT_TEACHER_ButtonResetLAdsMax_OnClick @120-BC33A33A
+    return result;
+}
+//End Close page_SUBJECT_SUBJECT_TEACHER_ButtonResetLAdsMax_OnClick
+
+//page_ManageLADs_buttonCancel_OnClick @558-C5A6467B
+function page_ManageLADs_buttonCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_ManageLADs_buttonCancel_OnClick
+
+//page_SUBJECT_SUBJECT_TEACHER_Button_DoSearch_OnClick @42-C422020E
+function page_SUBJECT_SUBJECT_TEACHER_Button_DoSearch_OnClick()
+{
+    disableValidation = true;
+}
+//End page_SUBJECT_SUBJECT_TEACHER_Button_DoSearch_OnClick
+
+//bind_events @1-B50DC282
+function bind_events() {
+    addEventHandler("SUBJECT_SUBJECT_TEACHERButtonResetLAdsMax","click",page_SUBJECT_SUBJECT_TEACHER_ButtonResetLAdsMax_OnClick);
+    addEventHandler("ManageLADsbuttonCancel","click",page_ManageLADs_buttonCancel_OnClick);
+    addEventHandler("SUBJECT_SUBJECT_TEACHERButton_DoSearch","click",page_SUBJECT_SUBJECT_TEACHER_Button_DoSearch_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+window.onload = bind_events;
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p align="center">
+<!-- BEGIN Record SUBJECT_SUBJECT_TEACHER -->
+<form id="SUBJECT_SUBJECT_TEACHER" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search Learning Advisor</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Search for...</th>
+ 
+            <td><input type="text" id="SUBJECT_SUBJECT_TEACHERs_keyword" maxlength="30" size="40" value="{s_keyword}" name="{s_keyword_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th colspan="2"><em>(searches on&nbsp;Staff Firstname, Staff Lastname, Staff login)</em></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;Show...</th>
+ 
+            <td>&nbsp; 
+              <!-- BEGIN RadioButton rbShow --><input type="radio" id="SUBJECT_SUBJECT_TEACHERrbShow_{rbShow:optionNumber}" value="{Value}" name="{rbShow_Name}" {Check}>{Description}<!-- END RadioButton rbShow --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="SUBJECT_SUBJECT_TEACHERClearParameters">Clear</a></td> 
+            <td style="TEXT-ALIGN: right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="SUBJECT_SUBJECT_TEACHERButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td> 
+      <td valign="top">&nbsp;</td> 
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Bulk Changes</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <tr class="Controls">
+            <th>&nbsp;Handy for start of Semester or Year resets</th>
+ 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>
+            <p>Set ALL LAds to __ students?</p>
+ 
+            <p>Confirm Reset:&nbsp;&nbsp; 
+            <!-- BEGIN RadioButton rbConfirm --><input type="radio" id="SUBJECT_SUBJECT_TEACHERrbConfirm_{rbConfirm:optionNumber}" value="{Value}" name="{rbConfirm_Name}" {Check}>{Description}<!-- END RadioButton rbConfirm --></p>
+            </th>
+ 
+            <td><input type="text" id="SUBJECT_SUBJECT_TEACHERmaxstudents" style="TEXT-ALIGN: right" maxlength="2" size="4" value="{maxstudents}" name="{maxstudents_Name}">
+              <!-- BEGIN Button ButtonResetLAdsMax --><input type="submit" id="SUBJECT_SUBJECT_TEACHERButtonResetLAdsMax" class="Button" value="Reset LAds" name="{Button_Name}"><!-- END Button ButtonResetLAdsMax --></td>
+          </tr>
+ 
+          <tr class="Error">
+            <td colspan="2">&nbsp;{lblConfirmError}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SUBJECT_SUBJECT_TEACHER --><br>
+&nbsp; 
+<!-- BEGIN Record SUBJECT_TEACHER -->
+<form id="SUBJECT_TEACHER" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" width="30%" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"></td> 
+            <td class="th"><strong>Add Learning Advisor</strong></td> 
+            <td class="HeaderRight">&nbsp;</td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="3"><span id="SUBJECT_TEACHERErrorBlock">{Error}</span></td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th>Learning Advisor&nbsp;Name</th>
+ 
+            <th>Year Level&nbsp;</th>
+ 
+            <th>&nbsp;Max Students</th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>
+              <select id="SUBJECT_TEACHERSTAFF_ID" name="{STAFF_ID_Name}">
+                <option selected value="">Select Value</option>
+                {STAFF_ID_Options}
+              </select>
+ </td> 
+            <td nowrap>&nbsp; 
+              <!-- BEGIN RadioButton radioYEAR_LEVEL --><input type="radio" id="SUBJECT_TEACHERradioYEAR_LEVEL_{radioYEAR_LEVEL:optionNumber}" value="{Value}" name="{radioYEAR_LEVEL_Name}" {Check}>{Description}<!-- END RadioButton radioYEAR_LEVEL --></td> 
+            <td>&nbsp;<input type="text" id="SUBJECT_TEACHERLAD_MAX_ALLOC" style="TEXT-ALIGN: right" maxlength="2" size="4" value="{LAD_MAX_ALLOC}" name="{LAD_MAX_ALLOC_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="3">
+              <!-- BEGIN Button buttonAdd --><input type="submit" id="SUBJECT_TEACHERbuttonAdd" class="Button" value="Add New LAd" name="{Button_Name}"><!-- END Button buttonAdd -->&nbsp;&nbsp; </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SUBJECT_TEACHER --><br>
+<!-- BEGIN EditableGrid ManageLADs -->
+<form id="ManageLADs" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table class="MainTable" cellspacing="0" cellpadding="0" width="50%" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Manage Learning Advisors</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="5">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Row">
+            <td colspan="5">Total Records:&nbsp;{TotalRecords}</td>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>Learning Advisor Name (Staff ID)</th>
+ 
+            <th>Year Level&nbsp;</th>
+ 
+            <th>&nbsp;Max. Students</th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SCAFFOLD_COURSEDEV_UPDATED --><span class="Sorter"><a href="{Sort_URL}" id="ManageLADsSorter_SCAFFOLD_COURSEDEV_UPDATED">Allocations Updated</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SCAFFOLD_COURSEDEV_UPDATED --></th>
+ 
+            <th>&nbsp;<font color="#c0504d">Delete!</font></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="5">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td>
+              <p>{FIRSTNAME}&nbsp;{SURNAME}&nbsp;({lblStaffID})</p>
+            </td> 
+            <td nowrap>&nbsp; 
+              <!-- BEGIN RadioButton radioYEAR_LEVEL --><input type="radio" id="ManageLADsradioYEAR_LEVEL_{radioYEAR_LEVEL:optionNumber}" value="{Value}" name="{radioYEAR_LEVEL_Name}" {Check}>{Description}<!-- END RadioButton radioYEAR_LEVEL --></td> 
+            <td>&nbsp;<input type="text" id="ManageLADsLAD_MAX_ALLOC" style="TEXT-ALIGN: right" maxlength="2" size="4" value="{LAD_MAX_ALLOC}" name="{LAD_MAX_ALLOC_Name}"></td> 
+            <td nowrap>&nbsp;{lblLastUpdated}</td> 
+            <td nowrap>&nbsp;<input type="checkbox" id="ManageLADscheckDelete" value="1" name="{checkDelete_Name}" {checkDelete}>&nbsp;Delete</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="5">No Staff or LAds Found!</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="5">
+              <!-- BEGIN Button buttonUpdate --><input type="submit" id="ManageLADsbuttonUpdate" class="Button" value="Save Changes" name="{Button_Name}"><!-- END Button buttonUpdate -->&nbsp;&nbsp; 
+              <!-- BEGIN Button buttonCancel --><input type="submit" id="ManageLADsbuttonCancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button buttonCancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+&nbsp;<!-- END EditableGrid ManageLADs --><br>
+<br>
+<br>
+</p>
+</body>
+</html>

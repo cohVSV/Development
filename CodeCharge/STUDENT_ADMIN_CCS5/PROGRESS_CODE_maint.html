@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+
+<title>PROGRESS CODE</title>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+{Header}
+
+<!-- BEGIN Record PROGRESS_CODE -->
+<form method="post" action="{Action}" name="{HTMLFormName}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+            <th>Add/Edit PROGRESS CODE </th>
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>TITLE</th>
+ 
+            <td><input type="text" name="{PROGRESS_CODE_TITLE_Name}" value="{PROGRESS_CODE_TITLE}" maxlength="30" size="30" id="PROGRESS_CODEPROGRESS_CODE_TITLE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STATUS</th>
+ 
+            <td><input type="checkbox" name="{STATUS_Name}" value="1" {STATUS} id="PROGRESS_CODESTATUS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY</th>
+ 
+            <td><input type="text" name="{LAST_ALTERED_BY_Name}" value="{LAST_ALTERED_BY}" maxlength="8" size="8" id="PROGRESS_CODELAST_ALTERED_BY"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED DATE</th>
+ 
+            <td><input type="text" name="{LAST_ALTERED_DATE_Name}" value="{LAST_ALTERED_DATE}" maxlength="100" size="10" id="PROGRESS_CODELAST_ALTERED_DATE"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" class="Button" id="PROGRESS_CODEButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" class="Button" id="PROGRESS_CODEButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" class="Button" id="PROGRESS_CODEButton_Delete"><!-- END Button Button_Delete --></td> 
+          </tr>
+        </table>
+ </td> 
+    </tr>
+  </table>
+</form>
+<!-- END Record PROGRESS_CODE --><br>
+{Footer}
+</body>
+</html>

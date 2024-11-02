@@ -1,0 +1,92 @@
+<!-- BEGIN Panel Head -->
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN EditableGrid shop_cart -->
+<form method="post" name="store_shopping" action="{Action}">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table class="MainTable">
+<tr>
+<td style="vertical-align:top;">
+  <table class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Shopping Cart Items</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table class="Grid">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="5">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Caption">
+      <th scope="col">Product&nbsp;</th> 
+      <th scope="col">Price</th> 
+      <th scope="col">Quantity</th> 
+      <th scope="col">Total</th> 
+      <th scope="col">Delete</th> 
+    </tr>
+ 
+    <!-- BEGIN Row -->
+    <!-- BEGIN RowError -->
+    <tr class="Error">
+      <td colspan="5">{Error}</td> 
+    </tr>
+ <!-- END RowError -->
+    <tr class="Row">
+      <td>{product_id}&nbsp;</td> 
+      <td style="text-align:right;">{Price}</td> 
+      <td style="text-align:right;"><label for="Contentshop_cartquantity" style="display: none;">Quantity</label><input id="Contentshop_cartquantity" class="NoiseInput" value="{quantity}" maxlength="7" size="7" name="{quantity_Name}">&nbsp;</td> 
+      <td style="text-align:right;">{SubTotal}</td> 
+      <td>
+        <!-- BEGIN Panel Delete1_Panel --><label for="Contentshop_cartDelete1" style="display: none;">&nbsp;</label> 
+        <!-- BEGIN CheckBox Delete1 --><input type="checkbox" id="Contentshop_cartDelete1" class="NoiseInput" value="1" name="{Delete1_Name}" {delete1}><!-- END CheckBox Delete1 --><!-- END Panel Delete1_Panel --></td> 
+    </tr>
+ <!-- END Row -->
+    <!-- BEGIN NoRecords -->
+    <tr class="NoRecords">
+      <td colspan="5">No records</td> 
+    </tr>
+ <!-- END NoRecords -->
+    <tr class="Bottom">
+      <td style="TEXT-ALIGN: right" colspan="5">
+        <!-- BEGIN Button Submit --><input type="submit" class="Button" value="{res:CCS_Update}" alt="{res:CCS_Update}" name="{Button_Name}"><!-- END Button Submit -->&nbsp; </td> 
+    </tr>
+ 
+  </table>
+  </td>
+	</tr>
+   </table>
+</form>
+<!-- END EditableGrid shop_cart -->
+<br>
+<table class="MainTable">
+<tr>
+<td style="vertical-align:top;">
+  <table class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Shop total</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+
+<!-- BEGIN Record shop_total -->
+<p><strong>Total:</strong> {total}</p>
+<!-- END Record shop_total -->
+<!-- BEGIN Record purchase -->
+<form method="post" name="{HTMLFormName}" action="{Action}"> 
+
+  <!-- BEGIN Button purchase --><input type="submit" class="Button" value="Purchase" alt="Buy" name="{Button_Name}"><!-- END Button purchase -->
+</form>
+<!-- END Record purchase -->
+<!-- BEGIN Label cart_is_empty -->
+<p>{cart_is_empty}</p>
+<!-- END Label cart_is_empty --> 
+</td>
+	</tr>
+   </table>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{Search} {Categories} {Recommended}<!-- END Panel Sidebar -->

@@ -1,0 +1,154 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Despatch Update by Year</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp;</p>
+<p>
+<!-- BEGIN Record UpdateForm -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+              <th>Despatch Run Update By Enrolment Date Range</th>
+ 
+              <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+            </tr>
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="4">{Error}</td>
+            </tr>
+            <!-- END Error -->
+            <tr class="Controls">
+              <th>
+              <p align="right">Despatch Dates for students enrolled between:</p>
+              </th>
+ 
+              <td><input maxlength="10" size="10" value="{studentdatefrom}" name="{studentdatefrom_Name}" id="UpdateFormstudentdatefrom">&nbsp;</td> 
+              <td>
+                <p align="center">&nbsp;to</p>
+              </td> 
+              <td>&nbsp;<input maxlength="10" size="10" value="{studentdateto}" name="{studentdateto_Name}" id="UpdateFormstudentdateto"></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>
+              <p align="right">&nbsp;Semester</p>
+              </th>
+ 
+              <td>1 <input type="checkbox" value="1" name="{semester_1_Name}" {semester_1} id="UpdateFormsemester_1">2<input type="checkbox" value="1" name="{semester_2_Name}" {semester_2} id="UpdateFormsemester_2">Both<input type="checkbox" value="1" name="{semester_both_Name}" {semester_both} id="UpdateFormsemester_both">&nbsp;</td> 
+              <td>&nbsp;Despatch Date</td> 
+              <td>&nbsp;<input maxlength="10" size="10" value="{despatchdate}" name="{despatchdate_Name}" id="UpdateFormdespatchdate"></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>
+              <p align="right">Campus</p>
+              </th>
+ 
+              <td><em>VSV</em></td> 
+              <td>
+                <p align="right">&nbsp; Book Range</p>
+              </td> 
+              <td>&nbsp;<input maxlength="2" size="2" value="{book_range_from}" name="{book_range_from_Name}" id="UpdateFormbook_range_from">&nbsp;to <input maxlength="2" size="2" value="{book_range_to}" name="{book_range_to_Name}" id="UpdateFormbook_range_to"></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>
+              <p align="right">&nbsp;Year Level</p>
+              </th>
+ 
+              <td colspan="3">
+                <table cellspacing="0" cellpadding="0" width="100%" align="center" border="1">
+                  <tr bgcolor="#aaaaaa">
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox0_Name}" {CheckBox0} id="UpdateFormCheckBox0"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox1_Name}" {CheckBox1} id="UpdateFormCheckBox1"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox2_Name}" {CheckBox2} id="UpdateFormCheckBox2"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox3_Name}" {CheckBox3} id="UpdateFormCheckBox3"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox4_Name}" {CheckBox4} id="UpdateFormCheckBox4"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox5_Name}" {CheckBox5} id="UpdateFormCheckBox5"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox6_Name}" {CheckBox6} id="UpdateFormCheckBox6"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox7_Name}" {CheckBox7} id="UpdateFormCheckBox7"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox8_Name}" {CheckBox8} id="UpdateFormCheckBox8"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox9_Name}" {CheckBox9} id="UpdateFormCheckBox9"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox10_Name}" {CheckBox10} id="UpdateFormCheckBox10"></td> 
+                    <td>&nbsp;<input type="checkbox" value="1" name="{CheckBox11_Name}" {CheckBox11} id="UpdateFormCheckBox11"></td> 
+                    <td bgcolor="#aaaaaa">&nbsp;<input type="checkbox" value="1" name="{CheckBox12_Name}" {CheckBox12} id="UpdateFormCheckBox12"></td>
+                  </tr>
+ 
+                  <tr>
+                    <td>
+                      <p align="center">&nbsp;0</p>
+                    </td> 
+                    <td>
+                      <p align="center">1</p>
+                    </td> 
+                    <td>
+                      <p align="center">2</p>
+                    </td> 
+                    <td>
+                      <p align="center">3</p>
+                    </td> 
+                    <td>
+                      <p align="center">4</p>
+                    </td> 
+                    <td>
+                      <p align="center">5</p>
+                    </td> 
+                    <td>
+                      <p align="center">6</p>
+                    </td> 
+                    <td>
+                      <p align="center">7</p>
+                    </td> 
+                    <td>
+                      <p align="center">8</p>
+                    </td> 
+                    <td>
+                      <p align="center">9</p>
+                    </td> 
+                    <td>
+                      <p align="center">10</p>
+                    </td> 
+                    <td>
+                      <p align="center">11</p>
+                    </td> 
+                    <td>
+                      <p align="center">12</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="4">
+                <!-- BEGIN Button Button_DoUpdate --><input class="Button" type="submit" value="Update" name="{Button_Name}" id="UpdateFormButton_DoUpdate"><!-- END Button Button_DoUpdate --></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <p>
+</form>
+<div align="center">
+  {lblSelections} 
+</div>
+<!-- END Record UpdateForm -->&nbsp; 
+<p></p>
+<p><br>
+&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Enrolment Intentions</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+<p align="center">
+<!-- BEGIN Panel Panel_MenuStudentMaintain -->{Menu_Student_maintain}&nbsp;<!-- END Panel Panel_MenuStudentMaintain --></p>
+<p align="center"><a href="{Link_Backtosummary_Src}" id="Link_Backtosummary" class="Button">Back to Summary</a>|&nbsp;&nbsp;<a href="{Link_BacktoPastoralList_Src}" id="Link_BacktoPastoralList" class="Button">Back to Student Support Group List</a></p>
+<p align="center">
+<!-- BEGIN Record STUDENT_FUTURE_INTENTIONS -->
+<form id="STUDENT_FUTURE_INTENTIONS" method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Add/Edit STUDENT FUTURE INTENTIONS </th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th><strong>STUDENT ID</strong></th>
+ 
+                        <td>{STUDENT_ID}</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>ENROLMENT YEAR</strong></th>
+ 
+                        <td>{ENROLMENT_YEAR}&nbsp;<em>(questions relate to next year)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>Will you be seeking re-enrolment at the VSV <u>next year</u>?</strong></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton RE_ENROLMENT_FLAG --><input type="radio" id="STUDENT_FUTURE_INTENTIONSRE_ENROLMENT_FLAG_{RE_ENROLMENT_FLAG:optionNumber}" checked value="{Value}" name="{RE_ENROLMENT_FLAG_Name}" {Check}>{Description}<!-- END RadioButton RE_ENROLMENT_FLAG --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>Will you be enrolling in another school/institution <u>next year</u>?</strong></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton NEW_SCHOOL_FLAG --><input type="radio" id="STUDENT_FUTURE_INTENTIONSNEW_SCHOOL_FLAG_{NEW_SCHOOL_FLAG:optionNumber}" checked value="{Value}" name="{NEW_SCHOOL_FLAG_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton NEW_SCHOOL_FLAG --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <p align="right"><em>If Yes, what School or Institution?</em></p>
+                        </th>
+ 
+                        <td><input type="text" id="STUDENT_FUTURE_INTENTIONSSCHOOL_NAME" maxlength="200" size="50" value="{SCHOOL_NAME}" name="{SCHOOL_NAME_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>Will you be leaving schooling altogether <u>next year</u>?</strong></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton LEAVING_FLAG --><input type="radio" id="STUDENT_FUTURE_INTENTIONSLEAVING_FLAG_{LEAVING_FLAG:optionNumber}" checked value="{Value}" name="{LEAVING_FLAG_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END RadioButton LEAVING_FLAG --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>Will you be seeking full time work?</strong></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton SEEKING_WORK_FLAG --><input type="radio" id="STUDENT_FUTURE_INTENTIONSSEEKING_WORK_FLAG_{SEEKING_WORK_FLAG:optionNumber}" checked value="{Value}" name="{SEEKING_WORK_FLAG_Name}" {Check}>{Description}&nbsp;&nbsp;&nbsp;<!-- END RadioButton SEEKING_WORK_FLAG --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>Will you be engaged in full employment <u>next year</u>?</strong></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton EMPLOYMENT_FLAG --><input type="radio" id="STUDENT_FUTURE_INTENTIONSEMPLOYMENT_FLAG_{EMPLOYMENT_FLAG:optionNumber}" checked value="{Value}" name="{EMPLOYMENT_FLAG_Name}" {Check}>{Description}&nbsp;&nbsp;&nbsp;&nbsp;<!-- END RadioButton EMPLOYMENT_FLAG --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <p align="right"><em>If Yes, what Employer or Company (or type 'Unknown')?</em></p>
+                        </th>
+ 
+                        <td><input type="text" id="STUDENT_FUTURE_INTENTIONSEMPLOYER_DETAIL" maxlength="200" size="50" value="{EMPLOYER_DETAIL}" name="{EMPLOYER_DETAIL_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY / LAST ALTERED DATE </th>
+ 
+                        <td>&nbsp;{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="2" align="right">
+                            <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENT_FUTURE_INTENTIONSButton_Insert" class="Button" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_FUTURE_INTENTIONSButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->&nbsp; 
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_FUTURE_INTENTIONSButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STUDENT_FUTURE_INTENTIONSHidden_lastalteredby" value="{Hidden_lastalteredby}" name="{Hidden_lastalteredby_Name}"><input type="hidden" id="STUDENT_FUTURE_INTENTIONSHidden_lastaltered_date" value="{Hidden_lastaltered_date}" name="{Hidden_lastaltered_date_Name}"><input type="hidden" id="STUDENT_FUTURE_INTENTIONSHidden_student_id" value="{Hidden_student_id}" name="{Hidden_student_id_Name}"><input type="hidden" id="STUDENT_FUTURE_INTENTIONSHidden_enrolmentyear" value="{Hidden_enrolmentyear}" name="{Hidden_enrolmentyear_Name}"></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_FUTURE_INTENTIONS --></p>
+<p align="center"><br>
+</p>
+</body>
+</html>

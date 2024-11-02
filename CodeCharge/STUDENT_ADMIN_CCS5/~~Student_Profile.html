@@ -1,0 +1,863 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Student Profile</TITLE>
+<STYLE needdelete>td {border-style:dotted;border-width:1px;border-color:#aaaaaa;} table {border-style:dashed;border-width:1px;border-color:#aaaaaa;}</STYLE>
+
+<META name=GENERATOR content="MSHTML 11.00.10570.1001" ccsServiceable="true">
+<META content="text/html; charset=windows-1252" http-equiv=content-type 
+ccsServiceable="true"><LINK rel=stylesheet type=text/css 
+href="Styles/Blueprint/Style.css" ccsServiceable="true" 
+ccs_href="Styles/Blueprint/Style.css"><LINK rel=stylesheet type=text/css 
+href="Styles/Blueprint/jquery-ui.css" ccsServiceable="true" 
+ccs_href="Styles/Blueprint/jquery-ui.css">
+<STYLE type=text/css>
+<!--
+.instructions  { font-size: 12px; font-style: italic; }
+.processtips  { display:none; }
+.processtips::before { content: "Tip!"; }
+.processtips:hover  { display:block; }
+.errormsg  { font-size: 120%; background-color: #F00; color:#FFF; font-weight: bold ;margin: 2px }
+
+-->
+</STYLE>
+
+<META content=IE=7 http-equiv=X-UA-Compatible toremove="toremove"></HEAD>
+<BODY>
+<P align=center><SPAN contentEditable=true 
+style="BORDER-TOP: transparent 1px dotted; BORDER-RIGHT: transparent 1px dotted; MARGIN-TOP: 3px; BORDER-BOTTOM: transparent 1px dotted; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; PADDING-LEFT: 3px; BORDER-LEFT: transparent 1px dotted; DISPLAY: block; PADDING-RIGHT: 3px" 
+ccsServiceable="true" ccsName="Panel_MenuStudentMaintain" ccsId="124" 
+ccsDesignColorSelection="true" ccsContentPlaceHolder="Panel_MenuStudentMaintain" 
+ccsType="Component"><SPAN contentEditable=true 
+style="BORDER-TOP: #96e593 1px solid; BORDER-RIGHT: #96e593 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #96e593 1px solid; BORDER-LEFT: #96e593 1px solid" 
+ccsServiceable="true" ccsName="Menu_Student_maintain" ccsId="125" 
+ccsType="Component" 
+ccsBlockIsWhiteSpace="true">Menu_Student_maintain</SPAN>&nbsp;</SPAN></P>
+<P align=center><SPAN contentEditable=true 
+style="BORDER-TOP: #9bc4ed 1px solid; BORDER-RIGHT: #9bc4ed 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #9bc4ed 1px solid; BORDER-LEFT: #9bc4ed 1px solid" 
+ccsServiceable="true" ccsName="Link_Backtosummary" ccsId="72" 
+ccsType="Component"><A id=Link_Backtosummary class=Button 
+href="{Link_Backtosummary_Src}" ccsServiceable="true" 
+ccs_href="{Link_Backtosummary_Src}"><SPAN style="WHITE-SPACE: nowrap" 
+ccsServiceable="true" ccsBlockIsWhiteSpace="true">Back to 
+Summary</SPAN></A></SPAN></P>
+<P align=center><SPAN contentEditable=true 
+style="BORDER-TOP: #96e593 1px solid; BORDER-RIGHT: #96e593 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #96e593 1px solid; BORDER-LEFT: #96e593 1px solid" 
+ccsServiceable="true" ccsName="StudentNamePlate" ccsId="73" ccsType="Component" 
+ccsBlockIsWhiteSpace="true">StudentNamePlate</SPAN></P>
+<P align=center><SPAN contentEditable=true 
+style="BORDER-TOP: rgb(186,107,255) 1px solid; BORDER-RIGHT: rgb(186,107,255) 1px solid; BORDER-BOTTOM: rgb(186,107,255) 1px solid; POSITION: relative; BORDER-LEFT: rgb(186,107,255) 1px solid; DISPLAY: block" 
+ccsServiceable="true" ccsName="STUDENT_PROFILE1" ccsId="3" 
+ccsDesignColorSelection="true" ccsType="Component" oldBorderWidth="1px" 
+oldBorderStyle="solid" oldBorderColor="#dcdcdc" oldBackgroundColor oldPosition 
+oldFilter>
+<FORM id=STUDENT_PROFILE1 method=post name={HTMLFormName} action={Action} 
+ccsServiceable="true">
+<TABLE class=MainTable cellSpacing=0 cellPadding=0 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top>
+      <TABLE class=Header cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+        <TR>
+          <TD class=HeaderLeft><IMG src="Styles/Blueprint/Images/Spacer.gif" 
+            ccsServiceable="true" 
+          ccs_src="Styles/Blueprint/Images/Spacer.gif"></TD>
+          <TH>Add/Edit STUDENT PROFILE </TH>
+          <TD class=HeaderRight><IMG src="Styles/Blueprint/Images/Spacer.gif" 
+            ccsServiceable="true" 
+          ccs_src="Styles/Blueprint/Images/Spacer.gif"></TD></TR></TBODY></TABLE>
+      <TABLE class=Record cellSpacing=0 cellPadding=0><!-- BEGIN Error -->
+        <TBODY>
+        <TR id=STUDENT_PROFILE1ErrorBlock class=Error>
+          <TD colSpan=2>{Error}</TD></TR><!-- END Error -->
+        <TR class=Controls>
+          <TH>STUDENT ID / ENROL YEAR</TH>
+          <TD><INPUT id=STUDENT_PROFILE1STUDENT_ID value={STUDENT_ID} 
+            name={STUDENT_ID_Name} ccsServiceable="true" ccsName="STUDENT_ID" 
+            ccsId="9" ccsType="Component" ccs_type="hidden"><SPAN 
+            contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="lblStudentID" ccsId="67" 
+            ccsType="Component" ccsBlockIsWhiteSpace="true">lblStudentID</SPAN> 
+            / <INPUT id=STUDENT_PROFILE1ENROLMENT_YEAR value={ENROLMENT_YEAR} 
+            name={ENROLMENT_YEAR_Name} ccsServiceable="true" 
+            ccsName="ENROLMENT_YEAR" ccsId="10" ccsType="Component" 
+            ccs_type="hidden"><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="lblEnrolYear" ccsId="68" 
+            ccsType="Component" 
+          ccsBlockIsWhiteSpace="true">lblEnrolYear</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>LAST ALTERED BY / WHEN</TH>
+          <TD><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="LAST_ALTERED_BY" ccsId="11" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">LAST_ALTERED_BY</SPAN>&nbsp;/ <SPAN 
+            contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="LAST_ALTERED_DATE" ccsId="12" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">LAST_ALTERED_DATE</SPAN><INPUT 
+            id=STUDENT_PROFILE1hidden_LastUpdatedBy value={hidden_LastUpdatedBy} 
+            name={hidden_LastUpdatedBy_Name} ccsServiceable="true" 
+            ccsName="hidden_LastUpdatedBy" ccsId="95" ccsType="Component" 
+            ccs_type="hidden"><INPUT id=STUDENT_PROFILE1hidden_LastUpdatedWhen 
+            value={hidden_LastUpdatedWhen} name={hidden_LastUpdatedWhen_Name} 
+            ccsServiceable="true" ccsName="hidden_LastUpdatedWhen" ccsId="97" 
+            ccsType="Component" ccs_type="hidden"></TD></TR>
+        <TR class=Controls>
+          <TH><INPUT onclick="restore_last_saved_values('form');" id=btnRestore type=button value="Retrieve Saved Data" name=btnRestore ccsServiceable="true"><SPAN 
+            style="COLOR: #fff; DISPLAY: none; BACKGROUND-COLOR: #468847">Data 
+            saved</SPAN> </TH>
+          <TD></TD></TR>
+        <TR class=Controls>
+          <TH>&nbsp;VSV Enrolment File Checked?</TH>
+          <TD>&nbsp;<INPUT id=STUDENT_PROFILE1cbENROL_FILE_CHECKED 
+            type=checkbox value=1 name={cbENROL_FILE_CHECKED_Name} 
+            ccsServiceable="true" ccsName="cbENROL_FILE_CHECKED" ccsId="202" 
+            ccsType="Component" 
+            ccscheckedattr="{cbENROL_FILE_CHECKED}">&nbsp;<EM>(enrol file to be 
+            checked annually for returning students)</EM></TD></TR>
+        <TR class=Controls>
+          <TH>
+            <H4>&nbsp;PERSONAL INFORMATION</H4></TH>
+          <TD>&nbsp;</TD></TR>
+        <TR class=Controls>
+          <TH>BACKGROUND INFO 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_BackgroundInfo" ccsId="127" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_BackgroundInfo</SPAN> </DIV>
+            <DIV class=instructions>Include information from Enrolment 
+            Application forms,<BR>Intake Interview and Ongoing 
+Contact.<BR></DIV>
+            <DIV class=processtips>Other relevant information including family 
+            structure <BR>(siblings at VSV), health status, social supports etc 
+            </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1BACKGROUND_INFO rows=5 cols=50 name={BACKGROUND_INFO_Name} ccsServiceable="true" ccsName="BACKGROUND_INFO" ccsId="13" ccsType="Component" maxysize="400">{BACKGROUND_INFO}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>REASONS FOR ENROLLING AT VSV 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_ReasonsEnrol" ccsId="128" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_ReasonsEnrol</SPAN> </DIV>
+            <DIV class=instructions>Please use Enrolment Application forms 
+            <BR>&amp;/or information from student and parent/carer.<BR></DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1ENROL_REASONS rows=5 cols=50 name={ENROL_REASONS_Name} ccsServiceable="true" ccsName="ENROL_REASONS" ccsId="14" ccsType="Component" maxysize="400">{ENROL_REASONS}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>STUDENT WELLBEING &amp; INCLUSION 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_StudentWellbeing" ccsId="129" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_StudentWellbeing</SPAN> </DIV>
+            <DIV class=processtips>Detail main factors relating to mental 
+            health<BR>,wellbeing and inclusion concerns (main issues; <BR>home 
+            supports, professional supports, changes<BR>in circumstances 
+          </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1WELLBEING_INCLUSION_CONCERNS rows=3 cols=50 name={WELLBEING_INCLUSION_CONCERNS_Name} ccsServiceable="true" ccsName="WELLBEING_INCLUSION_CONCERNS" ccsId="15" ccsType="Component" maxysize="400">{WELLBEING_INCLUSION_CONCERNS}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>EXPECTATIONS TO RETURN TO MAINSTREAM SCHOOL 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_ReturnMainstream" ccsId="130" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_ReturnMainstream</SPAN> </DIV>
+            <DIV class=instructions>Details of help required </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1EXPECT_RETURN_TO_SCHOOL rows=3 cols=50 name={EXPECT_RETURN_TO_SCHOOL_Name} ccsServiceable="true" ccsName="EXPECT_RETURN_TO_SCHOOL" ccsId="16" ccsType="Component" maxysize="400">{EXPECT_RETURN_TO_SCHOOL}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>RETURNING STUDENT? 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_ReturningStudent" ccsId="131" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_ReturningStudent</SPAN> </DIV></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="RETURN_STUDENT" ccsId="17" 
+            ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="RETURN_STUDENT" ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1RETURN_STUDENT_{RETURN_STUDENT:optionNumber} 
+            type=radio value={Value} name={RETURN_STUDENT_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>Previously known to Student Wellbeing? * 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_StudentWellbeing2" ccsId="132" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_StudentWellbeing2</SPAN> </DIV></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="KNOWN_WELLBEING" ccsId="18" 
+            ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="KNOWN_WELLBEING" ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1KNOWN_WELLBEING_{KNOWN_WELLBEING:optionNumber} 
+            type=radio value={Value} name={KNOWN_WELLBEING_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>Previously known to Student Inclusion? * 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_StudentInclusion" ccsId="133" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_StudentInclusion</SPAN> </DIV></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="KNOWN_INCLUSION" ccsId="19" 
+            ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="KNOWN_INCLUSION" ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1KNOWN_INCLUSION_{KNOWN_INCLUSION:optionNumber} 
+            type=radio value={Value} name={KNOWN_INCLUSION_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>Previously known to Pathways? * 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_PrevPathways" ccsId="134" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_PrevPathways</SPAN> </DIV></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="KNOWN_PATHWAYS" ccsId="20" 
+            ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="KNOWN_PATHWAYS" ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1KNOWN_PATHWAYS_{KNOWN_PATHWAYS:optionNumber} 
+            type=radio value={Value} name={KNOWN_PATHWAYS_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>&nbsp; </TH>
+          <TD>&nbsp; 
+            <DIV class=instructions>* if answered Yes to Wellbeing,Inclusion or 
+            Pathways, consult with personnel from relevant area<BR></DIV></TD></TR>
+        <TR class=Controls>
+          <TH>
+            <P>LIST OF SUPPORTING DOCUMENTATION 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_SupportDocs" ccsId="135" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_SupportDocs</SPAN> </DIV>
+            <P></P>
+            <P><EM>(complete annually for returning students)</EM></P></TH>
+          <TD><INPUT id=STUDENT_PROFILE1SUPPORT_DOCS_AGENCY_REFERRAL 
+            type=checkbox value=1 name={SUPPORT_DOCS_AGENCY_REFERRAL_Name} 
+            ccsServiceable="true" ccsName="SUPPORT_DOCS_AGENCY_REFERRAL" 
+            ccsId="21" ccsType="Component" 
+            ccscheckedattr="{SUPPORT_DOCS_AGENCY_REFERRAL}">&nbsp;Agency 
+            Referral Form<BR><BR><INPUT 
+            id=STUDENT_PROFILE1SUPPORT_DOCS_PRATITIONER_REFERRAL type=checkbox 
+            value=1 name={SUPPORT_DOCS_PRATITIONER_REFERRAL_Name} 
+            ccsServiceable="true" ccsName="SUPPORT_DOCS_PRATITIONER_REFERRAL" 
+            ccsId="22" ccsType="Component" 
+            ccscheckedattr="{SUPPORT_DOCS_PRATITIONER_REFERRAL}">&nbsp;Practitioner 
+            Referral Form <BR><BR><INPUT 
+            id=STUDENT_PROFILE1SUPPORT_DOCS_SCHOOL_REFERRAL type=checkbox 
+            value=1 name={SUPPORT_DOCS_SCHOOL_REFERRAL_Name} 
+            ccsServiceable="true" ccsName="SUPPORT_DOCS_SCHOOL_REFERRAL" 
+            ccsId="23" ccsType="Component" 
+            ccscheckedattr="{SUPPORT_DOCS_SCHOOL_REFERRAL}">&nbsp;School 
+            Referral Form <BR><BR><INPUT 
+            id=STUDENT_PROFILE1SUPPORT_DOCS_YOUNG_ADULT type=checkbox value=1 
+            name={SUPPORT_DOCS_YOUNG_ADULT_Name} ccsServiceable="true" 
+            ccsName="SUPPORT_DOCS_YOUNG_ADULT" ccsId="24" ccsType="Component" 
+            ccscheckedattr="{SUPPORT_DOCS_YOUNG_ADULT}">&nbsp;Young Adult form 
+            <BR><BR>Other <INPUT id=STUDENT_PROFILE1SUPPORT_DOCS_OTHER 
+            maxLength=50 size=35 value={SUPPORT_DOCS_OTHER} 
+            name={SUPPORT_DOCS_OTHER_Name} ccsServiceable="true" 
+            ccsName="SUPPORT_DOCS_OTHER" ccsId="25" ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TH>
+            <P>KEY PROFESSIONAL SUPPORTS<BR>NAME and CONTACT DETAILS 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_KeyProfSupports" ccsId="146" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_KeyProfSupports</SPAN> </DIV>
+            <P></P>
+            <P><EM>(complete annually for returning students)</EM></P></TH>
+          <TD><STRONG>Support 1</STRONG><BR>NAME <INPUT 
+            id=STUDENT_PROFILE1SUPPORT_KEY_PROFESSIONAL_NAME maxLength=50 
+            size=50 value={SUPPORT_KEY_PROFESSIONAL_NAME} 
+            name={SUPPORT_KEY_PROFESSIONAL_NAME_Name} ccsServiceable="true" 
+            ccsName="SUPPORT_KEY_PROFESSIONAL_NAME" ccsId="26" 
+            ccsType="Component"><BR>CONTACT <INPUT 
+            id=STUDENT_PROFILE1SUPPORT_KEY_PROFESSIONAL_CONTACT maxLength=50 
+            size=50 value={SUPPORT_KEY_PROFESSIONAL_CONTACT} 
+            name={SUPPORT_KEY_PROFESSIONAL_CONTACT_Name} ccsServiceable="true" 
+            ccsName="SUPPORT_KEY_PROFESSIONAL_CONTACT" ccsId="27" 
+            ccsType="Component"><BR><STRONG>Support 2</STRONG><BR>NAME <INPUT 
+            id=STUDENT_PROFILE1SUPPORT_KEY_PROFESSIONAL_NAME2 maxLength=50 
+            size=50 value={SUPPORT_KEY_PROFESSIONAL_NAME2} 
+            name={SUPPORT_KEY_PROFESSIONAL_NAME2_Name} ccsServiceable="true" 
+            ccsName="SUPPORT_KEY_PROFESSIONAL_NAME2" ccsId="188" 
+            ccsType="Component"><BR>CONTACT <INPUT 
+            id=STUDENT_PROFILE1SUPPORT_KEY_PROFESSIONAL_CONTACT2 maxLength=50 
+            size=50 value={SUPPORT_KEY_PROFESSIONAL_CONTACT2} 
+            name={SUPPORT_KEY_PROFESSIONAL_CONTACT2_Name} ccsServiceable="true" 
+            ccsName="SUPPORT_KEY_PROFESSIONAL_CONTACT2" ccsId="192" 
+            ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TD style="TEXT-ALIGN: right" colSpan=2><INPUT id=STUDENT_PROFILE1Button_Insert1 class=Button type=submit value=" Add Profile " name={Button_Name} ccsServiceable="true" ccsName="Button_Insert1" ccsId="85" ccsType="Component" ccsExtendedHtml="true"> 
+<INPUT id=STUDENT_PROFILE1Button_Update1 class=Button type=submit value=Update name={Button_Name} ccsServiceable="true" ccsName="Button_Update1" ccsId="87" ccsType="Component" ccsExtendedHtml="true"> 
+<INPUT id=STUDENT_PROFILE1Button_Cancel1 class=Button type=submit value=Cancel name={Button_Name} ccsServiceable="true" ccsName="Button_Cancel1" ccsId="89" ccsType="Component" ccsExtendedHtml="true"></TD></TR>
+        <TR class=Controls>
+          <TH>
+            <H4>ENGAGEMENT</H4><BR>HOBBIES/INTERESTS 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_HobbiesInterests" ccsId="136" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_HobbiesInterests</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1ENGAGEMENT_HOBBIES_INTERESTS rows=3 cols=50 name={ENGAGEMENT_HOBBIES_INTERESTS_Name} ccsServiceable="true" ccsName="ENGAGEMENT_HOBBIES_INTERESTS" ccsId="28" ccsType="Component" maxysize="400">{ENGAGEMENT_HOBBIES_INTERESTS}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>
+            <H4>&nbsp;COMMUNICATION</H4></TH>
+          <TD>&nbsp;</TD></TR>
+        <TR class=Controls>
+          <TH>
+            <P>A VSV/Student visit has been undertaken? 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_CommsVisit" ccsId="137" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_CommsVisit</SPAN> </DIV>
+            <P></P>
+            <P><EM>(complete annually for returning students)</EM></P></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="COMM_VISIT_FLAG" ccsId="29" 
+            ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="COMM_VISIT_FLAG" ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1COMM_VISIT_FLAG_{COMM_VISIT_FLAG:optionNumber} 
+            type=radio value={Value} name={COMM_VISIT_FLAG_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN><BR><BR>Visit 
+            Date (if done): <INPUT id=STUDENT_PROFILE1COMM_VISIT_DATE 
+            maxLength=10 size=10 value={COMM_VISIT_DATE} 
+            name={COMM_VISIT_DATE_Name} ccsServiceable="true" 
+            ccsName="COMM_VISIT_DATE" ccsId="30" 
+            ccsType="Component">&nbsp;<EM>dd/mm/yyyy format</EM></TD></TR>
+        <TR class=Controls>
+          <TH>CONTACT TYPE 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_ContactType" ccsId="138" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_ContactType</SPAN> </DIV></TH>
+          <TD>
+            <DIV class=instructions>Frequency, timing and method of contact 
+            negotiated with student and parent/carer (fortnightly minimum 
+            requirement) </DIV><SPAN ccsServiceable="true" 
+            ccsName="COMM_CONTACT_TYPE" ccsId="31" ccsType="CheckBoxList" 
+            ccsExtendedHtmlSpan="true" atomicselection="true" 
+            ccsExtendedHtml="true" ccsControlName="COMM_CONTACT_TYPE" 
+            ccsControlType="CheckBoxList"><INPUT 
+            id=STUDENT_PROFILE1COMM_CONTACT_TYPE_{COMM_CONTACT_TYPE:optionNumber} 
+            type=checkbox value={Value} name={COMM_CONTACT_TYPE_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN><BR><BR>Other 
+            Details <TEXTAREA id=STUDENT_PROFILE1COMM_CONTACT_TYPE_OTHER rows=5 cols=50 name={COMM_CONTACT_TYPE_OTHER_Name} ccsServiceable="true" ccsName="COMM_CONTACT_TYPE_OTHER" ccsId="32" ccsType="Component" maxysize="200">{COMM_CONTACT_TYPE_OTHER}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>Student willing to communicate over phone<BR>with teachers?</TH>
+          <TD><SPAN ccsServiceable="true" ccsName="COMM_PHONE_CONTACT" 
+            ccsId="33" ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="COMM_PHONE_CONTACT" 
+            ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1COMM_PHONE_CONTACT_{COMM_PHONE_CONTACT:optionNumber} 
+            type=radio value={Value} name={COMM_PHONE_CONTACT_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>
+            <H4>&nbsp;PARENT / CARER ENGAGEMENT</H4></TH>
+          <TD>&nbsp;</TD></TR>
+        <TR class=Controls>
+          <TH>CARER PREFERRED CONTACT METHOD 
+            <DIV class=instructions>(Outside minimum fortnightly phone call) 
+            </DIV>
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_CarerContactMethod" ccsId="139" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_CarerContactMethod</SPAN> 
+</DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1CARER_CONTACT_METHOD cols=50 name={CARER_CONTACT_METHOD_Name} ccsServiceable="true" ccsName="CARER_CONTACT_METHOD" ccsId="34" ccsType="Component" maxysize="400">{CARER_CONTACT_METHOD}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>Who will be supervising the student during the day? 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_SupervisorName" ccsId="140" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_SupervisorName</SPAN> </DIV></TH>
+          <TD><INPUT id=STUDENT_PROFILE1CARER_SUPERVISOR_NAME maxLength=50 
+            size=50 value={CARER_SUPERVISOR_NAME} 
+            name={CARER_SUPERVISOR_NAME_Name} ccsServiceable="true" 
+            ccsName="CARER_SUPERVISOR_NAME" ccsId="35" 
+ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TH>Are they aware of the role of the supervisor? 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_SupervisorRole" ccsId="141" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_SupervisorRole</SPAN> </DIV></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="CARER_SUPERVISOR_ROLE" 
+            ccsId="36" ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="CARER_SUPERVISOR_ROLE" 
+            ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1CARER_SUPERVISOR_ROLE_{CARER_SUPERVISOR_ROLE:optionNumber} 
+            type=radio value={Value} name={CARER_SUPERVISOR_ROLE_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>ADDITIONAL CARER INFORMATION 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_AddCarerInfo" ccsId="155" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_AddCarerInfo</SPAN> </DIV></TH>
+          <TD><INPUT id=STUDENT_PROFILE1CARER_ADDITIONAL maxLength=100 size=50 
+            value={CARER_ADDITIONAL} name={CARER_ADDITIONAL_Name} 
+            ccsServiceable="true" ccsName="CARER_ADDITIONAL" ccsId="37" 
+            ccsType="Component"></TD></TR>
+        <TR class=Controls>
+          <TH>
+            <H4>&nbsp;ORGANISATION</H4></TH>
+          <TD>&nbsp;</TD></TR>
+        <TR class=Controls>
+          <TH>Workspace 
+            <DIV class=instructions>Where/When does the student usually complete 
+            their VSV learning program? </DIV>
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_Workspace" ccsId="156" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_Workspace</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1ORGANISATION_WHENWHERE cols=50 name={ORGANISATION_WHENWHERE_Name} ccsServiceable="true" ccsName="ORGANISATION_WHENWHERE" ccsId="38" ccsType="Component" maxysize="200">{ORGANISATION_WHENWHERE}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>Timetable in Student Folder?</TH>
+          <TD><SPAN ccsServiceable="true" ccsName="ORGANISATION_TIMETABLE" 
+            ccsId="39" ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="ORGANISATION_TIMETABLE" 
+            ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1ORGANISATION_TIMETABLE_{ORGANISATION_TIMETABLE:optionNumber} 
+            type=radio value={Value} name={ORGANISATION_TIMETABLE_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>Hardware to do school work 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_OrgHardware" ccsId="170" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_OrgHardware</SPAN> </DIV></TH>
+          <TD><SELECT id=STUDENT_PROFILE1ORGANISATION_HARDWARE 
+            name={ORGANISATION_HARDWARE_Name} ccsServiceable="true" 
+            ccsName="ORGANISATION_HARDWARE" ccsId="40" ccsType="Component"> 
+              <OPTION selected value="" ccsServiceable="true">Select 
+              Value</OPTION> {ORGANISATION_HARDWARE_Options}</SELECT> </TD></TR>
+        <TR class=Controls>
+          <TH>Access to Internet? 
+            <DIV class=instructions>How/where will the student access the 
+            internet </DIV>
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_OrgInternet" ccsId="171" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_OrgInternet</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1ORGANISATION_ACCESS_INTERNET cols=50 name={ORGANISATION_ACCESS_INTERNET_Name} ccsServiceable="true" ccsName="ORGANISATION_ACCESS_INTERNET" ccsId="41" ccsType="Component" maxysize="200">{ORGANISATION_ACCESS_INTERNET}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>PREVIOUS SCHOOLS 
+            <DIV class=instructions>include information regarding school 
+            history, <BR>previous schools including VSV </DIV>
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_OrgPrevSchools" ccsId="172" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_OrgPrevSchools</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1ORGANISATION_PREVIOUS_SCHOOL rows=4 cols=50 name={ORGANISATION_PREVIOUS_SCHOOL_Name} ccsServiceable="true" ccsName="ORGANISATION_PREVIOUS_SCHOOL" ccsId="42" ccsType="Component" maxysize="200">{ORGANISATION_PREVIOUS_SCHOOL}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>ACADEMIC HISTORY 
+            <DIV class=instructions>strengths/weaknesses, academic progress 
+            including <BR>AusVELS assessments, NAPLAN data if available </DIV>
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_OrgAcademic" ccsId="173" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_OrgAcademic</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1ORGANISATION_ACADEMIC_HISTORY rows=5 cols=50 name={ORGANISATION_ACADEMIC_HISTORY_Name} ccsServiceable="true" ccsName="ORGANISATION_ACADEMIC_HISTORY" ccsId="43" ccsType="Component" maxysize="400">{ORGANISATION_ACADEMIC_HISTORY}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>Copy of most recent report added to Student Folder?</TH>
+          <TD><SPAN ccsServiceable="true" 
+            ccsName="ORGANISATION_RECENTREPORT_FILED" ccsId="44" 
+            ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="ORGANISATION_RECENTREPORT_FILED" 
+            ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1ORGANISATION_RECENTREPORT_FILED_{ORGANISATION_RECENTREPORT_FILED:optionNumber} 
+            type=radio value={Value} name={ORGANISATION_RECENTREPORT_FILED_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TD style="TEXT-ALIGN: right" colSpan=2><INPUT id=STUDENT_PROFILE1Button_Insert2 class=Button type=submit value=" Add Profile " name={Button_Name} ccsServiceable="true" ccsName="Button_Insert2" ccsId="90" ccsType="Component" ccsExtendedHtml="true"> 
+<INPUT id=STUDENT_PROFILE1Button_Update2 class=Button type=submit value=Update name={Button_Name} ccsServiceable="true" ccsName="Button_Update2" ccsId="92" ccsType="Component" ccsExtendedHtml="true"> 
+<INPUT id=STUDENT_PROFILE1Button_Cancel2 class=Button type=submit value=Cancel name={Button_Name} ccsServiceable="true" ccsName="Button_Cancel2" ccsId="94" ccsType="Component" ccsExtendedHtml="true"></TD></TR>
+        <TR class=Controls>
+          <TH>&nbsp; 
+            <H4>LAUNCHPAD / ASSESSMENT</H4></TH>
+          <TD>&nbsp; 
+            <P><EM>(Rest of Profile - complete annually for returning 
+            students)</EM></P></TD></TR>
+        <TR class=Controls>
+          <TH>LAUNCH PAD COMPLETED (Years 3 - 10) 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_LPDone" ccsId="217" 
+            ccsType="Component" ccsBlockIsWhiteSpace="true">error_LPDone</SPAN> 
+            </DIV></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="LAUNCH_PAD_DONE" ccsId="45" 
+            ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="LAUNCH_PAD_DONE" ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1LAUNCH_PAD_DONE_{LAUNCH_PAD_DONE:optionNumber} 
+            type=radio value={Value} name={LAUNCH_PAD_DONE_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN><BR><BR>COMPLETED 
+            DATE <INPUT id=STUDENT_PROFILE1LAUNCH_PAD_DONE_DATE maxLength=10 
+            size=10 value={LAUNCH_PAD_DONE_DATE} 
+            name={LAUNCH_PAD_DONE_DATE_Name} ccsServiceable="true" 
+            ccsName="LAUNCH_PAD_DONE_DATE" ccsId="46" 
+            ccsType="Component">&nbsp;<EM>dd/mm/yyyy</EM></TD></TR>
+        <TR class=Controls>
+          <TH colSpan=2>STUDENT ASSESSMENT DATA <BR>
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_AssessData" ccsId="174" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_AssessData</SPAN> </DIV>
+            <TABLE class=Record cellSpacing=0 cellPadding=0 width="100%">
+              <TBODY>
+              <TR>
+                <TD>&nbsp;</TD>
+                <TD>&nbsp;<STRONG>Launch Pad</STRONG></TD>
+                <TD><STRONG>&nbsp;ReLaunch</STRONG></TD></TR>
+              <TR>
+                <TD>&nbsp;English</TD>
+                <TD>&nbsp;<INPUT id=STUDENT_PROFILE1ASSESS_ENGLANG_LP 
+                  maxLength=10 size=5 value={ASSESS_ENGLANG_LP} 
+                  name={ASSESS_ENGLANG_LP_Name} ccsServiceable="true" 
+                  ccsName="ASSESS_ENGLANG_LP" ccsId="111" 
+ccsType="Component"></TD>
+                <TD>&nbsp;<INPUT id=STUDENT_PROFILE1ASSESS_ENGLANG_RL 
+                  maxLength=10 size=5 value={ASSESS_ENGLANG_RL} 
+                  name={ASSESS_ENGLANG_RL_Name} ccsServiceable="true" 
+                  ccsName="ASSESS_ENGLANG_RL" ccsId="112" 
+              ccsType="Component"></TD></TR>
+              <TR>
+                <TD>&nbsp;Mathematics</TD>
+                <TD>&nbsp;<INPUT id=STUDENT_PROFILE1ASSESS_MATH_LP 
+                  maxLength=10 size=5 value={ASSESS_MATH_LP} 
+                  name={ASSESS_MATH_LP_Name} ccsServiceable="true" 
+                  ccsName="ASSESS_MATH_LP" ccsId="116" ccsType="Component"></TD>
+                <TD>&nbsp;<INPUT id=STUDENT_PROFILE1ASSESS_MATH_RL 
+                  maxLength=10 size=5 value={ASSESS_MATH_RL} 
+                  name={ASSESS_MATH_RL_Name} ccsServiceable="true" 
+                  ccsName="ASSESS_MATH_RL" ccsId="118" 
+ccsType="Component"></TD></TR>
+              <TR>
+                <TD>&nbsp;PAT&nbsp;Science</TD>
+                <TD>&nbsp;<INPUT id=STUDENT_PROFILE1ASSESS_PATSCIENCE_LP 
+                  maxLength=10 size=5 value={ASSESS_PATSCIENCE_LP} 
+                  name={ASSESS_PATSCIENCE_LP_Name} ccsServiceable="true" 
+                  ccsName="ASSESS_PATSCIENCE_LP" ccsId="119" 
+                ccsType="Component"></TD>
+                <TD>&nbsp;<INPUT id=STUDENT_PROFILE1ASSESS_PATSCIENCE_RL 
+                  maxLength=10 size=5 value={ASSESS_PATSCIENCE_RL} 
+                  name={ASSESS_PATSCIENCE_RL_Name} ccsServiceable="true" 
+                  ccsName="ASSESS_PATSCIENCE_RL" ccsId="121" 
+                ccsType="Component"></TD></TR></TBODY></TABLE></TH></TR>
+        <TR class=Controls>
+          <TH>&nbsp; 
+            <H4>VSV LEARNING PROGRAM</H4></TH>
+          <TD>&nbsp;</TD></TR>
+        <TR class=Controls>
+          <TH>Standard or Customised</TH>
+          <TD><INPUT id=STUDENT_PROFILE1LEARNING_PROGRAM 
+            value={LEARNING_PROGRAM} name={LEARNING_PROGRAM_Name} 
+            ccsServiceable="true" ccsName="LEARNING_PROGRAM" ccsId="47" 
+            ccsType="Component" ccs_type="hidden"><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="lblLearningProgram" ccsId="66" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">lblLearningProgram</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>ADDITIONAL DETAILS 
+            <DIV class=instructions>eg: reduced subject load, modified subjects 
+            </DIV>
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_LearnDetails" ccsId="175" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_LearnDetails</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1LEARNING_PROGRAM_DETAILS rows=3 cols=50 name={LEARNING_PROGRAM_DETAILS_Name} ccsServiceable="true" ccsName="LEARNING_PROGRAM_DETAILS" ccsId="48" ccsType="Component" maxysize="200">{LEARNING_PROGRAM_DETAILS}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>LEARNING PROGRAM CONSULTATION</TH>
+          <TD><SPAN ccsServiceable="true" ccsName="LEARNING_PROGRAM_CONSULT" 
+            ccsId="49" ccsType="CheckBoxList" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="LEARNING_PROGRAM_CONSULT" 
+            ccsControlType="CheckBoxList"><INPUT 
+            id=STUDENT_PROFILE1LEARNING_PROGRAM_CONSULT_{LEARNING_PROGRAM_CONSULT:optionNumber} 
+            type=checkbox value={Value} name={LEARNING_PROGRAM_CONSULT_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}<BR>&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>LEARNING GOALS 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_LearnGoals" ccsId="176" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_LearnGoals</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1LEARNING_GOALS rows=5 cols=50 name={LEARNING_GOALS_Name} ccsServiceable="true" ccsName="LEARNING_GOALS" ccsId="50" ccsType="Component" maxysize="800">{LEARNING_GOALS}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>SPECIAL PROVISION? 
+            <DIV class=instructions>see F-10 Special Provision Policy. Prior 
+            discussion<BR>with LT Engagement and/or Year Level coordinator 
+            required </DIV></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="SPECIAL_PROVISION_FLAG" 
+            ccsId="51" ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="SPECIAL_PROVISION_FLAG" 
+            ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1SPECIAL_PROVISION_FLAG_{SPECIAL_PROVISION_FLAG:optionNumber} 
+            type=radio value={Value} name={SPECIAL_PROVISION_FLAG_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>SPECIAL PROVISION DETAILS 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_SpecialProvision" ccsId="177" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_SpecialProvision</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1SPECIAL_PROVISION_DETAILS rows=3 cols=50 name={SPECIAL_PROVISION_DETAILS_Name} ccsServiceable="true" ccsName="SPECIAL_PROVISION_DETAILS" ccsId="52" ccsType="Component" maxysize="400">{SPECIAL_PROVISION_DETAILS}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>&nbsp; 
+            <H4>PATHWAYS</H4></TH>
+          <TD>&nbsp;</TD></TR>
+        <TR class=Controls>
+          <TH>CAREER ACTION PLAN (7-10) * 
+            <DIV class=instructions>Student has a Career Action Plan (obtain 
+            copy)<BR>if No then start Career Action Plan </DIV></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="PATHWAYS_CAREER_PLAN_FLAG" 
+            ccsId="53" ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="PATHWAYS_CAREER_PLAN_FLAG" 
+            ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1PATHWAYS_CAREER_PLAN_FLAG_{PATHWAYS_CAREER_PLAN_FLAG:optionNumber} 
+            type=radio value={Value} name={PATHWAYS_CAREER_PLAN_FLAG_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN></TD></TR>
+        <TR class=Controls>
+          <TH>SUMMARY OF FUTURE CAREER GOALS 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_Goals" ccsId="178" 
+            ccsType="Component" ccsBlockIsWhiteSpace="true">error_Goals</SPAN> 
+            </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1PATHWAYS_CAREER_GOALS rows=3 cols=50 name={PATHWAYS_CAREER_GOALS_Name} ccsServiceable="true" ccsName="PATHWAYS_CAREER_GOALS" ccsId="54" ccsType="Component" maxysize="400">{PATHWAYS_CAREER_GOALS}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>Future Career Goals discussed (Mid-year) 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_GoalsMidyear" ccsId="179" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_GoalsMidyear</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1PATHWAYS_CAREER_GOALS_MIDYEAR rows=3 cols=50 name={PATHWAYS_CAREER_GOALS_MIDYEAR_Name} ccsServiceable="true" ccsName="PATHWAYS_CAREER_GOALS_MIDYEAR" ccsId="55" ccsType="Component" maxysize="400">{PATHWAYS_CAREER_GOALS_MIDYEAR}</TEXTAREA> 
+            <BR><BR>Date: <INPUT 
+            id=STUDENT_PROFILE1PATHWAYS_CAREER_GOALS_MIDYEAR_DATE maxLength=10 
+            size=10 value={PATHWAYS_CAREER_GOALS_MIDYEAR_DATE} 
+            name={PATHWAYS_CAREER_GOALS_MIDYEAR_DATE_Name} ccsServiceable="true" 
+            ccsName="PATHWAYS_CAREER_GOALS_MIDYEAR_DATE" ccsId="56" 
+            ccsType="Component">&nbsp;<EM>dd/mm/yyyy</EM></TD></TR>
+        <TR class=Controls>
+          <TH>Student Interested in Work Experience (Year 9/10) 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_WorkExp910" ccsId="183" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_WorkExp910</SPAN> </DIV></TH>
+          <TD><SPAN ccsServiceable="true" ccsName="PATHWAYS_WORKEXP_FLAG" 
+            ccsId="57" ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="PATHWAYS_WORKEXP_FLAG" 
+            ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1PATHWAYS_WORKEXP_FLAG_{PATHWAYS_WORKEXP_FLAG:optionNumber} 
+            type=radio value={Value} name={PATHWAYS_WORKEXP_FLAG_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN><BR><BR>If Yes, 
+            record details:<BR><TEXTAREA id=STUDENT_PROFILE1PATHWAYS_WORKEXP_DETAILS rows=3 cols=50 name={PATHWAYS_WORKEXP_DETAILS_Name} ccsServiceable="true" ccsName="PATHWAYS_WORKEXP_DETAILS" ccsId="58" ccsType="Component" maxysize="400">{PATHWAYS_WORKEXP_DETAILS}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>Details of Part Time job/s: 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_PartTimeJobs" ccsId="180" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_PartTimeJobs</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1PATHWAYS_PARTTIMEJOBS rows=3 cols=50 name={PATHWAYS_PARTTIMEJOBS_Name} ccsServiceable="true" ccsName="PATHWAYS_PARTTIMEJOBS" ccsId="59" ccsType="Component" maxysize="400">{PATHWAYS_PARTTIMEJOBS}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>End of Year Future Intentions Discussion (all Students) 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_EndYearDisc" ccsId="184" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_EndYearDisc</SPAN> </DIV></TH>
+          <TD><SPAN ccsServiceable="true" 
+            ccsName="PATHWAYS_ENDYEAR_INTENTIONS_FLAG" ccsId="60" 
+            ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="PATHWAYS_ENDYEAR_INTENTIONS_FLAG" 
+            ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1PATHWAYS_ENDYEAR_INTENTIONS_FLAG_{PATHWAYS_ENDYEAR_INTENTIONS_FLAG:optionNumber} 
+            type=radio value={Value} 
+            name={PATHWAYS_ENDYEAR_INTENTIONS_FLAG_Name} ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN><BR><BR>Date:<INPUT 
+            id=STUDENT_PROFILE1PATHWAYS_ENDYEAR_INTENTIONS_DATE maxLength=10 
+            size=10 value={PATHWAYS_ENDYEAR_INTENTIONS_DATE} 
+            name={PATHWAYS_ENDYEAR_INTENTIONS_DATE_Name} ccsServiceable="true" 
+            ccsName="PATHWAYS_ENDYEAR_INTENTIONS_DATE" ccsId="61" 
+            ccsType="Component">&nbsp;<EM>dd/mm/yyyy</EM></TD></TR>
+        <TR class=Controls>
+          <TH>End of Year Future Intentions Discussion logged in Database 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_EndYearLogged" ccsId="185" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_EndYearLogged</SPAN> </DIV></TH>
+          <TD><SPAN ccsServiceable="true" 
+            ccsName="PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG" ccsId="62" 
+            ccsType="RadioButton" ccsExtendedHtmlSpan="true" 
+            atomicselection="true" ccsExtendedHtml="true" 
+            ccsControlName="PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG" 
+            ccsControlType="RadioButton"><INPUT 
+            id=STUDENT_PROFILE1PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG_{PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG:optionNumber} 
+            type=radio value={Value} 
+            name={PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG_Name} 
+            ccsServiceable="true" 
+            ccscheckedattr="{Check}">{Description}&nbsp;</SPAN><BR><BR>Date:<INPUT 
+            id=STUDENT_PROFILE1PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE 
+            maxLength=10 size=10 value={PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE} 
+            name={PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE_Name} 
+            ccsServiceable="true" 
+            ccsName="PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE" ccsId="63" 
+            ccsType="Component">&nbsp;<EM>dd/mm/yyyy</EM></TD></TR>
+        <TR class=Controls>
+          <TH>&nbsp; 
+            <H4>REVIEW OF PROGRESS</H4></TH>
+          <TD>&nbsp; 
+            <DIV class=instructions>Learning Programs and Career Action Plans 
+            should be monitored<BR>and reviewed once per semester </DIV></TD></TR>
+        <TR class=Controls>
+          <TH>END OF SEMESTER 1 
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_ProgressSem1" ccsId="181" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_ProgressSem1</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1REVIEW_PROGRESS_END_SEM1 rows=3 cols=50 name={REVIEW_PROGRESS_END_SEM1_Name} ccsServiceable="true" ccsName="REVIEW_PROGRESS_END_SEM1" ccsId="64" ccsType="Component" maxysize="400">{REVIEW_PROGRESS_END_SEM1}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>END OF SEMESTER 2 
+            <DIV class=instructions>include recommendations for next year </DIV>
+            <DIV class=errormsg><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="error_ProgressSem2" ccsId="182" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">error_ProgressSem2</SPAN> </DIV></TH>
+          <TD><TEXTAREA id=STUDENT_PROFILE1REVIEW_PROGRESS_END_SEM2 rows=3 cols=50 name={REVIEW_PROGRESS_END_SEM2_Name} ccsServiceable="true" ccsName="REVIEW_PROGRESS_END_SEM2" ccsId="65" ccsType="Component" maxysize="400">{REVIEW_PROGRESS_END_SEM2}</TEXTAREA> 
+          </TD></TR>
+        <TR class=Controls>
+          <TH>LAST ALTERED BY / WHEN</TH>
+          <TD><SPAN contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="LAST_ALTERED_BY1" ccsId="69" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">LAST_ALTERED_BY1</SPAN>&nbsp;/ <SPAN 
+            contentEditable=true 
+            style="BORDER-TOP: #bbbbbb 1px solid; BORDER-RIGHT: #bbbbbb 1px solid; WHITE-SPACE: nowrap; BORDER-BOTTOM: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid" 
+            ccsServiceable="true" ccsName="LAST_ALTERED_DATE1" ccsId="71" 
+            ccsType="Component" 
+            ccsBlockIsWhiteSpace="true">LAST_ALTERED_DATE1</SPAN></TD></TR>
+        <TR class=Bottom>
+          <TD style="TEXT-ALIGN: right" colSpan=2><INPUT id=STUDENT_PROFILE1Button_Insert class=Button type=submit value=" Add Profile " name={Button_Name} ccsServiceable="true" ccsName="Button_Insert" ccsId="5" ccsType="Component" ccsExtendedHtml="true"> 
+<INPUT id=STUDENT_PROFILE1Button_Update class=Button type=submit value=Update name={Button_Name} ccsServiceable="true" ccsName="Button_Update" ccsId="6" ccsType="Component" ccsExtendedHtml="true"> 
+<INPUT id=STUDENT_PROFILE1Button_Cancel class=Button type=submit value=Cancel name={Button_Name} ccsServiceable="true" ccsName="Button_Cancel" ccsId="7" ccsType="Component" ccsExtendedHtml="true"></TD></TR></TBODY></TABLE><INPUT 
+      id=STUDENT_PROFILE1Hidden_LEARNING_PROGRAM_CONSULT 
+      value={Hidden_LEARNING_PROGRAM_CONSULT} 
+      name={Hidden_LEARNING_PROGRAM_CONSULT_Name} ccsServiceable="true" 
+      ccsName="Hidden_LEARNING_PROGRAM_CONSULT" ccsId="100" ccsType="Component" 
+      ccs_type="hidden"><INPUT id=STUDENT_PROFILE1Hidden_COMM_CONTACT_TYPE_MULTI 
+      value={Hidden_COMM_CONTACT_TYPE_MULTI} 
+      name={Hidden_COMM_CONTACT_TYPE_MULTI_Name} ccsServiceable="true" 
+      ccsName="Hidden_COMM_CONTACT_TYPE_MULTI" ccsId="204" ccsType="Component" 
+      ccs_type="hidden"></TD></TR></TBODY></TABLE></FORM>&nbsp;</SPAN></P>
+<SCRIPT type=text/javascript src="js/sisyphus.min.js" 
+ccs_src="js/sisyphus.min.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="js/sisyphus-ondemand.js" 
+ccs_src="js/sisyphus-ondemand.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="js/jquery.maxlength.min.js" 
+ccs_src="js/jquery.maxlength.min.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+       /*
+        $(window).load(function() {
+                // Animate loader off screen
+                $(".modal").fadeOut("slow");
+        });
+                */
+                jQuery.noConflict();
+        jQuery(function(){
+             //attachSisyphus('form')
+             // $('form').sisyphus({timeout: 10, autoRelease: true})
+        });  
+
+</SCRIPT>
+
+<SCRIPT language=javascript type=text/javascript>
+      jQuery(function(){
+                // due to stupid ASP.NET not allowing maxlength attribute on textarea
+                // , use 'maxysize' and convert on load to maxlength
+                // and attach to textarea now, when the attr exists
+                jQuery('textarea').attr('maxlength', function() {
+                                        return jQuery(this).attr('maxysize');
+                                 }).maxlength(); 
+                                        
+                        // jQuery("input").maxlength();
+        });
+</SCRIPT>
+
+<DIV class=modal><!-- Place at bottom of page --></DIV></BODY></HTML>

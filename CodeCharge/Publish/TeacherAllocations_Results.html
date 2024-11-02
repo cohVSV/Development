@@ -1,0 +1,473 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Teacher Allocations - Update</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_UpdateForm_button_DoTeacher_OnClick @64-0B3B32FF
+function page_UpdateForm_button_DoTeacher_OnClick()
+{
+    var result;
+//End page_UpdateForm_button_DoTeacher_OnClick
+
+//Custom Code @132-2A29BDB7
+    // -------------------------
+    result = true;
+    // -------------------------
+//End Custom Code
+
+
+
+//Validate Required Value @73-1723ED96
+    if(theForm.UpdateFormlistTeacher.value == "") {
+        alert("Must select a Teacher ID to Allocate New Teacher")
+        theForm.UpdateFormlistTeacher.focus();
+        return false;
+    }
+//End Validate Required Value
+
+//Close page_UpdateForm_button_DoTeacher_OnClick @64-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_button_DoTeacher_OnClick
+
+//page_UpdateForm_button_DoChangeOnvASS_OnClick @80-394B31FB
+function page_UpdateForm_button_DoChangeOnvASS_OnClick()
+{
+    var result;
+//End page_UpdateForm_button_DoChangeOnvASS_OnClick
+
+//Custom Code @135-2A29BDB7
+    // -------------------------
+    result = true;
+    // -------------------------
+//End Custom Code
+
+
+
+//Validate Required Value @82-C1A0A198
+    if(theForm.UpdateFormlistappearsVASS.value == "") {
+        alert("Must select the Appears on VASS to Allocate to a Student")
+        theForm.UpdateFormlistappearsVASS.focus();
+        return false;
+    }
+//End Validate Required Value
+
+//Close page_UpdateForm_button_DoChangeOnvASS_OnClick @80-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_button_DoChangeOnvASS_OnClick
+
+//page_UpdateForm_button_DoChangeInterimResult_OnClick @78-C140E486
+function page_UpdateForm_button_DoChangeInterimResult_OnClick()
+{
+    var result;
+//End page_UpdateForm_button_DoChangeInterimResult_OnClick
+
+//Custom Code @134-2A29BDB7
+    // -------------------------
+    result = true;
+    // -------------------------
+//End Custom Code
+
+
+
+//Validate Required Value @79-EDC3BB98
+    if(theForm.UpdateFormlistInterimResult.value == "") {
+        alert("Must select an Interim Progress Code to Allocate a Result")
+        theForm.UpdateFormlistInterimResult.focus();
+        return false;
+    }
+//End Validate Required Value
+
+//Close page_UpdateForm_button_DoChangeInterimResult_OnClick @78-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_button_DoChangeInterimResult_OnClick
+
+//page_UpdateForm_button_DoChangeFinalResult_OnClick @81-BCBB2771
+function page_UpdateForm_button_DoChangeFinalResult_OnClick()
+{
+    var result;
+//End page_UpdateForm_button_DoChangeFinalResult_OnClick
+
+//Validate Required Value @83-3D8C8658
+    if(theForm.UpdateFormlistFinalResult.value == "") {
+        alert("Must select a Final Progress Code to Allocate a Result")
+        theForm.UpdateFormlistFinalResult.focus();
+        return false;
+    }
+//End Validate Required Value
+
+//Confirmation Message @127-6DD3E795
+    return confirm('Update Final Result for Selected students?');
+//End Confirmation Message
+
+//Custom Code @128-2A29BDB7
+    // -------------------------
+    // ERA:2-Dec-2010|EA| Check if ALL Students were selected (querystring value) and if 's_SUBJ_ENROL_STATUS=[CDEFPW]' (%5b + %5d are [ and ] urlencoded)
+        //    and then double confirm Final Result - as it will overwrite Subject Enrol Status.
+        if (window.location.href.indexOf('s_SUBJ_ENROL_STATUS=%5bCDEFPW%5d') > 0) {
+                result = confirm('This will PERMANENTLY CHANGE any ticked Students to Status [Finished] - including those currently listed [Withdrawn]\n\nSo make sure only those ticked are the ones you want changed and click [Ok], or click [Cancel] and check.');
+        }
+    // -------------------------
+//End Custom Code
+
+//Close page_UpdateForm_button_DoChangeFinalResult_OnClick @81-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_button_DoChangeFinalResult_OnClick
+
+//page_UpdateForm_button_DoTeacherSST_OnClick @129-12707F6F
+function page_UpdateForm_button_DoTeacherSST_OnClick()
+{
+    var result;
+//End page_UpdateForm_button_DoTeacherSST_OnClick
+
+//Custom Code @133-2A29BDB7
+    // -------------------------
+    result = true;
+    // -------------------------
+//End Custom Code
+
+
+
+//Validate Required Value @130-1723ED96
+    if(theForm.UpdateFormlistTeacher.value == "") {
+        alert("Must select a Teacher ID to Allocate New Teacher")
+        theForm.UpdateFormlistTeacher.focus();
+        return false;
+    }
+//End Validate Required Value
+
+//Close page_UpdateForm_button_DoTeacherSST_OnClick @129-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_button_DoTeacherSST_OnClick
+
+//bind_events @1-DE0EFD97
+function bind_events() {
+    addEventHandler("UpdateFormbutton_DoTeacherSST","click",page_UpdateForm_button_DoTeacherSST_OnClick);
+    addEventHandler("UpdateFormbutton_DoChangeFinalResult","click",page_UpdateForm_button_DoChangeFinalResult_OnClick);
+    addEventHandler("UpdateFormbutton_DoChangeInterimResult","click",page_UpdateForm_button_DoChangeInterimResult_OnClick);
+    addEventHandler("UpdateFormbutton_DoChangeOnvASS","click",page_UpdateForm_button_DoChangeOnvASS_OnClick);
+    addEventHandler("UpdateFormbutton_DoTeacher","click",page_UpdateForm_button_DoTeacher_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+// -------------------------
+// ERA: Added bulk toggle as doing other work on page (unfuddle #254)
+// Eric Affleck, 4-Mar-2010
+// original code from http://mcarthurgfx.com/blog/article/making-a-toggle-all-checkbox
+// this done as plain HTML/JS not Codecharge as CC wanted to add too many bits.
+
+function toggle_CheckBoxAllFunction(cbthis) {
+        var toggle = document.getElementById(cbthis.id).checked;
+        var inputs = document.getElementsByTagName('input');
+        for(var i = 0; i < inputs.length ; i++) {
+                if(inputs[i].type == 'checkbox') {
+                        inputs[i].checked = toggle;
+                }
+        }
+}
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p align="center"><a href="{Link1_Src}" id="Link1" class="Button">Return to Subject Request</a><a href="{Link1_Src}"></a></p>
+<p>
+<!-- BEGIN Record UpdateForm -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <div align="center">
+        <table cellspacing="0" cellpadding="0" width="95%" align="center" border="0">
+            <tr>
+                <td valign="top">
+                    <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                            <th>Update Form</th>
+ 
+                            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                        </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                        <!-- BEGIN Error -->
+                        <tr class="Error">
+                            <td colspan="6">{Error}</td>
+                        </tr>
+                        <!-- END Error -->
+                        <tr class="Controls">
+                            <th>
+                            <p align="right">&nbsp;Subject ID </p>
+                            </th>
+ 
+                            <td>{lblSubjectID}&nbsp;</td> 
+                            <td>
+                                <p align="right">&nbsp;Subject Title</p>
+                            </td> 
+                            <td>&nbsp;{lblSubjectTitle}</td> 
+                            <td>
+                                <p align="right">&nbsp;Enrolment Year</p>
+                            </td> 
+                            <td>&nbsp;{lblEnrolmentYear}</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>
+                            <p align="right">Teacher ID</p>
+                            </th>
+ 
+                            <td>{lblTeacherID}&nbsp;</td> 
+                            <td>
+                                <p align="right">&nbsp;Semester</p>
+                            </td> 
+                            <td>&nbsp;{lblSemester}</td> 
+                            <td>
+                                <p align="right">&nbsp;Order By</p>
+                            </td> 
+                            <td>&nbsp;{lblOrderBy}</td>
+                        </tr>
+ 
+                        <tr class="Bottom" height="5">
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>
+                            <p align="right">New Teacher</p>
+                            </th>
+ 
+                            <td>
+                                <select id="UpdateFormlistTeacher" name="{listTeacher_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {listTeacher_Options}
+                                </select>
+ </td> 
+                            <td>&nbsp; 
+                                <!-- BEGIN Button button_DoTeacher --><input type="submit" id="UpdateFormbutton_DoTeacher" class="Button" value="Change SUBJECT Teacher" name="{Button_Name}"><!-- END Button button_DoTeacher -->
+                                <p>&nbsp; 
+                                <!-- BEGIN Button button_DoTeacherSST --><input type="submit" id="UpdateFormbutton_DoTeacherSST" class="Button" value="Change Learning Advisor" name="{Button_Name}"><!-- END Button button_DoTeacherSST --></p>
+                            </td> 
+                            <td>
+                                <p align="right">&nbsp; Appears on VASS</p>
+                            </td> 
+                            <td>&nbsp; 
+                                <select id="UpdateFormlistappearsVASS" name="{listappearsVASS_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {listappearsVASS_Options}
+                                </select>
+ </td> 
+                            <td>
+                                <!-- BEGIN Button button_DoChangeOnvASS --><input type="submit" id="UpdateFormbutton_DoChangeOnvASS" class="Button" value="Change Appears on VASS" name="{Button_Name}"><!-- END Button button_DoChangeOnvASS -->&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>
+                            <p align="right">Interim Result</p>
+                            </th>
+ 
+                            <td>
+                                <select id="UpdateFormlistInterimResult" name="{listInterimResult_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {listInterimResult_Options}
+                                </select>
+ </td> 
+                            <td>&nbsp; 
+                                <!-- BEGIN Button button_DoChangeInterimResult --><input type="submit" id="UpdateFormbutton_DoChangeInterimResult" class="Button" value="Change Int Result" name="{Button_Name}"><!-- END Button button_DoChangeInterimResult --></td> 
+                            <td>
+                                <p align="right">&nbsp;Final Result</p>
+                            </td> 
+                            <td>&nbsp; 
+                                <select id="UpdateFormlistFinalResult" name="{listFinalResult_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {listFinalResult_Options}
+                                </select>
+ </td> 
+                            <td>
+                                <!-- BEGIN Button button_DoChangeFinalResult --><input type="submit" id="UpdateFormbutton_DoChangeFinalResult" class="Button" value="Change Final Result" name="{Button_Name}"><!-- END Button button_DoChangeFinalResult -->&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Bottom">
+                            <th colspan="6" align="right"></th>
+                        </tr>
+                    </table>
+                    <input type="hidden" id="UpdateFormhidden_LAST_ALTERED_BY" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<p align="center">&nbsp;{lblSelections}</p>
+<!-- END Record UpdateForm -->
+<p>
+<!-- BEGIN Grid GridStudentList --><br>
+<table cellspacing="0" cellpadding="0" width="95%" align="center" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>List of Students</th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Row">
+                    <td colspan="11">Total Records:&nbsp;{STUD_SUB_INTERIM_STUD_SUB_TotalRecords}</td>
+                </tr>
+ 
+                <tr class="Caption">
+                    <th>&nbsp;<input type="checkbox" onclick="toggle_CheckBoxAllFunction(this);" id="Checkbox_ToggleAll" name="Checkbox_ToggleAll">&nbsp;<em>all</em></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_STUDENT_SUBJECT_STUDENT_ID --><a href="{Sort_URL}" id="GridStudentListSorter_STUDENT_SUBJECT_STUDENT_ID">Student ID</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_SUBJECT_STUDENT_ID --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="GridStudentListSorter_SURNAME">Surname</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="GridStudentListSorter_FIRST_NAME">First Name</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+                    <th>
+                    <p align="center">Sem.</p>
+                    </th>
+ 
+                    <th>
+                    <p align="center">
+                    <!-- BEGIN Sorter Sorter_SUBJ_ENROL_STATUS --><a href="{Sort_URL}" id="GridStudentListSorter_SUBJ_ENROL_STATUS">Subj. Status</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJ_ENROL_STATUS --></p>
+                    </th>
+ 
+                    <th>
+                    <p align="center">Interim Result</p>
+                    </th>
+ 
+                    <th>
+                    <p align="center">Final Result</p>
+                    </th>
+ 
+                    <th>
+                    <p align="center">
+                    <!-- BEGIN Sorter Sorter_STAFF_ID --><a href="{Sort_URL}" id="GridStudentListSorter_STAFF_ID">Teacher ID</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STAFF_ID --></p>
+                    </th>
+ 
+                    <th>
+                    <p align="center">Appears <br>
+                    on VASS</p>
+                    </th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_ATTENDING_SCHOOL_NAME --><a href="{Sort_URL}" id="GridStudentListSorter_ATTENDING_SCHOOL_NAME">Attending School</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ATTENDING_SCHOOL_NAME --></th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {GridStudentList:rowStyle}>
+                    <td style="TEXT-ALIGN: right">
+                        <p align="center"><input type="checkbox" value="{STUDENT_SUBJECT_STUDENT_ID}" name="{cbox_Name}_{STUDENT_SUBJECT_STUDENT_ID}" {cbox}></p>
+                    </td> 
+                    <td style="TEXT-ALIGN: right">
+                        <p align="left">{STUDENT_ID}&nbsp;</p>
+                    </td> 
+                    <td>{SURNAME}&nbsp;</td> 
+                    <td>{FIRST_NAME}&nbsp;</td> 
+                    <td>
+                        <div align="center">
+                            {SEMESTER}&nbsp; 
+                        </div>
+                    </td> 
+                    <td>
+                        <div align="center">
+                            {SUBJ_ENROL_STATUS}&nbsp; 
+                        </div>
+                    </td> 
+                    <td>
+                        <div align="center">
+                            {INTERIM_PROGRESS_CODE}&nbsp; 
+                        </div>
+                    </td> 
+                    <td>
+                        <div align="center">
+                            {FINAL_PROGRESS_CODE}&nbsp; 
+                        </div>
+                    </td> 
+                    <td>
+                        <div align="center">
+                            {STAFF_ID}&nbsp; 
+                        </div>
+                    </td> 
+                    <td>
+                        <div align="center">
+                            {APPEARS_ON_VASS}&nbsp; 
+                        </div>
+                    </td> 
+                    <td>{ATTENDING_SCHOOL_NAME}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN Separator -->
+                <tr class="Separator">
+                    <td colspan="11"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+                <!-- END Separator -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                    <td colspan="11">No Students found</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                    <td colspan="11">
+                        <!-- BEGIN Navigator Navigator -->
+                        <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+                        <!-- BEGIN First_Off -->First <!-- END First_Off -->
+                        <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+                        <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+                        <!-- BEGIN Pages -->
+                        <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                        <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+                        <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+                        <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+                        <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+                        <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- END Grid GridStudentList --></p>
+<p>{lblDEBUG}<br>
+</p>
+</body>
+</html>

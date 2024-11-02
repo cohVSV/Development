@@ -1,0 +1,771 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Profile</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<style type="text/css">
+<!--
+.instructions  { font-size: 12px; font-style: italic; }
+.processtips  { display:none; }
+.processtips::before { content: "Tip!"; }
+.processtips:hover  { display:block; }
+.errormsg  { font-size: 120%; background-color: #F00; color:#FFF; font-weight: bold ;margin: 2px }
+
+-->
+</style>
+</head>
+<body>
+<p align="center">
+<!-- BEGIN Panel Panel_MenuStudentMaintain -->{Menu_Student_maintain}<!-- END Panel Panel_MenuStudentMaintain --></p>
+<p align="center"><a href="{Link_Backtosummary_Src}" id="Link_Backtosummary" class="Button">Back to Summary</a></p>
+<p align="center">{StudentNamePlate}</p>
+<p align="center">
+<!-- BEGIN Record STUDENT_PROFILE1 -->
+<form id="STUDENT_PROFILE1" method="post" name="{HTMLFormName}" action="{Action}">
+    <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Add/Edit STUDENT PROFILE </th>
+ 
+                        <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr id="STUDENT_PROFILE1ErrorBlock" class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>STUDENT ID / ENROL YEAR</th>
+ 
+                        <td><input type="hidden" id="STUDENT_PROFILE1STUDENT_ID" value="{STUDENT_ID}" name="{STUDENT_ID_Name}">{lblStudentID} / <input type="hidden" id="STUDENT_PROFILE1ENROLMENT_YEAR" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}">{lblEnrolYear}</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY / WHEN</th>
+ 
+                        <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}<input type="hidden" id="STUDENT_PROFILE1hidden_LastUpdatedBy" value="{hidden_LastUpdatedBy}" name="{hidden_LastUpdatedBy_Name}"><input type="hidden" id="STUDENT_PROFILE1hidden_LastUpdatedWhen" value="{hidden_LastUpdatedWhen}" name="{hidden_LastUpdatedWhen_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><input type="button" onclick="restore_last_saved_values('form');" id="btnRestore" value="Retrieve Saved Data" name="btnRestore"><span style="COLOR: #fff; DISPLAY: none; BACKGROUND-COLOR: #468847">Data saved</span> </th>
+ 
+                        <td></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;VSV Enrolment File Checked?</th>
+ 
+                        <td>&nbsp;<input type="checkbox" id="STUDENT_PROFILE1cbENROL_FILE_CHECKED" value="1" name="{cbENROL_FILE_CHECKED_Name}" {cbENROL_FILE_CHECKED}>&nbsp;<em>(enrol file to be checked annually for returning students)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <h4>&nbsp;PERSONAL INFORMATION</h4>
+                        </th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>BACKGROUND INFO 
+                        <div class="errormsg">
+                            {error_BackgroundInfo} 
+                        </div>
+ 
+                        <div class="instructions">
+                            Include information from Enrolment Application forms,<br>
+                            Intake Interview and Ongoing Contact.<br>
+                        </div>
+ 
+                        <div class="processtips">
+                            Other relevant information including family structure <br>
+                            (siblings at VSV), health status, social supports etc 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1BACKGROUND_INFO" rows="5" cols="50" name="{BACKGROUND_INFO_Name}" maxysize="400">{BACKGROUND_INFO}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>REASONS FOR ENROLLING AT VSV 
+                        <div class="errormsg">
+                            {error_ReasonsEnrol} 
+                        </div>
+ 
+                        <div class="instructions">
+                            Please use Enrolment Application forms <br>
+                            &amp;/or information from student and parent/carer.<br>
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1ENROL_REASONS" rows="5" cols="50" name="{ENROL_REASONS_Name}" maxysize="400">{ENROL_REASONS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>STUDENT WELLBEING &amp; INCLUSION 
+                        <div class="errormsg">
+                            {error_StudentWellbeing} 
+                        </div>
+ 
+                        <div class="processtips">
+                            Detail main factors relating to mental health<br>
+                            ,wellbeing and inclusion concerns (main issues; <br>
+                            home supports, professional supports, changes<br>
+                            in circumstances 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1WELLBEING_INCLUSION_CONCERNS" rows="3" cols="50" name="{WELLBEING_INCLUSION_CONCERNS_Name}" maxysize="400">{WELLBEING_INCLUSION_CONCERNS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>EXPECTATIONS TO RETURN TO MAINSTREAM SCHOOL 
+                        <div class="errormsg">
+                            {error_ReturnMainstream} 
+                        </div>
+ 
+                        <div class="instructions">
+                            Details of help required 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1EXPECT_RETURN_TO_SCHOOL" rows="3" cols="50" name="{EXPECT_RETURN_TO_SCHOOL_Name}" maxysize="400">{EXPECT_RETURN_TO_SCHOOL}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>RETURNING STUDENT? 
+                        <div class="errormsg">
+                            {error_ReturningStudent} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton RETURN_STUDENT --><input type="radio" id="STUDENT_PROFILE1RETURN_STUDENT_{RETURN_STUDENT:optionNumber}" value="{Value}" name="{RETURN_STUDENT_Name}" {Check}>{Description}<!-- END RadioButton RETURN_STUDENT --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Previously known to Student Wellbeing? * 
+                        <div class="errormsg">
+                            {error_StudentWellbeing2} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton KNOWN_WELLBEING --><input type="radio" id="STUDENT_PROFILE1KNOWN_WELLBEING_{KNOWN_WELLBEING:optionNumber}" value="{Value}" name="{KNOWN_WELLBEING_Name}" {Check}>{Description}<!-- END RadioButton KNOWN_WELLBEING --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Previously known to Student Inclusion? * 
+                        <div class="errormsg">
+                            {error_StudentInclusion} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton KNOWN_INCLUSION --><input type="radio" id="STUDENT_PROFILE1KNOWN_INCLUSION_{KNOWN_INCLUSION:optionNumber}" value="{Value}" name="{KNOWN_INCLUSION_Name}" {Check}>{Description}<!-- END RadioButton KNOWN_INCLUSION --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Previously known to Pathways? * 
+                        <div class="errormsg">
+                            {error_PrevPathways} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton KNOWN_PATHWAYS --><input type="radio" id="STUDENT_PROFILE1KNOWN_PATHWAYS_{KNOWN_PATHWAYS:optionNumber}" value="{Value}" name="{KNOWN_PATHWAYS_Name}" {Check}>{Description}<!-- END RadioButton KNOWN_PATHWAYS --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp; </th>
+ 
+                        <td>&nbsp; 
+                            <div class="instructions">
+                                * if answered Yes to Wellbeing,Inclusion or Pathways, consult with personnel from relevant area<br>
+                            </div>
+                        </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <p>LIST OF SUPPORTING DOCUMENTATION 
+                        <div class="errormsg">
+                            {error_SupportDocs} 
+                        </div>
+ 
+                        <p></p>
+ 
+                        <p><em>(complete annually for returning students)</em></p>
+                        </th>
+ 
+                        <td><input type="checkbox" id="STUDENT_PROFILE1SUPPORT_DOCS_AGENCY_REFERRAL" value="1" name="{SUPPORT_DOCS_AGENCY_REFERRAL_Name}" {SUPPORT_DOCS_AGENCY_REFERRAL}>&nbsp;Agency Referral Form<br>
+                            <br>
+                            <input type="checkbox" id="STUDENT_PROFILE1SUPPORT_DOCS_PRATITIONER_REFERRAL" value="1" name="{SUPPORT_DOCS_PRATITIONER_REFERRAL_Name}" {SUPPORT_DOCS_PRATITIONER_REFERRAL}>&nbsp;Practitioner Referral Form <br>
+                            <br>
+                            <input type="checkbox" id="STUDENT_PROFILE1SUPPORT_DOCS_SCHOOL_REFERRAL" value="1" name="{SUPPORT_DOCS_SCHOOL_REFERRAL_Name}" {SUPPORT_DOCS_SCHOOL_REFERRAL}>&nbsp;School Referral Form <br>
+                            <br>
+                            <input type="checkbox" id="STUDENT_PROFILE1SUPPORT_DOCS_YOUNG_ADULT" value="1" name="{SUPPORT_DOCS_YOUNG_ADULT_Name}" {SUPPORT_DOCS_YOUNG_ADULT}>&nbsp;Young Adult form <br>
+                            <br>
+                            Other <input type="text" id="STUDENT_PROFILE1SUPPORT_DOCS_OTHER" maxlength="50" size="35" value="{SUPPORT_DOCS_OTHER}" name="{SUPPORT_DOCS_OTHER_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <p>KEY PROFESSIONAL SUPPORTS<br>
+                        NAME and CONTACT DETAILS 
+                        <div class="errormsg">
+                            {error_KeyProfSupports} 
+                        </div>
+ 
+                        <p></p>
+ 
+                        <p><em>(complete annually for returning students)</em></p>
+                        </th>
+ 
+                        <td><strong>Support 1</strong><br>
+                            NAME <input type="text" id="STUDENT_PROFILE1SUPPORT_KEY_PROFESSIONAL_NAME" maxlength="50" size="50" value="{SUPPORT_KEY_PROFESSIONAL_NAME}" name="{SUPPORT_KEY_PROFESSIONAL_NAME_Name}"><br>
+                            CONTACT <input type="text" id="STUDENT_PROFILE1SUPPORT_KEY_PROFESSIONAL_CONTACT" maxlength="50" size="50" value="{SUPPORT_KEY_PROFESSIONAL_CONTACT}" name="{SUPPORT_KEY_PROFESSIONAL_CONTACT_Name}"><br>
+                            <strong>Support 2</strong><br>
+                            NAME <input type="text" id="STUDENT_PROFILE1SUPPORT_KEY_PROFESSIONAL_NAME2" maxlength="50" size="50" value="{SUPPORT_KEY_PROFESSIONAL_NAME2}" name="{SUPPORT_KEY_PROFESSIONAL_NAME2_Name}"><br>
+                            CONTACT <input type="text" id="STUDENT_PROFILE1SUPPORT_KEY_PROFESSIONAL_CONTACT2" maxlength="50" size="50" value="{SUPPORT_KEY_PROFESSIONAL_CONTACT2}" name="{SUPPORT_KEY_PROFESSIONAL_CONTACT2_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td style="TEXT-ALIGN: right" colspan="2">
+                            <!-- BEGIN Button Button_Insert1 --><input type="submit" id="STUDENT_PROFILE1Button_Insert1" class="Button" value=" Add Profile " name="{Button_Name}"><!-- END Button Button_Insert1 -->
+                            <!-- BEGIN Button Button_Update1 --><input type="submit" id="STUDENT_PROFILE1Button_Update1" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update1 -->
+                            <!-- BEGIN Button Button_Cancel1 --><input type="submit" id="STUDENT_PROFILE1Button_Cancel1" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel1 --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <h4>ENGAGEMENT</h4>
+                        <br>
+                        HOBBIES/INTERESTS 
+                        <div class="errormsg">
+                            {error_HobbiesInterests} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1ENGAGEMENT_HOBBIES_INTERESTS" rows="3" cols="50" name="{ENGAGEMENT_HOBBIES_INTERESTS_Name}" maxysize="400">{ENGAGEMENT_HOBBIES_INTERESTS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <h4>&nbsp;COMMUNICATION</h4>
+                        </th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <p>A VSV/Student visit has been undertaken? 
+                        <div class="errormsg">
+                            {error_CommsVisit} 
+                        </div>
+ 
+                        <p></p>
+ 
+                        <p><em>(complete annually for returning students)</em></p>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton COMM_VISIT_FLAG --><input type="radio" id="STUDENT_PROFILE1COMM_VISIT_FLAG_{COMM_VISIT_FLAG:optionNumber}" value="{Value}" name="{COMM_VISIT_FLAG_Name}" {Check}>{Description}<!-- END RadioButton COMM_VISIT_FLAG --><br>
+                            <br>
+                            Visit Date (if done): <input type="text" id="STUDENT_PROFILE1COMM_VISIT_DATE" maxlength="10" size="10" value="{COMM_VISIT_DATE}" name="{COMM_VISIT_DATE_Name}">&nbsp;<em>dd/mm/yyyy format</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>CONTACT TYPE 
+                        <div class="errormsg">
+                            {error_ContactType} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <div class="instructions">
+                                Frequency, timing and method of contact negotiated with student and parent/carer (fortnightly minimum requirement) 
+                            </div>
+                            <!-- BEGIN CheckBoxList COMM_CONTACT_TYPE --><input type="checkbox" id="STUDENT_PROFILE1COMM_CONTACT_TYPE_{COMM_CONTACT_TYPE:optionNumber}" value="{Value}" name="{COMM_CONTACT_TYPE_Name}" {Check}>{Description}<!-- END CheckBoxList COMM_CONTACT_TYPE --><br>
+                            <br>
+                            Other Details <textarea id="STUDENT_PROFILE1COMM_CONTACT_TYPE_OTHER" rows="5" cols="50" name="{COMM_CONTACT_TYPE_OTHER_Name}" maxysize="200">{COMM_CONTACT_TYPE_OTHER}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Student willing to communicate over phone<br>
+                        with teachers?</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton COMM_PHONE_CONTACT --><input type="radio" id="STUDENT_PROFILE1COMM_PHONE_CONTACT_{COMM_PHONE_CONTACT:optionNumber}" value="{Value}" name="{COMM_PHONE_CONTACT_Name}" {Check}>{Description}<!-- END RadioButton COMM_PHONE_CONTACT --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <h4>&nbsp;PARENT / CARER ENGAGEMENT</h4>
+                        </th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>CARER PREFERRED CONTACT METHOD 
+                        <div class="instructions">
+                            (Outside minimum fortnightly phone call) 
+                        </div>
+ 
+                        <div class="errormsg">
+                            {error_CarerContactMethod} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1CARER_CONTACT_METHOD" cols="50" name="{CARER_CONTACT_METHOD_Name}" maxysize="400">{CARER_CONTACT_METHOD}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Who will be supervising the student during the day? 
+                        <div class="errormsg">
+                            {error_SupervisorName} 
+                        </div>
+                        </th>
+ 
+                        <td><input type="text" id="STUDENT_PROFILE1CARER_SUPERVISOR_NAME" maxlength="50" size="50" value="{CARER_SUPERVISOR_NAME}" name="{CARER_SUPERVISOR_NAME_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Are they aware of the role of the supervisor? 
+                        <div class="errormsg">
+                            {error_SupervisorRole} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton CARER_SUPERVISOR_ROLE --><input type="radio" id="STUDENT_PROFILE1CARER_SUPERVISOR_ROLE_{CARER_SUPERVISOR_ROLE:optionNumber}" value="{Value}" name="{CARER_SUPERVISOR_ROLE_Name}" {Check}>{Description}<!-- END RadioButton CARER_SUPERVISOR_ROLE --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>ADDITIONAL CARER INFORMATION 
+                        <div class="errormsg">
+                            {error_AddCarerInfo} 
+                        </div>
+                        </th>
+ 
+                        <td><input type="text" id="STUDENT_PROFILE1CARER_ADDITIONAL" maxlength="100" size="50" value="{CARER_ADDITIONAL}" name="{CARER_ADDITIONAL_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <h4>&nbsp;ORGANISATION</h4>
+                        </th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Workspace 
+                        <div class="instructions">
+                            Where/When does the student usually complete their VSV learning program? 
+                        </div>
+ 
+                        <div class="errormsg">
+                            {error_Workspace} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1ORGANISATION_WHENWHERE" cols="50" name="{ORGANISATION_WHENWHERE_Name}" maxysize="200">{ORGANISATION_WHENWHERE}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Timetable in Student Folder?</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton ORGANISATION_TIMETABLE --><input type="radio" id="STUDENT_PROFILE1ORGANISATION_TIMETABLE_{ORGANISATION_TIMETABLE:optionNumber}" value="{Value}" name="{ORGANISATION_TIMETABLE_Name}" {Check}>{Description}<!-- END RadioButton ORGANISATION_TIMETABLE --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Hardware to do school work 
+                        <div class="errormsg">
+                            {error_OrgHardware} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <select id="STUDENT_PROFILE1ORGANISATION_HARDWARE" name="{ORGANISATION_HARDWARE_Name}">
+                                <option selected value="">Select Value</option>
+                                {ORGANISATION_HARDWARE_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Access to Internet? 
+                        <div class="instructions">
+                            How/where will the student access the internet 
+                        </div>
+ 
+                        <div class="errormsg">
+                            {error_OrgInternet} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1ORGANISATION_ACCESS_INTERNET" cols="50" name="{ORGANISATION_ACCESS_INTERNET_Name}" maxysize="200">{ORGANISATION_ACCESS_INTERNET}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>PREVIOUS SCHOOLS 
+                        <div class="instructions">
+                            include information regarding school history, <br>
+                            previous schools including VSV 
+                        </div>
+ 
+                        <div class="errormsg">
+                            {error_OrgPrevSchools} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1ORGANISATION_PREVIOUS_SCHOOL" rows="4" cols="50" name="{ORGANISATION_PREVIOUS_SCHOOL_Name}" maxysize="200">{ORGANISATION_PREVIOUS_SCHOOL}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>ACADEMIC HISTORY 
+                        <div class="instructions">
+                            strengths/weaknesses, academic progress including <br>
+                            AusVELS assessments, NAPLAN data if available 
+                        </div>
+ 
+                        <div class="errormsg">
+                            {error_OrgAcademic} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1ORGANISATION_ACADEMIC_HISTORY" rows="5" cols="50" name="{ORGANISATION_ACADEMIC_HISTORY_Name}" maxysize="400">{ORGANISATION_ACADEMIC_HISTORY}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Copy of most recent report added to Student Folder?</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton ORGANISATION_RECENTREPORT_FILED --><input type="radio" id="STUDENT_PROFILE1ORGANISATION_RECENTREPORT_FILED_{ORGANISATION_RECENTREPORT_FILED:optionNumber}" value="{Value}" name="{ORGANISATION_RECENTREPORT_FILED_Name}" {Check}>{Description}<!-- END RadioButton ORGANISATION_RECENTREPORT_FILED --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td style="TEXT-ALIGN: right" colspan="2">
+                            <!-- BEGIN Button Button_Insert2 --><input type="submit" id="STUDENT_PROFILE1Button_Insert2" class="Button" value=" Add Profile " name="{Button_Name}"><!-- END Button Button_Insert2 -->
+                            <!-- BEGIN Button Button_Update2 --><input type="submit" id="STUDENT_PROFILE1Button_Update2" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update2 -->
+                            <!-- BEGIN Button Button_Cancel2 --><input type="submit" id="STUDENT_PROFILE1Button_Cancel2" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel2 --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp; 
+                        <h4>LAUNCHPAD / ASSESSMENT</h4>
+                        </th>
+ 
+                        <td>&nbsp; 
+                            <p><em>(Rest of Profile - complete annually for returning students)</em></p>
+                        </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAUNCH PAD COMPLETED (Years 3 - 10) 
+                        <div class="errormsg">
+                            {error_LPDone} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton LAUNCH_PAD_DONE --><input type="radio" id="STUDENT_PROFILE1LAUNCH_PAD_DONE_{LAUNCH_PAD_DONE:optionNumber}" value="{Value}" name="{LAUNCH_PAD_DONE_Name}" {Check}>{Description}<!-- END RadioButton LAUNCH_PAD_DONE --><br>
+                            <br>
+                            COMPLETED DATE <input type="text" id="STUDENT_PROFILE1LAUNCH_PAD_DONE_DATE" maxlength="10" size="10" value="{LAUNCH_PAD_DONE_DATE}" name="{LAUNCH_PAD_DONE_DATE_Name}">&nbsp;<em>dd/mm/yyyy</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th colspan="2">STUDENT ASSESSMENT DATA <br>
+                        <div class="errormsg">
+                            {error_AssessData} 
+                        </div>
+ 
+                        <table class="Record" cellspacing="0" cellpadding="0" width="100%">
+                            <tr>
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;<strong>Launch Pad</strong></td> 
+                                <td><strong>&nbsp;ReLaunch</strong></td>
+                            </tr>
+ 
+                            <tr>
+                                <td>&nbsp;English</td> 
+                                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_ENGLANG_LP" maxlength="10" size="5" value="{ASSESS_ENGLANG_LP}" name="{ASSESS_ENGLANG_LP_Name}"></td> 
+                                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_ENGLANG_RL" maxlength="10" size="5" value="{ASSESS_ENGLANG_RL}" name="{ASSESS_ENGLANG_RL_Name}"></td>
+                            </tr>
+ 
+                            <tr>
+                                <td>&nbsp;Mathematics</td> 
+                                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_MATH_LP" maxlength="10" size="5" value="{ASSESS_MATH_LP}" name="{ASSESS_MATH_LP_Name}"></td> 
+                                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_MATH_RL" maxlength="10" size="5" value="{ASSESS_MATH_RL}" name="{ASSESS_MATH_RL_Name}"></td>
+                            </tr>
+ 
+                            <tr>
+                                <td>&nbsp;PAT&nbsp;Science</td> 
+                                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_PATSCIENCE_LP" maxlength="10" size="5" value="{ASSESS_PATSCIENCE_LP}" name="{ASSESS_PATSCIENCE_LP_Name}"></td> 
+                                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_PATSCIENCE_RL" maxlength="10" size="5" value="{ASSESS_PATSCIENCE_RL}" name="{ASSESS_PATSCIENCE_RL_Name}"></td>
+                            </tr>
+                        </table>
+                        </th>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp; 
+                        <h4>VSV LEARNING PROGRAM</h4>
+                        </th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Standard or Customised</th>
+ 
+                        <td><input type="hidden" id="STUDENT_PROFILE1LEARNING_PROGRAM" value="{LEARNING_PROGRAM}" name="{LEARNING_PROGRAM_Name}">{lblLearningProgram}</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>ADDITIONAL DETAILS 
+                        <div class="instructions">
+                            eg: reduced subject load, modified subjects 
+                        </div>
+ 
+                        <div class="errormsg">
+                            {error_LearnDetails} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1LEARNING_PROGRAM_DETAILS" rows="3" cols="50" name="{LEARNING_PROGRAM_DETAILS_Name}" maxysize="200">{LEARNING_PROGRAM_DETAILS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LEARNING PROGRAM CONSULTATION</th>
+ 
+                        <td>
+                            <!-- BEGIN CheckBoxList LEARNING_PROGRAM_CONSULT --><input type="checkbox" id="STUDENT_PROFILE1LEARNING_PROGRAM_CONSULT_{LEARNING_PROGRAM_CONSULT:optionNumber}" value="{Value}" name="{LEARNING_PROGRAM_CONSULT_Name}" {Check}>{Description}<br>
+                            <!-- END CheckBoxList LEARNING_PROGRAM_CONSULT --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LEARNING GOALS 
+                        <div class="errormsg">
+                            {error_LearnGoals} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1LEARNING_GOALS" rows="5" cols="50" name="{LEARNING_GOALS_Name}" maxysize="800">{LEARNING_GOALS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SPECIAL PROVISION? 
+                        <div class="instructions">
+                            see F-10 Special Provision Policy. Prior discussion<br>
+                            with LT Engagement and/or Year Level coordinator required 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton SPECIAL_PROVISION_FLAG --><input type="radio" id="STUDENT_PROFILE1SPECIAL_PROVISION_FLAG_{SPECIAL_PROVISION_FLAG:optionNumber}" value="{Value}" name="{SPECIAL_PROVISION_FLAG_Name}" {Check}>{Description}<!-- END RadioButton SPECIAL_PROVISION_FLAG --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SPECIAL PROVISION DETAILS 
+                        <div class="errormsg">
+                            {error_SpecialProvision} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1SPECIAL_PROVISION_DETAILS" rows="3" cols="50" name="{SPECIAL_PROVISION_DETAILS_Name}" maxysize="400">{SPECIAL_PROVISION_DETAILS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp; 
+                        <h4>PATHWAYS</h4>
+                        </th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>CAREER ACTION PLAN (7-10) * 
+                        <div class="instructions">
+                            Student has a Career Action Plan (obtain copy)<br>
+                            if No then start Career Action Plan 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton PATHWAYS_CAREER_PLAN_FLAG --><input type="radio" id="STUDENT_PROFILE1PATHWAYS_CAREER_PLAN_FLAG_{PATHWAYS_CAREER_PLAN_FLAG:optionNumber}" value="{Value}" name="{PATHWAYS_CAREER_PLAN_FLAG_Name}" {Check}>{Description}<!-- END RadioButton PATHWAYS_CAREER_PLAN_FLAG --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SUMMARY OF FUTURE CAREER GOALS 
+                        <div class="errormsg">
+                            {error_Goals} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1PATHWAYS_CAREER_GOALS" rows="3" cols="50" name="{PATHWAYS_CAREER_GOALS_Name}" maxysize="400">{PATHWAYS_CAREER_GOALS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Future Career Goals discussed (Mid-year) 
+                        <div class="errormsg">
+                            {error_GoalsMidyear} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1PATHWAYS_CAREER_GOALS_MIDYEAR" rows="3" cols="50" name="{PATHWAYS_CAREER_GOALS_MIDYEAR_Name}" maxysize="400">{PATHWAYS_CAREER_GOALS_MIDYEAR}</textarea><br>
+                            <br>
+                            Date: <input type="text" id="STUDENT_PROFILE1PATHWAYS_CAREER_GOALS_MIDYEAR_DATE" maxlength="10" size="10" value="{PATHWAYS_CAREER_GOALS_MIDYEAR_DATE}" name="{PATHWAYS_CAREER_GOALS_MIDYEAR_DATE_Name}">&nbsp;<em>dd/mm/yyyy</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Student Interested in Work Experience (Year 9/10) 
+                        <div class="errormsg">
+                            {error_WorkExp910} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton PATHWAYS_WORKEXP_FLAG --><input type="radio" id="STUDENT_PROFILE1PATHWAYS_WORKEXP_FLAG_{PATHWAYS_WORKEXP_FLAG:optionNumber}" value="{Value}" name="{PATHWAYS_WORKEXP_FLAG_Name}" {Check}>{Description}<!-- END RadioButton PATHWAYS_WORKEXP_FLAG --><br>
+                            <br>
+                            If Yes, record details:<br>
+                            <textarea id="STUDENT_PROFILE1PATHWAYS_WORKEXP_DETAILS" rows="3" cols="50" name="{PATHWAYS_WORKEXP_DETAILS_Name}" maxysize="400">{PATHWAYS_WORKEXP_DETAILS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Details of Part Time job/s: 
+                        <div class="errormsg">
+                            {error_PartTimeJobs} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1PATHWAYS_PARTTIMEJOBS" rows="3" cols="50" name="{PATHWAYS_PARTTIMEJOBS_Name}" maxysize="400">{PATHWAYS_PARTTIMEJOBS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>End of Year Future Intentions Discussion (all Students) 
+                        <div class="errormsg">
+                            {error_EndYearDisc} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton PATHWAYS_ENDYEAR_INTENTIONS_FLAG --><input type="radio" id="STUDENT_PROFILE1PATHWAYS_ENDYEAR_INTENTIONS_FLAG_{PATHWAYS_ENDYEAR_INTENTIONS_FLAG:optionNumber}" value="{Value}" name="{PATHWAYS_ENDYEAR_INTENTIONS_FLAG_Name}" {Check}>{Description}<!-- END RadioButton PATHWAYS_ENDYEAR_INTENTIONS_FLAG --><br>
+                            <br>
+                            Date:<input type="text" id="STUDENT_PROFILE1PATHWAYS_ENDYEAR_INTENTIONS_DATE" maxlength="10" size="10" value="{PATHWAYS_ENDYEAR_INTENTIONS_DATE}" name="{PATHWAYS_ENDYEAR_INTENTIONS_DATE_Name}">&nbsp;<em>dd/mm/yyyy</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>End of Year Future Intentions Discussion logged in Database 
+                        <div class="errormsg">
+                            {error_EndYearLogged} 
+                        </div>
+                        </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG --><input type="radio" id="STUDENT_PROFILE1PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG_{PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG:optionNumber}" value="{Value}" name="{PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG_Name}" {Check}>{Description}<!-- END RadioButton PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG --><br>
+                            <br>
+                            Date:<input type="text" id="STUDENT_PROFILE1PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE" maxlength="10" size="10" value="{PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE}" name="{PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE_Name}">&nbsp;<em>dd/mm/yyyy</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp; 
+                        <h4>REVIEW OF PROGRESS</h4>
+                        </th>
+ 
+                        <td>&nbsp; 
+                            <div class="instructions">
+                                Learning Programs and Career Action Plans should be monitored<br>
+                                and reviewed once per semester 
+                            </div>
+                        </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>END OF SEMESTER 1 
+                        <div class="errormsg">
+                            {error_ProgressSem1} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1REVIEW_PROGRESS_END_SEM1" rows="3" cols="50" name="{REVIEW_PROGRESS_END_SEM1_Name}" maxysize="400">{REVIEW_PROGRESS_END_SEM1}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>END OF SEMESTER 2 
+                        <div class="instructions">
+                            include recommendations for next year 
+                        </div>
+ 
+                        <div class="errormsg">
+                            {error_ProgressSem2} 
+                        </div>
+                        </th>
+ 
+                        <td><textarea id="STUDENT_PROFILE1REVIEW_PROGRESS_END_SEM2" rows="3" cols="50" name="{REVIEW_PROGRESS_END_SEM2_Name}" maxysize="400">{REVIEW_PROGRESS_END_SEM2}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY / WHEN</th>
+ 
+                        <td>{LAST_ALTERED_BY1}&nbsp;/ {LAST_ALTERED_DATE1}</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td style="TEXT-ALIGN: right" colspan="2">
+                            <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENT_PROFILE1Button_Insert" class="Button" value=" Add Profile " name="{Button_Name}"><!-- END Button Button_Insert -->
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_PROFILE1Button_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_PROFILE1Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STUDENT_PROFILE1Hidden_LEARNING_PROGRAM_CONSULT" value="{Hidden_LEARNING_PROGRAM_CONSULT}" name="{Hidden_LEARNING_PROGRAM_CONSULT_Name}"><input type="hidden" id="STUDENT_PROFILE1Hidden_COMM_CONTACT_TYPE_MULTI" value="{Hidden_COMM_CONTACT_TYPE_MULTI}" name="{Hidden_COMM_CONTACT_TYPE_MULTI_Name}"></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_PROFILE1 --></p>
+<script src="js/sisyphus.min.js" type="text/javascript"></script>
+<script src="js/sisyphus-ondemand.js" type="text/javascript"></script>
+<script src="js/jquery.maxlength.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+       /*
+        $(window).load(function() {
+                // Animate loader off screen
+                $(".modal").fadeOut("slow");
+        });
+                */
+                jQuery.noConflict();
+        jQuery(function(){
+             //attachSisyphus('form')
+             // $('form').sisyphus({timeout: 10, autoRelease: true})
+        });  
+
+</script>
+<script language="javascript" type="text/javascript">
+      jQuery(function(){
+                // due to stupid ASP.NET not allowing maxlength attribute on textarea
+                // , use 'maxysize' and convert on load to maxlength
+                // and attach to textarea now, when the attr exists
+                jQuery('textarea').attr('maxlength', function() {
+                                        return jQuery(this).attr('maxysize');
+                                 }).maxlength(); 
+                                        
+                        // jQuery("input").maxlength();
+        });
+</script>
+<div class="modal">
+    <!-- Place at bottom of page -->
+</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+start /b iisexpress.exe /config:"..\Visual Studio\StudentDBDevelopment\.vs\StudentDBDevelopment\config\applicationhost.config" /site:STUDENT_ADMIN
+start microsoft-edge:http://localhost:40000/Login.aspx

@@ -1,0 +1,188 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>StudentEnrolment_TeleformsToBeEnrolled</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-DBA5BC7A
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/ajaxpanel.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Start Panel1 @3-C2C50D0F
+function Panel1_start(sender) {
+    var panel = $("Panel1");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel1_bind(sender);
+}
+//End Start Panel1
+
+//Refresh Panel1 @3-D0523501
+function Panel1_bind(sender) {
+}
+//End Refresh Panel1
+
+//Refresh UpdatePanel @4-3FE35307
+function UpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("Panel1"));
+}
+//End Refresh UpdatePanel
+
+//bind_events @1-A5AC7A5B
+function bind_events() {
+    Panel1_start(window);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p align="center">{Header}</p>
+<p>
+<!-- BEGIN Panel Panel1 -->&nbsp;&nbsp; 
+<!-- BEGIN Record TMP_STUDENTSearch -->
+<form id="Panel1TMP_STUDENTSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search Teleforms Students</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Surname or First Name</th>
+ 
+            <td><input id="Panel1TMP_STUDENTSearchs_keyword" maxlength="30" size="30" value="{s_keyword}" name="{s_keyword_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="Panel1TMP_STUDENTSearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record TMP_STUDENTSearch --><br>
+<!-- BEGIN EditableGrid NewEditableGrid1 -->
+<form id="Panel1NewEditableGrid1" name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript}&nbsp; 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>List of Teleforms Students</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="8">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Row">
+            <td colspan="8">Total Records:&nbsp;{NewEditableGrid1_TotalRecords}</td>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>STUDENT ID</th>
+ 
+            <th>SURNAME</th>
+ 
+            <th>FIRST NAME</th>
+ 
+            <th>BIRTH DATE</th>
+ 
+            <th>CATEGORY CODE</th>
+ 
+            <th>LAST ALTERED DATE</th>
+ 
+            <th>TELEFORM STATUS</th>
+ 
+            <th></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="8">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td>{STUDENT_ID}&nbsp;</td> 
+            <td>{SURNAME}&nbsp;</td> 
+            <td>{FIRST_NAME}&nbsp;</td> 
+            <td>{BIRTH_DATE}&nbsp;</td> 
+            <td>{CATEGORY_CODE}&nbsp;/ &nbsp;{SUBCATEGORY_CODE}</td> 
+            <td>{LAST_ALTERED_DATE}&nbsp;</td> 
+            <td>{TELEFORM_STATUS}&nbsp;</td> 
+            <td><input id="Panel1NewEditableGrid1TMP_STUDENT_ID_{NewEditableGrid1:rowNumber}" type="hidden" value="{TMP_STUDENT_ID}" name="{TMP_STUDENT_ID_Name}">&nbsp;&nbsp;
+              <!-- BEGIN Button Button1 --><input class="Button" id="Panel1NewEditableGrid1Button1" type="submit" value="Button1" name="{Button_Name}"><!-- END Button Button1 -->&nbsp; </td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="8">No Teleforms Details found</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="8">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif" border="0"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid NewEditableGrid1 --><br>
+<br>
+<br>
+<!-- END Panel Panel1 --></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

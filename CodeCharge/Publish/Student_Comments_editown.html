@@ -1,0 +1,153 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student_Comments_editown</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<script language="JavaScript" type="text/javascript">
+function limitMaxLength(formitem,maxlength,displaydivname) {
+        if (isNaN(maxlength)) {
+                return false;
+        } else {
+                var outputdiv = document.getElementById(displaydivname)
+                outputdiv.innerHTML = (maxlength-formitem.value.length) + ' characters allowed';
+                if (formitem.value.length+1>maxlength) {
+                        formitem.value=formitem.value.substring(0,maxlength);
+                }
+        }
+}
+</script>
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_EditComments_Button_Delete_OnClick @7-7AC0F529
+function page_EditComments_Button_Delete_OnClick()
+{
+    var result;
+//End page_EditComments_Button_Delete_OnClick
+
+//Confirmation Message @8-4F6CD15C
+    return confirm('Delete Comment? \n(this cannot be recovered)');
+//End Confirmation Message
+
+//Close page_EditComments_Button_Delete_OnClick @7-BC33A33A
+    return result;
+}
+//End Close page_EditComments_Button_Delete_OnClick
+
+//page_EditComments_OnSubmit @5-78241B10
+function page_EditComments_OnSubmit()
+{
+    var result;
+//End page_EditComments_OnSubmit
+
+//Custom Code @32-2A29BDB7
+    // -------------------------
+    //15-Sept-2016|EA| check for RESTRICTED Comment and alert to change portal access if needed (unfuddle #707)
+  	if (theForm.EditCommentslbSpecialCommentType.value =='RESTRICTED') {
+alert('For a RESTRICTED comment, manually update Portal access to [No] if necessary.');
+}
+result = true;
+    // -------------------------
+//End Custom Code
+
+//Close page_EditComments_OnSubmit @5-BC33A33A
+    return result;
+}
+//End Close page_EditComments_OnSubmit
+
+//page_EditComments_Button_Cancel_OnClick @9-E1E8FB6B
+function page_EditComments_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_EditComments_Button_Cancel_OnClick
+
+//bind_events @1-61717E13
+function bind_events() {
+    addEventHandler("<%= Page.Form.ClientID %>","submit",page_EditComments_OnSubmit);
+    addEventHandler("EditCommentsButton_Delete","click",page_EditComments_Button_Delete_OnClick);
+    addEventHandler("EditCommentsButton_Cancel","click",page_EditComments_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center"><a href="{Link_Backtosummary_Src}" class="Button" id="Link_Backtosummary">Back to Summary</a>|&nbsp;&nbsp;<a href="{Link_BacktoPastoralList_Src}" class="Button" id="Link_BacktoPastoralList">Back to Pastoral Students List</a> </p>
+<p align="center">
+<!-- BEGIN Record EditComments -->
+<form id="EditComments" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Edit Comment </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>STUDENT ID</th>
+ 
+            <td>{lblSTUDENT_ID}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMMENT 
+            <div id="maxchar_comment">
+              500 characters allowed 
+            </div>
+            </th>
+ 
+            <td><textarea id="EditCommentsCOMMENT" onkeyup="limitMaxLength(this,500,'maxchar_comment');" name="{COMMENT_Name}" rows="5" cols="50">{COMMENT}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{lblCommentType}&nbsp;</th>
+ 
+            <td>
+              <!-- BEGIN ListBox lbSpecialCommentType -->
+              <select id="EditCommentslbSpecialCommentType" name="{lbSpecialCommentType_Name}">
+                <option value="" selected>Select Value</option>
+                {lbSpecialCommentType_Options}
+              </select>
+ &nbsp;<!-- END ListBox lbSpecialCommentType -->&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="EditCommentsButton_Update" type="submit" value="Save Comment" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="EditCommentsButton_Delete" type="submit" value="Delete Comment" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="Button" id="EditCommentsButton_Cancel" type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input id="EditCommentshidden_LAST_ALTERED_BY" type="hidden" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"><input id="EditCommentshidden_LAST_ALTERED_DATE" type="hidden" value="{hidden_LAST_ALTERED_DATE}" name="{hidden_LAST_ALTERED_DATE_Name}"><input id="EditCommentsACTIVE_STATUS" type="hidden" value="{ACTIVE_STATUS}" name="{ACTIVE_STATUS_Name}"><input id="EditCommentsCOMMENT_TYPE" type="hidden" value="{COMMENT_TYPE}" name="{COMMENT_TYPE_Name}"><input id="EditCommentsSTUDENT_ID" type="hidden" value="{STUDENT_ID}" name="{STUDENT_ID_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record EditComments --><br>
+</p>
+</body>
+</html>

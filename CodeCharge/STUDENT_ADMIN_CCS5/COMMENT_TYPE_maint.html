@@ -1,0 +1,383 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>COMMENT TYPE maintenance</title>
+<meta name="description" content="For managing the Comment Types, added to a control table in April 2015 as new types being added all the time.">
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_COMMENT_TYPE1_OnSubmit @44-5C6EE782
+function page_COMMENT_TYPE1_OnSubmit()
+{
+    var result;
+//End page_COMMENT_TYPE1_OnSubmit
+
+//Validate Maximum Length @107-80BABBBD
+    if(theForm.COMMENT_TYPE1COMMENT_HELP.value.length > 500) {
+        alert("Comment Help must be less than 500 characters in length")
+        theForm.COMMENT_TYPE1COMMENT_HELP.focus();
+        return false;
+    }
+//End Validate Maximum Length
+
+//Close page_COMMENT_TYPE1_OnSubmit @44-BC33A33A
+    return result;
+}
+//End Close page_COMMENT_TYPE1_OnSubmit
+
+//page_COMMENT_TYPE1_Button_Cancel_OnClick @48-A007876E
+function page_COMMENT_TYPE1_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_COMMENT_TYPE1_Button_Cancel_OnClick
+
+//Handle condition_for_show @59-043B8DF0
+function condition_for_show_start(sender) {
+//End Handle condition_for_show
+
+//Custom condition_for_show @59-D1791465
+    if (true==(params["click"] == "link"))
+    {
+        DialogPanel1_show(sender);
+    } else {
+    }
+//End Custom condition_for_show
+
+//condition_for_show Tail @59-FCB6E20C
+}
+//End condition_for_show Tail
+
+//Handle condition_for_hide @64-86D194D0
+function condition_for_hide_start(sender) {
+//End Handle condition_for_hide
+
+//Custom condition_for_hide @64-A1BE8D38
+    if (true==(params["click"] == "submit" && $("#ErrorBlock").length == 0))
+    {
+        DialogPanel1_hide(sender);
+    } else {
+    }
+//End Custom condition_for_hide
+
+//condition_for_hide Tail @64-FCB6E20C
+}
+//End condition_for_hide Tail
+
+//Handle ccc_link_Condition @69-BC7B1F19
+function ccc_link_Condition_start(sender) {
+//End Handle ccc_link_Condition
+
+//Custom ccc_link_Condition @69-3ACAA933
+    if (true==(params["click"] = "link"))
+    {
+    } else {
+    }
+//End Custom ccc_link_Condition
+
+//ccc_link_Condition Tail @69-FCB6E20C
+}
+//End ccc_link_Condition Tail
+
+//Handle ccc_submit_Condition @80-D19B1E57
+function ccc_submit_Condition_start(sender) {
+//End Handle ccc_submit_Condition
+
+//Custom ccc_submit_Condition @80-3B4E074B
+    if (true==(params["click"] = "submit"))
+    {
+    } else {
+    }
+//End Custom ccc_submit_Condition
+
+//ccc_submit_Condition Tail @80-FCB6E20C
+}
+//End ccc_submit_Condition Tail
+
+//Handle ccc_others_Condition @95-DDF821BB
+function ccc_others_Condition_start(sender) {
+//End Handle ccc_others_Condition
+
+//Custom ccc_others_Condition @95-CECB318E
+    if (true==(params["click"] = ""))
+    {
+    } else {
+    }
+//End Custom ccc_others_Condition
+
+//ccc_others_Condition Tail @95-FCB6E20C
+}
+//End ccc_others_Condition Tail
+
+//bind_events @1-1F41A8C4
+function bind_events() {
+    addEventHandler("COMMENT_TYPECOMMENT_TYPE_Insert", "click", ccc_link_Condition_start);
+    addEventHandler("COMMENT_TYPEDetail", "click", ccc_link_Condition_start);
+    addEventHandler("COMMENT_TYPE1", "submit", ccc_submit_Condition_start);
+    addEventHandler("<%= Page.Form.ClientID %>","submit",page_COMMENT_TYPE1_OnSubmit);
+    addEventHandler("COMMENT_TYPE1Button_Cancel","click",page_COMMENT_TYPE1_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record COMMENT_TYPESearch -->
+<form id="Panel1COMMENT_TYPESearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th>
+ 
+            <td><input type="text" id="Panel1COMMENT_TYPESearchs_keyword" maxlength="20" value="{s_keyword}" name="{s_keyword_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="Panel1COMMENT_TYPESearchClearParameters">Clear</a></td> 
+            <td style="TEXT-ALIGN: right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="Panel1COMMENT_TYPESearchButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record COMMENT_TYPESearch --><br>
+<!-- BEGIN Grid COMMENT_TYPE -->
+<table id="Panel1COMMENT_TYPE" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>List of COMMENT TYPE </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMMENT_TYPE --><span class="Sorter"><a href="{Sort_URL}" id="Panel1COMMENT_TYPESorter_COMMENT_TYPE">COMMENT TYPE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMMENT_TYPE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMMENT_DESCRIPTION --><span class="Sorter"><a href="{Sort_URL}" id="Panel1COMMENT_TYPESorter_COMMENT_DESCRIPTION">COMMENT DESCRIPTION</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMMENT_DESCRIPTION --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STATUS --><span class="Sorter"><a href="{Sort_URL}" id="Panel1COMMENT_TYPESorter_STATUS">STATUS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_STATUS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PUBLIC_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="Panel1COMMENT_TYPESorter_PUBLIC_FLAG">PUBLIC FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PUBLIC_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SPECIAL_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="Panel1COMMENT_TYPESorter_SPECIAL_FLAG">SPECIAL FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SPECIAL_FLAG --></th>
+ 
+          <th>&nbsp; 
+          <!-- BEGIN Sorter Sorter_SORT_ORDER --><span class="Sorter"><a href="{Sort_URL}" id="Panel1COMMENT_TYPESorter1">SORT ORDER</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SORT_ORDER --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMMENT_HELP --><span class="Sorter"><a href="{Sort_URL}" id="Panel1COMMENT_TYPESorter_COMMENT_HELP">COMMENT HELP</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMMENT_HELP --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><span class="Sorter"><a href="{Sort_URL}" id="Panel1COMMENT_TYPESorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><span class="Sorter"><a href="{Sort_URL}" id="Panel1COMMENT_TYPESorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{Detail_Src}" id="Panel1COMMENT_TYPEDetail_{COMMENT_TYPE:rowNumber}">edit</a>&nbsp;</td> 
+          <td>{COMMENT_TYPE1}&nbsp;</td> 
+          <td>{COMMENT_DESCRIPTION}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{STATUS}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{PUBLIC_FLAG}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SPECIAL_FLAG}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SORT_ORDER}&nbsp;</td> 
+          <td>{COMMENT_HELP}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="10">No Comment Types found!</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="10"><a href="{COMMENT_TYPE_Insert_Src}" id="Panel1COMMENT_TYPECOMMENT_TYPE_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid COMMENT_TYPE --><br>
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record COMMENT_TYPE1 -->
+<form id="Panel1Panel2COMMENT_TYPE1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add/Edit COMMENT TYPE </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>COMMENT TYPE *</th>
+ 
+            <td>
+              <!-- BEGIN TextBox COMMENT_TYPE2 --><input type="text" id="Panel1Panel2COMMENT_TYPE1COMMENT_TYPE2" maxlength="20" value="{COMMENT_TYPE2}" name="{COMMENT_TYPE2_Name}" size="20"><!-- END TextBox COMMENT_TYPE2 -->{lblCOMMENT_TYPE}&nbsp;<em>(unique Comment Type)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMMENT DESCRIPTION *</th>
+ 
+            <td><input type="text" id="Panel1Panel2COMMENT_TYPE1COMMENT_DESCRIPTION" maxlength="50" size="50" value="{COMMENT_DESCRIPTION}" name="{COMMENT_DESCRIPTION_Name}">&nbsp;<em>(Drop-down description)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PUBLIC FLAG</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton PUBLIC_FLAG --><input type="radio" id="Panel1Panel2COMMENT_TYPE1PUBLIC_FLAG_{PUBLIC_FLAG:optionNumber}" value="{Value}" name="{PUBLIC_FLAG_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END RadioButton PUBLIC_FLAG --><em>(viewable&nbsp;for all users, not Contact type)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SPECIAL FLAG</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton SPECIAL_FLAG --><input type="radio" id="Panel1Panel2COMMENT_TYPE1SPECIAL_FLAG_{SPECIAL_FLAG:optionNumber}" value="{Value}" name="{SPECIAL_FLAG_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END RadioButton SPECIAL_FLAG --><em>(for Co-Ordinators, Leading, Enrolments etc)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SORT ORDER&nbsp;</th>
+ 
+            <td><input type="text" id="Panel1Panel2COMMENT_TYPE1TextBox1" maxlength="3" size="4" value="{SORT_ORDER}" name="{SORT_ORDER_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STATUS</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton STATUS --><input type="radio" id="Panel1Panel2COMMENT_TYPE1STATUS_{STATUS:optionNumber}" value="{Value}" name="{STATUS_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END RadioButton STATUS --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMMENT HELP 
+            <div id="maxchar_comment">
+              500 characters allowed 
+            </div>
+            </th>
+ 
+            <td><textarea onkeyup="limitMaxLength(this,500,'maxchar_comment');" id="Panel1Panel2COMMENT_TYPE1COMMENT_HELP" rows="5" cols="60" name="{COMMENT_HELP_Name}">{COMMENT_HELP}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="Panel1Panel2COMMENT_TYPE1Button_Insert" class="Button" value="Add Comment Type" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="Panel1Panel2COMMENT_TYPE1Button_Update" class="Button" value="Update changes" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="Panel1Panel2COMMENT_TYPE1Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input type="hidden" id="Panel1Panel2COMMENT_TYPE1LAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="Panel1Panel2COMMENT_TYPE1LAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record COMMENT_TYPE1 --><!-- END Panel Panel2 --><br>
+<!-- END Panel Panel1 --></p>
+<script language="JavaScript" type="text/javascript">
+function limitMaxLength(formitem,maxlength,displaydivname) {
+        if (isNaN(maxlength)) {
+                return false;
+        } else {
+                var outputdiv = document.getElementById(displaydivname)
+                outputdiv.innerHTML = (maxlength-formitem.value.length) + ' characters allowed';
+                if (formitem.value.length+1>maxlength) {
+                        formitem.value=formitem.value.substring(0,maxlength);
+                }
+        }
+}
+</script>
+<p>{Footer}</p>
+</body>
+</html>

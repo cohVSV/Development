@@ -1,0 +1,615 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Future Enrol - Student Maintain</title>
+<meta name="description" content="Student Maintenance page Future enrolments to enter student details and Enrol checklist items. Nov 2018">
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+</script>
+<script language="JavaScript" src="js/pt/prototype_ccs.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/yui/build/yahoo-dom-event/yahoo-dom-event.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/yui/build/calendar/calendar-min.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/yui/datepicker-commons.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+
+
+//Date Picker Object Definitions @1-E768D9C8
+
+var STUDENTDatePicker_BIRTH_DATE = new Object(); 
+STUDENTDatePicker_BIRTH_DATE.format           = "dd/mm/yyyy";
+STUDENTDatePicker_BIRTH_DATE.style            = "Styles/Blueprint/Style.css";
+STUDENTDatePicker_BIRTH_DATE.relativePathPart = "";
+STUDENTDatePicker_BIRTH_DATE.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_STUDENT_Button_Update_OnClick @26-DB04562F
+function page_STUDENT_Button_Update_OnClick()
+{
+    var result;
+//End page_STUDENT_Button_Update_OnClick
+
+//Custom Code @27-2A29BDB7
+    // -------------------------
+    // Write your own code here.
+        ValidateVSN();
+    // -------------------------
+//End Custom Code
+
+//Custom Code @28-2A29BDB7
+    // -------------------------
+    result = true;
+    // -------------------------
+//End Custom Code
+
+//Close page_STUDENT_Button_Update_OnClick @26-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_Button_Update_OnClick
+
+//page_STUDENT_ENROLMENT_ENROLMENT_STATUS_OnChange @139-211BF260
+function page_STUDENT_ENROLMENT_ENROLMENT_STATUS_OnChange()
+{
+    var result;
+//End page_STUDENT_ENROLMENT_ENROLMENT_STATUS_OnChange
+
+//Confirmation Message @287-FF4980BC
+    return confirm('Add a comment for why the Status is changing');
+//End Confirmation Message
+
+//Close page_STUDENT_ENROLMENT_ENROLMENT_STATUS_OnChange @139-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_ENROLMENT_ENROLMENT_STATUS_OnChange
+
+//page_STUDENT_COMMENT_lbCannedResponses_OnChange @97-947644D6
+function page_STUDENT_COMMENT_lbCannedResponses_OnChange()
+{
+    var result;
+//End page_STUDENT_COMMENT_lbCannedResponses_OnChange
+
+//Custom Code @98-2A29BDB7
+    // -------------------------
+     //      If Comment already has something then append to end (leading space) otherwise trailing space
+        if (theForm.STUDENT_COMMENTlbCannedResponses.value !='') {
+                if(theForm.STUDENT_COMMENTCOMMENT.value.length > 0) {
+                theForm.STUDENT_COMMENTCOMMENT.value = theForm.STUDENT_COMMENTCOMMENT.value + ' ' + theForm.STUDENT_COMMENTlbCannedResponses.value;
+        } else {
+                        theForm.STUDENT_COMMENTCOMMENT.value = theForm.STUDENT_COMMENTlbCannedResponses.value + ' ';
+                }
+                theForm.STUDENT_COMMENTCOMMENT.focus();
+    }
+    // -------------------------
+//End Custom Code
+
+//Set Focus @99-AB2838AB
+    if (theForm.STUDENT_COMMENTCOMMENT) theForm.STUDENT_COMMENTCOMMENT.focus();
+//End Set Focus
+
+//Close page_STUDENT_COMMENT_lbCannedResponses_OnChange @97-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_COMMENT_lbCannedResponses_OnChange
+
+//page_STUDENT_Button_Cancel_OnClick @29-AF0AE409
+function page_STUDENT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_Button_Cancel_OnClick
+
+//page_EditableGrid1_Cancel_OnClick @195-35441E36
+function page_EditableGrid1_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_EditableGrid1_Cancel_OnClick
+
+//page_EditableGrid1_Button_LoadChecklist_OnClick @253-21EAD36E
+function page_EditableGrid1_Button_LoadChecklist_OnClick()
+{
+    disableValidation = true;
+}
+//End page_EditableGrid1_Button_LoadChecklist_OnClick
+
+//page_STUDENT_COMMENT_Button_Cancel_OnClick @259-3BF1766F
+function page_STUDENT_COMMENT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_COMMENT_Button_Cancel_OnClick
+
+//bind_events @1-50F77868
+function bind_events() {
+    addEventHandler("STUDENT_COMMENTlbCannedResponses","change",page_STUDENT_COMMENT_lbCannedResponses_OnChange);
+    addEventHandler("STUDENT_ENROLMENTENROLMENT_STATUS","change",page_STUDENT_ENROLMENT_ENROLMENT_STATUS_OnChange);
+    addEventHandler("STUDENTButton_Update","click",page_STUDENT_Button_Update_OnClick);
+    addEventHandler("STUDENTButton_Cancel","click",page_STUDENT_Button_Cancel_OnClick);
+    addEventHandler("EditableGrid1Cancel","click",page_EditableGrid1_Cancel_OnClick);
+    addEventHandler("EditableGrid1Button_LoadChecklist","click",page_EditableGrid1_Button_LoadChecklist_OnClick);
+    addEventHandler("STUDENT_COMMENTButton_Cancel","click",page_STUDENT_COMMENT_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+window.onload = bind_events;
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<script language="JavaScript" type="text/javascript">
+function limitMaxLength(formitem,maxlength,displaydivname) {
+        if (isNaN(maxlength)) {
+                return false;
+        } else {
+                var outputdiv = document.getElementById(displaydivname)
+                outputdiv.innerHTML = (maxlength-formitem.value.length) + ' characters allowed';
+                if (formitem.value.length+1>maxlength) {
+                        formitem.value=formitem.value.substring(0,maxlength);
+                }
+        }
+}
+</script>
+<style type="text/css">
+<!--
+.AlertRed       td  { font-weight: bold; background-color: #FF6666; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.AlertGreen     td  { font-weight: bold; background-color: #66CC33; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.CoordAmber     td  { font-weight: bold; background-color: #FF9933; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.LightMauve     td  { font-weight: bold; background-color: #B3B3D7; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.Pathways       td  { font-weight: bold; background-color: #038C9A; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.autosave_saving  { font-weight: bold; color: #66CC33; }
+-->
+</style>
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp;</p>
+<p align="center">
+<!-- BEGIN Record STUDENT -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  <table cellspacing="0" cellpadding="0" width="85%" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Edit Student Details</th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th><strong>STUDENT ID</strong></th>
+ 
+            <td>{lblStudentID}</td> 
+            <td><strong>VSN</strong></td> 
+            <td><input type="text" onblur="javascript: return ValidateVSN();" id="STUDENTVSN" maxlength="9" size="10" value="{VSN}" name="{VSN_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>SURNAME</strong></th>
+ 
+            <td><input type="text" id="STUDENTSURNAME" maxlength="30" size="30" value="{SURNAME}" name="{SURNAME_Name}"></td> 
+            <td><strong>FIRST NAME</strong></td> 
+            <td><input type="text" id="STUDENTFIRST_NAME" maxlength="30" size="30" value="{FIRST_NAME}" name="{FIRST_NAME_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th colspan="2"><em></em></th>
+ 
+            <td><strong>PREFERRED NAME</strong></td> 
+            <td><input type="text" id="STUDENTPREFERRED_NAME" maxlength="30" size="30" value="{PREFERRED_NAME}" name="{PREFERRED_NAME_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>MIDDLE NAME</strong></th>
+ 
+            <td><input type="text" id="STUDENTMIDDLE_NAME" maxlength="30" size="30" value="{MIDDLE_NAME}" name="{MIDDLE_NAME_Name}"></td> 
+            <td><strong>DATE OF BIRTH (DD/MM/YY)</strong></td> 
+            <td><input type="text" id="STUDENTBIRTH_DATE" maxlength="100" size="8" value="{BIRTH_DATE}" name="{BIRTH_DATE_Name}">
+              <!-- BEGIN DatePicker DatePicker_BIRTH_DATE --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="STUDENTDatePicker_BIRTH_DATE"><img border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_BIRTH_DATE --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th></th>
+ 
+            <td></td> 
+            <td></td> 
+            <td></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>GENDER</strong></th>
+ 
+            <td>
+              <!-- BEGIN RadioButton SEX --><input type="radio" id="STUDENTSEX_{SEX:optionNumber}" value="{Value}" name="{SEX_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton SEX --></td> 
+            <td><strong>VCE CANDIDATE NUMBER&nbsp;(12345678A)</strong></td> 
+            <td><input type="text" id="STUDENTVCE_CANDIDATE_NUMBER" maxlength="10" size="12" value="{VCE_CANDIDATE_NUMBER}" name="{VCE_CANDIDATE_NUMBER_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th></th>
+ 
+            <td></td> 
+            <td></td> 
+            <td></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Student Email Address</strong></th>
+ 
+            <td><input type="text" id="STUDENTSTUDENT_EMAIL" maxlength="250" size="40" value="{STUDENT_EMAIL}" name="{STUDENT_EMAIL_Name}"></td> 
+            <td></td> 
+            <td></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Student Mobile</strong></th>
+ 
+            <td><input type="text" id="STUDENTSTUDENT_MOBILE" maxlength="20" value="{STUDENT_MOBILE}" name="{STUDENT_MOBILE_Name}"></td> 
+            <td><em></em></td> 
+            <td></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th></th>
+ 
+            <td></td> 
+            <td></td> 
+            <td></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>CATEGORY / SUBCATEGORY</strong></th>
+ 
+            <td colspan="3">
+              <select id="STUDENTListBox_SubCategory" name="{ListBox_SubCategory_Name}">
+                <option selected value="">Select Value</option>
+                {ListBox_SubCategory_Options}
+              </select>
+ &nbsp; </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><a href="#" onclick="OpenPopUpList_School('STUDENTATTENDING_SCHOOL_ID');">Attending School ID</a></th>
+ 
+            <td colspan="3"><input type="text" id="STUDENTATTENDING_SCHOOL_ID" maxlength="12" size="12" value="{ATTENDING_SCHOOL_ID}" name="{ATTENDING_SCHOOL_ID_Name}">{lblAttendingSchoolName}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><a href="#" onclick="OpenPopUpList_School('STUDENTHOME_SCHOOL_ID');">Home School ID</a></th>
+ 
+            <td colspan="3"><input type="text" id="STUDENTHOME_SCHOOL_ID" maxlength="12" size="12" value="{HOME_SCHOOL_ID}" name="{HOME_SCHOOL_ID_Name}">{lblHomeSchoolName}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Extra Organisation</strong></th>
+ 
+            <td colspan="3">
+              <select id="STUDENTlistORG_SCHOOL_ID" name="{listORG_SCHOOL_ID_Name}">
+                <option value="">Select Value</option>
+                <option selected value="0">- none -</option>
+                {listORG_SCHOOL_ID_Options}
+              </select>
+ <em>(ie: Sports or Drama organisations)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th></th>
+ 
+            <td colspan="3"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / DATE&nbsp;</th>
+ 
+            <td colspan="3">{LAST_ALTERED_BY}&nbsp; / {LAST_ALTERED_DATE}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="4" align="right">&nbsp; 
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENTButton_Insert" class="Button" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENTButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENTButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input type="hidden" id="STUDENTCATEGORY_CODE" value="{CATEGORY_CODE}" name="{CATEGORY_CODE_Name}"><input type="hidden" id="STUDENTSUBCATEGORY_CODE" value="{SUBCATEGORY_CODE}" name="{SUBCATEGORY_CODE_Name}"><input type="hidden" id="STUDENTEnrolmentCategoryTemp" value="{EnrolmentCategoryTemp}" name="{EnrolmentCategoryTemp_Name}"><input type="hidden" id="STUDENThidden_old_ATTENDING_SCHOOL_ID" value="{hidden_old_ATTENDING_SCHOOL_ID}" name="{hidden_old_ATTENDING_SCHOOL_ID_Name}"><input type="hidden" id="ENROLLEDBEFORE" value="{ENROLLEDBEFORE}" name="{ENROLLEDBEFORE_Name}"><input type="hidden" id="STUDENThidden_DATE_STUDENTFOLDER_CREATED" value="{hidden_DATE_STUDENTFOLDER_CREATED}" name="{hidden_DATE_STUDENTFOLDER_CREATED_Name}"><input type="hidden" id="STUDENThidden_LAST_ALTERED_BY" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"><input type="hidden" id="STUDENThidden_LAST_ALTERED_DATE" value="{hidden_LAST_ALTERED_DATE}" name="{hidden_LAST_ALTERED_DATE_Name}"></td>
+    </tr>
+  </table>
+</form>
+<input type="hidden" id="STUDENTHidden_CURR_RESID_ADDRESS_ID" value="{Hidden_CURR_RESID_ADDRESS_ID}" name="{Hidden_CURR_RESID_ADDRESS_ID_Name}"><!-- END Record STUDENT --></p>
+<p align="center">
+<!-- BEGIN Record STUDENT_ENROLMENT -->
+<form id="STUDENT_ENROLMENT" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" width="85%" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft">&nbsp;</td> 
+            <td class="th"><strong>Edit STUDENT ENROLMENT </strong></td> 
+            <td class="HeaderRight">&nbsp;</td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="10"><span id="ErrorBlock">{Error}</span></td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td>{lblENROLMENT_YEAR}</td> 
+            <td class="th"><label>ENROLMENT STATUS</label></td> 
+            <td>
+              <select id="STUDENT_ENROLMENTENROLMENT_STATUS" name="{ENROLMENT_STATUS_Name}">
+                <option selected value="">Select Value</option>
+                {ENROLMENT_STATUS_Options}
+              </select>
+ </td> 
+            <td class="th"><label>ENROLMENT DATE</label></td> 
+            <td><input type="text" id="STUDENT_ENROLMENTENROLMENT_DATE" maxlength="100" size="10" value="{ENROLMENT_DATE}" name="{ENROLMENT_DATE_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">&nbsp;</td> 
+            <td class="th"><label>YEAR LEVEL</label></td> 
+            <td>
+              <select id="STUDENT_ENROLMENTYEAR_LEVEL" name="{YEAR_LEVEL_Name}">
+                <option selected value="">Select Value</option>
+                {YEAR_LEVEL_Options}
+              </select>
+ </td> 
+            <td class="th">&nbsp;LAST ALTERED BY / WHEN</td> 
+            <td>{LAST_ALTERED_BY1}&nbsp;/&nbsp;&nbsp;{LAST_ALTERED_DATE1}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="10">
+              <!-- BEGIN Button Button_Add --><input type="submit" id="STUDENT_ENROLMENTButton_Add" class="Button" value="Add Year" name="{Button_Name}"><!-- END Button Button_Add -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_ENROLMENTButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+        <input type="hidden" id="STUDENT_ENROLMENTLAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"><input type="hidden" id="STUDENT_ENROLMENTLAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="STUDENT_ENROLMENTSTUDENT_ID" value="{STUDENT_ID}" name="{STUDENT_ID_Name}"><input type="hidden" id="STUDENT_ENROLMENTENROLMENT_YEAR" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STUDENT_ENROLMENT --></p>
+<p align="center">
+<!-- BEGIN Record STUDENT_COMMENT -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  &nbsp; 
+  <table cellspacing="0" cellpadding="0" width="85%" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add Comment</th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>STUDENT ID </th>
+ 
+            <td>{lblSTUDENT_ID}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMMENT 
+            <div id="maxchar_comment">
+              500 characters allowed 
+            </div>
+            <br>
+            <select id="STUDENT_COMMENTlbCannedResponses" name="{lbCannedResponses_Name}">
+              <option selected value="">Select Value</option>
+              {lbCannedResponses_Options}
+            </select>
+ </th>
+ 
+            <td><textarea onkeyup="limitMaxLength(this,500,'maxchar_comment');" id="STUDENT_COMMENTCOMMENT" rows="3" cols="70" name="{COMMENT_Name}">{COMMENT}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{lblCommentType}</th>
+ 
+            <td>
+              <!-- BEGIN ListBox lbSpecialCommentType -->
+              <select id="STUDENT_COMMENTlbSpecialCommentType" name="{lbSpecialCommentType_Name}">
+                <option selected value="">Select Value</option>
+                {lbSpecialCommentType_Options}
+              </select>
+ &nbsp;<!-- END ListBox lbSpecialCommentType -->&nbsp; 
+              <!-- BEGIN ListBox lbSpecialCommentType1 -->
+              <select id="STUDENT_COMMENTlbSpecialCommentType1" name="{lbSpecialCommentType1_Name}">
+                <option selected value="">Select Value</option>
+                {lbSpecialCommentType1_Options}
+              </select>
+ <!-- END ListBox lbSpecialCommentType1 --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENT_COMMENTButton_Insert" class="Button" value="Add Comment" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_COMMENTButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input type="hidden" id="STUDENT_COMMENTSTUDENT_ID" value="{STUDENT_ID}" name="{STUDENT_ID_Name}"><input type="hidden" id="STUDENT_COMMENThidden_STATUS" value="{hidden_STATUS}" name="{hidden_STATUS_Name}"><input type="hidden" id="STUDENT_COMMENTHidden_CommentType" value="{Hidden_CommentType}" name="{Hidden_CommentType_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STUDENT_COMMENT --></p>
+<p align="center">
+<!-- BEGIN Grid Grid_DisplayComments -->
+<table id="Table_PublicComments" cellspacing="0" cellpadding="0" width="85%" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>Future Enrolment Comments</th>
+ 
+          <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>COMMENT</th>
+ 
+          <th>&nbsp;TYPE</th>
+ 
+          <th>
+          <p align="center">LAST ALTERED BY</p>
+          </th>
+ 
+          <th>
+          <p align="center">LAST ALTERED DATE</p>
+          </th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr id="displaycomments_row" runat="server">
+          <td>&nbsp;<a href="{link_editcomment_Src}" id="Grid_DisplayCommentslink_editcomment_{Grid_DisplayComments:rowNumber}">edit</a></td> 
+          <td>{COMMENT}&nbsp;</td> 
+          <td>&nbsp;{COMMENT_TYPE}</td> 
+          <td>
+            <div align="center">
+              {LAST_ALTERED_BY}&nbsp; 
+            </div>
+          </td> 
+          <td nowrap>
+            <div align="center">
+              {LAST_ALTERED_DATE}&nbsp;&nbsp; 
+            </div>
+          </td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="5">No Comments found.</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="5">
+            <!-- BEGIN Navigator Navigator1 -->&nbsp; 
+            <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+            <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonFirst.gif"></a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonPrev.gif"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonNext.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonLast.gif"></a> <!-- END Last_On --><!-- END Navigator Navigator1 --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid Grid_DisplayComments --></p>
+<p align="center">
+<!-- BEGIN EditableGrid EditableGrid1 -->
+<form id="EditableGrid1" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table class="MainTable" cellspacing="0" cellpadding="0" width="85%" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Student Enrolment Checklist</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <tr class="Error">
+            <td colspan="6">Make sure you check for any Errors in each row after Updates</td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="6">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th>Id</th>
+ 
+            <th>Item Description</th>
+ 
+            <th>Item Received?</th>
+ 
+            <th>Notes (Public!)</th>
+ 
+            <th>Last Altered By / When</th>
+ 
+            <th>Delete</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="6">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td>{id}</td> 
+            <td nowrap>{description}</td> 
+            <td nowrap>
+              <!-- BEGIN RadioButton option_received --><input type="radio" id="EditableGrid1option_received_{EditableGrid1:rowNumber}_{option_received:optionNumber}" value="{Value}" name="{option_received_Name}" {Check}>{Description}<!-- END RadioButton option_received --></td> 
+            <td><input type="text" id="EditableGrid1notes_public_{EditableGrid1:rowNumber}" maxlength="200" size="35" value="{notes_public}" name="{notes_public_Name}"></td> 
+            <td>{lblWho}&nbsp;/ {lblWhen}<input type="hidden" id="EditableGrid1last_altered_when_{EditableGrid1:rowNumber}" value="{last_altered_when}" name="{last_altered_when_Name}"><input type="hidden" id="EditableGrid1last_altered_by" value="{last_altered_by}" name="{last_altered_by_Name}"><input type="hidden" id="EditableGrid1hidden_hashchanges_{EditableGrid1:rowNumber}" value="{hidden_hashchanges}" name="{hidden_hashchanges_Name}"></td> 
+            <td>
+              <!-- BEGIN CheckBox CheckBox_Delete --><input type="checkbox" id="EditableGrid1CheckBox_Delete_{EditableGrid1:rowNumber}" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="6">No Student Enrolment items found! - Update Student Enrolment Category then click 
+              <!-- BEGIN Button Button_LoadChecklist --><input type="submit" id="EditableGrid1Button_LoadChecklist" class="Button" value="Load Checklist" name="{Button_Name}"><!-- END Button Button_LoadChecklist --></td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="6">
+              <!-- BEGIN Button Button_Submit --><input type="submit" id="EditableGrid1Button_Submit" class="Button" value="Update Changes" name="{Button_Name}"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input type="submit" id="EditableGrid1Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid EditableGrid1 --><br>
+</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>

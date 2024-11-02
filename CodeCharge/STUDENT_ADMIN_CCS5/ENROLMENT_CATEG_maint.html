@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+<title>ENROLMENT CATEGORY</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+<p>{Header} </p>
+<p><a href="{Link1_Src}" id="Link1" class="Button">back to Category List</a></p>
+<!-- BEGIN Record ENROLMENT_CATEGORY -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add/Edit ENROLMENT CATEGORY </th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>CATEGORY CODE</th>
+ 
+            <td><input id="ENROLMENT_CATEGORYCATEGORY_CODE" value="{CATEGORY_CODE}" maxlength="10" size="10" name="{CATEGORY_CODE_Name}"><em>&nbsp;(max. 10 characters, UPPER CASE)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUB CATEGORY&nbsp;CODE</th>
+ 
+            <td><input id="ENROLMENT_CATEGORYSUBCATEGORY_CODE" value="{SUBCATEGORY_CODE}" maxlength="10" size="10" name="{SUBCATEGORY_CODE_Name}"><em>&nbsp;(max. 10 characters, UPPER CASE)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUBCATEGORY FULL TITLE</th>
+ 
+            <td><input id="ENROLMENT_CATEGORYSUBCATEGORY_CODE_FULL_TITLE" value="{SUBCATEGORY_FULL_TITLE}" maxlength="50" size="50" name="{SUBCATEGORY_FULL_TITLE_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STATUS</th>
+ 
+            <td><input id="ENROLMENT_CATEGORYSTATUS" value="1" type="checkbox" name="{STATUS_Name}" {STATUS}>&nbsp;<em>(Tick if Active)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY</th>
+ 
+            <td>{lblLAST_ALTERED_BY}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED DATE</th>
+ 
+            <td>{lblLAST_ALTERED_DATE}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Insert --><input id="ENROLMENT_CATEGORYButton_Insert" class="Button" value="Add" type="submit" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input id="ENROLMENT_CATEGORYButton_Update" class="Button" value="Update" type="submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input id="ENROLMENT_CATEGORYButton_Delete" class="Button" value="Delete" type="submit" name="{Button_Name}"><!-- END Button Button_Delete -->&nbsp; 
+              <!-- BEGIN Button Button_Cancel --><input id="ENROLMENT_CATEGORYButton_Cancel" class="Button" value="Cancel" type="submit" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input id="ENROLMENT_CATEGORYLAST_ALTERED_BY" value="{LAST_ALTERED_BY}" type="hidden" name="{LAST_ALTERED_BY_Name}"><input id="ENROLMENT_CATEGORYLAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" type="hidden" name="{LAST_ALTERED_DATE_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ENROLMENT_CATEGORY --><br>
+{Footer} 
+</body>
+</html>

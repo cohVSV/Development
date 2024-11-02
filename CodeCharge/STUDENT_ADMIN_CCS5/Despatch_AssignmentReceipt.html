@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Despatch - Assignment Receipt</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+function OpenPopUpList()
+{
+        // default popup - using no initial params and single field return
+        var FieldName;
+        FieldName = "AssignmentReceiptstudentid";
+        var win=window.open("popup_StudentSearch.aspx?returncontrol="+FieldName, "StudentSearch", "left=40,top=10,width=500,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+        win.focus();
+}
+
+function OpenPopUpList_SubjectSearch()
+{
+        var retFieldName;
+        retFieldName = "AssignmentReceiptsubjectid";
+        var tmpSearchField;
+        tmpSearchField = document.getElementById('AssignmentReceiptstudentid').value
+        var win=window.open("popup_StudentSubjectSearch.aspx?returncontrol="+retFieldName+"&p_STUDENTID="+tmpSearchField, "SubjectSearch", "left=40,top=10,width=500,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+        win.focus();
+}
+function disableEnterKey(e)
+{
+     var key;
+     if(window.event) {
+          key = window.event.keyCode; //IE
+         }
+     else {
+          key = e.which; //firefox     
+         }
+     return (key != 13);
+}
+
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>
+<!-- BEGIN Record AssignmentReceipt -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" width="50%" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Assignment Receipts</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="3">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>
+            <p align="right">Staff ID</p>
+            </th>
+ 
+            <td>
+              <select id="AssignmentReceiptStaffID" tabindex="1" name="{StaffID_Name}">
+                <option value="" selected>Select Value</option>
+                {StaffID_Options}
+              </select>
+ </td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>
+            <p align="right">Student ID</p>
+            </th>
+ 
+            <td><input id="AssignmentReceiptstudentid" style="BACKGROUND-COLOR: #cccccc; TEXT-ALIGN: right" onfocus="this.select();" tabindex="2" size="16" value="{studentid}" name="{studentid_Name}"></td> 
+            <td><a href="{link_popupStudentSearch_Src}" class="Button" id="AssignmentReceiptlink_popupStudentSearch" onclick="OpenPopUpList();">Student Search</a>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>
+            <p align="right">Subject Id + Assignment ID</p>
+            </th>
+ 
+            <td><input id="AssignmentReceiptsubjectid" style="BACKGROUND-COLOR: #cccccc" onfocus="this.select();" tabindex="3" maxlength="8" size="12" value="{subjectid}" name="{subjectid_Name}">&nbsp;</td> 
+            <td><a href="{link_popupStudentSubjectSearch_Src}" class="Button" id="AssignmentReceiptlink_popupStudentSubjectSearch" onclick="OpenPopUpList_SubjectSearch();">Subject Search</a></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>
+            <p align="right">Receipt Date</p>
+            </th>
+ 
+            <td>{receiptdate}</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="3"><a href="{Link1_Src}" id="AssignmentReceiptLink1">Clear</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="AssignmentReceiptButton_Insert" tabindex="5" type="submit" value="Add Receipt" name="{Button_Name}"><!-- END Button Button_Insert --></td>
+          </tr>
+        </table>
+        <input id="AssignmentReceiptENrolmentYear" type="hidden" value="{ENrolmentYear}" name="{ENrolmentYear_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record AssignmentReceipt --></p>
+</body>
+</html>

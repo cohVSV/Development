@@ -1,0 +1,240 @@
+<Site id="0" language="VB" name="DECV_PROD2007" siteLanguage="en" publishingType="Project" FTPpublishingType="Project" securityType="Table" urlType="Absolute" useCCSCultureFormats="True" defaultDateFormat="dd/mm/yyyy" LSEnableQueryString="True" LSQueryStringName="locale" LSEnableHTTPHeader="False" LSEnableSession="True" LSSessionName="locale" LSLanguageSessionName="lang" LSEnableCookie="False" LSCookieName="locale" LSCookieExpired="365" cachingMethod="None" useI18nFeatures="False" showDepreciatedStyles="Styles" useDynamicStyles="False" SSEnableQueryString="True" SSQueryStringName="style" SSEnableSession="True" SSSessionName="style" SSEnableCookie="False" SSCookieName="style" SSCookieExpired="365" targetVersion="3.5" TargetSchema="IE50" debugOption="Debug" tempSaveDir="CCSBuild" createIISApplication="False" userIDStoreMethod="Session" userIDVariable="UserID" userLoginVariable="UserLogin" groupIDVariable="GroupID" cookieVariable="UserInfo" automatedLogin="False" defaultHTMLEncoding="windows-1252" omitIfEmpty="True" FCKBasePath="FCKeditor" ccsVersion="5.1.1.18992" codeFileEncoding="windows-1252" securityConnection="connDECVPRODSQL2005" usersTable="STAFF" userIDField="STAFF_ID" userLoginField="STAFF_ID" userPasswordField="PASSWORD_EXTENDED" userGroupField="GROUP_ID" higherLevel="False" loginPage="Login.ccp" defaultStyle="Blueprint" wizardTheme="Blueprint" wizardThemeVersion="3.0" startPage="Menu.ccp" htmlTemplateType="HTML" isSection508="False" createIdsForControls="True" createIdsForNonEditableControls="True" createLablesForControls="False" generateJS="True" location="Local" localServerURL="http://localhost/DECV_PROD2007" localServerPath="C:\Development\Development\Development\CodeCharge" FTPPassiveMode="False" FTPSecureConnection="False" ALLoginCookieName="DECV_PROD2008Login" ALCookieExpired="1" ALEncryptionKey="Q08BRUi0795O13Lm" ALAutoProlong="False" ALEnabled="True" ProtectPasswordsInDB="False" ProtectPasswordsMethod="CodeExpression" useDynamicDesigns="True" DDEnableQueryString="True" DDQueryStringName="design" DDEnableSession="True" DDSessionName="design" DDEnableCookie="False" DDCookieName="design" DDCookieExpired="365" designFolder="Designs" FMChanged="true" isJQuery="False" currentConnection="connDECVPRODSQL2005" numberCounter="16" HTMLTemplates="Templates" ProtectPasswordsDBFunction="MD5({password})" useOAuth="False" sourceType="SQL" dataSource="declare @StudentID int = 95704;
+declare @MaxSecondsForDuplicates int = 300;
+
+
+with
+   SubmissionsCondensed as
+   (
+      -- Get the details of each activity for this student
+      -- There are often a bunch of submission entries for each activity, but we want to compress those details into a single record
+      -- So, use windowing functions to pick up the student's first and last dates for the activity, as well as their total submissions for each
+      -- The row number is used later to extract the summary details of only the most recent activity record
+      -- Finally, calculate SecondsSinceLastSubmission to eliminate submissions that are likely duplicates
+      select
+         s.ActivityId,
+         s.ActivityType,
+         s.ActivityName,
+         s.CourseIdNum,
+         s.CourseName,
+         s.StudentUsername,
+         s.APIDate,
+         first_value(s.APIDate) over (partition by s.ActivityId, s.StudentUsername order by s.APIDate desc) as LastSubmissionDate,
+         row_number() over (partition by s.ActivityId, s.StudentUsername order by s.APIDate desc) as ActivityRowNumber
+       from
+         dbo.Submissions as s
+      where
+          (s.StudentUsername = concat(cast(@StudentID as varchar(10)), '@vsv.vic.edu.au'))
+          and (s.ActivityType in ('assign'))
+   ),
+   GradesCondensed as
+   (
+      select
+         g.ActivityId,
+         g.StudentUsername,
+         g.StaffUsername,
+         g.APIDate,
+         first_value(g.APIDate) over (partition by g.ActivityId, g.StudentUsername order by g.APIDate desc) as LastReturnDate,
+         row_number() over (partition by g.ActivityId, g.StudentUsername order by g.APIDate desc) as ActivityRowNumber
+       from
+         dbo.Grades as g
+      where
+          (g.StudentUsername = concat(cast(@StudentID as varchar(10)), '@vsv.vic.edu.au'))
+   )
+ select
+    s.ActivityId,
+    s.ActivityType,
+    s.ActivityName,
+    s.CourseIdNum,
+    s.CourseName,
+    s.StudentUsername,
+    s.LastSubmissionDate,
+    s.ActivityRowNumber,
+    g.StaffUsername,
+    g.LastReturnDate
+  from
+    SubmissionsCondensed as s
+    left join GradesCondensed as g
+       on (
+             (g.ActivityId = s.ActivityId)
+             and (g.StudentUsername = s.StudentUsername)
+          )
+  where
+    (s.ActivityRowNumber = 1)
+    and (s.StudentUsername = concat(cast(@StudentID as varchar(10)), '@vsv.vic.edu.au'))
+    and (s.ActivityType in ('assign'))
+  order by
+    s.CourseIdNum,
+    s.ActivityName,
+    s.LastSubmissionDate;" orderBy=" " defaultDesign="Apricot" useOpenID="False" HTTPOnlyCookie="False" ProtectPasswordsCodeExpression="SecurityUtility.MD5({password})" _valueOfList="1" _nameOfList="Yes" connection="connDECVPRODSQL2005">
+	<Components>
+	</Components>
+	<Connections>
+	</Connections>
+	<CodeFiles>
+		<CodeFile id="JSFunctions" language="VB" name="Functions.js" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="JSDatePickerHTML" language="VB" name="DatePicker.html" forShow="False" comment="&lt;!--" commentEnd="--&gt;" codePage="windows-1252"/>
+		<CodeFile id="JSDatePicker" language="VB" name="DatePicker.js" forShow="False" comment="//" codePage="utf-8"/>
+		<CodeFile id="1" language="VB" name="CodeCharge.Data.OleDb.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="1a" language="VB" name="CodeCharge.Data.Oracle.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="1c" language="VB" name="CodeCharge.Data.ODP.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="1b" language="VB" name="CodeCharge.Data.DB2.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="2" language="VB" name="CodeCharge.Data.MSSQL.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="3" language="VB" name="CodeCharge.Data.ODBC.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="4" language="VB" name="CodeCharge.Data.BaseClass.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="5" language="VB" name="Utility.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="5aaa" language="VB" name="ParameterCollection.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="5a" language="VB" name="LocalesConfigHandler.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="6" language="VB" name="CodeCharge.Data.WhereBuilder.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="7" language="VB" name="Global.asax.vb" path="App_Code\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="7a" language="VB" name="Global.asax.resx" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="8" language="VB" name="Global.asax" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="7c" language="VB" name="ClientI18N.aspx.vb" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="8c" language="VB" name="ClientI18N.aspx" forShow="False" comment="&lt;!--" commentEnd="--&gt;" codePage="windows-1252"/>
+		<CodeFile id="9" language="VB" name="AssemblyInfo.vb" path="App_Code\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="10" language="VB" name="DataBaseDataProvider.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="11" language="VB" name="DbSpProvider.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="12" language="VB" name="DbSqlProvider.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="13" language="VB" name="DbTableProvider.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="28" language="VB" name="RecordDataProviderBase.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="29" language="VB" name="GridDataProviderBase.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="14" language="VB" name="Parameter.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="15" language="VB" name="BooleanParameter.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="16" language="VB" name="IntegerParameter.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="17" language="VB" name="FloatParameter.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="17s" language="VB" name="SingleParameter.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="18" language="VB" name="TextParameter.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="19" language="VB" name="MemoParameter.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="20" language="VB" name="DateParameter.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="21" language="VB" name="Settings.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="23" language="VB" name="DataUtility.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="24" language="VB" name="Security.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="35" language="VB" name="Sorter.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="35a" language="VB" name="Navigator.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="35b" language="VB" name="Directory.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="Calendar" language="VB" name="Calendar.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="CalendarNavigator" language="VB" name="CalendarNavigator.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="35c" language="VB" name="Path.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="35d" language="VB" name="FileUpload.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="37" language="VB" name="Fields.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="35rl" language="VB" name="ReportLabel.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="35r" language="VB" name="Report.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="ca1" language="VB" name="CacheModule.vb" path="App_Code\components\caching\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="ca2" language="VB" name="ICacheManager.vb" path="App_Code\components\caching\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="ca3" language="VB" name="CacheSettings.vb" path="App_Code\components\caching\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="ca4" language="VB" name="CacheParameter.vb" path="App_Code\components\caching\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="ca5" language="VB" name="CacheManager.vb" path="App_Code\components\caching\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="ca6" language="VB" name="ResponseFilter.vb" path="App_Code\components\caching\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="attr1" language="VB" name="CCSControlAttributeCollection.vb" path="App_Code\components\attributes\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="attr2" language="VB" name="CCSControlAttribute.vb" path="App_Code\components\attributes\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="attr3" language="VB" name="AttributesContainer.vb" path="App_Code\components\attributes\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="attr4" language="VB" name="AttributeBinder.vb" path="App_Code\components\attributes\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="main1" language="VB" name="CCPage.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="main2" language="VB" name="CCUserControl.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="26" language="VB" name="web.config" forShow="False" comment="&lt;!--" commentEnd="--&gt;" codePage="utf-8"/>
+		<CodeFile id="MembershipProvider" language="VB" name="MembershipProvider.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="en.txt" language="VB" name="strings.txt" path="App_GlobalResources\" forShow="False" comment="#" codePage="utf-8"/>
+		<CodeFile id="rc4" language="VB" name="RC4.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="fc1" language="VB" name="FlashChart.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="m1" language="VB" name="Menu.vb" path="App_Code\components\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="ajaxpanel1" language="VB" name="ajaxpanel.js" path="js\pt\" forShow="False" comment="//" codePage="windows-1252"/>
+		<CodeFile id="Prototype" language="VB" name="prototype.js" path="js\pt" forShow="False" comment="//" codePage="utf-8" CheckSum="9F2C5881"/>
+		<CodeFile id="PrototypeCcs" language="VB" name="prototype_ccs.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="DF43E555"/>
+		<CodeFile id="InlineEditing" language="VB" name="inlineediting.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="AADEB3FC"/>
+		<CodeFile id="PTBuilder" language="VB" name="builder.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="F58455A1"/>
+		<CodeFile id="PTControls" language="VB" name="controls.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="5224641B"/>
+		<CodeFile id="PTDragDrop" language="VB" name="dragdrop.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="F2FF6479"/>
+		<CodeFile id="PTEffects" language="VB" name="effects.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="F9CE83BB"/>
+		<CodeFile id="PTScriptaculous" language="VB" name="scriptaculous.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="FC331358"/>
+		<CodeFile id="PTSlider" language="VB" name="slider.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="78349C90"/>
+		<CodeFile id="YUIAnimationMin" language="VB" name="animation-min.js" path="js\yui\build\animation" forShow="False" comment="//" codePage="windows-1252" CheckSum="83AC29D7"/>
+		<CodeFile id="YUIAutocompleteMin" language="VB" name="autocomplete-min.js" path="js\yui\build\autocomplete" forShow="False" comment="//" codePage="windows-1252" CheckSum="FDDC8F52"/>
+		<CodeFile id="YUICOnnectionMin" language="VB" name="connection-min.js" path="js\yui\build\connection" forShow="False" comment="//" codePage="windows-1252" CheckSum="D8DF8F51"/>
+		<CodeFile id="YUIDOMMin" language="VB" name="dom-min.js" path="js\yui\build\dom" forShow="False" comment="//" codePage="windows-1252" CheckSum="1D0EFD33"/>
+		<CodeFile id="YUIElementMin" language="VB" name="element-beta-min.js" path="js\yui\build\element" forShow="False" comment="//" codePage="windows-1252" CheckSum="74FDB25B"/>
+		<CodeFile id="YUIEventMin" language="VB" name="event-min.js" path="js\yui\build\event" forShow="False" comment="//" codePage="windows-1252" CheckSum="1C159AFF"/>
+		<CodeFile id="YUITabViewMin" language="VB" name="tabview-min.js" path="js\yui\build\tabview" forShow="False" comment="//" codePage="windows-1252" CheckSum="ED35E588"/>
+		<CodeFile id="YUITabViewBorderTab" language="VB" name="border_tabs.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="B61A1CC8"/>
+		<CodeFile id="YUITabViewCss" language="VB" name="tabview.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="8C0CE21C"/>
+		<CodeFile id="YUIYahooMin" language="VB" name="yahoo-min.js" path="js\yui\build\yahoo" forShow="False" comment="//" codePage="windows-1252" CheckSum="95969253"/>
+		<CodeFile id="YUIYahooDomEvent" language="VB" name="yahoo-dom-event.js" path="js\yui\build\yahoo-dom-event" forShow="False" comment="//" codePage="windows-1252" CheckSum="878E8CA4"/>
+		<CodeFile id="MenuScript" language="VB" name="ADxMenu.js" path="js\menu" forShow="False" comment="//" codePage="windows-1252" CheckSum="ED7D4309"/>
+		<CodeFile id="captcha1" language="VB" name="Captcha.vb" path="App_Code\components\captcha\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="captcha2" language="VB" name="QuadraticPaths.vb" path="App_Code\components\captcha\" forShow="False" comment="'" codePage="windows-1252"/>
+		<CodeFile id="CaptchaCCS" language="VB" name="captcha.js" path="js\pt" forShow="False" comment="//" codePage="windows-1252" CheckSum="DA0B423F"/>
+		<CodeFile id="MenuWCHScript" language="VB" name="WCH.js" path="js\menu" forShow="False" comment="//" codePage="windows-1252" CheckSum="20EABDE1"/>
+		<CodeFile id="YUIAutocompleteCommons" language="VB" name="autocomplete-commons.js" path="js\yui" forShow="False" comment="//" codePage="windows-1252" CheckSum="C7D4EA64"/>
+		<CodeFile id="YUIAutocompleteCss" language="VB" name="autocomplete.css" path="js\yui\build\autocomplete\assets\skins\sam" forShow="False" comment="//" codePage="windows-1252" CheckSum="DB58EE1A"/>
+		<CodeFile id="YUIJSONMin" language="VB" name="json-min.js" path="js\yui\build\json" forShow="False" comment="//" codePage="windows-1252" CheckSum="9C6B8551"/>
+		<CodeFile id="YUIDataSource" language="VB" name="datasource-min.js" path="js\yui\build\datasource" forShow="False" comment="//" codePage="windows-1252" CheckSum="05E27C3E"/>
+		<CodeFile id="YUITabViewCoreCss" language="VB" name="tabview-core.css" path="js\yui\build\tabview\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="744A5B1E"/>
+		<CodeFile id="YUICalendarMin" language="VB" name="calendar-min.js" path="js\yui\build\calendar" forShow="False" comment="//" codePage="windows-1252" CheckSum="6B48AF78"/>
+		<CodeFile id="YUIDatepickerCommons" language="VB" name="datepicker-commons.js" path="js\yui" forShow="False" comment="//" codePage="windows-1252" CheckSum="EB5F1815"/>
+		<CodeFile id="YUICalendarCss" language="VB" name="calendar.css" path="js\yui\build\calendar\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="2ADF3D6F"/>
+		<CodeFile id="YUICalendarCoreCss" language="VB" name="calendar-core.css" path="js\yui\build\calendar\assets" forShow="False" comment="//" codePage="windows-1252" CheckSum="54CE072D"/>
+		<CodeFile id="YUIContainerMin" language="VB" name="container-min.js" path="js\yui\build\container" forShow="False" comment="//" codePage="windows-1252" CheckSum="28883421"/>
+		<CodeFile id="YUIContainerCore" language="VB" name="container_core-min.js" path="js\yui\build\container" forShow="False" comment="//" codePage="windows-1252" CheckSum="FAFCD9BD"/>
+		<CodeFile id="YUIContainerCSS" language="VB" name="container.css" path="js\yui\build\container\assets\skins\sam" forShow="False" comment="//" codePage="windows-1252" CheckSum="76397594"/>
+		<CodeFile id="YUIContainerSkin" language="VB" name="container-skin.css" path="js\yui\build\container\assets\skins\sam" forShow="False" comment="//" codePage="windows-1252" CheckSum="290F457C"/>
+		<CodeFile id="YUIDragDropMin" language="VB" name="dragdrop-min.js" path="js\yui\build\dragdrop" forShow="False" comment="//" codePage="windows-1252" CheckSum="B9FB4883"/>
+	</CodeFiles>
+	<Groups>
+		<Group id="86" name="UNKNOWN" value="1"/>
+		<Group id="87" name="PRINCIPALS" value="2"/>
+		<Group id="88" name="ADMINISTRATORS" value="3"/>
+		<Group id="89" name="DATA ENTRY OPERATORS" value="4"/>
+		<Group id="90" name="DESPATCH" value="5"/>
+		<Group id="91" name="ENROLMENT OFFICERS" value="6"/>
+		<Group id="92" name="LEADING TEACHERS" value="7"/>
+		<Group id="93" name="TEACHERS" value="8"/>
+		<Group id="94" name="SYSTEM" value="9"/>
+		<Group id="95" name="RECEPTION" value="11"/>
+		<Group id="96" name="Wellbeing Officers" value="12"/>
+	</Groups>
+	<Styles>
+		<Style id="2" name="Blueprint" caption="Blueprint"/>
+		<Style id="59" name="Fresh" caption="Fresh"/>
+		<Style id="70" name="Basic" caption="Basic"/>
+		<Style id="71" name="Tile" caption="Tile"/>
+		<Style id="72" name="Universal" caption="Universal"/>
+		<Style id="73" name="Lollipop" caption="Lollipop"/>
+	</Styles>
+	<CustomButtons/>
+	<Profiles>
+		<Profile name="LocalDev" FTPFolder="" FTPLogin="" FTPPassiveMode="True" FTPPassword="" FTPSecureConnection="False" FTPServer="" FTPServerURL="" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;res;;master" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" __specValue="" localServerPath="C:\Vikas\DECV documents\bACKUP\STUDENT_ADMIN_codecharge" localServerURL="http://localhost/Student_Admin" location="Local" publishingAllMask="html;js;asp;php;jsp;cfm;cfc;pl;pm;cgi;mdb;gif;jpg;css;xml;java;asax;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;res;;master" publishingExceptMask="ccs;ccp" publishingType="AllMask">
+			<Connections connection="connDECVPRODSQL2005">
+				<Connection id="1" serverDatabase="MSSQLServer" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="True" serverConnectionType="OLEDB" database="MSSQLServer" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="String" connectionString="Provider=SQLNCLI.1;Password=w4gg0n;Persist Security Info=True;User ID=stagemaster;Initial Catalog=STUDENT_ADMIN_staging;Data Source=decv-db1" name="connDECVPRODSQL2005" login="stagemaster" password="w4gg0n" catalog="STUDENT_ADMIN_stage5" schema="dbo" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="1;0" connection="connDECVPRODSQL2005" ddXMLPath="connDECVPRODSQL2005_DataDictionary.xml" typeMode="Expert" addSchemaName="False"/>
+				<Connection id="48" serverDatabase="MSSQLServer" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="True" serverConnectionType="OLEDB" database="MSSQLServer" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" name="connDECVPROD_RegionEnrolments" connectionType="String" connectionString="Provider=SQLNCLI;Password=redr0ck;Persist Security Info=True;User ID=webmaster;Initial Catalog=decvRegionEnrolments;Data Source=decv-db1" login="webmaster" password="redr0ck" catalog="decvRegionEnrolments" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="1;0" ddXMLPath="connDECVPROD_RegionEnrolments_DataDictionary.xml"/>
+				<Connection id="85" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="True" serverConnectionType="OLEDB" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" name="connDECVAPIPROD"/>
+				<Connection id="97" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="True" serverConnectionType="OLEDB" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" name="Connection1"/>
+</Connections>
+		</Profile>
+		<Profile name="STUDENT_ADMIN_staging" FTPFolder="" FTPLogin="" FTPPassiveMode="True" FTPPassword="" FTPSecureConnection="False" FTPServer="" FTPServerURL="" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;master" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" __specValue="" localServerPath="\\DECV-DB\e$\Inetpub\wwwroot\STUDENT_ADMIN_stage5" localServerURL="http://decv-db/STUDENT_ADMIN_stage5" location="Local" publishingAllMask="html;js;png;gif;jpg;css;xml;asax;ascx;aspx;cs;vb;resx;config;webinfo;properties;inc;txt;resources;master" publishingExceptMask="ccs;ccp" publishingType="AllMask">
+			<Connections connection="connDECVPRODSQL2005">
+				<Connection id="1" serverDatabase="MSSQLServer" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="False" serverConnectionType="MSSQL" database="MSSQLServer" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="String" connectionString="Provider=SQLNCLI11;Password=iz1dub55tep;Persist Security Info=True;User ID=stagemaster;Initial Catalog=STUDENT_ADMIN_stage5;Data Source=decv-db" name="connDECVPRODSQL2005" login="stagemaster" password="iz1dub55tep" catalog="STUDENT_ADMIN_stage5" schema="dbo" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="1;0" connection="connDECVPRODSQL2005" serverConnectionString="Password=iz0dub88;Persist Security Info=True;User ID=stagemaster;Initial Catalog=STUDENT_ADMIN_staging;Data Source=DECV-DB;" serverLogin="stagemaster" serverPassword="iz0dub88" typeMode="Expert" addSchemaName="False" ddXMLPath="connDECVPRODSQL2005_DataDictionary.xml"/>
+				<Connection id="48" serverDatabase="MSSQLServer" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="False" serverConnectionType="MSSQL" database="MSSQLServer" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="String" connectionString="Provider=SQLNCLI.1;Password=redr0ck;Persist Security Info=True;User ID=webmaster;Initial Catalog=decvRegionEnrolments;Data Source=decv-db1" name="connDECVPROD_RegionEnrolments" login="webmaster" password="redr0ck" catalog="decvRegionEnrolments" schema="dbo" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="1;0" connection="connDECVPROD_RegionEnrolments" serverConnectionString="Password=redr0ck;Persist Security Info=True;User ID=webmaster;Initial Catalog=decvRegionEnrolments;Data Source=decv-db1" serverLogin="webmaster" serverPassword="redr0ck" ddXMLPath="connDECVPROD_RegionEnrolments_DataDictionary.xml"/>
+				<Connection id="85" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="True" serverConnectionType="OLEDB" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" name="connDECVAPIPROD"/>
+				<Connection id="97" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="True" serverConnectionType="OLEDB" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" name="Connection1"/>
+</Connections>
+		</Profile>
+		<Profile name="RussellLocalDevelopment" FTPFolder="" FTPLogin="" FTPPassiveMode="True" FTPPassword="" FTPSecureConnection="False" FTPServer="" FTPServerURL="" FTPpublishingAllMask="html;js;asp;php;jsp;cfm;pl;pm;cgi;mdb;gif;jpg;css;xml;java;ascx;aspx;cs;vb;vbproj;resx;config;vsdisco;csproj;webinfo;bat;tld;jar;properties;inc;txt;resources;master" FTPpublishingExceptMask="ccs;ccp" FTPpublishingType="Project" __specValue="" localServerPath="C:\Users\RWhipp\Documents\Development\StudentDB\Development\CodeCharge\Publish" localServerURL="http://localhost:40000" location="Local" publishingAllMask="html;js;png;gif;jpg;css;xml;asax;ascx;aspx;cs;vb;resx;config;webinfo;properties;inc;txt;resources;master" publishingExceptMask="ccs;ccp" publishingType="AllMask">
+			<Connections connection="connDECVPRODSQL2005">
+				<Connection id="1" serverDatabase="MSSQLServer" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="False" serverConnectionType="MSSQL" database="MSSQLServer" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="String" connectionString="Provider=SQLNCLI11.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=STUDENT_ADMIN;Data Source=(localdb)\MSSQLLocalDB;Initial File Name=&quot;&quot;;Server SPN=&quot;&quot;" name="connDECVPRODSQL2005" catalog="STUDENT_ADMIN_stage5" schema="dbo" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="1;0" connection="connDECVPRODSQL2005" serverConnectionString="Password=iz0dub88;Persist Security Info=True;User ID=stagemaster;Initial Catalog=STUDENT_ADMIN_staging;Data Source=DECV-DB;" serverLogin="stagemaster" serverPassword="iz0dub88" typeMode="Expert" addSchemaName="False" ddXMLPath="connDECVPRODSQL2005_DataDictionary.xml"/>
+				<Connection id="48" serverDatabase="MSSQLServer" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="False" serverConnectionType="MSSQL" database="MSSQLServer" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="String" connectionString="Provider=SQLNCLI.1;Password=redr0ck;Persist Security Info=True;User ID=webmaster;Initial Catalog=decvRegionEnrolments;Data Source=decv-db1" name="connDECVPROD_RegionEnrolments" login="webmaster" password="redr0ck" catalog="decvRegionEnrolments" schema="dbo" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="1;0" connection="connDECVPROD_RegionEnrolments" serverConnectionString="Password=redr0ck;Persist Security Info=True;User ID=webmaster;Initial Catalog=decvRegionEnrolments;Data Source=decv-db1" serverLogin="webmaster" serverPassword="redr0ck" ddXMLPath="connDECVPROD_RegionEnrolments_DataDictionary.xml"/>
+				<Connection id="85" serverDatabase="MSSQLServer" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="False" serverConnectionType="OLEDB" database="MSSQLServer" showViews="True" showSynonyms="False" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="String" connectionString="Provider=SQLNCLI11.1;Integrated Security=SSPI;Persist Security Info=False;User ID=&quot;&quot;;Initial Catalog=ActivityAPI;Data Source=(localdb)\MSSQLLocalDB;Initial File Name=&quot;&quot;;Server SPN=&quot;&quot;;Application Intent=READONLY" name="connDECVAPIPROD" ddXMLPath="connDECVAPIPROD_DataDictionary.xml" typeMode="Expert" addSchemaName="True" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="1;0" connection="connDECVAPIPROD" catalog="ActivityAPI" schema="dbo" serverConnectionString="Data Source=decv-api;Initial Catalog=ActivityAPI;Integrated Security=True"/>
+				<Connection id="97" serverDatabase="ANSI" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="True" serverConnectionType="OLEDB" database="ANSI" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" name="Connection1"/>
+</Connections>
+		</Profile>
+	</Profiles>
+	<Languages>
+		<Language name="en" defaultCountry="US" encoding="windows-1252">
+			<LocaleInfo language="en" country="US" encoding="windows-1252" msValue="1033" booleanFormat="Yes;No" decimalDigits="2" decimalSeparator="." groupSeparator="," monthNames="January;February;March;April;May;June;July;August;September;October;November;December" monthShortNames="Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec" weekdayNames="Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday" weekdayShortNames="Sun;Mon;Tue;Wed;Thu;Fri;Sat" shortDate="m/d/yyyy" longDate="dddd, mmmm dd, yyyy" shortTime="h:nn tt" longTime="h:nn:ss tt" firstWeekDay="0" AMDesignator="AM" PMDesignator="PM" weekdayNarrowNames="S;M;T;W;T;F;S"/>
+		</Language>
+	</Languages>
+	<Events/>
+	<Connections/>
+	<Connections/>
+	<OAuthProviders/>
+	<Connections connection="Connection1">
+<Connection id="97" serverDatabase="MSSQLServer" DBNameUppercase="True" OptimizeSQL="True" serverSameAsDesign="True" serverConnectionType="OLEDB" database="MSSQLServer" showViews="True" showSynonyms="True" showSysTable="False" showSysView="False" showAliases="False" relationshipDiscovery="True" connectionType="ODBC" connectionString="DECV-DB" name="Connection1" ddXMLPath="Connection1_DataDictionary.xml" login="DECV\COH" password="Cl@@cl123" typeMode="Expert" addSchemaName="False" DBDateFormat="yyyy-mm-dd HH:nn:ss" DBBooleanFormat="1;0" connection="Connection1"/>
+</Connections>
+</Site>

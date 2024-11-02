@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>StudentSubject_TeacherStats</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_Report1_Page_Footer_ButtonClosePopup_OnClick @21-91C80A36
+function page_Report1_Page_Footer_ButtonClosePopup_OnClick()
+{
+    var result;
+//End page_Report1_Page_Footer_ButtonClosePopup_OnClick
+
+//Custom Code @25-2A29BDB7
+    // -------------------------
+    window.close();
+    // -------------------------
+//End Custom Code
+
+//Close page_Report1_Page_Footer_ButtonClosePopup_OnClick @21-BC33A33A
+    return result;
+}
+//End Close page_Report1_Page_Footer_ButtonClosePopup_OnClick
+
+//bind_events @1-A05DC0F8
+function bind_events() {
+    addEventHandler("Report1","click",page_Report1_Page_Footer_ButtonClosePopup_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+&nbsp; 
+<!-- BEGIN Report Report1 -->
+<table id="Panel2" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>Current Active Subject Enrolments&nbsp; (Excludes Non-Submits)</th>
+ 
+          <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header -->
+        <h2>Subject Abbrev: {ReportLabel1}</h2>
+ <!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header -->
+        <tr class="Caption">
+          <th>Year</th>
+ 
+          <th>Sem.</th>
+ 
+          <th>Teacher</th>
+ 
+          <th>Teacher <br>
+          Subject&nbsp;TF</th>
+ 
+          <th>TF&nbsp;Maximum</th>
+ 
+          <th>Current Active<br>
+          &nbsp;Student Count</th>
+        </tr>
+ <!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td colspan="6">
+            <!-- BEGIN Button ButtonClosePopup --><input type="submit" id="Report1Page_FooterButtonClosePopup" class="Button" name="{Button_Name}" value="Close This Popup"><!-- END Button ButtonClosePopup --></td>
+        </tr>
+ <!-- END Section Page_Footer -->
+        <!-- BEGIN Section ENROLMENT_YEAR_Header -->
+        <tr class="GroupCaption">
+          <th style="TEXT-ALIGN: right">{ENROLMENT_YEAR} </th>
+ 
+          <th style="TEXT-ALIGN: right"></th>
+ 
+          <th style="TEXT-ALIGN: right"></th>
+ 
+          <th style="TEXT-ALIGN: right"></th>
+ 
+          <th style="TEXT-ALIGN: right"></th>
+ 
+          <th style="TEXT-ALIGN: right"></th>
+        </tr>
+ <!-- END Section ENROLMENT_YEAR_Header -->
+        <!-- BEGIN Section SEMESTER_Header -->
+        <tr class="GroupCaption">
+          <th></th>
+ 
+          <th>{SEMESTER} </th>
+ 
+          <th></th>
+ 
+          <th></th>
+ 
+          <th></th>
+ 
+          <th></th>
+        </tr>
+ <!-- END Section SEMESTER_Header -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"></td> 
+          <td></td> 
+          <td><strong>{STAFF_ID}</strong> </td> 
+          <td style="TEXT-ALIGN: right">{SUBJECT_TIMEFRACTION} </td> 
+          <td style="TEXT-ALIGN: right">{FTE_StudentMax} </td> 
+          <td style="TEXT-ALIGN: right"><strong>{Current_Student_Count}</strong> </td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section SEMESTER_Footer -->
+        <tr class="SubTotal">
+          <td style="TEXT-ALIGN: right" colspan="4">
+            <p><br>
+            Semester&nbsp;Total&nbsp;</p>
+          </td> 
+          <td style="TEXT-ALIGN: right"><br>
+            {FTE_StudentMax1}</td> 
+          <td style="TEXT-ALIGN: right" valign="baseline">
+            <p><br>
+            {Sum_Current_Student_Count1} </p>
+          </td>
+        </tr>
+ <!-- END Section SEMESTER_Footer -->
+        <!-- BEGIN Section ENROLMENT_YEAR_Footer -->
+        <tr class="SubTotal">
+          <td style="TEXT-ALIGN: right" colspan="4">Year&nbsp;Total&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{FTE_StudentMax2}</td> 
+          <td style="TEXT-ALIGN: right" valign="baseline">{Sum_Current_Student_Count} </td>
+        </tr>
+ <!-- END Section ENROLMENT_YEAR_Footer -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No Teachers&nbsp;or Enrolments found for this Subject!</td>
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report Report1 -->
+</body>
+</html>

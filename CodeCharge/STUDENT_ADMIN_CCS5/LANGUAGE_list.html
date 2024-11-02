@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>LANGUAGE</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+<p>{Header} </p>
+<p>
+<!-- BEGIN Record LANGUAGE1 -->
+<form id="LANGUAGE1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>
+            <p>Search&nbsp; Description</p>
+            </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Description</th>
+ 
+            <td><input type="text" id="LANGUAGE1s_keyword" maxlength="20" value="{s_keyword}" name="{s_keyword_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="LANGUAGE1ClearParameters">Clear</a></td> 
+            <td style="TEXT-ALIGN: right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="LANGUAGE1Button_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record LANGUAGE1 --><br>
+</p>
+<!-- BEGIN Grid LANGUAGE -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>List of LANGUAGE </th>
+ 
+          <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>&nbsp;<a href="{LANGUAGE_Insert_Src}" id="LANGUAGELANGUAGE_Insert">Add New</a></th>
+ 
+          <th>&nbsp;</th>
+ 
+          <th>&nbsp;</th>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_LANG_CODE --><a href="{Sort_URL}" id="LANGUAGESorter_LANG_CODE">LANG CODE</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LANG_CODE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LANG_DESCRIPTION --><a href="{Sort_URL}" id="LANGUAGESorter_LANG_DESCRIPTION">LANG DESCRIPTION</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LANG_DESCRIPTION --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><a href="{Sort_URL}" id="LANGUAGESorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><a href="{Sort_URL}" id="LANGUAGESorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{LANG_CODE_Src}" id="LANGUAGELANG_CODE">{LANG_CODE}</a>&nbsp;</td> 
+          <td>{LANG_DESCRIPTION}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr class="AltRow">
+          <td style="TEXT-ALIGN: right"><a href="{Alt_LANG_CODE_Src}" id="LANGUAGEAlt_LANG_CODE">{Alt_LANG_CODE}</a>&nbsp;</td> 
+          <td>{Alt_LANG_DESCRIPTION}&nbsp;</td> 
+          <td>{Alt_LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{Alt_LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="4">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="4">
+            <!-- BEGIN Navigator Navigator1 --><span class="Navigator">Records per page 
+            <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --></span><!-- END Navigator Navigator1 --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid LANGUAGE --><br>
+{Footer} 
+</body>
+</html>

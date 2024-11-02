@@ -1,0 +1,465 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Comments - Maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+function limitMaxLength(formitem,maxlength,displaydivname) {
+        if (isNaN(maxlength)) {
+                return false;
+        } else {
+                var outputdiv = document.getElementById(displaydivname)
+                outputdiv.innerHTML = (maxlength-formitem.value.length) + ' characters allowed';
+                if (formitem.value.length+1>maxlength) {
+                        formitem.value=formitem.value.substring(0,maxlength);
+                }
+        }
+}
+</script>
+<style type="text/css">
+<!--
+.AlertRed       td  { font-weight: bold; background-color: #FF6666; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.AlertGreen     td  { font-weight: bold; background-color: #66CC33; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.CoordAmber     td  { font-weight: bold; background-color: #FF9933; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.LightMauve     td  { font-weight: bold; background-color: #B3B3D7; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.Pathways       td  { font-weight: bold; background-color: #038C9A; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.Rollover       td  { font-weight: bold; background-color: #FF69B4; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.Offshore       td  { font-weight: bold; background-color: #c4bc96; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.autosave_saving  { font-weight: bold; color: #66CC33; }
+-->
+</style>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_STUDENT_COMMENT_lbCannedResponses_OnChange @97-947644D6
+function page_STUDENT_COMMENT_lbCannedResponses_OnChange()
+{
+    var result;
+//End page_STUDENT_COMMENT_lbCannedResponses_OnChange
+
+//Custom Code @98-2A29BDB7
+    // -------------------------
+    // ERA: 21-June-2012|EA| add the selected comment to the COMMENT field.
+        //      If Comment already has something then append to end (leading space) otherwise trailing space
+        if (theForm.STUDENT_COMMENTlbCannedResponses.value !='') {
+                if(theForm.STUDENT_COMMENTCOMMENT.value.length > 0) {
+                theForm.STUDENT_COMMENTCOMMENT.value = theForm.STUDENT_COMMENTCOMMENT.value + ' ' + theForm.STUDENT_COMMENTlbCannedResponses.value;
+        } else {
+                        theForm.STUDENT_COMMENTCOMMENT.value = theForm.STUDENT_COMMENTlbCannedResponses.value + ' ';
+                }
+                theForm.STUDENT_COMMENTCOMMENT.focus();
+    }
+    // -------------------------
+//End Custom Code
+
+//Set Focus @99-AB2838AB
+    if (theForm.STUDENT_COMMENTCOMMENT) theForm.STUDENT_COMMENTCOMMENT.focus();
+//End Set Focus
+
+//Close page_STUDENT_COMMENT_lbCannedResponses_OnChange @97-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_COMMENT_lbCannedResponses_OnChange
+
+//page_STUDENT_COMMENT_OnSubmit @13-2C355D69
+function page_STUDENT_COMMENT_OnSubmit()
+{
+    var result;
+//End page_STUDENT_COMMENT_OnSubmit
+
+//Custom Code @142-2A29BDB7
+    // -------------------------
+    //15-Sept-2016|EA| check for RESTRICTED Comment and alert to change portal access if needed (unfuddle #707)
+        if (theForm.STUDENT_COMMENTlbSpecialCommentType.value =='RESTRICTED') {
+alert('For a RESTRICTED comment, manually update Portal access to [No] if necessary.');
+}
+result = true;
+    // -------------------------
+//End Custom Code
+
+//Close page_STUDENT_COMMENT_OnSubmit @13-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_COMMENT_OnSubmit
+
+//page_STUDENT_COMMENT_Button_Cancel_OnClick @15-3BF1766F
+function page_STUDENT_COMMENT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_COMMENT_Button_Cancel_OnClick
+
+//page_ProfilesPanel_Button_Cancel_OnClick @50-9F68870E
+function page_ProfilesPanel_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_ProfilesPanel_Button_Cancel_OnClick
+
+//bind_events @1-985E51AF
+function bind_events() {
+    addEventHandler("<%= Page.Form.ClientID %>","submit",page_STUDENT_COMMENT_OnSubmit);
+    addEventHandler("STUDENT_COMMENTlbCannedResponses","change",page_STUDENT_COMMENT_lbCannedResponses_OnChange);
+    addEventHandler("STUDENT_COMMENTButton_Cancel","click",page_STUDENT_COMMENT_Button_Cancel_OnClick);
+    addEventHandler("ProfilesPanelButton_Cancel","click",page_ProfilesPanel_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+window.onload = bind_events;
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">
+<!-- BEGIN Panel Panel_MenuStudentMaintain -->{Menu_Student_maintain}<!-- END Panel Panel_MenuStudentMaintain --><a href="{Link_Backtosummary_Src}" id="Link_Backtosummary" class="Button">Back to Summary</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{Link_BacktoPastoralList_Src}" id="Link_BacktoPastoralList" class="Button">Back to Student Support Group List</a></p>
+<p align="center">{StudentNamePlate}</p>
+<p align="center">
+<!-- BEGIN Record STUDENT_COMMENT -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    &nbsp; 
+    <table cellspacing="0" cellpadding="0" width="70%" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Add Comment</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>STUDENT ID </th>
+ 
+                        <td>{lblSTUDENT_ID}&nbsp;<span class="autosave_saving">Saving…</span></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>COMMENT 
+                        <div id="maxchar_comment">
+                            500 characters allowed 
+                        </div>
+                        <br>
+                        <button class="autosave_restore">Retrieve Comment</button> <br>
+                        <br>
+                        <select id="STUDENT_COMMENTlbCannedResponses" name="{lbCannedResponses_Name}">
+                            <option selected value="">Select Value</option>
+                            {lbCannedResponses_Options}
+                        </select>
+ </th>
+ 
+                        <td><textarea onkeyup="limitMaxLength(this,500,'maxchar_comment');" id="STUDENT_COMMENTCOMMENT" rows="5" cols="50" name="{COMMENT_Name}">{COMMENT}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>{lblCommentType}</th>
+ 
+                        <td>
+                            <!-- BEGIN ListBox lbSpecialCommentType -->
+                            <select id="STUDENT_COMMENTlbSpecialCommentType" name="{lbSpecialCommentType_Name}">
+                                <option selected value="">Select Value</option>
+                                {lbSpecialCommentType_Options}
+                            </select>
+ &nbsp;<!-- END ListBox lbSpecialCommentType -->&nbsp; 
+                            <!-- BEGIN ListBox lbSpecialCommentType1 -->
+                            <select id="STUDENT_COMMENTlbSpecialCommentType1" name="{lbSpecialCommentType1_Name}">
+                                <option selected value="">Select Value</option>
+                                {lbSpecialCommentType1_Options}
+                            </select>
+ <!-- END ListBox lbSpecialCommentType1 --></td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="2" align="right">
+                            <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENT_COMMENTButton_Insert" class="Button" value="Add Comment" name="{Button_Name}"><!-- END Button Button_Insert -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_COMMENTButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STUDENT_COMMENTSTUDENT_ID" value="{STUDENT_ID}" name="{STUDENT_ID_Name}"><input type="hidden" id="STUDENT_COMMENThidden_STATUS" value="{hidden_STATUS}" name="{hidden_STATUS_Name}"><input type="hidden" id="STUDENT_COMMENTHidden_CommentType" value="{Hidden_CommentType}" name="{Hidden_CommentType_Name}"></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_COMMENT --></p>
+<p align="center">
+<!-- BEGIN Record ProfilesPanel -->
+<form id="ProfilesPanel" method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" width="70%" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Update Profiles for&nbsp;{label_EnrolYear}</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="5">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>Student Profile Done?&nbsp;</th>
+ 
+                        <th>&nbsp; 
+                        <!-- BEGIN RadioButton radio_IntakeInterview --><input type="radio" id="ProfilesPanelradio_IntakeInterview_{radio_IntakeInterview:optionNumber}" value="{Value}" name="{radio_IntakeInterview_Name}" {Check}>{Description}<!-- END RadioButton radio_IntakeInterview --></th>
+ 
+                        <th>&nbsp;</th>
+ 
+                        <th>Pathways Profile Done?</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton radio_PathwaysProfile --><input type="radio" id="ProfilesPanelradio_PathwaysProfile_{radio_PathwaysProfile:optionNumber}" value="{Value}" name="{radio_PathwaysProfile_Name}" {Check}>{Description}<!-- END RadioButton radio_PathwaysProfile --></td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="5" align="right">
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="ProfilesPanelButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="ProfilesPanelButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+                <em>Only change when Profiles are complete and put in Student Folder. Updating will add a Comment </em></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record ProfilesPanel --></p>
+<p align="center">
+<!-- BEGIN Grid Grid_DisplayComments_MyComments -->
+<table id="Table_MyComments" cellspacing="0" cellpadding="0" width="70%" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>{Label_LogType}</th>
+ 
+                    <th style="WIDTH: 400px; TEXT-ALIGN: right" nowrap align="right">
+                    <div style="WIDTH: 380px; MARGIN: 9px" align="right">
+                        Click to filter:&nbsp; <img id="CONTACT_PHONE" title="show Phone comments" class="filter_icon" name="CONTACT_PHONE" alt="show Phone comments" src="images/telephone.png">&nbsp;&nbsp; <img id="CONTACT_EMAIL" title="show Email comments" class="filter_icon" name="CONTACT_EMAIL" alt="show Email comments" src="images/email.png">&nbsp;&nbsp; <img id="CONTACT_POST" title="show Post comments" class="filter_icon" name="CONTACT_POST" alt="show Post comments" src="images/report.png">&nbsp;&nbsp; <img id="CONTACT_VISITED" title="show Visited comments" class="filter_icon" name="CONTACT_VISITED" alt="show Visited comments" src="images/user_suit.png">&nbsp;&nbsp; <img id="CONTACT_SMS" title="show SMS comments" class="filter_icon" name="CONTACT_SMS" alt="show SMS comments" src="images/phone_sound.png">&nbsp;&nbsp; <img id="CONTACT_OTHER" title="show Other comments" class="filter_icon" name="CONTACT_OTHER" alt="show Other comments" src="images/cup.png">&nbsp;&nbsp;<img id="toggle_Comments_All" title="show All comments" class="filter_icon" name="toggle_Comments_All" alt="show All comments" src="images/asterisk_yellow.png">
+                    </div>
+                    </th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+ 
+            <div align="center">
+                <table id="STUDENT_COMMENTS_table" class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                        <th></th>
+ 
+                        <th>COMMENT</th>
+ 
+                        <th class="filter-column">TYPE</th>
+ 
+                        <th>
+                        <p align="center">LAST ALTERED BY</p>
+                        </th>
+ 
+                        <th>
+                        <p align="center">LAST ALTERED DATE</p>
+                        </th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <tr id="displaycomments_row" runat="server">
+                        <td><a href="{link_editcomment_Src}" id="Grid_DisplayComments_MyCommentslink_editcomment_{Grid_DisplayComments_MyComments:rowNumber}">edit</a></td> 
+                        <td>{COMMENT}&nbsp;</td> 
+                        <td>{COMMENT_TYPE}</td> 
+                        <td>
+                            <div align="center">
+                                {LAST_ALTERED_BY}&nbsp; 
+                            </div>
+                        </td> 
+                        <td nowrap>
+                            <div align="center">
+                                {LAST_ALTERED_DATE}&nbsp;&nbsp; 
+                            </div>
+                        </td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="5">No Communications found.</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<!-- END Grid Grid_DisplayComments_MyComments --></p>
+<p align="center">
+<!-- BEGIN Grid Grid_DisplayComments -->
+<table id="Table_PublicComments" cellspacing="0" cellpadding="0" width="70%" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>Public Comments</th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                    <th>&nbsp;</th>
+ 
+                    <th>COMMENT</th>
+ 
+                    <th>&nbsp;TYPE</th>
+ 
+                    <th>
+                    <p align="center">LAST ALTERED BY</p>
+                    </th>
+ 
+                    <th>
+                    <p align="center">LAST ALTERED DATE</p>
+                    </th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr id="displaycomments_row" runat="server">
+                    <td>&nbsp;<a href="{link_editcomment_Src}" id="Grid_DisplayCommentslink_editcomment_{Grid_DisplayComments:rowNumber}">edit</a></td> 
+                    <td>{COMMENT}&nbsp;</td> 
+                    <td>&nbsp;{COMMENT_TYPE}</td> 
+                    <td>
+                        <div align="center">
+                            {LAST_ALTERED_BY}&nbsp; 
+                        </div>
+                    </td> 
+                    <td nowrap>
+                        <div align="center">
+                            {LAST_ALTERED_DATE}&nbsp;&nbsp; 
+                        </div>
+                    </td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                    <td colspan="5">No Comments found.</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                    <td colspan="5">
+                        <!-- BEGIN Navigator Navigator1 -->&nbsp; 
+                        <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+                        <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                            <option selected value="">-</option>
+ {PageSize_Options}
+                        </select>
+ 
+                        <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonFirst.gif"></a> <!-- END First_On -->
+                        <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonPrev.gif"></a> <!-- END Prev_On -->&nbsp;{Page_Number}&nbsp;of&nbsp;{Total_Pages}&nbsp; 
+                        <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonNext.gif"></a> <!-- END Next_On -->
+                        <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonLast.gif"></a> <!-- END Last_On --><!-- END Navigator Navigator1 --></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- END Grid Grid_DisplayComments --><br>
+<br>
+</p>
+<script language="JavaScript" src="js/jquery_min.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/jquery.cookie.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/jquery.autosave.pack.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+    // -------------------------
+    //9-June-2011|EA| added autosave option
+        $('textarea#STUDENT_COMMENTCOMMENT').autosave({'cookieCharMaxSize': 550, 'cookieExpiryLength':10});
+        
+         // hide some of the Contact comments (unfuddle #638 and other requests)
+                // using same code as StudentSummary let's show/hide all comments after first 5
+        var numShown = 16; // Initial rows shown & index
+        var numMore = 10; // Increment
+        var numRows = $('#STUDENT_COMMENTS_table').find('tr').length; // Total # rows
+
+        // Hide rows and add clickable div
+        $('#STUDENT_COMMENTS_table')
+              .find('tr:gt(' + (numShown - 1) + ')').hide().end()
+              .after('<div id="more" class="Button"><br>Show <span>' + numMore + '</span> More Comments<br></div>');
+
+        $('#more').click(function(){
+              numShown = numShown + numMore;
+              // no more show more if done
+              if ( numShown >= numRows ) $('#more').remove();
+              // change rows remaining if less than increment
+              if ( numRows - numShown < numMore ) $('#more span').html(numRows - numShown);
+                 $('#STUDENT_COMMENTS_table').find('tr:lt('+numShown+')').show();
+        })
+        // doing the above to hide for 'all' comments, and then the filters below will show all of the comments
+        // for the selected type otherwise we might accidently hide some rows if filters are clicked.
+        
+
+        // ERA: using jquery, attach the toggles to the toggle_Census and toggle_Equipment links
+        $('img#toggle_Comments_All').click(function() {
+            $('table#Table_MyComments').find('tr.Row').show();
+        });
+
+
+        $('img#CONTACT_PHONE').click(function() {
+                        $('table#Table_MyComments').find('tr.Row').hide();
+                        $('tr.CONTACT_PHONE').show();
+                       // $('#more').html('<br>All [Phone] shown. Click to show some more <strong>ALL Contact</strong> Comments<br>');
+        });
+
+        $('img#CONTACT_EMAIL').click(function() {
+                        $('table#Table_MyComments').find('tr.Row').hide();
+                        $('tr.CONTACT_EMAIL').show();
+                        //$('#more').html('<br>All [Email] shown. Click to show some more <strong>ALL Contact</strong> Comments<br>');
+        });
+
+        $('img#CONTACT_POST').click(function() {
+                        $('table#Table_MyComments').find('tr.Row').hide();
+                        $('tr.CONTACT_POST').show();
+                        //$('#more').html('<br>All [Postal] shown. Click to show some more <strong>ALL Contact</strong> Comments<br>');
+        });
+
+        $('img#CONTACT_VISITED').click(function() {
+                        $('table#Table_MyComments').find('tr.Row').hide();
+                        $('tr.CONTACT_VISITED').show();
+                        //$('#more').html('<br>All [Visits] shown. Click to show some more <strong>ALL Contact</strong> Comments<br>');
+        });
+                // 2-3-2011|EA| added
+        $('img#CONTACT_OTHER').click(function() {
+                        $('table#Table_MyComments').find('tr.Row').hide();
+                        $('tr.CONTACT_OTHER').show();
+                        //$('#more').html('<br>All [Other] shown. Click to show some more <strong>ALL Contact</strong> Comments<br>');
+        });
+
+         // 7-Apr-2011|EA| added SMS
+        $('img#CONTACT_SMS').click(function() {
+                        $('table#Table_MyComments').find('tr.Row').hide();
+                        $('tr.CONTACT_SMS').show();
+                        //$('#more').html('<br>All [SMS] shown. Click to show some more <strong>ALL Contact</strong> Comments<br>');
+        });
+       
+
+       
+    // -------------------------
+</script>
+</body>
+</html>

@@ -1,0 +1,528 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\Development\\Visual Studio\\StudentDBDevelopment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|h:\\development\\student_admin\\onlineenrolmentsettings.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|h:\\development\\student_admin\\onlineenrolmentsettings.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\.gitignore||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\app_code\\components\\databasedataprovider.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\app_code\\studentsummarydataprovider.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\studentsummary.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\studentsummary - codecharge.aspx.vb.exclude||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\app_code\\components\\settings.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\studentsummary.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\vsrenrolment.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\update_utilities.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\maintainsearchrequest_advanced_viewmaintainsearchrequest_s_schoolname_ptautocomplete1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\studentnameplate.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\winlogin\\student_contact_quickentry.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\vwd.webinfo||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\student_carer_maint_student_carer_contact_surname_ptautocomplete1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\student_address_maintain_viewstudentmaintain_addre_postadd_school_address_id_ifknown_ptautofill1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\maintainsearchrequest_advanced_viewmaintainsearchrequest_s_schoolname_ptautofill1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\student_classlist_export.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\student_classlist_exportcsv.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\student_subject_maintain_addsubject_listbox_subject_ptdependentlistbox1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\studentdetails_maintain_student_txtsearch_attendingschool_ptautofill1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\studentenrolment_addnewyear_student_inputregionid_ptautofill1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\studentenrolmentdetails_maintain_student_enrolment_txtschool_super_name_ptautocomplete1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\services\\studentenrolmentdetails_maintain_student_enrolment_txtschool_super_name_ptautofill1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\studentenrolment_initialcheck.aspx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\app_code\\studentenrolment_initialcheckdataprovider.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\studentenrolment_initialcheck.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\winlogin\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\funnelprocessapplication.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\futureenrol_studentmaintain.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE66AC6-84EC-477A-9470-51AEC812A693}|H:\\Development\\STUDENT_ADMIN|H:\\Development\\student_admin\\funnelbrowseapplications.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Student_Carer_Maint_STUDENT_CARER_CONTACT_SURNAME_PTAutocomplete1.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\Student_Carer_Maint_STUDENT_CARER_CONTACT_SURNAME_PTAutocomplete1.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\Student_Carer_Maint_STUDENT_CARER_CONTACT_SURNAME_PTAutocomplete1.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\Student_Carer_Maint_STUDENT_CARER_CONTACT_SURNAME_PTAutocomplete1.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\Student_Carer_Maint_STUDENT_CARER_CONTACT_SURNAME_PTAutocomplete1.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:37.895Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Student_Address_maintain_viewStudentMaintain_Addre_PostAdd_SCHOOL_ADDRESS_ID_ifknown_PTAutoFill1.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\Student_Address_maintain_viewStudentMaintain_Addre_PostAdd_SCHOOL_ADDRESS_ID_ifknown_PTAutoFill1.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\Student_Address_maintain_viewStudentMaintain_Addre_PostAdd_SCHOOL_ADDRESS_ID_ifknown_PTAutoFill1.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\Student_Address_maintain_viewStudentMaintain_Addre_PostAdd_SCHOOL_ADDRESS_ID_ifknown_PTAutoFill1.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\Student_Address_maintain_viewStudentMaintain_Addre_PostAdd_SCHOOL_ADDRESS_ID_ifknown_PTAutoFill1.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:35.879Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutoFill1.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutoFill1.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutoFill1.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutoFill1.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutoFill1.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:33.849Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutocomplete1.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutocomplete1.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutocomplete1.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutocomplete1.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutocomplete1.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:31.711Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VSREnrolment.aspx.vb",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\VSREnrolment.aspx.vb",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\VSREnrolment.aspx.vb",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\VSREnrolment.aspx.vb",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\VSREnrolment.aspx.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVEhL7ZY9SFtRFMf/Tzo0H7S4KKhYCKWpQwJWKBmMUcjWpKCdQroJzpm7NBncMxZnY6KDgjhmiGTJ4qKBtB0CFVFSSvwgH36k7/Wek5vG6nvJM5kK/uC83Hveyfm/e\u002B49j6fUajUNJlAUJWaxWKJyahqlWq1GxZ99YjxLju8nF/h2fIH9w1MMP38qzILg1Bg0TdsVtzMUo4fNZtMVV\u002BgiRT7TeGfvCNvCVrNFuMcH4X4xiJUlD93qiNVq5Vx3MSzR0kqOV7H/4xQfvQ4ExCreCwsEAjIC8Pv98Hg8bIReGVkg\u002B/UnsoWSdDWhVZTOLlE6r/MqvK\u002BH4JsYxlkhg3w\u002Bz\u002BZwOOByudikSEZV1Yzdbo9xEgELLG8dYHnzQLr0aZXry\u002BJbpFIprCXX2E8iZJFIhOfE7XINyN\u002BeKRaLSKfTiMfjyOVy0tvmCV1o\u002BZ/mXexoQZtN5SmdX/LTT4sYilNVjU6UjGpDQk6nU87asMCMqC3ZbQ5/VcUmoykg9yD4ZhSNxm9DgXK5LGdtTB1Tqjs9udhACtFl4cM8QqEQwuHwv3tQqVQoMTUa82rkGR9JKtni3Eu8mxw1LIsZOr4qKKkmklNZumG4Apq0jBzJZJKb6frqBjfXDVPJO9H3Me3Go0BX/n8BflXosbGxLkf98bchCGo66oNEIiE9D0Ov0e4JyGFfGArU6/UHfzXo0cvXR48AfwACBOq7p9gf8gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T02:29:02.784Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OnlineEnrolmentSettings.aspx.cs",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\OnlineEnrolmentSettings.aspx.cs",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\OnlineEnrolmentSettings.aspx.cs",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\OnlineEnrolmentSettings.aspx.cs",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\OnlineEnrolmentSettings.aspx.cs",
+              "ViewState": "AQIAALMBAAAAAAAAAAAiwL4BAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T05:11:03.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OnlineEnrolmentSettings.aspx",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\OnlineEnrolmentSettings.aspx",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\OnlineEnrolmentSettings.aspx",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\OnlineEnrolmentSettings.aspx",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\OnlineEnrolmentSettings.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-08-19T05:10:55.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": ".gitignore",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\.gitignore",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\.gitignore",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\.gitignore",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\.gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-19T05:08:25.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataBaseDataProvider.vb",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\App_Code\\components\\DataBaseDataProvider.vb",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\App_Code\\components\\DataBaseDataProvider.vb",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\App_Code\\components\\DataBaseDataProvider.vb",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\App_Code\\components\\DataBaseDataProvider.vb",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAwwBkAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIqSURBVEhL7ZS/TxRBFMe/u956t3u33hHUBWMkIQZixGtsaAQ0AStjTCyl5U\u002BwICSsjS21tBIrOwsKKEQaGhoaookkZ4DLCujh7a57HN457\u002B2c2R/aEBKb\u002ByRzt/Pe7HxnvvNm0eW/o9CP7/vjrVZrgiPnRLvdXjNN8z0LeJ5nK4oyz5lzQsz3Qtd1OyP7jDH9BkVDQ8m4iO2FxzIKjM4twzkO4NR\u002BykiaonhnstyPKdGe3RuUUUCV/8xQ/yUUchqO/SY3r3GKRvMXT57LqJyPQhPdv93HcRq3/83H1peazIbEBIavkUAGNf\u002BEmxs0EZCAWHlWu8D5KNNC4MFIH8dp3B4JVL7LbEhM4NHd6xiWq1zfdrCyVcW7zV3uD4lJKJ\u002Bk0WzxbgmrmEP5RomfO6Qs6jWz/Pyp\u002BgOfHReVQ4/7vYVsyqKl9R18EAuhMbRDOgcSiZKyqCPwcZ8E6qgchAKXRTxp0euOwIGLHAnkhUBJl9kQFsjn87ZhGAqtYOBKAeWBHvHiV7aJ2tgtiy2ifJTqq6dYs6ewODMqbDrB240KZhY3ZDYktgPiKvvYw1VBVUT\u002BsnXCoiRUXUf1xp8z\u002BBspAauo8w6oKtzglKuJVk8WJXFqAQ7rYcX9i9hFI6iK6KCeL23KSFhddAGTPHy5Kp/iFy1KTICut5ZRxsVkE7NP7sgovazxIRLReBTKD1oF3LRMGQnhb1EU13XnVVW1ZffMdL5Fstuly5kBfgMND8itRMY5HgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T03:44:15.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentSummaryDataProvider.vb",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\App_Code\\StudentSummaryDataProvider.vb",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\App_Code\\StudentSummaryDataProvider.vb",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\App_Code\\StudentSummaryDataProvider.vb",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\App_Code\\StudentSummaryDataProvider.vb",
+              "ViewState": "AQIAAAECAAAAAAAAAAAEwG4BAAAPAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIqSURBVEhL7ZS/TxRBFMe/u956t3u33hHUBWMkIQZixGtsaAQ0AStjTCyl5U\u002BwICSsjS21tBIrOwsKKEQaGhoaookkZ4DLCujh7a57HN457\u002B2c2R/aEBKb\u002ByRzt/Pe7HxnvvNm0eW/o9CP7/vjrVZrgiPnRLvdXjNN8z0LeJ5nK4oyz5lzQsz3Qtd1OyP7jDH9BkVDQ8m4iO2FxzIKjM4twzkO4NR\u002BykiaonhnstyPKdGe3RuUUUCV/8xQ/yUUchqO/SY3r3GKRvMXT57LqJyPQhPdv93HcRq3/83H1peazIbEBIavkUAGNf\u002BEmxs0EZCAWHlWu8D5KNNC4MFIH8dp3B4JVL7LbEhM4NHd6xiWq1zfdrCyVcW7zV3uD4lJKJ\u002Bk0WzxbgmrmEP5RomfO6Qs6jWz/Pyp\u002BgOfHReVQ4/7vYVsyqKl9R18EAuhMbRDOgcSiZKyqCPwcZ8E6qgchAKXRTxp0euOwIGLHAnkhUBJl9kQFsjn87ZhGAqtYOBKAeWBHvHiV7aJ2tgtiy2ifJTqq6dYs6ewODMqbDrB240KZhY3ZDYktgPiKvvYw1VBVUT\u002BsnXCoiRUXUf1xp8z\u002BBspAauo8w6oKtzglKuJVk8WJXFqAQ7rYcX9i9hFI6iK6KCeL23KSFhddAGTPHy5Kp/iFy1KTICut5ZRxsVkE7NP7sgovazxIRLReBTKD1oF3LRMGQnhb1EU13XnVVW1ZffMdL5Fstuly5kBfgMND8itRMY5HgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T03:45:11.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentSummary - CodeCharge.aspx.vb.exclude",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\StudentSummary - CodeCharge.aspx.vb.exclude",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\StudentSummary - CodeCharge.aspx.vb.exclude",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\StudentSummary - CodeCharge.aspx.vb.exclude",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\StudentSummary - CodeCharge.aspx.vb.exclude",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAjwBsAAAAhAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADKSURBVEhL7ZZBCsMgEEVjd0ZyFC/kadp7ZO012ixdexfdBGxNR3FCBmJTC4U8kMyAPx\u002B/YsK6AudcgPIjGGM3zvkV2gVkYIypMpBSQvUmhDC9Hg8hRDZBBuM4VhkopaDC9H2f3/vViEpSXGRE6\u002BUnrLVQYdbzk8EF\u002BoUoToOinFMOiv\u002BJqCRqNw3KU0SdEK01VDRRu2nQIqLqTaagtM0NzogylPaMKENpm0eEDGq/aBS77qIj/PQuQgbee/RHcIR5nqdhGO7QtqLrnrQ1zmS06PbpAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-08-19T03:49:54.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "web.config",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\web.config",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\web.config",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\web.config",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\web.config",
+              "ViewState": "AQIAALIAAAAAAAAAAAAQwD4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-08-23T00:05:57.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StudentNamePlate.ascx",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\StudentNamePlate.ascx",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\StudentNamePlate.ascx",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\StudentNamePlate.ascx",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\StudentNamePlate.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALwSURBVEhLpZVLT1pREMeHyyM8El0R1CgQk9pU6sq9xa7tom0ifgI\u002BBYmYuOcbWDcmotYm1LgwmPjYGOujEVjAgmh8EKU00QgKBuj5T\u002B8leLlQpD8yuefOHc7MmTNnjo464P7\u002BflqSpKD82oDVaq3N\u002B2IH\u002BXw\u002BmMvl3j0\u002BPnr39vaoXC6zmEwmcjqd5Ha7yW63z4gAtiwWy9aLHRQKherFxQVBQqEQPT09UalUIpvNRmNjYywjIyOk0\u002BlmhINgRw5WVlZoeXkZq5G1fzEajbyScDhccyDJ314EUoLI1VQqlQZ9Rw4wEdKiBo7V\u002Bo4cIBXIuRotvUF\u002BMig/edgSl8vFmxmNRnk1iByTDw4OstTzbJOxgfKwJTc3N3R9fU2zs7PtVRFqWyim8cfDw0MW1Hg9/f39LH6/nyfTSpEWeqRFROAtFovuSCRCt7e3ZDFbKJVKkcfjofHx95RIJKinp4ecA046PT2lh4cH0uv1dHZ2hkjZ2dHREcViMdrf36d4PM6TOxwOEgdOCoocelHT6\u002BvrdHl5iZPIBh7PW5ryTfHYZrWxHjZYIQ4aJkSqAHQbGxu0sLDAcnJywnreZHzc2dkh36SPhoaGhLymuS9zbKDwSugnJj7wOPsryxuMCHd3d2lzc5PfteAyvbu744iOfx5TVBgvLYX5I1KjHsMG6YM99gQVlE6n2UYLXoHiAFJPIhFnUY8V4CCZTLZ0IKFylJ6y\u002BvVbTcCkSJl6DFH2pR0MqAAcEqCkQ0ErRSCuWkkr2AE6IFgML/JT4V8pagcdTi8qCDL8ZrhWRZ8\u002Bf\u002BS0IB3147W171xF2WyWAoGAPE1zeJN7e3tpdHSUDn4cUFn0Fq2L7ncux9WDVPX19bE9qFar27i9\u002BEUDdoA/dHd30/z8PFXFTy81NllxTQoHSc7/gHOg5kC\u002BGpvez//Vi\u002Bov92awgegtXvHwoi9dXV1RJpOh8/NzfKrR1dXFq0TkBoNh22w2t4xc4VkE7bZrpRXLry0g\u002BgOKrLHtlkQxmwAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T02:19:25.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentSummary.aspx.vb",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\StudentSummary.aspx.vb",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\StudentSummary.aspx.vb",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\StudentSummary.aspx.vb",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\StudentSummary.aspx.vb",
+              "ViewState": "AQIAABQAAAAAAAAAAAAMwBkAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVEhL7ZY9SFtRFMf/Tzo0H7S4KKhYCKWpQwJWKBmMUcjWpKCdQroJzpm7NBncMxZnY6KDgjhmiGTJ4qKBtB0CFVFSSvwgH36k7/Wek5vG6nvJM5kK/uC83Hveyfm/e\u002B49j6fUajUNJlAUJWaxWKJyahqlWq1GxZ99YjxLju8nF/h2fIH9w1MMP38qzILg1Bg0TdsVtzMUo4fNZtMVV\u002BgiRT7TeGfvCNvCVrNFuMcH4X4xiJUlD93qiNVq5Vx3MSzR0kqOV7H/4xQfvQ4ExCreCwsEAjIC8Pv98Hg8bIReGVkg\u002B/UnsoWSdDWhVZTOLlE6r/MqvK\u002BH4JsYxlkhg3w\u002Bz\u002BZwOOByudikSEZV1Yzdbo9xEgELLG8dYHnzQLr0aZXry\u002BJbpFIprCXX2E8iZJFIhOfE7XINyN\u002BeKRaLSKfTiMfjyOVy0tvmCV1o\u002BZ/mXexoQZtN5SmdX/LTT4sYilNVjU6UjGpDQk6nU87asMCMqC3ZbQ5/VcUmoykg9yD4ZhSNxm9DgXK5LGdtTB1Tqjs9udhACtFl4cM8QqEQwuHwv3tQqVQoMTUa82rkGR9JKtni3Eu8mxw1LIsZOr4qKKkmklNZumG4Apq0jBzJZJKb6frqBjfXDVPJO9H3Me3Go0BX/n8BflXosbGxLkf98bchCGo66oNEIiE9D0Ov0e4JyGFfGArU6/UHfzXo0cvXR48AfwACBOq7p9gf8gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T02:41:26.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Update_Utilities.aspx.vb",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\Update_Utilities.aspx.vb",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\Update_Utilities.aspx.vb",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\Update_Utilities.aspx.vb",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\Update_Utilities.aspx.vb",
+              "ViewState": "AQIAAPYAAAAAAAAAAAAewKoAAABFAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVEhL7ZY9SFtRFMf/Tzo0H7S4KKhYCKWpQwJWKBmMUcjWpKCdQroJzpm7NBncMxZnY6KDgjhmiGTJ4qKBtB0CFVFSSvwgH36k7/Wek5vG6nvJM5kK/uC83Hveyfm/e\u002B49j6fUajUNJlAUJWaxWKJyahqlWq1GxZ99YjxLju8nF/h2fIH9w1MMP38qzILg1Bg0TdsVtzMUo4fNZtMVV\u002BgiRT7TeGfvCNvCVrNFuMcH4X4xiJUlD93qiNVq5Vx3MSzR0kqOV7H/4xQfvQ4ExCreCwsEAjIC8Pv98Hg8bIReGVkg\u002B/UnsoWSdDWhVZTOLlE6r/MqvK\u002BH4JsYxlkhg3w\u002Bz\u002BZwOOByudikSEZV1Yzdbo9xEgELLG8dYHnzQLr0aZXry\u002BJbpFIprCXX2E8iZJFIhOfE7XINyN\u002BeKRaLSKfTiMfjyOVy0tvmCV1o\u002BZ/mXexoQZtN5SmdX/LTT4sYilNVjU6UjGpDQk6nU87asMCMqC3ZbQ5/VcUmoykg9yD4ZhSNxm9DgXK5LGdtTB1Tqjs9udhACtFl4cM8QqEQwuHwv3tQqVQoMTUa82rkGR9JKtni3Eu8mxw1LIsZOr4qKKkmklNZumG4Apq0jBzJZJKb6frqBjfXDVPJO9H3Me3Go0BX/n8BflXosbGxLkf98bchCGo66oNEIiE9D0Ov0e4JyGFfGArU6/UHfzXo0cvXR48AfwACBOq7p9gf8gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T02:20:15.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StudentSummary.aspx",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\StudentSummary.aspx",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\StudentSummary.aspx",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\StudentSummary.aspx",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\StudentSummary.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANASURBVEhLrVVLT1NREP56\u002B4C2PEpATVSqtIkkAgsQQ6ImklDduVATCLBw7c6V6EZgQYj\u002BARdCjBrkkagxxo22CSQYFTGasGmNLQG1SgHLo2/68Mz0Fgt9WBO\u002BZO6dO2fufOfMzDlHgRwIBAIJWf1v6HS67bh5Cebm5kBSCCoqKlBTUwOz2QyVStUvSdKkVqudzEswOjqKkZER2ZIfJpMJbW1tsFgs0Ov1UCgU/YKgryCCp0\u002BeydZMTEyMY2x8jHVaBcng4CDUajU0Gg0kHtkjBINBeL1e2Gw2zM/Ps21PCUKhEBNYrVY4nU627SlBCi6Xi4kIKn7K8Pl8vbLKoK6gwomOEF8JJETjJuiRhrq6OrS3d8hfSVBdUthR5N297/F4sLS0hPq6eg5MEovF5dHcuHT5Ijo7O9Hd3Z1Mkd/v76PgC74ohh0\u002BdNiWobu/gKMvg2iZLYP\u002BwSKanv9C19RvuCPAZkzMTJGzAXdAorT4o4mz65E4B/\u002B6voVqXbI0p/dr0NNQynqZWsF28nm3HGGSQiDSK/XFEmhdEwT37JuCIIJqvZIHzxwowk2ZoJwIhH1IELwVBBvRwk4SnurrHyFcf\u002B/FDRHs2vESXK3V82A6mqs0bCefkAjeM7MGpVISM8yfKiZYCcXwRaTG9jOMR84Abs9t8uCbpXCGTj6zy2H2T9ahAILVcBwO8YPVHcJDQTAoB532RDJ08plZibA/Efyr1hJ1DhWYsNZ1cFsIVODdOkmqLoVAKtdIKEo2DacgJYRsKSKh1RQKBfX/wOd1DHxak02Fw3/FiHg8nrH50jcaHxW15WpcMOpwap8azZVqnBQdY3js5rRQOtL1uw4/vgXi\u002BOaPYWh4CA6HA3a7nQNnAxOYSlWwHCrGq\u002B9BUHtn26XuQAyzq1ucHnNZ0r/J0ASj0YjGxkbZ6y8aGhr4zQT0Q2WxhFsfRZrEeaPK0hlE8EF0z7SoRa1BjfOHtThSckIezQ0ORWeRmHUvdZRVbDpayYvFADukcEykkVJ5p6UC1BgGIemXey6wg7iJWsWr1RuO9bo2onBubHGfp6OyWIkq0W7nxMw1CkzpNUq61Pvk4ZzYMYPdx3UuiNXyhS5/5gHwB7TvkMaGe6XXAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-08-19T01:22:14.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Student_Contact_QuickEntry.aspx.vb",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\WinLogin\\Student_Contact_QuickEntry.aspx.vb",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\WinLogin\\Student_Contact_QuickEntry.aspx.vb",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\WinLogin\\Student_Contact_QuickEntry.aspx.vb",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\WinLogin\\Student_Contact_QuickEntry.aspx.vb",
+              "ViewState": "AQIAAB4BAAAAAAAAAADwvxIAAAAaAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVEhL7ZY9SFtRFMf/Tzo0H7S4KKhYCKWpQwJWKBmMUcjWpKCdQroJzpm7NBncMxZnY6KDgjhmiGTJ4qKBtB0CFVFSSvwgH36k7/Wek5vG6nvJM5kK/uC83Hveyfm/e\u002B49j6fUajUNJlAUJWaxWKJyahqlWq1GxZ99YjxLju8nF/h2fIH9w1MMP38qzILg1Bg0TdsVtzMUo4fNZtMVV\u002BgiRT7TeGfvCNvCVrNFuMcH4X4xiJUlD93qiNVq5Vx3MSzR0kqOV7H/4xQfvQ4ExCreCwsEAjIC8Pv98Hg8bIReGVkg\u002B/UnsoWSdDWhVZTOLlE6r/MqvK\u002BH4JsYxlkhg3w\u002Bz\u002BZwOOByudikSEZV1Yzdbo9xEgELLG8dYHnzQLr0aZXry\u002BJbpFIprCXX2E8iZJFIhOfE7XINyN\u002BeKRaLSKfTiMfjyOVy0tvmCV1o\u002BZ/mXexoQZtN5SmdX/LTT4sYilNVjU6UjGpDQk6nU87asMCMqC3ZbQ5/VcUmoykg9yD4ZhSNxm9DgXK5LGdtTB1Tqjs9udhACtFl4cM8QqEQwuHwv3tQqVQoMTUa82rkGR9JKtni3Eu8mxw1LIsZOr4qKKkmklNZumG4Apq0jBzJZJKb6frqBjfXDVPJO9H3Me3Go0BX/n8BflXosbGxLkf98bchCGo66oNEIiE9D0Ov0e4JyGFfGArU6/UHfzXo0cvXR48AfwACBOq7p9gf8gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T02:17:11.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Settings.vb",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\App_Code\\components\\Settings.vb",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\App_Code\\components\\Settings.vb",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\App_Code\\components\\Settings.vb",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\App_Code\\components\\Settings.vb",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAwwBMAAAAuAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIqSURBVEhL7ZS/TxRBFMe/u956t3u33hHUBWMkIQZixGtsaAQ0AStjTCyl5U\u002BwICSsjS21tBIrOwsKKEQaGhoaookkZ4DLCujh7a57HN457\u002B2c2R/aEBKb\u002ByRzt/Pe7HxnvvNm0eW/o9CP7/vjrVZrgiPnRLvdXjNN8z0LeJ5nK4oyz5lzQsz3Qtd1OyP7jDH9BkVDQ8m4iO2FxzIKjM4twzkO4NR\u002BykiaonhnstyPKdGe3RuUUUCV/8xQ/yUUchqO/SY3r3GKRvMXT57LqJyPQhPdv93HcRq3/83H1peazIbEBIavkUAGNf\u002BEmxs0EZCAWHlWu8D5KNNC4MFIH8dp3B4JVL7LbEhM4NHd6xiWq1zfdrCyVcW7zV3uD4lJKJ\u002Bk0WzxbgmrmEP5RomfO6Qs6jWz/Pyp\u002BgOfHReVQ4/7vYVsyqKl9R18EAuhMbRDOgcSiZKyqCPwcZ8E6qgchAKXRTxp0euOwIGLHAnkhUBJl9kQFsjn87ZhGAqtYOBKAeWBHvHiV7aJ2tgtiy2ifJTqq6dYs6ewODMqbDrB240KZhY3ZDYktgPiKvvYw1VBVUT\u002BsnXCoiRUXUf1xp8z\u002BBspAauo8w6oKtzglKuJVk8WJXFqAQ7rYcX9i9hFI6iK6KCeL23KSFhddAGTPHy5Kp/iFy1KTICut5ZRxsVkE7NP7sgovazxIRLReBTKD1oF3LRMGQnhb1EU13XnVVW1ZffMdL5Fstuly5kBfgMND8itRMY5HgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-15T23:02:53.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "vwd.webinfo",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\vwd.webinfo",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\vwd.webinfo",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\vwd.webinfo",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\vwd.webinfo",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-19T01:29:34.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Student_ClassList_Export.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\Student_ClassList_Export.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\Student_ClassList_Export.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\Student_ClassList_Export.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\Student_ClassList_Export.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:24.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Student_ClassList_ExportCSV.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\Student_ClassList_ExportCSV.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\Student_ClassList_ExportCSV.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\Student_ClassList_ExportCSV.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\Student_ClassList_ExportCSV.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:19.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Student_Subject_maintain_AddSubject_ListBox_Subject_PTDependentListBox1.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\Student_Subject_maintain_AddSubject_ListBox_Subject_PTDependentListBox1.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\Student_Subject_maintain_AddSubject_ListBox_Subject_PTDependentListBox1.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\Student_Subject_maintain_AddSubject_ListBox_Subject_PTDependentListBox1.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\Student_Subject_maintain_AddSubject_ListBox_Subject_PTDependentListBox1.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:16.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "StudentDetails_maintain_STUDENT_txtSearch_AttendingSchool_PTAutoFill1.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\StudentDetails_maintain_STUDENT_txtSearch_AttendingSchool_PTAutoFill1.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\StudentDetails_maintain_STUDENT_txtSearch_AttendingSchool_PTAutoFill1.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\StudentDetails_maintain_STUDENT_txtSearch_AttendingSchool_PTAutoFill1.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\StudentDetails_maintain_STUDENT_txtSearch_AttendingSchool_PTAutoFill1.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:14.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "StudentEnrolment_AddNewYear_STUDENT_inputREgionID_PTAutoFill1.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\StudentEnrolment_AddNewYear_STUDENT_inputREgionID_PTAutoFill1.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\StudentEnrolment_AddNewYear_STUDENT_inputREgionID_PTAutoFill1.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\StudentEnrolment_AddNewYear_STUDENT_inputREgionID_PTAutoFill1.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\StudentEnrolment_AddNewYear_STUDENT_inputREgionID_PTAutoFill1.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:11.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutocomplete1.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutocomplete1.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutocomplete1.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutocomplete1.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutocomplete1.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:07.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutoFill1.html",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\services\\StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutoFill1.html",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\services\\StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutoFill1.html",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\services\\StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutoFill1.html",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\services\\StudentEnrolmentDetails_maintain_STUDENT_ENROLMENT_txtSchool_Super_Name_PTAutoFill1.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIeSURBVEhL3ZXPTxpBFMffDohCerIJeKqGK7L/gbblTDS1ifLjn\u002BBeEjEp/Q96IhyMZVlI0AtHDlQTw60NkHhQ8EKiN2yyED2t7z0WsgtIoeLBfpJvZubN7HyXt8MbCZ6g2\u002B3qRndmXC7XYN\u002BJBrVaDUjT4Pf7we12g8fjAV3XD4QQZafTWZ5okM1mIZPJGJHJRCIRNiERkiQdoEFiKoPjwokRHSWfz4GaU7nv9XpZsViMx4Qw2rnQbreh2WxCpVKBVqvFsddl0KdUKkGj0eD\u002Bsw18Ph/s7u5ZZGYOBusQ2gtZZOZFUmTmPzTQNG3/OXVoGIsBbY415L0xHIsQEpUBY/R3LAa4eQKbj73ReHDN7AadTicxLi3hcBiKxSI4FhcGEjYBNrsAu91mrJqMoLRgy2mh4tYvz2e3D5C56sC3339YP7BPMaJer4OqqlOlC3\u002BxSOCiDzSgylmtVnni9PYejq40\u002BPrrjnV0qXGMIAMlq0yVLk6RoigQDAYhHAoN6nkSNz296W1InOHmFCPWsTzQ2q3tLcjlVU7dzudPA5kZOab/Cn0vs/ovOjeDaDRqkSzLvQk6PX0FAgE9lUpx/8v5jb55fK3D9wvWRuGaYzSXTqd5rfnZ3m6j2OLxuISXNH4raQ1b/ml0cRPv3thBXnbAxsoSbKLktw5YxRhBFzy9JT7zEz/2YTKZLPPEEHwE6H\u002BABnRcZwaf48vdGA4B8Ailxwl3O7PCowAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:21:04.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "StudentEnrolment_InitialCheck.aspx.vb",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\StudentEnrolment_InitialCheck.aspx.vb",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\StudentEnrolment_InitialCheck.aspx.vb",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\StudentEnrolment_InitialCheck.aspx.vb",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\StudentEnrolment_InitialCheck.aspx.vb",
+              "ViewState": "AQIAANwBAAAAAAAAAAAwwOcBAAAIAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVEhL7ZY9SFtRFMf/Tzo0H7S4KKhYCKWpQwJWKBmMUcjWpKCdQroJzpm7NBncMxZnY6KDgjhmiGTJ4qKBtB0CFVFSSvwgH36k7/Wek5vG6nvJM5kK/uC83Hveyfm/e\u002B49j6fUajUNJlAUJWaxWKJyahqlWq1GxZ99YjxLju8nF/h2fIH9w1MMP38qzILg1Bg0TdsVtzMUo4fNZtMVV\u002BgiRT7TeGfvCNvCVrNFuMcH4X4xiJUlD93qiNVq5Vx3MSzR0kqOV7H/4xQfvQ4ExCreCwsEAjIC8Pv98Hg8bIReGVkg\u002B/UnsoWSdDWhVZTOLlE6r/MqvK\u002BH4JsYxlkhg3w\u002Bz\u002BZwOOByudikSEZV1Yzdbo9xEgELLG8dYHnzQLr0aZXry\u002BJbpFIprCXX2E8iZJFIhOfE7XINyN\u002BeKRaLSKfTiMfjyOVy0tvmCV1o\u002BZ/mXexoQZtN5SmdX/LTT4sYilNVjU6UjGpDQk6nU87asMCMqC3ZbQ5/VcUmoykg9yD4ZhSNxm9DgXK5LGdtTB1Tqjs9udhACtFl4cM8QqEQwuHwv3tQqVQoMTUa82rkGR9JKtni3Eu8mxw1LIsZOr4qKKkmklNZumG4Apq0jBzJZJKb6frqBjfXDVPJO9H3Me3Go0BX/n8BflXosbGxLkf98bchCGo66oNEIiE9D0Ov0e4JyGFfGArU6/UHfzXo0cvXR48AfwACBOq7p9gf8gAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:13:59.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "StudentEnrolment_InitialCheckDataProvider.vb",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\App_Code\\StudentEnrolment_InitialCheckDataProvider.vb",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\App_Code\\StudentEnrolment_InitialCheckDataProvider.vb",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\App_Code\\StudentEnrolment_InitialCheckDataProvider.vb",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\App_Code\\StudentEnrolment_InitialCheckDataProvider.vb",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIqSURBVEhL7ZS/TxRBFMe/u956t3u33hHUBWMkIQZixGtsaAQ0AStjTCyl5U\u002BwICSsjS21tBIrOwsKKEQaGhoaookkZ4DLCujh7a57HN457\u002B2c2R/aEBKb\u002ByRzt/Pe7HxnvvNm0eW/o9CP7/vjrVZrgiPnRLvdXjNN8z0LeJ5nK4oyz5lzQsz3Qtd1OyP7jDH9BkVDQ8m4iO2FxzIKjM4twzkO4NR\u002BykiaonhnstyPKdGe3RuUUUCV/8xQ/yUUchqO/SY3r3GKRvMXT57LqJyPQhPdv93HcRq3/83H1peazIbEBIavkUAGNf\u002BEmxs0EZCAWHlWu8D5KNNC4MFIH8dp3B4JVL7LbEhM4NHd6xiWq1zfdrCyVcW7zV3uD4lJKJ\u002Bk0WzxbgmrmEP5RomfO6Qs6jWz/Pyp\u002BgOfHReVQ4/7vYVsyqKl9R18EAuhMbRDOgcSiZKyqCPwcZ8E6qgchAKXRTxp0euOwIGLHAnkhUBJl9kQFsjn87ZhGAqtYOBKAeWBHvHiV7aJ2tgtiy2ifJTqq6dYs6ewODMqbDrB240KZhY3ZDYktgPiKvvYw1VBVUT\u002BsnXCoiRUXUf1xp8z\u002BBspAauo8w6oKtzglKuJVk8WJXFqAQ7rYcX9i9hFI6iK6KCeL23KSFhddAGTPHy5Kp/iFy1KTICut5ZRxsVkE7NP7sgovazxIRLReBTKD1oF3LRMGQnhb1EU13XnVVW1ZffMdL5Fstuly5kBfgMND8itRMY5HgAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-19T01:13:43.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "StudentEnrolment_InitialCheck.aspx",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\StudentEnrolment_InitialCheck.aspx",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\StudentEnrolment_InitialCheck.aspx",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\StudentEnrolment_InitialCheck.aspx",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\StudentEnrolment_InitialCheck.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANASURBVEhLrVVLT1NREP56\u002B4C2PEpATVSqtIkkAgsQQ6ImklDduVATCLBw7c6V6EZgQYj\u002BARdCjBrkkagxxo22CSQYFTGasGmNLQG1SgHLo2/68Mz0Fgt9WBO\u002BZO6dO2fufOfMzDlHgRwIBAIJWf1v6HS67bh5Cebm5kBSCCoqKlBTUwOz2QyVStUvSdKkVqudzEswOjqKkZER2ZIfJpMJbW1tsFgs0Ov1UCgU/YKgryCCp0\u002BeydZMTEyMY2x8jHVaBcng4CDUajU0Gg0kHtkjBINBeL1e2Gw2zM/Ps21PCUKhEBNYrVY4nU627SlBCi6Xi4kIKn7K8Pl8vbLKoK6gwomOEF8JJETjJuiRhrq6OrS3d8hfSVBdUthR5N297/F4sLS0hPq6eg5MEovF5dHcuHT5Ijo7O9Hd3Z1Mkd/v76PgC74ohh0\u002BdNiWobu/gKMvg2iZLYP\u002BwSKanv9C19RvuCPAZkzMTJGzAXdAorT4o4mz65E4B/\u002B6voVqXbI0p/dr0NNQynqZWsF28nm3HGGSQiDSK/XFEmhdEwT37JuCIIJqvZIHzxwowk2ZoJwIhH1IELwVBBvRwk4SnurrHyFcf\u002B/FDRHs2vESXK3V82A6mqs0bCefkAjeM7MGpVISM8yfKiZYCcXwRaTG9jOMR84Abs9t8uCbpXCGTj6zy2H2T9ahAILVcBwO8YPVHcJDQTAoB532RDJ08plZibA/Efyr1hJ1DhWYsNZ1cFsIVODdOkmqLoVAKtdIKEo2DacgJYRsKSKh1RQKBfX/wOd1DHxak02Fw3/FiHg8nrH50jcaHxW15WpcMOpwap8azZVqnBQdY3js5rRQOtL1uw4/vgXi\u002BOaPYWh4CA6HA3a7nQNnAxOYSlWwHCrGq\u002B9BUHtn26XuQAyzq1ucHnNZ0r/J0ASj0YjGxkbZ6y8aGhr4zQT0Q2WxhFsfRZrEeaPK0hlE8EF0z7SoRa1BjfOHtThSckIezQ0ORWeRmHUvdZRVbDpayYvFADukcEykkVJ5p6UC1BgGIemXey6wg7iJWsWr1RuO9bo2onBubHGfp6OyWIkq0W7nxMw1CkzpNUq61Pvk4ZzYMYPdx3UuiNXyhS5/5gHwB7TvkMaGe6XXAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-08-19T01:12:56.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FutureEnrol_StudentMaintain.aspx",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\FutureEnrol_StudentMaintain.aspx",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\FutureEnrol_StudentMaintain.aspx",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\FutureEnrol_StudentMaintain.aspx",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\FutureEnrol_StudentMaintain.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANASURBVEhLrVVLT1NREP56\u002B4C2PEpATVSqtIkkAgsQQ6ImklDduVATCLBw7c6V6EZgQYj\u002BARdCjBrkkagxxo22CSQYFTGasGmNLQG1SgHLo2/68Mz0Fgt9WBO\u002BZO6dO2fufOfMzDlHgRwIBAIJWf1v6HS67bh5Cebm5kBSCCoqKlBTUwOz2QyVStUvSdKkVqudzEswOjqKkZER2ZIfJpMJbW1tsFgs0Ov1UCgU/YKgryCCp0\u002BeydZMTEyMY2x8jHVaBcng4CDUajU0Gg0kHtkjBINBeL1e2Gw2zM/Ps21PCUKhEBNYrVY4nU627SlBCi6Xi4kIKn7K8Pl8vbLKoK6gwomOEF8JJETjJuiRhrq6OrS3d8hfSVBdUthR5N297/F4sLS0hPq6eg5MEovF5dHcuHT5Ijo7O9Hd3Z1Mkd/v76PgC74ohh0\u002BdNiWobu/gKMvg2iZLYP\u002BwSKanv9C19RvuCPAZkzMTJGzAXdAorT4o4mz65E4B/\u002B6voVqXbI0p/dr0NNQynqZWsF28nm3HGGSQiDSK/XFEmhdEwT37JuCIIJqvZIHzxwowk2ZoJwIhH1IELwVBBvRwk4SnurrHyFcf\u002B/FDRHs2vESXK3V82A6mqs0bCefkAjeM7MGpVISM8yfKiZYCcXwRaTG9jOMR84Abs9t8uCbpXCGTj6zy2H2T9ahAILVcBwO8YPVHcJDQTAoB532RDJ08plZibA/Efyr1hJ1DhWYsNZ1cFsIVODdOkmqLoVAKtdIKEo2DacgJYRsKSKh1RQKBfX/wOd1DHxak02Fw3/FiHg8nrH50jcaHxW15WpcMOpwap8azZVqnBQdY3js5rRQOtL1uw4/vgXi\u002BOaPYWh4CA6HA3a7nQNnAxOYSlWwHCrGq\u002B9BUHtn26XuQAyzq1ucHnNZ0r/J0ASj0YjGxkbZ6y8aGhr4zQT0Q2WxhFsfRZrEeaPK0hlE8EF0z7SoRa1BjfOHtThSckIezQ0ORWeRmHUvdZRVbDpayYvFADukcEykkVJ5p6UC1BgGIemXey6wg7iJWsWr1RuO9bo2onBubHGfp6OyWIkq0W7nxMw1CkzpNUq61Pvk4ZzYMYPdx3UuiNXyhS5/5gHwB7TvkMaGe6XXAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-08-15T23:48:47.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "web.config",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\WinLogin\\web.config",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\WinLogin\\web.config",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\WinLogin\\web.config",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\WinLogin\\web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI\u002BSURBVEhLvZW9buJAEMfHxpcE6AiBRIB0QkggBVBCRZmCgoIXALqL6HmDJG\u002BQ1NRAEilJg6gooCMUFHx0QEUDDQ2mQWffztyaI9hCxoruh1benTHz368ZC7DDcrm8E0Xxng8t4XA4NnH3CvT7fWpmiMVi4PF4wOv1gqqqDyxG0263NyXuN2QwGEClUuGj/eRyORJBAUEQ7ri5uXcF1WoVyuUyvL99kM\u002BI19cXeH55pn4wGKRWLBZpjIj8\u002BS0sFguYTCbQbrdhOp2S7f8IyLJ8v1qtVGzbNyibzUKtVuMj8zQaDRiPx9S34Z6zwDdM5Ger1SKjy\u002BWi52g0gk6nA\u002BcXF\u002By6CcDEyb7L2ZkHLi\u002BjmzYcDunA4/E4SDjj9XpNy6vX65BOpyEUCtEfUQBtV1fXACcAkqS/dFrQbfDgNWhK3W4XSqUS7R8KaWh7\u002BvT0CJ\u002BdT7BJNu4xDwmwbYL5fE4GI9C3kmV9VppAO2SYzWZkMAJ9\u002BA5LIG4xj\u002B7UMLkymQw1TDINlf8OhQTcbjeEw2EyGIE\u002BfEc9PP4/gUgkQgYj0Hd6igIWV5BIJKBQKEAqlaJaooF9tN3\u002BuoVrdlWV3wr3mEdkB/fAZkYZlkwmwe/3kwPx\u002BXxkUxS2\u002B1b2hyGymo2loYkDDBYIBLBLoNhfAcWyAKWm0\u002BlEEapHON7l6PjHpnQfyt4PzjbRaJSKn1mwFiFfMgdXsD1TDJjP56lvFV2iGYEfcatNtwL8yPd6PRprJRdfJIMFdAK8\u002BwXrAgB/AOK1\u002BbfGFgbGAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-08-23T00:05:57.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FunnelProcessApplication.aspx",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\FunnelProcessApplication.aspx",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\FunnelProcessApplication.aspx",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\FunnelProcessApplication.aspx",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\FunnelProcessApplication.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANASURBVEhLrVVLT1NREP56\u002B4C2PEpATVSqtIkkAgsQQ6ImklDduVATCLBw7c6V6EZgQYj\u002BARdCjBrkkagxxo22CSQYFTGasGmNLQG1SgHLo2/68Mz0Fgt9WBO\u002BZO6dO2fufOfMzDlHgRwIBAIJWf1v6HS67bh5Cebm5kBSCCoqKlBTUwOz2QyVStUvSdKkVqudzEswOjqKkZER2ZIfJpMJbW1tsFgs0Ov1UCgU/YKgryCCp0\u002BeydZMTEyMY2x8jHVaBcng4CDUajU0Gg0kHtkjBINBeL1e2Gw2zM/Ps21PCUKhEBNYrVY4nU627SlBCi6Xi4kIKn7K8Pl8vbLKoK6gwomOEF8JJETjJuiRhrq6OrS3d8hfSVBdUthR5N297/F4sLS0hPq6eg5MEovF5dHcuHT5Ijo7O9Hd3Z1Mkd/v76PgC74ohh0\u002BdNiWobu/gKMvg2iZLYP\u002BwSKanv9C19RvuCPAZkzMTJGzAXdAorT4o4mz65E4B/\u002B6voVqXbI0p/dr0NNQynqZWsF28nm3HGGSQiDSK/XFEmhdEwT37JuCIIJqvZIHzxwowk2ZoJwIhH1IELwVBBvRwk4SnurrHyFcf\u002B/FDRHs2vESXK3V82A6mqs0bCefkAjeM7MGpVISM8yfKiZYCcXwRaTG9jOMR84Abs9t8uCbpXCGTj6zy2H2T9ahAILVcBwO8YPVHcJDQTAoB532RDJ08plZibA/Efyr1hJ1DhWYsNZ1cFsIVODdOkmqLoVAKtdIKEo2DacgJYRsKSKh1RQKBfX/wOd1DHxak02Fw3/FiHg8nrH50jcaHxW15WpcMOpwap8azZVqnBQdY3js5rRQOtL1uw4/vgXi\u002BOaPYWh4CA6HA3a7nQNnAxOYSlWwHCrGq\u002B9BUHtn26XuQAyzq1ucHnNZ0r/J0ASj0YjGxkbZ6y8aGhr4zQT0Q2WxhFsfRZrEeaPK0hlE8EF0z7SoRa1BjfOHtThSckIezQ0ORWeRmHUvdZRVbDpayYvFADukcEykkVJ5p6UC1BgGIemXey6wg7iJWsWr1RuO9bo2onBubHGfp6OyWIkq0W7nxMw1CkzpNUq61Pvk4ZzYMYPdx3UuiNXyhS5/5gHwB7TvkMaGe6XXAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-08-15T23:47:16.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "FunnelBrowseApplications.aspx",
+              "DocumentMoniker": "H:\\Development\\STUDENT_ADMIN\\FunnelBrowseApplications.aspx",
+              "RelativeDocumentMoniker": "..\\..\\STUDENT_ADMIN\\FunnelBrowseApplications.aspx",
+              "ToolTip": "H:\\Development\\STUDENT_ADMIN\\FunnelBrowseApplications.aspx",
+              "RelativeToolTip": "..\\..\\STUDENT_ADMIN\\FunnelBrowseApplications.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANASURBVEhLrVVLT1NREP56\u002B4C2PEpATVSqtIkkAgsQQ6ImklDduVATCLBw7c6V6EZgQYj\u002BARdCjBrkkagxxo22CSQYFTGasGmNLQG1SgHLo2/68Mz0Fgt9WBO\u002BZO6dO2fufOfMzDlHgRwIBAIJWf1v6HS67bh5Cebm5kBSCCoqKlBTUwOz2QyVStUvSdKkVqudzEswOjqKkZER2ZIfJpMJbW1tsFgs0Ov1UCgU/YKgryCCp0\u002BeydZMTEyMY2x8jHVaBcng4CDUajU0Gg0kHtkjBINBeL1e2Gw2zM/Ps21PCUKhEBNYrVY4nU627SlBCi6Xi4kIKn7K8Pl8vbLKoK6gwomOEF8JJETjJuiRhrq6OrS3d8hfSVBdUthR5N297/F4sLS0hPq6eg5MEovF5dHcuHT5Ijo7O9Hd3Z1Mkd/v76PgC74ohh0\u002BdNiWobu/gKMvg2iZLYP\u002BwSKanv9C19RvuCPAZkzMTJGzAXdAorT4o4mz65E4B/\u002B6voVqXbI0p/dr0NNQynqZWsF28nm3HGGSQiDSK/XFEmhdEwT37JuCIIJqvZIHzxwowk2ZoJwIhH1IELwVBBvRwk4SnurrHyFcf\u002B/FDRHs2vESXK3V82A6mqs0bCefkAjeM7MGpVISM8yfKiZYCcXwRaTG9jOMR84Abs9t8uCbpXCGTj6zy2H2T9ahAILVcBwO8YPVHcJDQTAoB532RDJ08plZibA/Efyr1hJ1DhWYsNZ1cFsIVODdOkmqLoVAKtdIKEo2DacgJYRsKSKh1RQKBfX/wOd1DHxak02Fw3/FiHg8nrH50jcaHxW15WpcMOpwap8azZVqnBQdY3js5rRQOtL1uw4/vgXi\u002BOaPYWh4CA6HA3a7nQNnAxOYSlWwHCrGq\u002B9BUHtn26XuQAyzq1ucHnNZ0r/J0ASj0YjGxkbZ6y8aGhr4zQT0Q2WxhFsfRZrEeaPK0hlE8EF0z7SoRa1BjfOHtThSckIezQ0ORWeRmHUvdZRVbDpayYvFADukcEykkVJ5p6UC1BgGIemXey6wg7iJWsWr1RuO9bo2onBubHGfp6OyWIkq0W7nxMw1CkzpNUq61Pvk4ZzYMYPdx3UuiNXyhS5/5gHwB7TvkMaGe6XXAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-08-15T23:45:17.872Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

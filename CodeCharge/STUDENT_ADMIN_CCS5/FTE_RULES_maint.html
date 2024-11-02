@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+
+<title>FTE RULES</title>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+{Header}
+
+<!-- BEGIN Record FTE_RULES -->
+<form method="post" action="{Action}" name="{HTMLFormName}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+            <th>Add/Edit FTE RULES </th>
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>FROM YEAR LEVEL</th>
+ 
+            <td><input type="text" name="{FROM_YEAR_LEVEL_Name}" value="{FROM_YEAR_LEVEL}" maxlength="5" size="5" id="FTE_RULESFROM_YEAR_LEVEL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>TO YEAR LEVEL</th>
+ 
+            <td><input type="text" name="{TO_YEAR_LEVEL_Name}" value="{TO_YEAR_LEVEL}" maxlength="5" size="5" id="FTE_RULESTO_YEAR_LEVEL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>FTE</th>
+ 
+            <td><input type="text" name="{FTE_Name}" value="{FTE}" maxlength="12" size="12" id="FTE_RULESFTE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>FULLTIME FLAG</th>
+ 
+            <td><input type="checkbox" name="{FULLTIME_FLAG_Name}" value="1" {FULLTIME_FLAG} id="FTE_RULESFULLTIME_FLAG"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY</th>
+ 
+            <td><input type="text" name="{LAST_ALTERED_BY_Name}" value="{LAST_ALTERED_BY}" maxlength="8" size="8" id="FTE_RULESLAST_ALTERED_BY"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED DATE</th>
+ 
+            <td><input type="text" name="{LAST_ALTERED_DATE_Name}" value="{LAST_ALTERED_DATE}" maxlength="100" size="10" id="FTE_RULESLAST_ALTERED_DATE"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" class="Button" id="FTE_RULESButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" class="Button" id="FTE_RULESButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" class="Button" id="FTE_RULESButton_Delete"><!-- END Button Button_Delete --></td> 
+          </tr>
+        </table>
+ </td> 
+    </tr>
+  </table>
+</form>
+<!-- END Record FTE_RULES --><br>
+{Footer}
+</body>
+</html>

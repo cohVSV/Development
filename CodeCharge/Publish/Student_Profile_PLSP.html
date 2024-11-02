@@ -1,0 +1,305 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Personal Learning and Support Plan</title>
+<meta name="description" content="for 202 Enrolments, spin off parts of Student Profile into the Personal Learning Plan (PLP) and the Personal Learning and Support Plan (PLSP). Everyone gets the PLP and the Support page is only for certain categories of students.">
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<style type="text/css">
+<!--
+.instructions   { font-size: 12px; font-style: italic; }
+.processtips   { display: none; }
+.processtips::before  { content: "Tip!"; }
+.processtips:hover   { display: block; }
+.errormsg   { font-size: 120%; background-color: #F00; color: #FFF; font-weight: bold; margin: 2px; }
+-->
+</style>
+</head>
+<body>
+<p align="center">
+<!-- BEGIN Panel Panel_MenuStudentMaintain -->{Menu_Student_maintain}<!-- END Panel Panel_MenuStudentMaintain --></p>
+<p align="center"><a href="{Link_Backtosummary_Src}" id="Link_Backtosummary" class="Button">Back to Summary</a></p>
+<p align="center">{StudentNamePlate}</p>
+<p align="center">
+<!-- BEGIN Record STUDENT_PROFILE1 -->
+<form id="STUDENT_PROFILE1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add/Edit STUDENT&nbsp;PERSONAL LEARNING PLAN&nbsp;</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="STUDENT_PROFILE1ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>STUDENT ID / ENROL YEAR</th>
+ 
+            <td><input type="hidden" id="STUDENT_PROFILE1STUDENT_ID" value="{STUDENT_ID}" name="{STUDENT_ID_Name}">{lblStudentID} / <input type="hidden" id="STUDENT_PROFILE1ENROLMENT_YEAR" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}">{lblEnrolYear}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / WHEN</th>
+ 
+            <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}<input type="hidden" id="STUDENT_PROFILE1hidden_LastUpdatedBy" value="{hidden_LastUpdatedBy}" name="{hidden_LastUpdatedBy_Name}"><input type="hidden" id="STUDENT_PROFILE1hidden_LastUpdatedWhen" value="{hidden_LastUpdatedWhen}" name="{hidden_LastUpdatedWhen_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><input type="button" onclick="restore_last_saved_values('form');" id="btnRestore" value="Retrieve Saved Data" name="btnRestore"><span style="COLOR: #fff; DISPLAY: none; BACKGROUND-COLOR: #468847">Data saved</span> </th>
+ 
+            <td></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;Somthing&nbsp;something manual&nbsp;Checked?</th>
+ 
+            <td>&nbsp;<input type="checkbox" id="STUDENT_PROFILE1cbENROL_FILE_CHECKED" value="1" name="{cbENROL_FILE_CHECKED_Name}" {cbENROL_FILE_CHECKED}>&nbsp;<em>(enrol file to be checked annually for returning students)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>
+            <h4>&nbsp;PERSONAL INFORMATION</h4>
+            </th>
+ 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp; Something might go here </th>
+ 
+            <td>&nbsp; 
+              <p><em>(the PLP and other stuff might be at the top)</em></p>
+            </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert2 --><input type="submit" id="STUDENT_PROFILE1Button_Insert2" class="Button" value="Add Learning Plan" name="{Button_Name}"><!-- END Button Button_Insert2 -->
+              <!-- BEGIN Button Button_Update2 --><input type="submit" id="STUDENT_PROFILE1Button_Update2" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update2 -->
+              <!-- BEGIN Button Button_Cancel2 --><input type="submit" id="STUDENT_PROFILE1Button_Cancel2" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel2 --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp; 
+            <h4>LAUNCHPAD / ASSESSMENT</h4>
+            </th>
+ 
+            <td>&nbsp; 
+              <p><em>(Rest of Profile - complete annually for returning students)</em></p>
+            </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAUNCH PAD COMPLETED (Years 3 - 10) 
+            <div class="errormsg">
+              {error_LPDone} 
+            </div>
+            </th>
+ 
+            <td>
+              <!-- BEGIN RadioButton LAUNCH_PAD_DONE --><input type="radio" id="STUDENT_PROFILE1LAUNCH_PAD_DONE_{LAUNCH_PAD_DONE:optionNumber}" value="{Value}" name="{LAUNCH_PAD_DONE_Name}" {Check}>{Description}<!-- END RadioButton LAUNCH_PAD_DONE --><br>
+              <br>
+              COMPLETED DATE <input type="text" id="STUDENT_PROFILE1LAUNCH_PAD_DONE_DATE" maxlength="10" size="10" value="{LAUNCH_PAD_DONE_DATE}" name="{LAUNCH_PAD_DONE_DATE_Name}">&nbsp;<em>dd/mm/yyyy</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th colspan="2">STUDENT ASSESSMENT DATA <br>
+            <div class="errormsg">
+              {error_AssessData} 
+            </div>
+ 
+            <table class="Record" cellspacing="0" cellpadding="0" width="100%">
+              <tr>
+                <td>&nbsp;</td> 
+                <td>&nbsp;<strong>Launch Pad</strong></td> 
+                <td><strong>&nbsp;ReLaunch</strong></td>
+              </tr>
+ 
+              <tr>
+                <td>&nbsp;English</td> 
+                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_ENGLANG_LP" maxlength="10" size="5" value="{ASSESS_ENGLANG_LP}" name="{ASSESS_ENGLANG_LP_Name}"></td> 
+                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_ENGLANG_RL" maxlength="10" size="5" value="{ASSESS_ENGLANG_RL}" name="{ASSESS_ENGLANG_RL_Name}"></td>
+              </tr>
+ 
+              <tr>
+                <td>&nbsp;Mathematics</td> 
+                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_MATH_LP" maxlength="10" size="5" value="{ASSESS_MATH_LP}" name="{ASSESS_MATH_LP_Name}"></td> 
+                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_MATH_RL" maxlength="10" size="5" value="{ASSESS_MATH_RL}" name="{ASSESS_MATH_RL_Name}"></td>
+              </tr>
+ 
+              <tr>
+                <td>&nbsp;PAT&nbsp;Science</td> 
+                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_PATSCIENCE_LP" maxlength="10" size="5" value="{ASSESS_PATSCIENCE_LP}" name="{ASSESS_PATSCIENCE_LP_Name}"></td> 
+                <td>&nbsp;<input type="text" id="STUDENT_PROFILE1ASSESS_PATSCIENCE_RL" maxlength="10" size="5" value="{ASSESS_PATSCIENCE_RL}" name="{ASSESS_PATSCIENCE_RL_Name}"></td>
+              </tr>
+            </table>
+            </th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp; 
+            <h4>VSV LEARNING PROGRAM</h4>
+            </th>
+ 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Standard or Customised</th>
+ 
+            <td><input type="hidden" id="STUDENT_PROFILE1LEARNING_PROGRAM" value="{LEARNING_PROGRAM}" name="{LEARNING_PROGRAM_Name}">{lblLearningProgram}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ADDITIONAL DETAILS 
+            <div class="instructions">
+              eg: reduced subject load, modified subjects 
+            </div>
+ 
+            <div class="errormsg">
+              {error_LearnDetails} 
+            </div>
+            </th>
+ 
+            <td><textarea id="STUDENT_PROFILE1LEARNING_PROGRAM_DETAILS" rows="3" cols="50" name="{LEARNING_PROGRAM_DETAILS_Name}" maxysize="200">{LEARNING_PROGRAM_DETAILS}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LEARNING PROGRAM CONSULTATION</th>
+ 
+            <td>
+              <!-- BEGIN CheckBoxList LEARNING_PROGRAM_CONSULT --><input type="checkbox" id="STUDENT_PROFILE1LEARNING_PROGRAM_CONSULT_{LEARNING_PROGRAM_CONSULT:optionNumber}" value="{Value}" name="{LEARNING_PROGRAM_CONSULT_Name}" {Check}>{Description}<br>
+              <!-- END CheckBoxList LEARNING_PROGRAM_CONSULT --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LEARNING GOALS 
+            <div class="errormsg">
+              {error_LearnGoals} 
+            </div>
+            </th>
+ 
+            <td><strong>this will be on another page of Goals</strong></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SPECIAL PROVISION? 
+            <div class="instructions">
+              see F-10 Special Provision Policy. Prior discussion<br>
+              with LT Engagement and/or Year Level coordinator required 
+            </div>
+            </th>
+ 
+            <td>
+              <!-- BEGIN RadioButton SPECIAL_PROVISION_FLAG --><input type="radio" id="STUDENT_PROFILE1SPECIAL_PROVISION_FLAG_{SPECIAL_PROVISION_FLAG:optionNumber}" value="{Value}" name="{SPECIAL_PROVISION_FLAG_Name}" {Check}>{Description}<!-- END RadioButton SPECIAL_PROVISION_FLAG --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SPECIAL PROVISION DETAILS 
+            <div class="errormsg">
+              {error_SpecialProvision} 
+            </div>
+            </th>
+ 
+            <td><textarea id="STUDENT_PROFILE1SPECIAL_PROVISION_DETAILS" rows="3" cols="50" name="{SPECIAL_PROVISION_DETAILS_Name}" maxysize="400">{SPECIAL_PROVISION_DETAILS}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp; 
+            <h4>REVIEW OF PROGRESS - here or Profile??</h4>
+            </th>
+ 
+            <td>&nbsp; 
+              <div class="instructions">
+                Learning Programs and Career Action Plans should be monitored<br>
+                and reviewed once per semester 
+              </div>
+            </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>END OF SEMESTER 1 
+            <div class="errormsg">
+              {error_ProgressSem1} 
+            </div>
+            </th>
+ 
+            <td><textarea id="STUDENT_PROFILE1REVIEW_PROGRESS_END_SEM1" rows="3" cols="50" name="{REVIEW_PROGRESS_END_SEM1_Name}" maxysize="400">{REVIEW_PROGRESS_END_SEM1}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>END OF SEMESTER 2 
+            <div class="instructions">
+              include recommendations for next year 
+            </div>
+ 
+            <div class="errormsg">
+              {error_ProgressSem2} 
+            </div>
+            </th>
+ 
+            <td><textarea id="STUDENT_PROFILE1REVIEW_PROGRESS_END_SEM2" rows="3" cols="50" name="{REVIEW_PROGRESS_END_SEM2_Name}" maxysize="400">{REVIEW_PROGRESS_END_SEM2}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / WHEN</th>
+ 
+            <td>{LAST_ALTERED_BY1}&nbsp;/ {LAST_ALTERED_DATE1}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENT_PROFILE1Button_Insert" class="Button" value="Add Learning Plan" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_PROFILE1Button_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_PROFILE1Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input type="hidden" id="STUDENT_PROFILE1Hidden_LEARNING_PROGRAM_CONSULT" value="{Hidden_LEARNING_PROGRAM_CONSULT}" name="{Hidden_LEARNING_PROGRAM_CONSULT_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STUDENT_PROFILE1 --></p>
+<script src="js/sisyphus.min.js" type="text/javascript"></script>
+<script src="js/sisyphus-ondemand.js" type="text/javascript"></script>
+<script src="js/jquery.maxlength.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+       /*
+        $(window).load(function() {
+                // Animate loader off screen
+                $(".modal").fadeOut("slow");
+        });
+                */
+                jQuery.noConflict();
+        jQuery(function(){
+             //attachSisyphus('form')
+             // $('form').sisyphus({timeout: 10, autoRelease: true})
+        });  
+
+</script>
+<script language="javascript" type="text/javascript">
+      jQuery(function(){
+                // due to stupid ASP.NET not allowing maxlength attribute on textarea
+                // , use 'maxysize' and convert on load to maxlength
+                // and attach to textarea now, when the attr exists
+                jQuery('textarea').attr('maxlength', function() {
+                                        return jQuery(this).attr('maxysize');
+                                 }).maxlength(); 
+                                        
+                        // jQuery("input").maxlength();
+        });
+</script>
+<div class="modal">
+  <!-- Place at bottom of page -->
+</div>
+</body>
+</html>

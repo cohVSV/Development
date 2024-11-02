@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>STAFF</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+<p>{Header} </p>
+<p><a href="{Link1_Src}" id="Link1" class="Button">Back to Staff List</a></p>
+<!-- BEGIN Record STAFF -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Add/Edit STAFF </th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>STAFF ID:</th>
+ 
+                        <td>
+                            <!-- BEGIN TextBox StaffID --><input type="text" tabindex="1" id="STAFFStaffID" value="{StaffID}" name="{StaffID_Name}"><!-- END TextBox StaffID -->
+                            <!-- BEGIN Label StaffID_view -->{StaffID_view} <!-- END Label StaffID_view --></td> 
+                        <td>&nbsp;{lblLoginID}</td> 
+                        <td><input type="text" id="STAFFLoginID" value="{LoginID}" name="{LoginID_Name}">&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>TITLE</th>
+ 
+                        <td><input type="text" tabindex="2" id="STAFFSALUTATION" maxlength="20" value="{SALUTATION}" name="{SALUTATION_Name}" size="20"></td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SURNAME</th>
+ 
+                        <td><input type="text" tabindex="3" id="STAFFSURNAME" maxlength="30" size="30" value="{SURNAME}" name="{SURNAME_Name}"></td> 
+                        <td>&nbsp;FIRSTNAME</td> 
+                        <td>&nbsp;<input type="text" tabindex="4" id="STAFFFIRSTNAME" title="" maxlength="30" size="30" value="{FIRSTNAME}" name="{FIRSTNAME_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>MIDDLENAME</th>
+ 
+                        <td><input type="text" tabindex="5" id="STAFFMIDDLENAME" maxlength="30" size="30" value="{MIDDLENAME}" name="{MIDDLENAME_Name}"></td> 
+                        <td></td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>TEACHER FLAG</th>
+ 
+                        <td><input type="checkbox" tabindex="7" id="STAFFTEACHER_FLAG" value="1" name="{TEACHER_FLAG_Name}" {TEACHER_FLAG}></td> 
+                        <td>&nbsp;ACTIVE?</td> 
+                        <td>&nbsp; <input type="checkbox" tabindex="8" id="STAFFSTATUS" value="1" name="{STATUS_Name}" {STATUS}></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SECURITY GROUP NAME</th>
+ 
+                        <td>
+                            <select tabindex="9" id="STAFFGROUP_ID" name="{GROUP_ID_Name}">
+                                <option selected value="">Select Value</option>
+                                {GROUP_ID_Options}
+                            </select>
+ </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SECURITY Additional&nbsp;</th>
+ 
+                        <td colspan="3">
+                            <!-- BEGIN CheckBoxList CheckboxList_SECURITY_FUNCTIONS --><input type="checkbox" id="STAFFCheckboxList_SECURITY_FUNCTIONS_{CheckboxList_SECURITY_FUNCTIONS:optionNumber}" value="{Value}" name="{CheckboxList_SECURITY_FUNCTIONS_Name}" {Check}>{Description}<!-- END CheckBoxList CheckboxList_SECURITY_FUNCTIONS -->&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY</th>
+ 
+                        <td>{lblLAST_ALTERED_BY}</td> 
+                        <td>&nbsp;LAST ALTERED DATE</td> 
+                        <td>&nbsp;{lblLAST_ALTERED_DATE}</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="4" align="right">
+                            <!-- BEGIN Button Button_Insert --><input type="submit" tabindex="10" id="STAFFButton_Insert" class="Button" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                            <!-- BEGIN Button Button_Update --><input type="submit" tabindex="11" id="STAFFButton_Update" class="Button" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+                            <!-- BEGIN Button Button_Delete --><input type="submit" tabindex="12" id="STAFFButton_Delete" class="Button" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STAFFCAMPUS_CODE" value="{CAMPUS_CODE}" name="{CAMPUS_CODE_Name}"><input type="hidden" id="STAFFhidden_LAST_ALTERED_BY" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"><input type="hidden" id="STAFFhidden_LAST_ALTERED_DATE" value="{hidden_LAST_ALTERED_DATE}" name="{hidden_LAST_ALTERED_DATE_Name}"><input type="hidden" id="STAFFHidden_LOGIN_ID" value="{Hidden_LOGIN_ID}" name="{Hidden_LOGIN_ID_Name}"><input type="hidden" id="STAFFHidden_SECURITY_FUNCTIONS" value="{Hidden_SECURITY_FUNCTIONS}" name="{Hidden_SECURITY_FUNCTIONS_Name}"></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STAFF --><br>
+{Footer} 
+</body>
+</html>

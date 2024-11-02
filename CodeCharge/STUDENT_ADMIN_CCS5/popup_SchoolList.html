@@ -1,0 +1,150 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>popup_SubjectList</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript">
+
+function gup( name )
+{
+        // used to read values from Querystring
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+}
+
+
+// known, expected values are from the Teacher allocations, or Subject list
+var retFieldName = gup('returncontrol');
+//var retFieldName = 'TeacherAllocations_Searchs_SUBJECT_ID';
+
+
+function SetOpenerValue(currentObj)
+{
+        var IE  = (document.all) ? 1 : 0;
+        if(IE) {
+                var selVal = currentObj.innerText; 
+        } else {
+                var selVal = currentObj.text;  
+        }
+        window.opener.document.getElementById(retFieldName).value = selVal;
+        window.opener.focus();
+        window.close();
+}
+</script>
+</head>
+<body>
+<div align="right">
+<a href="#" onclick="window.close();">close window</a> 
+</div>
+<!-- BEGIN Record SUBJECTSearch -->
+<form method="get" name="{HTMLFormName}" action="{Action}">
+  <table cellspacing="0" cellpadding="0" width="60%" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Filter School Name</th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Filter School Name</th>
+ 
+            <td>
+              <select id="SUBJECTSearchs_SEARCH_ALPHA" name="{s_SEARCH_ALPHA_Name}">
+                <option selected value="">Select Value</option>
+                {s_SEARCH_ALPHA_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="SUBJECTSearchButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+        <em>Sports and other Organisations are NOT included</em></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SUBJECTSearch --><br>
+<!-- BEGIN Grid SCHOOL -->
+<table cellspacing="0" cellpadding="0" width="80%" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>List of Schools</th>
+ 
+          <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_SUBJECT_ID --><a href="{Sort_URL}" id="SCHOOLSorter_SUBJECT_ID">ID</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJECT_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUBJECT_TITLE --><a href="{Sort_URL}" id="SCHOOLSorter_SUBJECT_TITLE">TITLE</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJECT_TITLE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{SCHOOL_ID_Src}" onclick="SetOpenerValue(this);return false;" id="SCHOOLSCHOOL_ID">{SCHOOL_ID}</a>&nbsp;</td> 
+          <td>{SCHOOL_TITLE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN Separator -->
+        <tr class="Separator">
+          <td colspan="2"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+        <!-- END Separator -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="2">No Schools found - change the Filter and Search again</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="2">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid SCHOOL --><br>
+</body>
+</html>

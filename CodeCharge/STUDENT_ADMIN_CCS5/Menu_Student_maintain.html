@@ -1,0 +1,33 @@
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}js/css/jquery.notifyBar.css">
+<script language="JavaScript" src="{page:pathToRoot}js/jquery_min.js" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/jquery.notifyBar.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+<!--
+#menu_maintain a.StrongBold  {font-weight: bold; PADDING: 5px 8px 5px 8px;}
+#menu_maintain a.StrongSad  {PADDING: 5px 8px 5px 8px;}
+#menu_maintain {display: block}
+A:HOVER  { background-color: #D0D0D0; }
+-->
+</style>
+<!-- BEGIN Panel Panel1 -->
+<div align="center">
+<a href="{LinkMenu_Src}" id="Menu_Student_maintainPanel1LinkMenu" class="Button" style="PADDING: 6px 8px 6px 8px;" title="go to Main Menu">Back to Main Menu</a>&nbsp;&nbsp;&nbsp; <a href="{Link1_Src}" id="Menu_Student_maintainPanel1Link1" class="Button" style="PADDING: 6px 8px 6px 8px;">Back to Summary</a> 
+</div>
+<br>
+<div id="menu_maintain" align="center">
+  Maintain: <a href="{Link2_Src}" id="Menu_Student_maintainPanel1Link2" class="Button StrongBold">Enrolment (All)</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link6_Src}" id="Menu_Student_maintainPanel1Link6" class="Button StrongBold">Address</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link11_Src}" id="Menu_Student_maintainPanel1Link11" class="Button StrongBold">Carer</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link12_Src}" id="Menu_Student_maintainPanel1Link12" class="Button StrongBold">Family Group</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link3_Src}" id="Menu_Student_maintainPanel1Link3" class="Button StrongSad">Census</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link4_Src}" id="Menu_Student_maintainPanel1Link4" class="Button StrongSad">Equipment</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link5_Src}" id="Menu_Student_maintainPanel1Link5" class="Button StrongSad">Medical</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link7_Src}" id="Menu_Student_maintainPanel1Link7" class="Button StrongBold">Subjects</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link8_Src}" id="Menu_Student_maintainPanel1Link8" class="Button StrongBold">VSV Financials</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link10_Src}" id="Menu_Student_maintainPanel1Link10" class="Button StrongSad">SMS</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{Link9_Src}" id="Menu_Student_maintainPanel1Link9" class="Button StrongBold">Comments</a>&nbsp; 
+</div>
+<br>
+<!-- END Panel Panel1 -->
+<div id="notifymessage" style="DISPLAY: none">{lblnotifymessage}</div>
+<script language="JavaScript" type="text/javascript">
+		jQuery.noConflict();
+		jQuery(function () {
+        	var msg = jQuery('div#notifymessage').html();
+        	if (msg !='') {
+        		jQuery.notifyBar({html: msg,cssClass:"success"});  
+        	}   
+        });
+</script>

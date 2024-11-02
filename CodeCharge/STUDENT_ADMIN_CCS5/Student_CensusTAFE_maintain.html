@@ -1,0 +1,281 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Census TAFE Maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-59AE36A3
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/scriptaculous.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/controls.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/Services.js" type="text/javascript" charset="windows-1252"></script>
+<link rel="stylesheet" type="text/css" href="Student_CensusTAFE_maintainSTUDENT_CENSUS_DATASCHOOL_NAME_style.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//page_STUDENT_CENSUS_DATA_Button_Cancel_OnClick @4-C43C1CAE
+function page_STUDENT_CENSUS_DATA_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_CENSUS_DATA_Button_Cancel_OnClick
+
+//Initialize STUDENT_CENSUS_DATASCHOOL_NAMEPTAutocomplete2 @87-6FD6389E
+function STUDENT_CENSUS_DATASCHOOL_NAMEPTAutocomplete2_start() {
+    if ($("STUDENT_CENSUS_DATASCHOOL_NAME"))
+        new Ajax.Autocompleter("STUDENT_CENSUS_DATASCHOOL_NAME", "STUDENT_CENSUS_DATASCHOOL_NAME_choices", "services/MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutocomplete1.aspx", {indicator:'STUDENT_CENSUS_DATAajaxBusy'});
+}
+//End Initialize STUDENT_CENSUS_DATASCHOOL_NAMEPTAutocomplete2
+
+//Handle STUDENT_CENSUS_DATACondition1 @70-460C4752
+function STUDENT_CENSUS_DATACondition1_start(sender) {
+//End Handle STUDENT_CENSUS_DATACondition1
+
+//Custom STUDENT_CENSUS_DATACondition1 @70-A8225497
+        // ERA: kooky JS created from Wizard. Fixed by Eric
+    if ($("STUDENT_CENSUS_DATASCHOOL_NAME").value != "")
+    {
+        STUDENT_CENSUS_DATAPTAutoFill1_start(sender);
+    } else {
+    }
+//End Custom STUDENT_CENSUS_DATACondition1
+
+//STUDENT_CENSUS_DATACondition1 Tail @70-FCB6E20C
+}
+//End STUDENT_CENSUS_DATACondition1 Tail
+
+//PTAutoFill1 Loading @75-0D9C8967
+function STUDENT_CENSUS_DATAPTAutoFill1_start(sender) {
+        // ERA fixing keyword selection as it grabbed the form, not the field
+    new Ajax.Request("services/MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutoFill1.aspx?keyword=" + encodeURI($("STUDENT_CENSUS_DATASCHOOL_NAME").value), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            $("STUDENT_CENSUS_DATAPREVIOUS_SCHOOL_ID").value = valuesRow["SCHOOL_ID"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//bind_events @1-65B4BE36
+function bind_events() {
+    STUDENT_CENSUS_DATASCHOOL_NAMEPTAutocomplete2_start();
+        addEventHandler("STUDENT_CENSUS_DATASCHOOL_NAME", "focus", STUDENT_CENSUS_DATACondition1_start);   //ERA: add to 'focus' to ensure firing
+    addEventHandler("STUDENT_CENSUS_DATASCHOOL_NAME", "keyup", STUDENT_CENSUS_DATACondition1_start);   //ERA: change event from 'keypress' to 'keyup' (better browser support)
+    addEventHandler("STUDENT_CENSUS_DATAButton_Cancel","click",page_STUDENT_CENSUS_DATA_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events;
+
+//End CCS script
+</script>
+<style type="text/css">
+<!--
+#STUDENT_CENSUS_DATAHIGHEST_SCHOOL_LEVEL td  { border-top-style: none; border-right-style: none; }
+#STUDENT_CENSUS_DATARadioButton_Employment_Status td  { border-top-style: none; border-right-style: none; }
+#STUDENT_CENSUS_DATARadioButton_Reason_for_Study td  { border-top-style: none; border-right-style: none; }
+#STUDENT_CENSUS_DATACheckBoxList_Disability td  { border-top-style: none; border-right-style: none; }
+#STUDENT_CENSUS_DATACheckBoxList_PriorQualifications td  { border-top-style: none; border-right-style: none; }
+-->
+</style>
+</head>
+<body>
+<div align="center">
+</div>
+<div align="left">
+  {Menu_Student_maintain} 
+</div>
+<div align="left">
+</div>
+<!-- BEGIN Record STUDENT_CENSUS_DATA -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  <table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Edit Student TAFE Details</th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th><strong>STUDENT ID:</strong>&nbsp;<br>
+            <br>
+            <br>
+            </th>
+ 
+            <td><br>
+              &nbsp;{STUDENT_ID}&nbsp;&nbsp; go to <a href="{Link_gotoCensusPage_Src}" id="STUDENT_CENSUS_DATALink_gotoCensusPage" class="Button" style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">Normal Census page</a></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ENGLISH PROFICIENCY&nbsp;</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton RadioButton_EnglishProficiency --><input type="radio" id="STUDENT_CENSUS_DATARadioButton_EnglishProficiency_{RadioButton_EnglishProficiency:optionNumber}" checked value="{Value}" name="{RadioButton_EnglishProficiency_Name}" {Check}>{Description}<!-- END RadioButton RadioButton_EnglishProficiency -->&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Disability</strong></th>
+ 
+            <td>
+              <!-- BEGIN CheckBoxList CheckBoxList_Disability --><input type="checkbox" id="STUDENT_CENSUS_DATACheckBoxList_Disability_{CheckBoxList_Disability:optionNumber}" value="{Value}" name="{CheckBoxList_Disability_Name}" {Check}>{Description}&nbsp;<!-- END CheckBoxList CheckBoxList_Disability --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Disability 'Other' description&nbsp;</th>
+ 
+            <td><input type="text" id="STUDENT_CENSUS_DATADISABILITY_OTHER_TEXT" maxlength="50" size="40" value="{DISABILITY_OTHER_TEXT}" name="{DISABILITY_OTHER_TEXT_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DISABILITY ID</th>
+ 
+            <td><input type="text" id="STUDENT_CENSUS_DATADISABILITY_ID" maxlength="6" size="6" value="{DISABILITY_ID}" name="{DISABILITY_ID_Name}">&nbsp;{lblCheckDisability}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th colspan="2">
+            <p><strong></strong>&nbsp;</p>
+ 
+            <p><strong>Schooling </strong></p>
+            </th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>
+            <p align="right">&nbsp;<em>Type School Name to automatically fill in Previous School ID</em></p>
+            </th>
+ 
+            <td id="ajax_busy">
+              <!-- BEGIN TextBox SCHOOL_NAME --><input type="text" id="STUDENT_CENSUS_DATASCHOOL_NAME" size="50" value="{SCHOOL_NAME}" name="{SCHOOL_NAME_Name}" autocomplete="off">
+              <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+              <div id="STUDENT_CENSUS_DATASCHOOL_NAME_choices">
+              </div>
+              <!-- ENDF PTAutocomplete PTAutocomplete1 -->&nbsp; 
+              <!-- BEGINF PTAutocomplete PTAutocomplete2 -->
+              <div id="STUDENT_CENSUS_DATASCHOOL_NAME_choices">
+              </div>
+              <!-- ENDF PTAutocomplete PTAutocomplete2 --><!-- END TextBox SCHOOL_NAME --><img id="STUDENT_CENSUS_DATAajaxBusy" style="DISPLAY: none" name="ajaxBusy" alt="looking..." src="images/ajax-loader_small.gif"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PREVIOUS SCHOOL ID</th>
+ 
+            <td><input type="text" id="STUDENT_CENSUS_DATAPREVIOUS_SCHOOL_ID" maxlength="10" size="9" value="{PREVIOUS_SCHOOL_ID}" name="{PREVIOUS_SCHOOL_ID_Name}">&nbsp;{lblPREVIOUS_SCHOOL_NAME}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DATE LAST ATTENDED SCHOOL&nbsp;</th>
+ 
+            <td><input type="text" id="STUDENT_CENSUS_DATADATE_LAST_ATTENDED_SCHOOL" maxlength="10" size="12" value="{DATE_LAST_ATTENDED_SCHOOL}" name="{DATE_LAST_ATTENDED_SCHOOL_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Level of <em>highest</em>&nbsp;COMPLETED school level</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton HIGHEST_SCHOOL_LEVEL --><input type="radio" id="STUDENT_CENSUS_DATAHIGHEST_SCHOOL_LEVEL_{HIGHEST_SCHOOL_LEVEL:optionNumber}" value="{Value}" name="{HIGHEST_SCHOOL_LEVEL_Name}" {Check}>{Description}&nbsp;<br>
+              <!-- END RadioButton HIGHEST_SCHOOL_LEVEL -->&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th colspan="2">
+            <p><strong></strong>&nbsp;</p>
+ 
+            <p><strong>Prior Qualifications&nbsp;</strong></p>
+            </th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Successfully completed any of the following</th>
+ 
+            <td>
+              <!-- BEGIN CheckBoxList CheckBoxList_PriorQualifications --><input type="checkbox" id="STUDENT_CENSUS_DATACheckBoxList_PriorQualifications_{CheckBoxList_PriorQualifications:optionNumber}" value="{Value}" name="{CheckBoxList_PriorQualifications_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END CheckBoxList CheckBoxList_PriorQualifications -->&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Prior Qualifications 'Other' description&nbsp;&nbsp;</th>
+ 
+            <td><input type="text" id="STUDENT_CENSUS_DATAPRIORQUALIFICATIONS_OTHER_TEXT" maxlength="50" size="40" value="{PRIORQUALIFICATIONS_OTHER_TEXT}" name="{PRIORQUALIFICATIONS_OTHER_TEXT_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Current Employment Status</strong>&nbsp;&nbsp;</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton RadioButton_Employment_Status --><input type="radio" id="STUDENT_CENSUS_DATARadioButton_Employment_Status_{RadioButton_Employment_Status:optionNumber}" checked value="{Value}" name="{RadioButton_Employment_Status_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton RadioButton_Employment_Status --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th colspan="2">
+            <p>&nbsp;</p>
+            </th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Reason for Study</strong>&nbsp;&nbsp;</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton RadioButton_Reason_for_Study --><input type="radio" id="STUDENT_CENSUS_DATARadioButton_Reason_for_Study_{RadioButton_Reason_for_Study:optionNumber}" checked value="{Value}" name="{RadioButton_Reason_for_Study_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton RadioButton_Reason_for_Study --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / DATE (entire form)</th>
+ 
+            <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_CENSUS_DATAButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_CENSUS_DATAButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input type="hidden" id="STUDENT_CENSUS_DATAHidden_last_altered_by" value="{Hidden_last_altered_by}" name="{Hidden_last_altered_by_Name}"><input type="hidden" id="STUDENT_CENSUS_DATAHidden_last_altered_date" value="{Hidden_last_altered_date}" name="{Hidden_last_altered_date_Name}"><input type="hidden" id="STUDENT_CENSUS_DATAHidden_DisabilityList" value="{Hidden_DisabilityList}" name="{Hidden_DisabilityList_Name}"><input type="hidden" id="STUDENT_CENSUS_DATAHidden_PriorQualificationsList" value="{Hidden_PriorQualificationsList}" name="{Hidden_PriorQualificationsList_Name}">
+        <p></p>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STUDENT_CENSUS_DATA --><br>
+</body>
+</html>

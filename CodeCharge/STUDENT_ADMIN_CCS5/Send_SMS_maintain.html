@@ -1,0 +1,235 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Send SMS</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-2F0138A6
+</script>
+<script language="JavaScript" src="js/pt/prototype_ccs.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//page_NewSMSRecord_Button_Cancel_OnClick @35-D3E6A0D3
+function page_NewSMSRecord_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_NewSMSRecord_Button_Cancel_OnClick
+
+//HideShow_ajaxBusy Loading @56-F7D4BEBD
+function NewSMSRecordHideShow_ajaxBusy_show(sender) {
+    var control = getSameLevelCtl("NewSMSRecordajaxBusy", sender);
+    if (control != null) {
+            control.style.display = "";
+    } else {
+            addProgress();
+    }
+}
+function NewSMSRecordHideShow_ajaxBusy_hide(sender) {
+    var control = getSameLevelCtl("NewSMSRecordajaxBusy", sender);
+    if (control != null) {
+            control.style.display = "none";
+    } else {
+            removeProgress();
+    }
+}
+//End HideShow_ajaxBusy Loading
+
+//bind_events @1-CAA259E6
+function bind_events() {
+    addEventHandler("NewSMSRecord", "submit", NewSMSRecordHideShow_ajaxBusy_show);
+    addEventHandler("NewSMSRecord", "load", NewSMSRecordHideShow_ajaxBusy_hide);
+    addEventHandler("NewSMSRecordButton_Cancel","click",page_NewSMSRecord_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+<style type="text/css">
+<!--
+.warnMaxChars  { font-weight: bold; color: #FFFFFF; background-color: #FF0000; padding-top: 10px; padding-bottom: 10px; }
+.normalSMSCharacters  { font-weight: normal; color: #00FF00; }
+-->
+</style>
+</head>
+<body>
+<p align="center">
+<!-- BEGIN Panel Panel_MenuStudentMaintain -->{Menu_Student_maintain}<!-- END Panel Panel_MenuStudentMaintain --></p>
+<p>&nbsp; <a href="OnlineHelp/SMS_FromDatabase/SMS_FromDatabase.html" title="show help for this page" target="_blank"><img border="0" alt="show help for this page" src="images/help.png" align="right"></a> 
+<p align="center"><a href="{Link_Backtosummary_Src}" id="Link_Backtosummary" class="Button">Back to Summary</a><font color="#ff0000"></font></p>
+<p>
+<!-- BEGIN Record NewSMSRecord -->
+<form id="NewSMSRecord" method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Send SMS</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>Student ID</th>
+ 
+                        <td>{lblStudentID}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Send to Number</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton mobileno_sendto --><input type="radio" id="NewSMSRecordmobileno_sendto_{mobileno_sendto:optionNumber}" value="{Value}" name="{mobileno_sendto_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton mobileno_sendto -->{lblNoSMSNumbers}</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SMS Message to send 
+                        <div id="maxchar_sms">
+                            140 characters allowed 
+                        </div>
+                        </th>
+ 
+                        <td><textarea onkeyup="warnMaxLength(this,140,'maxchar_sms');" id="NewSMSRecordsms_text" rows="3" cols="50" name="{sms_text_Name}">{sms_text}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="2" align="right"><img id="NewSMSRecordajaxBusy" style="DISPLAY: none" name="ajaxBusy" alt="updating" src="images/ajax_loader.gif">
+                            <!-- BEGIN Button Button_Insert --><input type="submit" id="NewSMSRecordButton_Insert" class="Button" value="Send SMS" name="{Button_Name}"><!-- END Button Button_Insert -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="NewSMSRecordButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input type="hidden" id="NewSMSRecordsms_status" value="{sms_status}" name="{sms_status_Name}"><input type="hidden" id="NewSMSRecordsent_by" value="{sent_by}" name="{sent_by_Name}"><input type="hidden" id="NewSMSRecordstudent_id" value="{student_id}" name="{student_id_Name}"></td>
+                    </tr>
+                </table>
+                <em>Note: SMS will be sent immediately. SMS Failures will be automatically notified to PC Support for follow-up.</em></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record NewSMSRecord --></p>
+<p>
+<p></p>
+<!-- BEGIN Grid STUDENT_SMS_LOG -->
+<table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>3 Month SMS&nbsp;History</th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                    <th>
+                    <!-- BEGIN Sorter Sorter_mobileno_sendto --><a href="{Sort_URL}" id="STUDENT_SMS_LOGSorter_mobileno_sendto">Number Sent To</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_mobileno_sendto --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_sms_text --><a href="{Sort_URL}" id="STUDENT_SMS_LOGSorter_sms_text">SMS Message</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_sms_text --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_datetime_created --><a href="{Sort_URL}" id="STUDENT_SMS_LOGSorter_datetime_created">Date/time Created</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_datetime_created --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_sent_by --><a href="{Sort_URL}" id="STUDENT_SMS_LOGSorter_sent_by">Sent By</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_sent_by --></th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr class="Row">
+                    <td>{mobileno_sendto}&nbsp;</td> 
+                    <td>{sms_text}&nbsp;</td> 
+                    <td>{datetime_created}&nbsp;</td> 
+                    <td>{sent_by}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                    <td colspan="4">No SMS Messsages found in previous 3 months. Check the student's <a href="{Link1_Src}" id="STUDENT_SMS_LOGLink1_{STUDENT_SMS_LOG:rowNumber}">Comments page</a></td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                    <td colspan="4">&nbsp; 
+                        <!-- BEGIN Navigator Navigator -->
+                        <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+                        <!-- BEGIN First_Off --><img border="0" src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+                        <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+                        <!-- BEGIN Prev_Off --><img border="0" src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                        <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+                        <!-- BEGIN Next_Off --><img border="0" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+                        <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+                        <!-- BEGIN Last_Off --><img border="0" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- END Grid STUDENT_SMS_LOG --><br>
+<br>
+<script language="JavaScript" type="text/javascript">
+function limitMaxLength(formitem,maxlength,displaydivname) {
+        // handle longer messages by cutting out dodgy chars and limiting to 140 char.
+        if (isNaN(maxlength)) {
+          return false;
+        } else {
+                //replace any non-approved chars with blank
+        var typedStuff = formitem.value;
+        typedStuff = typedStuff.replace(/[^0-9a-zA-Z\s\.\!\@\(\)\+\?\-]/g,"");
+        var outputdiv = document.getElementById(displaydivname)
+        outputdiv.innerHTML = (maxlength-typedStuff.length) + ' characters allowed';
+        if (typedStuff.length+1>maxlength) {
+                formitem.value=typedStuff.substring(0,maxlength);
+        }
+        }
+}
+function warnMaxLength(formitem,maxlength,displaydivname) {
+        // handle longer messages by showing coloured warning but not cut.
+        if (isNaN(maxlength)) {
+          return false;
+        } else {
+        var typedStuff = formitem.value;
+        //typedStuff = typedStuff.replace(/[^0-9a-zA-Z\s\.\!\@\(\)\+\?\-]/g,"");
+        var outputdiv = document.getElementById(displaydivname)
+       
+        if (typedStuff.length>maxlength) {
+                        outputdiv.className = 'warnMaxChars';        
+                        outputdiv.innerHTML = (typedStuff.length-maxlength) + ' too many character(s)!';
+                } else {
+                        outputdiv.className = 'normalSMSCharacters';
+                        outputdiv.innerHTML = (maxlength-typedStuff.length) + ' characters remaining';
+        }
+        }
+}
+</script>
+</body>
+</html>

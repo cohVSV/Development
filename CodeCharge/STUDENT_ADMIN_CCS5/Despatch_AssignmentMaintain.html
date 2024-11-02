@@ -1,0 +1,291 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Despatch_AssignmentMaintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.01.00.06">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-6A27B1C8
+
+var ASSIGNMENT_SUBMISSION_STU1DatePicker_RECEIVED_DATE = new Object(); 
+ASSIGNMENT_SUBMISSION_STU1DatePicker_RECEIVED_DATE.format           = "dd/mm/yy";
+ASSIGNMENT_SUBMISSION_STU1DatePicker_RECEIVED_DATE.style            = "Styles/Blueprint/Style.css";
+ASSIGNMENT_SUBMISSION_STU1DatePicker_RECEIVED_DATE.relativePathPart = "";
+ASSIGNMENT_SUBMISSION_STU1DatePicker_RECEIVED_DATE.themeVersion     = "3.0";
+var ASSIGNMENT_SUBMISSION_STU1DatePicker_RETURNED_DATE = new Object(); 
+ASSIGNMENT_SUBMISSION_STU1DatePicker_RETURNED_DATE.format           = "dd/mm/yy";
+ASSIGNMENT_SUBMISSION_STU1DatePicker_RETURNED_DATE.style            = "Styles/Blueprint/Style.css";
+ASSIGNMENT_SUBMISSION_STU1DatePicker_RETURNED_DATE.relativePathPart = "";
+ASSIGNMENT_SUBMISSION_STU1DatePicker_RETURNED_DATE.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_ASSIGNMENT_SUBMISSION_STU1_Button_Submit_OnClick @73-5E224502
+function page_ASSIGNMENT_SUBMISSION_STU1_Button_Submit_OnClick()
+{
+    var result;
+//End page_ASSIGNMENT_SUBMISSION_STU1_Button_Submit_OnClick
+
+//Confirmation Message @74-257FDD03
+    return confirm('Submit records?');
+//End Confirmation Message
+
+//Close page_ASSIGNMENT_SUBMISSION_STU1_Button_Submit_OnClick @73-BC33A33A
+    return result;
+}
+//End Close page_ASSIGNMENT_SUBMISSION_STU1_Button_Submit_OnClick
+
+//page_ASSIGNMENT_SUBMISSION_STU1_checkboxDelete_OnClick @95-C696B2B4
+function page_ASSIGNMENT_SUBMISSION_STU1_checkboxDelete_OnClick()
+{
+    var result;
+//End page_ASSIGNMENT_SUBMISSION_STU1_checkboxDelete_OnClick
+
+//Confirmation Message @107-7D05CDD7
+    return confirm('You Really Want to Delete this Assignment? \nIt cannot come back if you change your mind.');
+//End Confirmation Message
+
+//Close page_ASSIGNMENT_SUBMISSION_STU1_checkboxDelete_OnClick @95-BC33A33A
+    return result;
+}
+//End Close page_ASSIGNMENT_SUBMISSION_STU1_checkboxDelete_OnClick
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @82-05A8BD1A
+    if (theForm.ASSIGNMENT_SUBMISSION_STUs_STUDENT_SUBJECT_STUDENT_ID) theForm.ASSIGNMENT_SUBMISSION_STUs_STUDENT_SUBJECT_STUDENT_ID.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//page_ASSIGNMENT_SUBMISSION_STU1_Cancel_OnClick @75-030B3B05
+function page_ASSIGNMENT_SUBMISSION_STU1_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_ASSIGNMENT_SUBMISSION_STU1_Cancel_OnClick
+
+//bind_events @1-93E27E5D
+function bind_events() {
+    if(typeof(initASSIGNMENT_SUBMISSION_STU1Elements) == "function")
+        initASSIGNMENT_SUBMISSION_STU1Elements();
+    if(typeof(initASSIGNMENT_SUBMISSION_STU1Elements) == "function"){
+        for(var i = 0; i < ASSIGNMENT_SUBMISSION_STU1Elements.length; i++){
+            addEventHandler(ASSIGNMENT_SUBMISSION_STU1Elements[i][ASSIGNMENT_SUBMISSION_STU1DeleteControl].id, "click", page_ASSIGNMENT_SUBMISSION_STU1_checkboxDelete_OnClick);
+        }
+    }
+    if(typeof(ASSIGNMENT_SUBMISSION_STU1StaticElementsID) == "object" && typeof(ASSIGNMENT_SUBMISSION_STU1StaticElementsID[ASSIGNMENT_SUBMISSION_STU1Button_SubmitID]) == "object" && ASSIGNMENT_SUBMISSION_STU1StaticElementsID[ASSIGNMENT_SUBMISSION_STU1Button_SubmitID]!=null)
+        addEventHandler(ASSIGNMENT_SUBMISSION_STU1StaticElementsID[ASSIGNMENT_SUBMISSION_STU1Button_SubmitID].id, "click", page_ASSIGNMENT_SUBMISSION_STU1_Button_Submit_OnClick);
+    addEventHandler("ASSIGNMENT_SUBMISSION_STU1Cancel","click",page_ASSIGNMENT_SUBMISSION_STU1_Cancel_OnClick);
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events;
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{Header}</p>
+<p>
+<!-- BEGIN Record ASSIGNMENT_SUBMISSION_STU -->
+<form id="ASSIGNMENT_SUBMISSION_STU" method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search Assignment Submissions</th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>STUDENT ID</th>
+ 
+            <td><input type="text" id="ASSIGNMENT_SUBMISSION_STUs_STUDENT_SUBJECT_STUDENT_ID" name="{s_STUDENT_SUBJECT_STUDENT_ID_Name}" maxlength="12" value="{s_STUDENT_SUBJECT_STUDENT_ID}" size="12"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUBJECT ID</th>
+ 
+            <td><input type="text" id="ASSIGNMENT_SUBMISSION_STUs_STUDENT_SUBJECT_SUBJECT_ID" name="{s_STUDENT_SUBJECT_SUBJECT_ID_Name}" maxlength="10" value="{s_STUDENT_SUBJECT_SUBJECT_ID}" size="10"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STAFF NAME</th>
+ 
+            <td>
+              <select id="ASSIGNMENT_SUBMISSION_STUs_STUDENT_SUBJECT_STAFF_ID" name="{s_STUDENT_SUBJECT_STAFF_ID_Name}">
+                <option selected value="">Select Value</option>
+                {s_STUDENT_SUBJECT_STAFF_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="ASSIGNMENT_SUBMISSION_STUClearParameters">Clear</a></td> 
+            <td align="right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ASSIGNMENT_SUBMISSION_STUButton_DoSearch" class="Button" name="{Button_Name}" value="Search"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ASSIGNMENT_SUBMISSION_STU --><br>
+<!-- BEGIN EditableGrid ASSIGNMENT_SUBMISSION_STU1 -->
+<form id="ASSIGNMENT_SUBMISSION_STU1" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" name="FormState" value="{FormState}">{FormScript} 
+  <table border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Assignments Submitted for Staff/Student/Subject </th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="13">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Row">
+            <td colspan="13">Total Records:&nbsp;{ASSIGNMENT_SUBMISSION_STU1_TotalRecords}</td>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>Delete?&nbsp;</th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ASSIGNMENT_SUBMISSION_SUBJECT_ID --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_STU1Sorter_ASSIGNMENT_SUBMISSION_SUBJECT_ID">Subject ID</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ASSIGNMENT_SUBMISSION_SUBJECT_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ASSIGNMENT_SUBMISSION_STUDENT_ID --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_STU1Sorter_ASSIGNMENT_SUBMISSION_STUDENT_ID">Student ID</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ASSIGNMENT_SUBMISSION_STUDENT_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ASSIGNMENT_ID --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_STU1Sorter_ASSIGNMENT_ID">Assignment No.</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ASSIGNMENT_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SUBMISSION_ID --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_STU1Sorter_SUBMISSION_ID">Submission No.</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SUBMISSION_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_RECEIVED_DATE --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_STU1Sorter_RECEIVED_DATE">Received Date</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_RECEIVED_DATE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_RETURNED_DATE --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_STU1Sorter_RETURNED_DATE">Returned Date</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_RETURNED_DATE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ASSIGNMENT_SUBMISSION_STAFF_ID --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_STU1Sorter_ASSIGNMENT_SUBMISSION_STAFF_ID">Marker ID</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ASSIGNMENT_SUBMISSION_STAFF_ID --></th>
+ 
+            <th colspan="5">
+            <!-- BEGIN Sorter Sorter_COMMENTS --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_STU1Sorter_COMMENTS">Comments</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_COMMENTS --></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="13">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td>&nbsp;<input type="checkbox" id="ASSIGNMENT_SUBMISSION_STU1checkboxDelete" name="{checkboxDelete_Name}" value="1" {checkboxDelete}></td> 
+            <td>{ASSIGNMENT_SUBMISSION_SUBJECT_ID}&nbsp;</td> 
+            <td>{ASSIGNMENT_SUBMISSION_STUDENT_ID}&nbsp;</td> 
+            <td>{ASSIGNMENT_ID}&nbsp;</td> 
+            <td>{SUBMISSION_ID}&nbsp;</td> 
+            <td><input type="text" id="ASSIGNMENT_SUBMISSION_STU1RECEIVED_DATE_{ASSIGNMENT_SUBMISSION_STU1:rowNumber}" name="{RECEIVED_DATE_Name}" maxlength="100" value="{RECEIVED_DATE}" size="10">
+              <!-- BEGIN DatePicker DatePicker_RECEIVED_DATE --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="ASSIGNMENT_SUBMISSION_STU1DatePicker_RECEIVED_DATE_{ASSIGNMENT_SUBMISSION_STU1:rowNumber}"><img id="ASSIGNMENT_SUBMISSION_STU1DatePicker_RECEIVED_DATE_Image_{ASSIGNMENT_SUBMISSION_STU1:rowNumber}" border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_RECEIVED_DATE --></td> 
+            <td><input type="text" id="ASSIGNMENT_SUBMISSION_STU1RETURNED_DATE_{ASSIGNMENT_SUBMISSION_STU1:rowNumber}" name="{RETURNED_DATE_Name}" maxlength="100" value="{RETURNED_DATE}" size="10">
+              <!-- BEGIN DatePicker DatePicker_RETURNED_DATE --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="ASSIGNMENT_SUBMISSION_STU1DatePicker_RETURNED_DATE_{ASSIGNMENT_SUBMISSION_STU1:rowNumber}"><img id="ASSIGNMENT_SUBMISSION_STU1DatePicker_RETURNED_DATE_Image_{ASSIGNMENT_SUBMISSION_STU1:rowNumber}" border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_RETURNED_DATE --></td> 
+            <td>
+              <select id="ASSIGNMENT_SUBMISSION_STU1ASSIGNMENT_SUBMISSION_STAFF_ID_{ASSIGNMENT_SUBMISSION_STU1:rowNumber}" name="{ASSIGNMENT_SUBMISSION_STAFF_ID_Name}">
+                <option selected value="">Select Value</option>
+                {ASSIGNMENT_SUBMISSION_STAFF_ID_Options}
+              </select>
+ </td> 
+            <td colspan="5"><input type="text" id="ASSIGNMENT_SUBMISSION_STU1COMMENTS_{ASSIGNMENT_SUBMISSION_STU1:rowNumber}" name="{COMMENTS_Name}" maxlength="60" value="{COMMENTS}" size="30"></td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="13">No Assignment Details found for this Student/Subject/Staff.</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="13">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN Page_Parameter --><input type="hidden" name="{Name}" value="{Value}"><!-- END Page_Parameter -->Per page: 
+              <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                <option selected value="">-</option>
+ {PageSize_Options}
+              </select>
+ 
+              <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img border="0" src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img border="0" src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img border="0" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img border="0" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input type="submit" id="ASSIGNMENT_SUBMISSION_STU1Button_Submit" class="Button" name="{Button_Name}" value="Submit"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input type="submit" id="ASSIGNMENT_SUBMISSION_STU1Cancel" class="Button" name="{Button_Name}" value="Cancel"><!-- END Button Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid ASSIGNMENT_SUBMISSION_STU1 --><br>
+</p>
+<p>&nbsp;</p>
+</body>
+</html>

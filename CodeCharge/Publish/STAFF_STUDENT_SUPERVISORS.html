@@ -1,0 +1,271 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>STAFF_STUDENT_SUPERVISORS</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_STAFF_STUDENT_SUPERVISORS1_Button_Delete_OnClick @43-792DAB00
+function page_STAFF_STUDENT_SUPERVISORS1_Button_Delete_OnClick()
+{
+    var result;
+//End page_STAFF_STUDENT_SUPERVISORS1_Button_Delete_OnClick
+
+//Confirmation Message @44-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close page_STAFF_STUDENT_SUPERVISORS1_Button_Delete_OnClick @43-BC33A33A
+    return result;
+}
+//End Close page_STAFF_STUDENT_SUPERVISORS1_Button_Delete_OnClick
+
+//page_STAFF_STUDENT_SUPERVISORS1_Button_Cancel_OnClick @45-3E6E2335
+function page_STAFF_STUDENT_SUPERVISORS1_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STAFF_STUDENT_SUPERVISORS1_Button_Cancel_OnClick
+
+//bind_events @1-EF265882
+function bind_events() {
+    addEventHandler("STAFF_STUDENT_SUPERVISORS1Button_Delete","click",page_STAFF_STUDENT_SUPERVISORS1_Button_Delete_OnClick);
+    addEventHandler("STAFF_STUDENT_SUPERVISORS1Button_Cancel","click",page_STAFF_STUDENT_SUPERVISORS1_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>
+<!-- BEGIN Record STAFF_STUDENT_SUPERVISORSSearch -->
+<form id="STAFF_STUDENT_SUPERVISORSSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search Supervisors</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th>
+ 
+            <td><input id="STAFF_STUDENT_SUPERVISORSSearchs_keyword" maxlength="30" size="30" value="{s_keyword}" name="{s_keyword_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="STAFF_STUDENT_SUPERVISORSSearchClearParameters">Clear</a></td> 
+            <td align="right">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="STAFF_STUDENT_SUPERVISORSSearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STAFF_STUDENT_SUPERVISORSSearch --></p>
+<p align="right"><a href="{STAFF_STUDENT_SUPERVISORS_Insert_Src}" class="Button" id="STAFF_STUDENT_SUPERVISORS_Insert">Add New</a><br>
+</p>
+<p>
+<!-- BEGIN Grid STAFF_STUDENT_SUPERVISORS -->
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of Student&nbsp;Supervisors </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="8">Total Records:&nbsp;{STAFF_STUDENT_SUPERVISORS_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><a href="{Sort_URL}" id="STAFF_STUDENT_SUPERVISORSSorter_YEAR_LEVEL">YEAR LEVEL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPERVISOR_NAME --><a href="{Sort_URL}" id="STAFF_STUDENT_SUPERVISORSSorter_SUPERVISOR_NAME">SUPERVISOR NAME</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SUPERVISOR_NAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPERVISOR_EMAIL --><a href="{Sort_URL}" id="STAFF_STUDENT_SUPERVISORSSorter_SUPERVISOR_EMAIL">SUPERVISOR EMAIL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SUPERVISOR_EMAIL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPERVISOR_PHONE --><a href="{Sort_URL}" id="STAFF_STUDENT_SUPERVISORSSorter_SUPERVISOR_PHONE">SUPERVISOR PHONE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SUPERVISOR_PHONE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STATUS --><a href="{Sort_URL}" id="STAFF_STUDENT_SUPERVISORSSorter_STATUS">STATUS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STATUS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><a href="{Sort_URL}" id="STAFF_STUDENT_SUPERVISORSSorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><a href="{Sort_URL}" id="STAFF_STUDENT_SUPERVISORSSorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{Detail_Src}" id="STAFF_STUDENT_SUPERVISORSDetail_{STAFF_STUDENT_SUPERVISORS:rowNumber}">edit</a></td> 
+          <td style="TEXT-ALIGN: right">{YEAR_LEVEL}&nbsp;</td> 
+          <td>{SUPERVISOR_NAME}&nbsp;</td> 
+          <td>{SUPERVISOR_EMAIL}&nbsp;</td> 
+          <td>{SUPERVISOR_PHONE}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{STATUS}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">No Staff Supervisors found - click 'Add New'</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="8"><a href="{STAFF_STUDENT_SUPERVISORS_Insert_Src}" class="Button" id="STAFF_STUDENT_SUPERVISORSSTAFF_STUDENT_SUPERVISORS_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid STAFF_STUDENT_SUPERVISORS --></p>
+<p><br>
+</p>
+<p>
+<!-- BEGIN Record STAFF_STUDENT_SUPERVISORS1 -->
+<form id="STAFF_STUDENT_SUPERVISORS1" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit&nbsp;Student Supervisors </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th colspan="2"><em>&nbsp;NOTE: The Name, Email, and Phone will appear on reports and letters to Students</em>&nbsp;</th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>YEAR LEVEL</th>
+ 
+            <td>
+              <select id="STAFF_STUDENT_SUPERVISORS1YEAR_LEVEL" name="{YEAR_LEVEL_Name}">
+                <option value="" selected>Select Value</option>
+                {YEAR_LEVEL_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPERVISOR NAME</th>
+ 
+            <td><input id="STAFF_STUDENT_SUPERVISORS1SUPERVISOR_NAME" maxlength="30" size="30" value="{SUPERVISOR_NAME}" name="{SUPERVISOR_NAME_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPERVISOR EMAIL</th>
+ 
+            <td><input id="STAFF_STUDENT_SUPERVISORS1SUPERVISOR_EMAIL" maxlength="50" size="50" value="{SUPERVISOR_EMAIL}" name="{SUPERVISOR_EMAIL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPERVISOR PHONE</th>
+ 
+            <td><input id="STAFF_STUDENT_SUPERVISORS1SUPERVISOR_PHONE" maxlength="20" value="{SUPERVISOR_PHONE}" name="{SUPERVISOR_PHONE_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STATUS</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton STATUS --><input id="STAFF_STUDENT_SUPERVISORS1STATUS_{STATUS:optionNumber}" type="radio" value="{Value}" name="{STATUS_Name}" {Check}>{Description}<!-- END RadioButton STATUS --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / DATE</th>
+ 
+            <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="STAFF_STUDENT_SUPERVISORS1Button_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="STAFF_STUDENT_SUPERVISORS1Button_Update" type="submit" value="Save" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="STAFF_STUDENT_SUPERVISORS1Button_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="Button" id="STAFF_STUDENT_SUPERVISORS1Button_Cancel" type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input id="STAFF_STUDENT_SUPERVISORS1Hidden_LAST_ALTERED_BY" type="hidden" value="{Hidden_LAST_ALTERED_BY}" name="{Hidden_LAST_ALTERED_BY_Name}"><input id="STAFF_STUDENT_SUPERVISORS1Hidden_LAST_ALTERED_DATE" type="hidden" value="{Hidden_LAST_ALTERED_DATE}" name="{Hidden_LAST_ALTERED_DATE_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STAFF_STUDENT_SUPERVISORS1 --></p>
+<p><br>
+</p>
+<p>{Footer}</p>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Learning Goals</title>
+<meta name="description" content="Special form for Student Learning Goals to be reviewd and added. For all staff, as requested for 202 Enrolments.">
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<style type="text/css">
+<!--
+.deprecated::after  { content: " deprecated"; background-color: yellow; color: red; font-weight: bold; }
+.Controls th.shiftright  { margin-right: 1em; text-align: right; }
+.instructions   { font-size: 12px; font-style: italic; }
+.processtips   { display: none; }
+.processtips::before  { content: "Tip!"; }
+.processtips:hover   { display: block; }
+.errormsg   { font-size: 120%; background-color: #F00; color: #FFF; font-weight: bold; margin: 2px; }
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_STUDENT_LEARNING_GOALS2_Button_Delete_OnClick @213-FBD2AF28
+function page_STUDENT_LEARNING_GOALS2_Button_Delete_OnClick()
+{
+    var result;
+//End page_STUDENT_LEARNING_GOALS2_Button_Delete_OnClick
+
+//Confirmation Message @214-249B1D32
+    return confirm('Permanently Delete Goal?');
+//End Confirmation Message
+
+//Close page_STUDENT_LEARNING_GOALS2_Button_Delete_OnClick @213-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_LEARNING_GOALS2_Button_Delete_OnClick
+
+//page_STUDENT_LEARNING_GOALS2_Button_Cancel_OnClick @215-197ED276
+function page_STUDENT_LEARNING_GOALS2_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_LEARNING_GOALS2_Button_Cancel_OnClick
+
+//Handle condition_for_show @230-043B8DF0
+function condition_for_show_start(sender) {
+//End Handle condition_for_show
+
+//Custom condition_for_show @230-D1791465
+    if (true==(params["click"] == "link"))
+    {
+        DialogPanel1_show(sender);
+    } else {
+    }
+//End Custom condition_for_show
+
+//condition_for_show Tail @230-FCB6E20C
+}
+//End condition_for_show Tail
+
+//Handle condition_for_hide @235-86D194D0
+function condition_for_hide_start(sender) {
+//End Handle condition_for_hide
+
+//Custom condition_for_hide @235-A1BE8D38
+    if (true==(params["click"] == "submit" && $("#ErrorBlock").length == 0))
+    {
+        DialogPanel1_hide(sender);
+    } else {
+    }
+//End Custom condition_for_hide
+
+//condition_for_hide Tail @235-FCB6E20C
+}
+//End condition_for_hide Tail
+
+//Handle ccc_link_Condition @240-BC7B1F19
+function ccc_link_Condition_start(sender) {
+//End Handle ccc_link_Condition
+
+//Custom ccc_link_Condition @240-3ACAA933
+    if (true==(params["click"] = "link"))
+    {
+    } else {
+    }
+//End Custom ccc_link_Condition
+
+//ccc_link_Condition Tail @240-FCB6E20C
+}
+//End ccc_link_Condition Tail
+
+//Handle ccc_submit_Condition @251-D19B1E57
+function ccc_submit_Condition_start(sender) {
+//End Handle ccc_submit_Condition
+
+//Custom ccc_submit_Condition @251-3B4E074B
+    if (true==(params["click"] = "submit"))
+    {
+    } else {
+    }
+//End Custom ccc_submit_Condition
+
+//ccc_submit_Condition Tail @251-FCB6E20C
+}
+//End ccc_submit_Condition Tail
+
+//Handle ccc_others_Condition @266-DDF821BB
+function ccc_others_Condition_start(sender) {
+//End Handle ccc_others_Condition
+
+//Custom ccc_others_Condition @266-CECB318E
+    if (true==(params["click"] = ""))
+    {
+    } else {
+    }
+//End Custom ccc_others_Condition
+
+//ccc_others_Condition Tail @266-FCB6E20C
+}
+//End ccc_others_Condition Tail
+
+//bind_events @1-02A6C4FD
+function bind_events() {
+    addEventHandler("STUDENT_LEARNING_GOALS1STUDENT_LEARNING_GOALS1_Insert", "click", ccc_link_Condition_start);
+    addEventHandler("STUDENT_LEARNING_GOALS1Detail", "click", ccc_link_Condition_start);
+    addEventHandler("STUDENT_LEARNING_GOALS2", "submit", ccc_submit_Condition_start);
+    addEventHandler("STUDENT_LEARNING_GOALS2Button_Delete","click",page_STUDENT_LEARNING_GOALS2_Button_Delete_OnClick);
+    addEventHandler("STUDENT_LEARNING_GOALS2Button_Cancel","click",page_STUDENT_LEARNING_GOALS2_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">
+<!-- BEGIN Panel Panel_MenuStudentMaintain -->{Menu_Student_maintain}<!-- END Panel Panel_MenuStudentMaintain --></p>
+
+<div align="left">
+  <p align="center"><a href="{Link_Backtosummary_Src}" id="Link_Backtosummary" class="Button">Back to Summary</a></p>
+  <p align="center">{StudentNamePlate}</p>
+</div>
+<div align="left">
+</div>
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Grid STUDENT_LEARNING_GOALS1 -->
+<table id="Panel1STUDENT_LEARNING_GOALS1" class="MainTable" cellspacing="0" cellpadding="0" width="90%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>Student Learning Goals </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_GOAL_TITLE --><span class="Sorter"><a href="{Sort_URL}" id="Panel1STUDENT_LEARNING_GOALS1Sorter_GOAL_TITLE">GOAL TITLE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_GOAL_TITLE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_GOAL_CATEGORY --><span class="Sorter"><a href="{Sort_URL}" id="Panel1STUDENT_LEARNING_GOALS1Sorter_GOAL_CATEGORY">GOAL CATEGORY</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_GOAL_CATEGORY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_GOAL_BY_DATE --><span class="Sorter"><a href="{Sort_URL}" id="Panel1STUDENT_LEARNING_GOALS1Sorter_GOAL_BY_DATE">GOAL BY DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_GOAL_BY_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_GOAL_RESULT --><span class="Sorter"><a href="{Sort_URL}" id="Panel1STUDENT_LEARNING_GOALS1Sorter_GOAL_RESULT">GOAL RESULT</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_GOAL_RESULT --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_CREATED_DATETIME --><span class="Sorter">CREATED</span><!-- END Sorter Sorter_CREATED_DATETIME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><span class="Sorter"><a href="{Sort_URL}" id="Panel1STUDENT_LEARNING_GOALS1Sorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{Detail_Src}" id="Panel1STUDENT_LEARNING_GOALS1Detail_{STUDENT_LEARNING_GOALS1:rowNumber}">Detail</a>&nbsp;</td> 
+          <td>{GOAL_TITLE}<strong>&nbsp;</strong></td> 
+          <td>{GOAL_CATEGORY}&nbsp;</td> 
+          <td>{GOAL_BY_DATE}&nbsp;</td> 
+          <td>{GOAL_RESULT}&nbsp;</td> 
+          <td>{CREATED_DATETIME}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;/ {LAST_ALTERED_BY}</td>
+        </tr>
+ 
+        <tr class="Row">
+          <td>&nbsp;</td> 
+          <td colspan="5">Detail: <em>{GOAL_DETAIL}</em></td> 
+          <td>&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No Learning Goals found!</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="7"><a href="{STUDENT_LEARNING_GOALS1_Insert_Src}" id="Panel1STUDENT_LEARNING_GOALS1STUDENT_LEARNING_GOALS1_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid STUDENT_LEARNING_GOALS1 --><br>
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record STUDENT_LEARNING_GOALS2 -->
+<form id="Panel1Panel2STUDENT_LEARNING_GOALS2" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" width="90%" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft">&nbsp;</td> 
+            <td class="th"><strong>Add/Edit Student Learning Goals</strong></td> 
+            <td class="HeaderRight">&nbsp;</td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4"><span id="ErrorBlock">{Error}</span></td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label>GOAL TITLE</label></td> 
+            <td><input type="text" id="Panel1Panel2STUDENT_LEARNING_GOALS2GOAL_TITLE" maxlength="100" size="90" value="{GOAL_TITLE}" name="{GOAL_TITLE_Name}"></td> 
+            <td class="th">&nbsp;</td> 
+            <td class="th">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>CATEGORY</label></td> 
+            <td>
+              <select id="Panel1Panel2STUDENT_LEARNING_GOALS2GOAL_CATEGORY" name="{GOAL_CATEGORY_Name}">
+                <option selected value="">Select Value</option>
+                {GOAL_CATEGORY_Options}
+              </select>
+ </td> 
+            <td class="th"><label>BY DATE</label></td> 
+            <td><input type="text" id="Panel1Panel2STUDENT_LEARNING_GOALS2GOAL_BY_DATE" style="TEXT-ALIGN: right" maxlength="100" size="10" value="{GOAL_BY_DATE}" name="{GOAL_BY_DATE_Name}">&nbsp;<em>(dd/mm/yyyy)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>DETAIL</label></td> 
+            <td><textarea id="Panel1Panel2STUDENT_LEARNING_GOALS2GOAL_DETAIL" rows="5" cols="70" name="{GOAL_DETAIL_Name}">{GOAL_DETAIL}</textarea></td> 
+            <td class="th" colspan="2">
+              <p>SMART Goal principles:<br>
+              <ul>
+                <li>Specific - what exactly is it? 
+                <li>Measurable - how will you know it is done? 
+                <li>Actionable - can you really do this? 
+                <li>Relevant - is it related to the student? 
+                <li>Time-bounded - by when? </li>
+              </ul>
+ 
+              <p></p>
+            </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>GOAL RESULT</label></td> 
+            <td>
+              <select id="Panel1Panel2STUDENT_LEARNING_GOALS2GOAL_RESULT" name="{GOAL_RESULT_Name}">
+                {GOAL_RESULT_Options}
+              </select>
+ </td> 
+            <td class="th" colspan="2">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>RESULT NOTES</label></td> 
+            <td>
+              <p><textarea id="Panel1Panel2STUDENT_LEARNING_GOALS2RESULT_NOTES" rows="3" cols="70" name="{RESULT_NOTES_Name}">{RESULT_NOTES}</textarea></p>
+ 
+              <p><input type="hidden" id="Panel1Panel2STUDENT_LEARNING_GOALS2STUDENT_ID" value="{STUDENT_ID}" name="{STUDENT_ID_Name}"><input type="hidden" id="Panel1Panel2STUDENT_LEARNING_GOALS2ENROLMENT_YEAR" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}"><input type="hidden" id="Panel1Panel2STUDENT_LEARNING_GOALS2CREATED_DATETIME" value="{CREATED_DATETIME}" name="{CREATED_DATETIME_Name}"><input type="hidden" id="Panel1Panel2STUDENT_LEARNING_GOALS2LAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="Panel1Panel2STUDENT_LEARNING_GOALS2LAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></p>
+            </td> 
+            <td class="th" colspan="2">&nbsp;Last Updated By / Date (this Goal only)<br>
+              {lblLAST_ALTERED_BY}&nbsp;/ {lblLAST_ALTERED_DATE}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="4">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="Panel1Panel2STUDENT_LEARNING_GOALS2Button_Insert" class="Button" value="Add Goal" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="Panel1Panel2STUDENT_LEARNING_GOALS2Button_Update" class="Button" value="Update Goal" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" id="Panel1Panel2STUDENT_LEARNING_GOALS2Button_Delete" class="Button" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="Panel1Panel2STUDENT_LEARNING_GOALS2Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STUDENT_LEARNING_GOALS2 --><!-- END Panel Panel2 --><br>
+<!-- END Panel Panel1 -->
+</body>
+</html>

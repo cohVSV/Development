@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Despatch Update by Year</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp;</p>
+<p align="center">
+<!-- BEGIN Record SUBJECTSearch -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>List Subjects</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>YEAR LEVEL</th>
+ 
+            <td>
+              <select name="{s_YEAR_LEVEL_Name}" id="SUBJECTSearchs_YEAR_LEVEL">
+                <option value="" selected>Select Value</option>
+                {s_YEAR_LEVEL_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" type="submit" value="Display Subject List" name="{Button_Name}" id="SUBJECTSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SUBJECTSearch -->
+<p>
+<p>
+<!-- BEGIN Record UpdateForm -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+              <th>Update Form</th>
+ 
+              <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+            </tr>
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td>
+            </tr>
+            <!-- END Error -->
+            <tr class="Controls">
+              <th>
+              <p align="right">&nbsp;Year Level</p>
+              </th>
+ 
+              <td>{lblYearLevel2}&nbsp;</td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>
+              <p align="right">Despatch Date</p>
+              </th>
+ 
+              <td><input maxlength="10" size="10" value="{despatchdate}" name="{despatchdate_Name}" id="UpdateFormdespatchdate"></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>
+              <p align="right">Book Range</p>
+              </th>
+ 
+              <td><input maxlength="2" size="2" value="{book_range_from}" name="{book_range_from_Name}" id="UpdateFormbook_range_from">&nbsp;to <input maxlength="2" size="2" value="{book_range_to}" name="{book_range_to_Name}" id="UpdateFormbook_range_to"></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>
+              <p align="right">&nbsp;Semester</p>
+              </th>
+ 
+              <td>1 <input type="checkbox" value="1" name="{semester_1_Name}" {semester_1} id="UpdateFormsemester_1">&nbsp; 2<input type="checkbox" value="1" name="{semester_2_Name}" {semester_2} id="UpdateFormsemester_2">&nbsp;&nbsp;&nbsp;&nbsp; Both<input type="checkbox" value="1" name="{semester_both_Name}" {semester_both} id="UpdateFormsemester_both"></td>
+            </tr>
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="2">
+                <!-- BEGIN Button Button_DoUpdate --><input class="Button" type="submit" value="Update" name="{Button_Name}" id="UpdateFormButton_DoUpdate"><!-- END Button Button_DoUpdate --></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <p>
+</form>
+<div align="center">
+  {lblSelections}
+</div>
+<!-- END Record UpdateForm -->
+<!-- BEGIN Grid SUBJECT -->
+<p>&nbsp;</p>
+<table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0" border="0">
+        <tr class="Row">
+          <td>&nbsp;Despatch Run Update By Year Level {lblYearLevel}</td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="4">Total Records:&nbsp;{SUBJECT_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>Subject ID</th>
+ 
+          <th>Subject Title</th>
+ 
+          <th>Semester</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr {SUBJECT:rowStyle}>
+          <td style="TEXT-ALIGN: right">&nbsp;<input type="checkbox" value="1" name="{cbox_Name}" {cbox} id="SUBJECTcbox"></td> 
+          <td>&nbsp;{SUBJECT_ID}</td> 
+          <td>&nbsp;{SUBJECT_TITLE}</td> 
+          <td>&nbsp;{DEFAULT_SEMESTER}</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="4">No Subjects found</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="4"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid SUBJECT -->
+<p></p>
+<p><br>
+&nbsp;</p>
+</body>
+</html>

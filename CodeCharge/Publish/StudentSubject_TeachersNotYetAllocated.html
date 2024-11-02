@@ -1,0 +1,347 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Subject - Teachers Not Yet Allocated</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_ForceRun_Button_Update_OnClick @166-1BAF1854
+function page_ForceRun_Button_Update_OnClick()
+{
+    var result;
+//End page_ForceRun_Button_Update_OnClick
+
+//Custom Code @168-2A29BDB7
+        result = confirm("Are you sure that you wish to run the process to auto-allocate teachers to students in subjects?");
+//End Custom Code
+
+//Close page_ForceRun_Button_Update_OnClick @166-BC33A33A
+    return result;
+}
+//End Close page_ForceRun_Button_Update_OnClick
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @67-25F0BFE1
+    if (theForm.view_Class_ListSearchs_SURNAME) theForm.view_Class_ListSearchs_SURNAME.focus();
+//End Set Focus
+
+//Custom Code @133-2A29BDB7
+    // -------------------------
+    //ERA: force hide of modal
+    //ShowModal1_hide();
+    // ERA: set up the 'current' links to open the Modal popup to show the current enrolments
+    //$$('.show_enrolments').each(function (el) {
+    //            return $(el).observe('click', function() {
+    //                                                            ShowModal1_show();
+    //                                                            return false;
+    //                                                    });
+    //    });
+    result = true;
+    // -------------------------
+//End Custom Code
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//page_view_Class_List_Cancel_OnClick @138-8C9DC0EF
+function page_view_Class_List_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_view_Class_List_Cancel_OnClick
+
+//bind_events @1-36DEB597
+function bind_events() {
+    addEventHandler("ForceRunButton_Update","click",page_ForceRun_Button_Update_OnClick);
+    addEventHandler("view_Class_ListCancel","click",page_view_Class_List_Cancel_OnClick);
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events;
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+<p>{Header}</p>
+<p>
+<table style="WIDTH: 95%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td valign="top">
+            <!-- BEGIN Record view_Class_ListSearch -->
+            <form id="view_Class_ListSearch" method="post" name="{HTMLFormName}" action="{Action}">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td valign="top">
+                            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                                    <th>Search </th>
+ 
+                                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                                </tr>
+                            </table>
+ 
+                            <table class="Record" cellspacing="0" cellpadding="0">
+                                <!-- BEGIN Error -->
+                                <tr class="Error">
+                                    <td colspan="2">{Error}</td>
+                                </tr>
+                                <!-- END Error -->
+                                <tr class="Controls">
+                                    <th>Student/Subject/School Name</th>
+ 
+                                    <td><input type="text" id="view_Class_ListSearchs_SURNAME" maxlength="40" size="40" value="{s_SURNAME}" name="{s_SURNAME_Name}"></td>
+                                </tr>
+ 
+                                <tr class="Controls">
+                                    <th><em>(Semester 'B' Subjects must be allocated Manually)</em></th>
+ 
+                                    <td>
+                                        <!-- BEGIN RadioButton s_SEMESTER --><input type="radio" id="view_Class_ListSearchs_SEMESTER_{s_SEMESTER:optionNumber}" value="{Value}" name="{s_SEMESTER_Name}" {Check}>{Description}<!-- END RadioButton s_SEMESTER --></td>
+                                </tr>
+ 
+                                <tr class="Controls">
+                                    <th>Student Year Level</th>
+ 
+                                    <td>
+                                        <select id="view_Class_ListSearchradioYearLevel" name="{radioYearLevel_Name}">
+                                            <option selected value="">Select Value</option>
+                                            {radioYearLevel_Options}
+                                        </select>
+ </td>
+                                </tr>
+ 
+                                <tr class="Bottom">
+                                    <td><a href="{ClearParameters_Src}" id="view_Class_ListSearchClearParameters">Clear</a></td> 
+                                    <td align="right">
+                                        <!-- BEGIN Button Button_DoSearch --><input type="submit" id="view_Class_ListSearchButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                                </tr>
+                            </table>
+                            <em>Shows Next Enrolment Year from 1 Dec; Excludes LP/DL Subjects;</em></td>
+                    </tr>
+                </table>
+            </form>
+            <!-- END Record view_Class_ListSearch -->
+            <p></p>
+        </td> 
+        <td valign="top"></td> 
+        <td valign="top">
+            <!-- BEGIN Record ForceRun -->
+            <form id="ForceRun" method="post" name="{HTMLFormName}" action="{Action}">
+                <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td valign="top">
+                            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                                    <th>Force Allocation&nbsp;Run</th>
+ 
+                                    <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                                </tr>
+                            </table>
+ 
+                            <table class="Record" cellspacing="0" cellpadding="0">
+                                <!-- BEGIN Error -->
+                                <tr id="ForceRunErrorBlock" class="Error">
+                                    <td colspan="2">{Error}</td>
+                                </tr>
+                                <!-- END Error -->
+                                <tr class="Controls">
+                                    <th colspan="2"><u>If allocations 'stalled' try running and increase batch size</u></th>
+                                </tr>
+ 
+                                <tr class="Controls">
+                                    <th>Batch Size</th>
+ 
+                                    <td>
+                                        <select id="ForceRunlistBatchSize" name="{listBatchSize_Name}">
+                                            {listBatchSize_Options}
+                                        </select>
+ students </td>
+                                </tr>
+ 
+                                <tr class="Controls">
+                                    <th>VCE Only</th>
+ 
+                                    <td><input type="checkbox" id="ForceRuncheckVCEOnly" value="1" name="{checkVCEOnly_Name}" {checkVCEOnly}>&nbsp;<em>(leave blank for all Years)</em></td>
+                                </tr>
+ 
+                                <tr class="Bottom">
+                                    <td style="TEXT-ALIGN: right" colspan="2">
+                                        <!-- BEGIN Button Button_Update --><input type="submit" id="ForceRunButton_Update" class="Button" value="Run Batch" name="{Button_Name}"><!-- END Button Button_Update --></td>
+                                </tr>
+                            </table>
+                            <em>
+                            <ul>
+                                <li>may take 1-2 minutes to run 
+                                <li>if no change, increase batch size and Run Batch 
+                                <li>after 500 then must add Teachers or manually allocate </li>
+                            </ul>
+                            </em></td>
+                    </tr>
+                </table>
+            </form>
+            <!-- END Record ForceRun --></td>
+    </tr>
+</table>
+<p><br>
+</p>
+<p>
+<!-- BEGIN EditableGrid view_Class_List -->
+<form id="view_Class_List" method="post" name="{HTMLFormName}" action="{Action}">
+    <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+    <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Students with Unallocated Subject Teachers</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="10">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Row">
+                        <td colspan="10">Total Records:&nbsp;{view_Class_List_TotalRecords}</td>
+                    </tr>
+ 
+                    <tr class="Caption">
+                        <th>
+                        <!-- BEGIN Sorter Sorter_STUDENT_ID --><a href="{Sort_URL}" id="view_Class_ListSorter_STUDENT_ID">STUDENT ID</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="view_Class_ListSorter_SURNAME">STUDENT NAME</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter SorterYEAR_LEVEL --><a href="{Sort_URL}" id="view_Class_ListSorterYEAR_LEVEL">YEAR LEVEL</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter SorterYEAR_LEVEL -->&nbsp;</th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_SCHOOL_NAME --><a href="{Sort_URL}" id="view_Class_ListSorter_SCHOOL_NAME">SCHOOL NAME</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SCHOOL_NAME --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_SEMESTER --><a href="{Sort_URL}" id="view_Class_ListSorter_SEMESTER">SEMESTER</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SEMESTER --></th>
+ 
+                        <th>STAFF ID (Choose!)</th>
+ 
+                        <th>&nbsp;</th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_SUBJECT_TITLE --><a href="{Sort_URL}" id="view_Class_ListSorter_SUBJECT_TITLE">SUBJECT TITLE</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJECT_TITLE --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_SUBJ_ENROL_STATUS --><a href="{Sort_URL}" id="view_Class_ListSorter_SUBJ_ENROL_STATUS">Enrol Status</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJ_ENROL_STATUS --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_ENROLMENT_DATE --><a href="{Sort_URL}" id="view_Class_ListSorter_ENROLMENT_DATE">Last Altered Date</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_DATE --></th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <!-- BEGIN RowError -->
+                    <tr class="Error">
+                        <td colspan="10">{Error}</td>
+                    </tr>
+                    <!-- END RowError -->
+                    <tr class="Row">
+                        <td><a href="{STUDENT_ID_Src}" id="view_Class_ListSTUDENT_ID_{view_Class_List:rowNumber}">{STUDENT_ID}</a>&nbsp;</td> 
+                        <td>{FIRST_NAME}&nbsp;{SURNAME}</td> 
+                        <td>
+                            <div align="center">
+                                {YEAR_LEVEL}&nbsp; 
+                            </div>
+                        </td> 
+                        <td>{SCHOOL_NAME}&nbsp;</td> 
+                        <td>
+                            <div align="center">
+                                {SEMESTER} 
+                            </div>
+                        </td> 
+                        <td>
+                            <select id="view_Class_ListSTAFF_ID_{view_Class_List:rowNumber}" name="{STAFF_ID_Name}">
+                                <option selected value="">Select Value</option>
+                                {STAFF_ID_Options}
+                            </select>
+ </td> 
+                        <td><a href="{link_ShowCurrentEnrolment_Src}" id="view_Class_Listlink_ShowCurrentEnrolment_{view_Class_List:rowNumber}" class="show_enrolments" target="_blank">current</a>&nbsp;{lblWarnFull}</td> 
+                        <td><a href="{SUBJECT_ABBREV_Src}" id="view_Class_ListSUBJECT_ABBREV_{view_Class_List:rowNumber}">{SUBJECT_ABBREV}</a>&nbsp;:&nbsp;{SUBJECT_TITLE}&nbsp;</td> 
+                        <td>
+                            <div align="center">
+                                {SUBJ_ENROL_STATUS} 
+                            </div>
+                        </td> 
+                        <td>{ENROLMENT_DATE}&nbsp;</td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="10"><font color="#800000">No Unallocated Students found! Check Search settings then click [Search].</font></td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                        <td style="TEXT-ALIGN: right" colspan="10">
+                            <!-- BEGIN Navigator Navigator --><span class="Navigator">
+                            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+                            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+                            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+                            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp; 
+                            <!-- BEGIN Pages -->
+                            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+                            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+                            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+                            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+                            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->
+                            <!-- BEGIN Button Button_Submit --><input type="submit" id="view_Class_ListButton_Submit" class="Button" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit -->&nbsp; 
+                            <!-- BEGIN Button Cancel --><input type="submit" id="view_Class_ListCancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Cancel --></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- END EditableGrid view_Class_List --></p>
+</body>
+</html>

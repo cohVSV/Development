@@ -1,0 +1,191 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Details - Add New Enrolment Year</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//DEL  </script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_STUDENT_Button_Update_OnClick @3-DB04562F
+function page_STUDENT_Button_Update_OnClick()
+{
+    var result;
+//End page_STUDENT_Button_Update_OnClick
+
+//Confirmation Message @85-DABCB649
+    return confirm('Are you sure you want to add a new Enrolment Year?');
+//End Confirmation Message
+
+//Close page_STUDENT_Button_Update_OnClick @3-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_Button_Update_OnClick
+
+//page_STUDENT_Button_Cancel_OnClick @5-AF0AE409
+function page_STUDENT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_Button_Cancel_OnClick
+
+//bind_events @1-597438F4
+function bind_events() {
+    addEventHandler("STUDENTButton_Update","click",page_STUDENT_Button_Update_OnClick);
+    addEventHandler("STUDENTButton_Cancel","click",page_STUDENT_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649
+//End Assign bind_events
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+<script language="JavaScript" type="text/javascript">
+/*
+    Date Modified : 12 Nov 2009
+    Modified by : Eric Affleck
+    Ref: Unfuddle Ticket No: #182, 184
+    Task: Region Approval display - this hides it if 'not this student?' is clicked.
+*/
+
+function clearRegionID(){
+    $('STUDENTinputREgionID').value='0';
+    $('STUDENTinputREgionID').focus();
+        $('region_approvalHolder').style.display = "none";
+    return true;
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Fresh/Style_Components.css">
+</head>
+<body>
+<div align="center">
+    &nbsp;{Header}&nbsp; 
+</div>
+<!-- BEGIN Record STUDENT -->
+<p>
+<p>
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Add New Year for a Student</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>STUDENT ID</th>
+ 
+                        <td>{lblStudentID}&nbsp; </td> 
+                        <td>ENROLMENT DATE</td> 
+                        <td>&nbsp;<input type="text" id="Panel1STUDENT1EnrolDate" readonly maxlength="12" size="10" value="{EnrolDate}" name="{EnrolDate_Name}">&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SURNAME</th>
+ 
+                        <td>{SURNAME}&nbsp;</td> 
+                        <td>FIRST NAME</td> 
+                        <td>&nbsp;{FIRST_NAME}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>MIDDLE NAME</th>
+ 
+                        <td>{MIDDLE_NAME}&nbsp;</td> 
+                        <td>DATE OF BIRTH (DD/MM/YYYY):</td> 
+                        <td>&nbsp;{BIRTH_DATE} </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>GENDER</th>
+ 
+                        <td style="pointer-events: none">
+                            <!-- BEGIN RadioButton SEX --><input type="radio" id="Panel1STUDENT1SEX_{SEX:optionNumber}" value="{Value}" name="{SEX_Name}" {Check}>{Description}<!-- END RadioButton SEX -->&nbsp; <input type="text" id="STUDENTSEX_SELF_DESCRIBED" readonly value="{SEX_SELF_DESCRIBED}" name="{SEX_SELF_DESCRIBED_Name}"></td> 
+                        <td>&nbsp;</td> 
+                        <td></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>YEAR LEVEL</strong></th>
+ 
+                        <td>
+                            <select tabindex="1" id="Panel1STUDENT1listYearLevel" name="{listYearLevel_Name}">
+                                <option selected value="">Select Value</option>
+                                {listYearLevel_Options}
+                            </select>
+ &nbsp;</td> 
+                        <td><strong>ENROLMENT YEAR</strong></td> 
+                        <td>&nbsp;<input type="text" tabindex="2" id="Panel1STUDENT1EnrolYear" maxlength="4" size="4" value="{EnrolYear}" name="{EnrolYear_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th></th>
+ 
+                        <td>
+                            <p>&nbsp;</p>
+                        </td> 
+                        <td><strong>PRIVACY PERMISSION GIVEN?</strong>&nbsp;<img onclick="javascript:alert('Privacy Permission Given?, Dec 2011');return false;" id="privacy_permission_icon" title="Permission VSV to access and share any existing relevant personal or health information with specialist practitioners or agencies that have been listed in this enrolment application." border="0" name="privacy_permission_icon" alt="Permission VSV to access and share any existing relevant personal or health information with specialist practitioners or agencies that have been listed in this enrolment application." src="images/icon_info.gif"></td> 
+                        <td>
+                            <p>&nbsp; 
+                            <!-- BEGIN RadioButton PRIVACY_PERMISSION --><input type="radio" id="STUDENTPRIVACY_PERMISSION_{PRIVACY_PERMISSION:optionNumber}" checked value="{Value}" name="{PRIVACY_PERMISSION_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton PRIVACY_PERMISSION --><br>
+                            <em>Mandatory 2020 Onwards</em></p>
+                        </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>CATEGORY / SUBCATEGORY</th>
+ 
+                        <td colspan="3">{category}&nbsp;/ {subcategory}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>ATTENDING SCHOOL ID</th>
+ 
+                        <td colspan="3">{ATTENDING_SCHOOL_ID}&nbsp;&nbsp;{lblAttendingSchoolName}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>HOME SCHOOL ID</th>
+ 
+                        <td colspan="3">{HOME_SCHOOL_ID}&nbsp;&nbsp;{lblHomeSchoolName}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="4" align="right">
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="Panel1STUDENT1Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel -->
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="Panel1STUDENT1Button_Update" class="Button" value="Add New Year" name="{Button_Name}"><!-- END Button Button_Update --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="Panel1STUDENT1hidden_STUDENT_ID" value="{hidden_STUDENT_ID}" name="{hidden_STUDENT_ID_Name}"><input type="hidden" id="Panel1STUDENT1hidden_LAST_ALTERED_BY" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"><input type="hidden" id="STUDENTinputREgionID" value="{inputREgionID}" name="{inputREgionID_Name}"></td>
+        </tr>
+    </table>
+</form>
+<p align="center">&nbsp;{lblErrorMessages}</p>
+<!-- END Record STUDENT -->
+<p>&nbsp;</p>
+</body>
+</html>

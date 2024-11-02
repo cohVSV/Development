@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SCHOOL TYPE</title>
+<meta content="CodeCharge Studio 3.1.1.0" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{Header} </p>
+<p><a href="{Link1_Src}" class="Button" id="Link1">Back to School Type List</a></p>
+<!-- BEGIN Record SCHOOL_TYPE -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit SCHOOL TYPE </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>TYPE CODE&nbsp;</th>
+ 
+            <td><input id="SCHOOL_TYPESCHOOL_TYPE_CODE" maxlength="1" size="2" value="{SCHOOL_TYPE_CODE}" name="{SCHOOL_TYPE_CODE_Name}">{lbl_SchoolTypeCode}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DESCRIPTION</th>
+ 
+            <td><input id="SCHOOL_TYPESCHOOL_TYPE_DESCRIPTION" maxlength="10" size="10" value="{SCHOOL_TYPE_DESCRIPTION}" name="{SCHOOL_TYPE_DESCRIPTION_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY</th>
+ 
+            <td>{lbl_LAST_ALTERED_BY}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED DATE</th>
+ 
+            <td>{lbl_LAST_ALTERED_DATE}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="SCHOOL_TYPEButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="SCHOOL_TYPEButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="SCHOOL_TYPEButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->&nbsp; 
+              <!-- BEGIN Button Button_Cancel --><input class="Button" id="SCHOOL_TYPEButton_Cancel" type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input id="SCHOOL_TYPELAST_ALTERED_BY" type="hidden" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input id="SCHOOL_TYPELAST_ALTERED_DATE" type="hidden" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SCHOOL_TYPE --><br>
+{Footer} 
+</body>
+</html>

@@ -1,0 +1,189 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Enrolment - Initial Check</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @32-962FD0A0
+    if (theForm.STUDENTSearchs_SURNAME) theForm.STUDENTSearchs_SURNAME.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//bind_events @1-B716D3FC
+function bind_events() {
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{Header}</p>
+<p align="center">
+<!-- BEGIN Record STUDENTSearch -->
+<div align="left">
+  <form method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+              <th>Search Students</th>
+ 
+              <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+            <tr class="Controls">
+              <th>SURNAME</th>
+ 
+              <td><input type="text" id="STUDENTSearchs_SURNAME" maxlength="30" value="{s_SURNAME}" name="{s_SURNAME_Name}"></td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <th>FIRST NAME</th>
+ 
+              <td><input type="text" id="STUDENTSearchs_FIRST_NAME" maxlength="30" value="{s_FIRST_NAME}" name="{s_FIRST_NAME_Name}"></td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <th>BIRTH DATE</th>
+ 
+              <td><input type="text" id="STUDENTSearchs_BIRTH_DATE" maxlength="10" size="10" value="{s_BIRTH_DATE}" name="{s_BIRTH_DATE_Name}"><em>(dd/mm/yyyy)</em></td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <th colspan="2">
+              <p align="center"><strong><em>Enter ALL fields ABOVE <br>
+              <font color="#ff0000">OR</font> </em></strong></p>
+ </th>
+ 
+            </tr>
+ 
+            <tr class="Controls">
+              <th>STUDENT ID&nbsp;</th>
+ 
+              <td><input type="text" id="STUDENTSearchs_STUDENT_ID" maxlength="10" size="10" value="{s_STUDENT_ID}" name="{s_STUDENT_ID_Name}">&nbsp;</td> 
+            </tr>
+ 
+            <tr class="Bottom">
+              <td colspan="2" align="right">
+                <!-- BEGIN Button Button_DoSearch --><input type="submit" id="STUDENTSearchButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+            </tr>
+ 
+          </table>
+ </td> 
+      </tr>
+ 
+    </table>
+ 
+  </form>
+</div>
+<div align="left">
+</div>
+<!-- END Record STUDENTSearch -->
+<p></p>
+<!-- BEGIN Grid STUDENT -->
+<p>
+<table cellspacing="0" cellpadding="0" width="50%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>Existing Students</th>
+ 
+          <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="6">{lblWarningExistingStudent}</td> 
+        </tr>
+ 
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>Student ID</th>
+ 
+          <th>SURNAME</th>
+ 
+          <th>FIRST NAME</th>
+ 
+          <th>BIRTH DATE</th>
+ 
+          <th>GENDER</th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr {STUDENT:rowStyle}>
+          <td style="TEXT-ALIGN: right"><a href="{Link1_Src}" id="STUDENTLink1">Add New Year</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">
+            <div align="left">
+              {STUDENT_ID}&nbsp; 
+            </div>
+ </td> 
+          <td>{SURNAME}&nbsp;</td> 
+          <td>{FIRST_NAME}&nbsp;</td> 
+          <td>{BIRTH_DATE}&nbsp;</td> 
+          <td>{SEX}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">Student Not Previously Enrolled&nbsp;&nbsp;<a href="{link_AddNewStudent_Src}" id="STUDENTlink_AddNewStudent">Add New Student</a></td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonPrev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img border="0" src="Styles/Blueprint/Images/en/ButtonPrevOff.gif"><!-- END Prev_Off -->
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" src="Styles/Blueprint/Images/en/ButtonNext.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img border="0" src="Styles/Blueprint/Images/en/ButtonNextOff.gif"><!-- END Next_Off --><!-- END Navigator Navigator --></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid STUDENT --></p>
+<p><br>
+</p>
+</body>
+</html>

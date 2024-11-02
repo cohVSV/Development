@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Teacher Allocations - Search</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet" />
+<script language="JavaScript" type="text/javascript">
+function OpenPopUpList()
+{
+        var FieldName;
+        FieldName = "TeacherAllocations_Searchs_SUBJECT_ID";
+        var win=window.open("popup_SubjectList.aspx?returncontrol="+FieldName, "SubjectList", "left=40,top=10,width=380,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+        win.focus();
+}
+
+</script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_TeacherAllocations_Search_OnLoad @3-A21B2B68
+function page_TeacherAllocations_Search_OnLoad(form)
+{
+    var result;
+//End page_TeacherAllocations_Search_OnLoad
+
+//Set Focus @15-30791720
+    if (theForm.TeacherAllocations_Searchs_SUBJECT_ID) theForm.TeacherAllocations_Searchs_SUBJECT_ID.focus();
+//End Set Focus
+
+//Close page_TeacherAllocations_Search_OnLoad @3-BC33A33A
+    return result;
+}
+//End Close page_TeacherAllocations_Search_OnLoad
+
+//bind_events @1-AFB0A55C
+function bind_events() {
+    if(document.getElementById("TeacherAllocations_SearchHolder"))
+    addEventHandler("TeacherAllocations_Search","load",page_TeacherAllocations_Search_OnLoad);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<!-- BEGIN Record TeacherAllocations_Search -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" width="60%" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+              <th>Teacher Allocations </th>
+ 
+              <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+            <tr class="Controls">
+              <th><strong>Enter a Subject ID</strong></th>
+ 
+              <td><input id="TeacherAllocations_Searchs_SUBJECT_ID" maxlength="10" size="6" value="{s_SUBJECT_ID}" name="{s_SUBJECT_ID_Name}">&nbsp;<a href="{link_popupSubjectList_Src}" id="TeacherAllocations_Searchlink_popupSubjectList" onclick="OpenPopUpList();">subject list</a></td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>&nbsp;<em>Optional Parameters</em></strong></th>
+ 
+              <td>&nbsp;</td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>Teacher Name</strong></th>
+ 
+              <td>
+                <select id="TeacherAllocations_Searchs_STAFF_ID" name="{s_STAFF_ID_Name}">
+                  <option value="" selected>Select Value</option>
+ {s_STAFF_ID_Options} 
+                </select>
+ </td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>Semester</strong></th>
+ 
+              <td>
+                <select id="TeacherAllocations_Searchs_SEMESTER" name="{s_SEMESTER_Name}">
+                  <option value="" selected>Select Value</option>
+ {s_SEMESTER_Options} 
+                </select>
+ </td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>Student</strong></th>
+ 
+              <td>
+                <!-- BEGIN RadioButton s_SUBJ_ENROL_STATUS --><input id="TeacherAllocations_Searchs_SUBJ_ENROL_STATUS_{s_SUBJ_ENROL_STATUS:optionNumber}" type="radio" value="{Value}" name="{s_SUBJ_ENROL_STATUS_Name}" {Check}>{Description}<!-- END RadioButton s_SUBJ_ENROL_STATUS --></td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>VASS?</strong></th>
+ 
+              <td>
+                <!-- BEGIN RadioButton s_APPEARS_ON_VASS --><input id="TeacherAllocations_Searchs_APPEARS_ON_VASS_{s_APPEARS_ON_VASS:optionNumber}" type="radio" value="{Value}" name="{s_APPEARS_ON_VASS_Name}" {Check}>{Description}<!-- END RadioButton s_APPEARS_ON_VASS --></td> 
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>Enrolment Year</strong></th>
+ 
+              <td><input id="TeacherAllocations_Searchs_ENROLMENT_YEAR" maxlength="4" size="4" value="{s_ENROLMENT_YEAR}" name="{s_ENROLMENT_YEAR_Name}"></td> 
+            </tr>
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="2">
+                <!-- BEGIN Button Button_DoSearch --><input class="Button" id="TeacherAllocations_SearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+            </tr>
+ 
+          </table>
+ </td> 
+      </tr>
+ 
+    </table>
+ 
+  </div>
+</form>
+<!-- END Record TeacherAllocations_Search --><br>
+</body>
+</html>

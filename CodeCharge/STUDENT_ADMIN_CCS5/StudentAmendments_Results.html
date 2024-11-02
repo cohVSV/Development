@@ -1,0 +1,264 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Amendments - Update</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_UpdateForm_button_DoTeacher_OnClick @64-0B3B32FF
+function page_UpdateForm_button_DoTeacher_OnClick()
+{
+    var result;
+//End page_UpdateForm_button_DoTeacher_OnClick
+
+//Validate Required Value @73-B821C3BD
+    if(theForm.UpdateFormlistTeacher.value == "") {
+        alert("Field - Pastoral Care ID\nOption must be selected from list")
+        theForm.UpdateFormlistTeacher.focus();
+        return false;
+    }
+//End Validate Required Value
+
+//Confirmation Message @120-24EC9FA2
+    return confirm('Are you Sure you want to Change the Pastoral Care ID?');
+//End Confirmation Message
+
+//Close page_UpdateForm_button_DoTeacher_OnClick @64-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_button_DoTeacher_OnClick
+
+//bind_events @1-896F1782
+function bind_events() {
+    addEventHandler("UpdateFormbutton_DoTeacher","click",page_UpdateForm_button_DoTeacher_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p align="center"><a href="{Link1_Src}" class="Button" id="Link1">Return to Student Request</a><a href="{Link1_Src}"></a></p>
+<p>
+<!-- BEGIN Record UpdateForm -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" width="95%" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+              <th>Update Form</th>
+ 
+              <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+            </tr>
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="6">{Error}</td>
+            </tr>
+            <!-- END Error -->
+            <tr class="Controls">
+              <th>
+              <p align="right">Lowest Student ID</p>
+              </th>
+ 
+              <td>{lblStudentID}&nbsp;</td> 
+              <td>
+                <p align="right">&nbsp;Enrolment Year</p>
+              </td> 
+              <td>&nbsp;{lblEnrolmentYear}</td> 
+              <td>
+                <p align="right">Rows/Page</p>
+              </td> 
+              <td>{lblRowsPerPage}</td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>&nbsp;</th>
+ 
+              <td>&nbsp;</td> 
+              <td>
+                <p align="right">Year Level</p>
+              </td> 
+              <td>&nbsp;{lblYearLevel}</td> 
+              <td>
+                <p align="right">&nbsp;</p>
+              </td> 
+              <td>&nbsp;</td>
+            </tr>
+ 
+            <tr class="Bottom" height="5">
+              <td>&nbsp;</td> 
+              <td>&nbsp;</td> 
+              <td>&nbsp;</td> 
+              <td>&nbsp;</td> 
+              <td>&nbsp;</td> 
+              <td>&nbsp;</td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>
+              <p align="right">Pastoral Care Name</p>
+              </th>
+ 
+              <td>
+                <select id="UpdateFormlistTeacher" name="{listTeacher_Name}">
+                  <option value="" selected>Select Value</option>
+                  {listTeacher_Options}
+                </select>
+ </td> 
+              <td colspan="2">&nbsp; 
+                <!-- BEGIN Button button_DoTeacher --><input class="Button" id="UpdateFormbutton_DoTeacher" type="submit" value="Change Pastoral Care ID" name="{Button_Name}"><!-- END Button button_DoTeacher -->&nbsp;</td> 
+              <td>&nbsp;&nbsp; </td> 
+              <td>&nbsp;</td>
+            </tr>
+ 
+            <tr class="Bottom">
+              <th align="right" colspan="6"></th>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+<p align="center">&nbsp;{lblSelections}</p>
+<!-- END Record UpdateForm -->
+<p>
+<!-- BEGIN Grid GridStudentList --><br>
+<table cellspacing="0" cellpadding="0" width="95%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of Students</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="7">
+            <p align="left">Total Matched Records:&nbsp;{STUD_SUB_INTERIM_STUD_SUB_TotalRecords}</p>
+          </td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STUDENT_ID --><a href="{Sort_URL}" id="GridStudentListSorter_STUDENT_ID">Student ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="GridStudentListSorter_SURNAME">Surname</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="GridStudentListSorter_FIRST_NAME">First Name</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+          <th>
+          <p align="center">&nbsp; 
+          <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><a href="{Sort_URL}" id="GridStudentListSorter_YEAR_LEVEL">Year Level</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_YEAR_LEVEL --></p>
+          </th>
+ 
+          <th>
+          <p align="center">
+          <!-- BEGIN Sorter Sorter_SUBJ_ENROL_STATUS --><a href="{Sort_URL}" id="GridStudentListSorter_SUBJ_ENROL_STATUS">Enrolment Status</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJ_ENROL_STATUS --></p>
+          </th>
+ 
+          <th>
+          <p align="center">
+          <!-- BEGIN Sorter Sorter_STAFF_ID --><a href="{Sort_URL}" id="GridStudentListSorter_STAFF_ID">Pastoral Care ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STAFF_ID --></p>
+          </th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr {GridStudentList:rowStyle}>
+          <td style="TEXT-ALIGN: right">
+            <p align="center"><input id="GridStudentListcbox" type="checkbox" value="1" name="{cbox_Name}" {cbox}></p>
+          </td> 
+          <td style="TEXT-ALIGN: right">
+            <p align="left">{STUDENT_ID}</p>
+          </td> 
+          <td>{SURNAME}&nbsp;</td> 
+          <td>{FIRST_NAME}&nbsp;</td> 
+          <td>
+            <p align="center">{YEAR_LEVEL}&nbsp;</p>
+          </td> 
+          <td>
+            <div align="center">
+              {SUBJ_ENROL_STATUS}&nbsp; 
+            </div>
+          </td> 
+          <td>
+            <div align="center">
+              {STAFF_ID}&nbsp; 
+            </div>
+          </td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN Separator -->
+        <tr class="Separator">
+          <td colspan="7"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+        <!-- END Separator -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No Students found</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="7">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid GridStudentList --></p>
+<p><br>
+</p>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SCHOOL</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+{Header} <br>
+<br>
+<!-- BEGIN Record SCHOOLSearch -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search SCHOOL </th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th>
+ 
+            <td><input type="text" id="SCHOOLSearchs_keyword" maxlength="20" value="{s_keyword}" name="{s_keyword_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th colspan="2"><em>(wildcard of School ID, Name or Region ID)</em>&nbsp;&nbsp;</th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;School Type</th>
+ 
+            <td>
+              <select id="SCHOOLSearchlbSCHOOL_TYPE" name="{lbSCHOOL_TYPE_Name}">
+                <option selected value="">Select Value</option>
+                {lbSCHOOL_TYPE_Options}
+              </select>
+ &nbsp;&nbsp;<em>(optional)</em></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="SCHOOLSearchButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SCHOOLSearch -->
+<div align="center">
+  <!-- BEGIN Grid SCHOOL -->
+  <p align="right"><a href="{link_NewSchool_Src}" id="SCHOOLlink_NewSchool" class="Button">Add new</a><br>
+  </p>
+  <div align="left">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+              <th>List of SCHOOLS </th>
+ 
+              <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+            </tr>
+          </table>
+ 
+          <table class="Grid" cellspacing="0" cellpadding="0">
+            <tr class="Caption">
+              <th>
+              <!-- BEGIN Sorter Sorter_SCHOOL_ID --><a href="{Sort_URL}" id="SCHOOLSorter_SCHOOL_ID">SCHOOL ID</a> 
+              <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SCHOOL_ID --></th>
+ 
+              <th>
+              <!-- BEGIN Sorter Sorter_SCHOOL_NAME --><a href="{Sort_URL}" id="SCHOOLSorter_SCHOOL_NAME">NAME</a> 
+              <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SCHOOL_NAME --></th>
+ 
+              <th>&nbsp;Type</th>
+ 
+              <th>
+              <!-- BEGIN Sorter Sorter_REGION_ID --><a href="{Sort_URL}" id="SCHOOLSorter_REGION_ID">REGION ID</a> 
+              <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_REGION_ID --></th>
+ 
+              <th>
+              <!-- BEGIN Sorter Sorter_METRO_CATEGORY --><a href="{Sort_URL}" id="SCHOOLSorter_METRO_CATEGORY">METRO CATEGORY</a> 
+              <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_METRO_CATEGORY --></th>
+ 
+              <th>
+              <!-- BEGIN Sorter Sorter_STATUS --><a href="{Sort_URL}" id="SCHOOLSorter_STATUS">Active?</a> 
+              <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STATUS --></th>
+ 
+              <th>
+              <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><a href="{Sort_URL}" id="SCHOOLSorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+              <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+              <th>
+              <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><a href="{Sort_URL}" id="SCHOOLSorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+              <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+              <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+            </tr>
+ 
+            <!-- BEGIN Row -->
+            <tr class="Row">
+              <td style="TEXT-ALIGN: right"><a href="{SCHOOL_ID_Src}" id="SCHOOLSCHOOL_ID">{SCHOOL_ID}</a>&nbsp;</td> 
+              <td>{SCHOOL_NAME}&nbsp;</td> 
+              <td>&nbsp;{SCHOOL_TYPE_CODE}</td> 
+              <td style="TEXT-ALIGN: right">{REGION_ID}&nbsp;</td> 
+              <td>{METRO_CATEGORY}&nbsp;</td> 
+              <td>{STATUS}&nbsp;</td> 
+              <td>{LAST_ALTERED_BY}&nbsp;</td> 
+              <td>{LAST_ALTERED_DATE}&nbsp;</td>
+            </tr>
+ <!-- END Row -->
+            <!-- BEGIN Separator -->
+            <tr class="Separator">
+              <td colspan="8"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+            </tr>
+            <!-- END Separator -->
+            <!-- BEGIN NoRecords -->
+            <tr class="NoRecords">
+              <td colspan="8">No records found. </td>
+            </tr>
+            <!-- END NoRecords -->
+            <tr class="Footer">
+              <td colspan="8"><a href="{link_AnotherNewSchool_Src}" id="SCHOOLlink_AnotherNewSchool_{SCHOOL:rowNumber}">Add new</a>&nbsp;&nbsp;&nbsp; 
+                <!-- BEGIN Navigator Navigator -->
+                <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+                <!-- BEGIN First_Off -->First <!-- END First_Off -->
+                <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+                <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+                <!-- BEGIN Pages -->
+                <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+                <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+                <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+                <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+                <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div align="left">
+  </div>
+  <!-- END Grid SCHOOL -->
+</div>
+<div align="center">
+</div>
+<br>
+<br>
+&nbsp; 
+</body>
+</html>

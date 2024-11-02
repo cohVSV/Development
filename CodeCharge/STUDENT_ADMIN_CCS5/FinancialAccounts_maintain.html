@@ -1,0 +1,241 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+{Header} {Menu_Student_maintain} 
+<h1>Financial Accounts - DECV</h1>
+<a href="OnlineHelp/Auto%20Transactions/Auto%20Transactions.html" title="show help for this page" target="_blank"><img border="0" alt="Online Help" src="images/help.png" align="right"></a> 
+<p>
+<div align="center">
+  <strong>Student ID: </strong>{lblStudentID}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Enrolment Year: </strong>{lblEnrolmentYear} 
+</div>
+<br>
+<!-- BEGIN Grid Grid_Transactions -->
+<table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <p align="center">Transaction Date</p>
+          </th>
+ 
+          <th>
+          <p align="center">Transaction Code</p>
+          </th>
+ 
+          <th>
+          <p align="center">Amount</p>
+          </th>
+ 
+          <th>
+          <p align="center">DR/CR</p>
+          </th>
+ 
+          <th>
+          <p align="center">Comments</p>
+          </th>
+ 
+          <th>
+          <p align="center">Receipt #</p>
+          </th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr {Grid_Transactions:rowStyle}>
+          <td>
+            <div align="center">
+<a href="{link_TRANS_DATE_Src}" id="Grid_Transactionslink_TRANS_DATE" title="edit Comment / Receipt #">{link_TRANS_DATE}</a> 
+            </div>
+          </td> 
+          <td>
+            <div align="right">
+              <input type="hidden" id="Grid_TransactionsTXN_ID" size="8" value="{TXN_ID}" name="{TXN_ID_Name}">{TRANS_CODE} 
+            </div>
+          </td> 
+          <td style="TEXT-ALIGN: right">
+            <div align="right">
+              {AMOUNT}&nbsp;&nbsp; 
+            </div>
+          </td> 
+          <td>
+            <div align="center">
+              {CR_DR_FLAG} 
+            </div>
+          </td> 
+          <td>{COMMENTS}&nbsp;</td> 
+          <td>{RECEIPT}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <tr class="Bottom">
+          <td colspan="2" align="right">
+            <p align="right"><strong>Account Balance:</strong></p>
+          </td> 
+          <td align="right">${lblAcctBalance}&nbsp;&nbsp;</td> 
+          <td>
+            <div align="center">
+              {lblCRDRFlag} 
+            </div>
+          </td> 
+          <td colspan="2" align="left"></td>
+        </tr>
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No Transactions found for this Student + Year&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="ShowModal_AutoTXN_show();" id="Button_TXNTest" class="Button" value="Try Auto Transactions" name="Button_TXNTest"></td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid Grid_Transactions -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-58B55CB0
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @43-9AD6E82B
+    if (theForm.txnAMOUNT) theForm.txnAMOUNT.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//PTAutoFill2 Loading @57-F9B8A73F
+function txnTXN_CODEPTAutoFill2_start(sender) {
+    if (!sender || sender === window) return;
+    new Ajax.Request("services/FinancialAccounts_maintain_txn_TXN_CODE_PTAutoFill1.aspx?keyword=" + encodeURIComponent(sender.value).replace(/'/g, "%27"), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            if (typeof(valuesRow) != "undefined") {
+                $("txnLabel_CR_DR_FLAG").innerHTML = valuesRow["CR_DR_FLAG"];
+                $("txnCR_DR_FLAG").value = valuesRow["CR_DR_FLAG"];
+            } else {
+                $("txnLabel_CR_DR_FLAG").innerHTML = "";
+                $("txnCR_DR_FLAG").value = "";
+            }
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill2 Loading
+
+//bind_events @1-FB98D9C9
+function bind_events() {
+    addEventHandler("txnTXN_CODE", "change", txnTXN_CODEPTAutoFill2_start);
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+//End CCS script
+</script>
+&nbsp; 
+<!-- BEGIN Record txn -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" id="txnSTUDENT_ID" value="{STUDENT_ID}" name="{STUDENT_ID_Name}"><input type="hidden" id="txnENROLMENT_YEAR" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}"><input type="hidden" id="txnLAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="txnCAMPUS_CODE" value="{CAMPUS_CODE}" name="{CAMPUS_CODE_Name}"><input type="hidden" id="txnLAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+              <th>Add Transaction</th>
+ 
+              <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+            </tr>
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="6">{Error}</td>
+            </tr>
+            <!-- END Error -->
+            <tr class="Controls">
+              <th>
+              <p align="center"><strong>Transaction<br>
+              </strong><strong>Date</strong></p>
+              </th>
+ 
+              <td><strong>Transaction Code</strong></td> 
+              <td>
+                <p align="center"><strong>Amount</strong></p>
+              </td> 
+              <td>
+                <p align="center"><strong>DR/CR</strong></p>
+              </td> 
+              <td>
+                <p align="center"><strong>Comments&nbsp;</strong></p>
+              </td> 
+              <td>
+                <p align="center"><strong>Receipt</strong></p>
+              </td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>
+              <p align="center"><input type="text" id="txnTXN_DATE" maxlength="12" size="10" value="{TXN_DATE}" name="{TXN_DATE_Name}"></p>
+              </th>
+ 
+              <td>
+                <!-- BEGIN ListBox TXN_CODE -->
+                <select id="txnTXN_CODE" name="{TXN_CODE_Name}">
+                  <option selected value="">Select Value</option>
+                  {TXN_CODE_Options}
+                </select>
+ <!-- END ListBox TXN_CODE --></td> 
+              <td align="center"><input type="text" id="txnAMOUNT" maxlength="15" size="10" value="{AMOUNT}" name="{AMOUNT_Name}"></td> 
+              <td align="center">
+                <div id="txnLabel_CR_DR_FLAG" name="txnLabel_CR_DR_FLAG">
+                </div>
+                <select id="txnCR_DR_FLAG" name="{CR_DR_FLAG_Name}">
+                  <option selected value="">Select Value</option>
+                  {CR_DR_FLAG_Options}
+                </select>
+ </td> 
+              <td><textarea id="txnCOMMENTS" cols="15" name="{COMMENTS_Name}">{COMMENTS}</textarea></td> 
+              <td><input type="text" id="txnRECEIPT_NO" maxlength="10" size="10" value="{RECEIPT_NO}" name="{RECEIPT_NO_Name}"></td>
+            </tr>
+ 
+            <tr class="Bottom">
+              <td colspan="6" align="right">
+                <!-- BEGIN Button Button_Insert --><input type="submit" id="txnButton_Insert" class="Button" value="Add" name="{Button_Name}"><!-- END Button Button_Insert --></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+<!-- END Record txn -->
+</body>
+</html>

@@ -1,0 +1,289 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Despatch Update by Year</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_UpdateForm_Button_DoUpdate1_OnClick @75-F5F6E886
+function page_UpdateForm_Button_DoUpdate1_OnClick()
+{
+    var result;
+//End page_UpdateForm_Button_DoUpdate1_OnClick
+
+//Validate Required Value @82-784DAF30
+    if(theForm.UpdateFormtxtEnrolYear1.value == "") {
+        alert("The [Enrolment Year] is required.")
+        theForm.UpdateFormtxtEnrolYear1.focus();
+        return false;
+    }
+//End Validate Required Value
+
+//Close page_UpdateForm_Button_DoUpdate1_OnClick @75-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_Button_DoUpdate1_OnClick
+
+//page_UpdateForm_Button_DoUpdate3_OnClick @79-DBA62106
+function page_UpdateForm_Button_DoUpdate3_OnClick()
+{
+    var result;
+//End page_UpdateForm_Button_DoUpdate3_OnClick
+
+//Confirmation Message @80-A250FB48
+    return confirm('Are you SURE you wish to run the Update Time Fraction?');
+//End Confirmation Message
+
+//Close page_UpdateForm_Button_DoUpdate3_OnClick @79-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_Button_DoUpdate3_OnClick
+
+//page_UpdateForm_Button_DoUpdate2_OnClick @45-CC8E45C6
+function page_UpdateForm_Button_DoUpdate2_OnClick()
+{
+    var result;
+//End page_UpdateForm_Button_DoUpdate2_OnClick
+
+//Validate Required Value @83-1B6BD73A
+    if(theForm.UpdateFormtxtEnrolYear2.value == "") {
+        alert("The [Enrolment Year] is required.")
+        theForm.UpdateFormtxtEnrolYear2.focus();
+        return false;
+    }
+//End Validate Required Value
+
+//Validate Required Value @84-C983D5C6
+    if(theForm.UpdateFormtxtGrace.value == "") {
+        alert("The [Grace Period] is required.")
+        theForm.UpdateFormtxtGrace.focus();
+        return false;
+    }
+//End Validate Required Value
+
+//Close page_UpdateForm_Button_DoUpdate2_OnClick @45-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_Button_DoUpdate2_OnClick
+
+//bind_events @1-06607318
+function bind_events() {
+    addEventHandler("UpdateFormButton_DoUpdate2","click",page_UpdateForm_Button_DoUpdate2_OnClick);
+    addEventHandler("UpdateFormButton_DoUpdate3","click",page_UpdateForm_Button_DoUpdate3_OnClick);
+    addEventHandler("UpdateFormButton_DoUpdate1","click",page_UpdateForm_Button_DoUpdate1_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp;</p>
+<p>
+<!-- BEGIN Record UpdateForm -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <div align="center">
+        <table cellspacing="0" cellpadding="0" align="center" border="0">
+            <tr>
+                <td valign="top">
+                    <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                            <th>Update Utilities</th>
+ 
+                            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                        </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                        <!-- BEGIN Error -->
+                        <tr class="Error">
+                            <td colspan="6">{Error}</td>
+                        </tr>
+                        <!-- END Error -->
+                        <tr class="Controls">
+                            <th><strong>&nbsp;Update Finished Students</strong></th>
+ 
+                            <td>&nbsp;Enrolment Year</td> 
+                            <td><input type="text" id="UpdateFormtxtEnrolYear1" maxlength="4" size="5" value="{txtEnrolYear1}" name="{txtEnrolYear1_Name}"></td> 
+                            <td>
+                                <p align="right">&nbsp;Campus</p>
+                            </td> 
+                            <td>&nbsp;<em>VSV</em></td> 
+                            <td>&nbsp; 
+                                <!-- BEGIN Button Button_DoUpdate1 --><input type="submit" id="UpdateFormButton_DoUpdate1" class="Button" value="Run " name="{Button_Name}"><!-- END Button Button_DoUpdate1 --></td>
+                        </tr>
+ 
+                        <tr class="Bottom" height="15">
+                            <td colspan="6"></td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th><strong>&nbsp;Update Time Fraction</strong></th>
+ 
+                            <td>&nbsp;N/A</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp; 
+                                <!-- BEGIN Button Button_DoUpdate3 --><input type="submit" id="UpdateFormButton_DoUpdate3" class="Button" value="Run " name="{Button_Name}"><!-- END Button Button_DoUpdate3 --></td>
+                        </tr>
+ 
+                        <tr class="Bottom" height="15">
+                            <td colspan="6"></td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th><strong>&nbsp;Update Submission Status</strong></th>
+ 
+                            <td>
+                                <p align="right">Enrolment Year&nbsp;</p>
+                            </td> 
+                            <td><input type="text" id="UpdateFormtxtEnrolYear2" maxlength="4" size="5" value="{txtEnrolYear2}" name="{txtEnrolYear2_Name}">&nbsp;</td> 
+                            <td>
+                                <p align="right">&nbsp;Campus</p>
+                            </td> 
+                            <td>&nbsp;<em>VSV</em></td> 
+                            <td>&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>
+                            <p align="right">&nbsp;</p>
+                            </th>
+ 
+                            <td>
+                                <p align="right">Semester</p>
+                            </td> 
+                            <td>1 <input type="checkbox" id="UpdateFormsemester_1" value="1" name="{semester_1_Name}" {semester_1}>2<input type="checkbox" id="UpdateFormsemester_2" value="1" name="{semester_2_Name}" {semester_2}>Both<input type="checkbox" id="UpdateFormsemester_both" value="1" name="{semester_both_Name}" {semester_both}>&nbsp;</td> 
+                            <td>
+                                <p align="right">&nbsp;Grace Period</p>
+                            </td> 
+                            <td>&nbsp;<input type="text" id="UpdateFormtxtGrace" maxlength="3" size="3" value="{txtGrace}" name="{txtGrace_Name}"></td> 
+                            <td>&nbsp; 
+                                <!-- BEGIN Button Button_DoUpdate2 --><input type="submit" id="UpdateFormButton_DoUpdate2" class="Button" value="Run " name="{Button_Name}"><!-- END Button Button_DoUpdate2 --></td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>
+                            <p align="right">&nbsp;Year Level</p>
+                            </th>
+ 
+                            <td colspan="5">
+                                <table cellspacing="0" cellpadding="0" width="100%" align="center" border="1">
+                                    <tr bgcolor="#aaaaaa">
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox0" value="1" name="{CheckBox0_Name}" {CheckBox0}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox1" value="1" name="{CheckBox1_Name}" {CheckBox1}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox2" value="1" name="{CheckBox2_Name}" {CheckBox2}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox3" value="1" name="{CheckBox3_Name}" {CheckBox3}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox4" value="1" name="{CheckBox4_Name}" {CheckBox4}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox5" value="1" name="{CheckBox5_Name}" {CheckBox5}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox6" value="1" name="{CheckBox6_Name}" {CheckBox6}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox7" value="1" name="{CheckBox7_Name}" {CheckBox7}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox8" value="1" name="{CheckBox8_Name}" {CheckBox8}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox9" value="1" name="{CheckBox9_Name}" {CheckBox9}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox10" value="1" name="{CheckBox10_Name}" {CheckBox10}></td> 
+                                        <td>&nbsp;<input type="checkbox" id="UpdateFormCheckBox11" value="1" name="{CheckBox11_Name}" {CheckBox11}></td> 
+                                        <td bgcolor="#aaaaaa">&nbsp;<input type="checkbox" id="UpdateFormCheckBox12" value="1" name="{CheckBox12_Name}" {CheckBox12}></td> 
+                                        <td bgcolor="#ffc060"><input type="checkbox" onclick="runCheckAll();" id="UpdateFormCheckBox_All" value="1" name="{CheckBox_All_Name}" {CheckBox_All}></td>
+                                    </tr>
+ 
+                                    <tr bgcolor="#cc0033">
+                                        <td>
+                                            <p align="center">&nbsp;0</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">1</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">2</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">3</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">4</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">5</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">6</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">7</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">8</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">9</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">10</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">11</p>
+                                        </td> 
+                                        <td>
+                                            <p align="center">12</p>
+                                        </td> 
+                                        <td bgcolor="#ffc060">
+                                            <p align="center"><strong>ALL</strong></p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+ 
+                        <tr class="Bottom">
+                            <td colspan="6" align="right">&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p>
+    <script language="Javascript">
+        function runCheckAll()
+        {
+        var thisform=document.forms[0];
+        var current=thisform.UpdateFormCheckBox_All.checked;
+                thisform.UpdateFormCheckBox0.checked=current;
+        thisform.UpdateFormCheckBox1.checked=current;
+        thisform.UpdateFormCheckBox2.checked=current;
+                thisform.UpdateFormCheckBox3.checked=current;
+                thisform.UpdateFormCheckBox4.checked=current;
+                thisform.UpdateFormCheckBox5.checked=current;
+                thisform.UpdateFormCheckBox6.checked=current;
+                thisform.UpdateFormCheckBox7.checked=current;
+                thisform.UpdateFormCheckBox8.checked=current;
+                thisform.UpdateFormCheckBox9.checked=current;
+                thisform.UpdateFormCheckBox10.checked=current;
+                thisform.UpdateFormCheckBox11.checked=current;
+                thisform.UpdateFormCheckBox12.checked=current;
+        }
+</script>
+</form>
+<div align="center">
+    {lblSelections} 
+</div>
+<!-- END Record UpdateForm -->&nbsp; 
+<p></p>
+<p>{lblModified}<br>
+&nbsp;</p>
+</body>
+</html>

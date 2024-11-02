@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Amendment - Search</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+function OpenPopUpList()
+{
+        var FieldName;
+        FieldName = "TeacherAllocations_Searchs_STUDENT_ID_lowest";
+        var win=window.open("popup_SubjectList.aspx?returncontrol="+FieldName, "SubjectList", "left=40,top=10,width=350,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+        win.focus();
+}
+
+</script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//DEL  </script>
+//DEL  <script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+//DEL  <script language="JavaScript" type="text/javascript">
+//DEL    
+
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @18-109CDAC8
+    if (theForm.TeacherAllocations_Searchs_STUDENT_ID_lowest) theForm.TeacherAllocations_Searchs_STUDENT_ID_lowest.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//bind_events @1-B716D3FC
+function bind_events() {
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<!-- BEGIN Record TeacherAllocations_Search -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" width="60%" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+              <th>Student Amendment</th>
+ 
+              <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+            </tr>
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td>
+            </tr>
+            <!-- END Error -->
+            <tr class="Controls">
+              <th><strong>Enter lowest Student ID</strong></th>
+ 
+              <td><input id="TeacherAllocations_Searchs_STUDENT_ID_lowest" maxlength="10" size="6" value="{s_STUDENT_ID_lowest}" name="{s_STUDENT_ID_lowest_Name}">&nbsp;with 
+                <select name="{listRowsPerPage_Name}" id="TeacherAllocations_SearchlistRowsPerPage">
+                  <option value="" selected>Select Value</option>
+                  {listRowsPerPage_Options}
+                </select>
+ &nbsp;rows</td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>&nbsp;<em>Optional Parameters</em></strong></th>
+ 
+              <td>&nbsp;</td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>Year Level</strong></th>
+ 
+              <td>
+                <select name="{s_YEAR_LEVEL_Name}" id="TeacherAllocations_Searchs_YEAR_LEVEL">
+                  <option value="" selected>Select Value</option>
+                  {s_YEAR_LEVEL_Options}
+                </select>
+ (optional)</td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>Student</strong></th>
+ 
+              <td>
+                <!-- BEGIN RadioButton s_SUBJ_ENROL_STATUS --><input type="radio" value="{Value}" name="{s_SUBJ_ENROL_STATUS_Name}" {Check} id="TeacherAllocations_Searchs_SUBJ_ENROL_STATUS_{s_SUBJ_ENROL_STATUS:optionNumber}">{Description}<!-- END RadioButton s_SUBJ_ENROL_STATUS --></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th><strong>Enrolment Year</strong></th>
+ 
+              <td><input maxlength="4" size="4" value="{s_ENROLMENT_YEAR}" name="{s_ENROLMENT_YEAR_Name}" id="TeacherAllocations_Searchs_ENROLMENT_YEAR"></td>
+            </tr>
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="2">
+                <!-- BEGIN Button Button_DoSearch --><input class="Button" type="submit" value="Search" name="{Button_Name}" id="TeacherAllocations_SearchButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+<!-- END Record TeacherAllocations_Search --><br>
+</body>
+</html>

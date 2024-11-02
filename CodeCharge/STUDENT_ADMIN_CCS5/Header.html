@@ -1,0 +1,15 @@
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="{page:pathToRoot}js/css/jquery.notifyBar.css">
+<p align="center"><strong><a href="{LinkMenu_Src}" id="HeaderLinkMenu" title="go to Main Menu">Back to Main Menu</a></strong>&nbsp;&nbsp;<img id="ImageLogo" border="0" name="ImageLogo" alt="VSV Logo" src="{page:pathToRoot}images/logosm.gif">&nbsp;<font color="#ff0000">STAGING</font>&nbsp;<strong></strong></p>
+<div style="RIGHT: 4px; POSITION: absolute; TOP: 4px">
+<a href="{ImageLink2}" title="open Reports" target="_blank"><img style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" border="0" alt="open Reports" src="images/SQLRS_Report.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{ImageLink1}"><img style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" border="0" alt="email PC Support about the Database" src="images/emailsm.gif"></a> 
+</div>
+<div id="notifymessage" style="DISPLAY: none">{lblnotifymessage}</div>
+<script language="JavaScript" src="{page:pathToRoot}js/jquery_min.js" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/jquery.notifyBar.js" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">jQuery.noConflict();jQuery(function () {
+        var msg = jQuery('div#notifymessage').html();
+        if (msg !='') {
+        jQuery.notifyBar({html: msg,cssClass:"success",closeOnClick:false});  
+        }   });</script>

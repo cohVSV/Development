@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+
+<title>COUNTRY OF BIRTH</title>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+{Header}
+
+<!-- BEGIN Record COUNTRY_OF_BIRTHSearch -->
+<form method="post" action="{Action}" name="{HTMLFormName}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+            <th>Search COUNTRY OF BIRTH </th>
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th> 
+ 
+            <td><input type="text" name="{s_keyword_Name}" value="{s_keyword}" maxlength="20" size="20" id="COUNTRY_OF_BIRTHSearchs_keyword"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_DoSearch --><input name="{Button_Name}" type="submit" value="Search" class="Button" id="COUNTRY_OF_BIRTHSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+        </table>
+ </td> 
+    </tr>
+  </table>
+</form>
+<!-- END Record COUNTRY_OF_BIRTHSearch --><br>
+<!-- BEGIN Grid COUNTRY_OF_BIRTH -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table cellspacing="0" cellpadding="0" border="0" class="Header">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          <th>List of COUNTRY OF BIRTH </th>
+          <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_COUNTRY_ID --><a href="{Sort_URL}" id="COUNTRY_OF_BIRTHSorter_COUNTRY_ID">COUNTRY ID</a>
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_COUNTRY_ID --></th>
+          <th>
+          <!-- BEGIN Sorter Sorter_COUNTRY_NAME --><a href="{Sort_URL}" id="COUNTRY_OF_BIRTHSorter_COUNTRY_NAME">COUNTRY NAME</a>
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_COUNTRY_NAME --></th>
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><a href="{Sort_URL}" id="COUNTRY_OF_BIRTHSorter_LAST_ALTERED_BY">LAST ALTERED BY</a>
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><a href="{Sort_URL}" id="COUNTRY_OF_BIRTHSorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a>
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="text-align:right;"><a href="{COUNTRY_ID_Src}" id="COUNTRY_OF_BIRTHCOUNTRY_ID">{COUNTRY_ID}</a>&nbsp;</td>
+          <td>{COUNTRY_NAME}&nbsp;</td>
+          <td>{LAST_ALTERED_BY}&nbsp;</td>
+          <td>{LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+        <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr class="AltRow">
+          <td style="text-align:right;"><a href="{Alt_COUNTRY_ID_Src}" id="COUNTRY_OF_BIRTHAlt_COUNTRY_ID">{Alt_COUNTRY_ID}</a>&nbsp;</td>
+          <td>{Alt_COUNTRY_NAME}&nbsp;</td>
+          <td>{Alt_LAST_ALTERED_BY}&nbsp;</td>
+          <td>{Alt_LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+        <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="4">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="4"><a href="{COUNTRY_OF_BIRTH_Insert_Src}" id="COUNTRY_OF_BIRTHCOUNTRY_OF_BIRTH_Insert">Add New</a>&nbsp;
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a> <!-- END First_On -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a> <!-- END Prev_On -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a> <!-- END Next_On -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a> <!-- END Last_On --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid COUNTRY_OF_BIRTH --><br>
+{Footer}
+</body>
+</html>

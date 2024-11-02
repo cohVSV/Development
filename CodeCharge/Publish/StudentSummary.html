@@ -1,0 +1,1685 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Summary</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<style type="text/css">
+<!--
+.AlertRed td   { font-weight: bold; background-color: #FF6666; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+.AlertGreen td   { font-weight: bold; background-color: #66CC33; vertical-align: left; text-align: left; border-top-width: 1px; border-top-color: #3D84CC; border-top-style: solid; border-right-width: 1px; border-right-color: #3D84CC; border-right-style: solid; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; }
+a.StrongBold  { font-weight: bold; PADDING: 6px 8px 6px 8px;}
+a.StrongSad  {PADDING: 6px 8px 6px 8px;}
+A:HOVER  { background-color: #D0D0D0; }
+.AlertRedText  { font-weight: bold; color: #FF0000; }
+.EnrolStatus_E { font-weight: bold; color: #006400; }
+.EnrolStatus_N { font-weight: bold; color: #FF0000; }
+.EnrolStatus_B { font-weight: bold; background-color: #0000FF; color: white; padding-left: 5px; padding-right: 5px}
+.EnrolStatus_F { font-weight: bold; background-color: #0000FF; color: white; padding-left: 5px; padding-right: 5px}
+.LearningPlan_PLP { font-weight: bold; color: #006400; }
+.LearningPlan_PLSP { font-weight: bold; color: #FF8C00; }
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="Styles/Tile/Style_Components.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="js/tablesort_theme/style.css">
+</head>
+<body>
+<div align="center">
+    &nbsp;Back to:&nbsp; <a href="{link_Menu_Src}" id="link_Menu" class="Button StrongBold">Main Menu</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{Link_SearchRequest_Src}" id="Link_SearchRequest" title="Search and Lookup Student" class="Button StrongSad">Search Request</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{link_Assignments_Src}" id="link_Assignments" class="Button StrongBold">Assignments</a>&nbsp;&nbsp;| <a href="{Link10_Src}" id="Link10" class="Button StrongSad">SMS</a>&nbsp; |&nbsp;<a href="{Link6_Src}" id="Link6" class="Button StrongSad">Future Intentions</a> | &nbsp;<a href="{Link5_Src}" id="Link5" class="Button StrongBold">Comments</a>&nbsp;|&nbsp;&nbsp; <a href="{Link8_Src}" id="Link8" title="Student Profile" class="Button StrongBold">Student Profile</a>&nbsp;| &nbsp; <a href="{Link7_Src}" id="Link7" title="Student Learning and Support Plan" class="Button StrongBold">Early Assessment Checklist</a><br>
+    <br>
+</div>
+<div align="center">
+    <!-- BEGIN Panel Panel_MaintainMenu -->
+    <p><span align="center">Maintain: <a href="{Link1_Src}" id="Panel_MaintainMenuLink1" class="Button StrongBold">Student Details</a>&nbsp; | <a href="{Link3_Src}" id="Panel_MaintainMenuLink3" class="Button StrongBold">Subjects</a>|&nbsp;<a href="{Link2_Src}" id="Panel_MaintainMenuLink2" class="Button StrongBold">Other Details</a>&nbsp;|&nbsp;<a href="{Link4_Src}" id="Panel_MaintainMenuLink4" class="Button StrongSad">VSV Financials</a></span><br>
+    &nbsp;&nbsp;&nbsp;</p>
+    <!-- END Panel Panel_MaintainMenu -->
+</div>
+<div align="center">
+    <!-- BEGIN Grid view_StudentSummary_Alert -->
+    <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td valign="top">
+                <table class="HeaderTile" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeftTile">&nbsp;</td> 
+                        <th>Student Alerts</th>
+ 
+                        <td class="HeaderRightTile">&nbsp;</td>
+                    </tr>
+                </table>
+ 
+                <table class="GridTile" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Row -->
+                    <!-- BEGIN Panel RowOpenTag -->
+                    <tr class="RowTile">
+                        <!-- END Panel RowOpenTag -->
+                        <td>
+                            <!-- BEGIN Panel RowComponents --><strong>{COMMENT_TYPE}</strong><br>
+                            {Comment}&nbsp;<br>
+                            <em>{lblDate_Updated}</em><!-- END Panel RowComponents -->&nbsp;</td> 
+                        <!-- BEGIN Panel RowCloseTag -->
+                    </tr>
+ <!-- END Panel RowCloseTag --><!-- END Row -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecordsTile">
+                        <td colspan="{view_StudentSummary_Alert:numberOfColumns}">No Alerts found</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END Grid view_StudentSummary_Alert --><br>
+</div>
+<div align="center">
+    <!-- BEGIN Record viewStudentSummary_Detail -->
+    <div align="center">
+        <form method="post" name="{HTMLFormName}" action="{Action}">
+            <table cellspacing="0" cellpadding="0" width="90%" align="center" border="0">
+                <tr>
+                    <td valign="top">
+                        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                                <th>Student&nbsp;Details </th>
+ 
+                                <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                            </tr>
+                        </table>
+ 
+                        <table class="Record" cellspacing="0" cellpadding="0">
+                            <!-- BEGIN Error -->
+                            <tr class="Error">
+                                <td colspan="4">{Error}</td>
+                            </tr>
+                            <!-- END Error -->
+                            <tr class="Controls">
+                                <th><strong>Student ID</strong></th>
+ 
+                                <td>
+                                    <h2>{Student_id}</h2>
+                                </td> 
+                                <td><strong>&nbsp;Enrolment Date</strong></td> 
+                                <td>{enrolment_date}&nbsp;</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>End / Withdrawal Date</strong></th>
+ 
+                                <td>{withdrawal_date}&nbsp;</td> 
+                                <td><strong>&nbsp;Enrolment Status</strong></td> 
+                                <td>&nbsp;<span class="EnrolStatus_{lblEnrolStatus}">{ENROLMENT_STATUS}</span></td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Withdrawal Reason / Destination</strong></th>
+ 
+                                <td colspan="3">{WithdrawalReason}&nbsp;&nbsp;{WITHDRAWAL_REASON_ID}&nbsp;&nbsp;/&nbsp;&nbsp;{lblWd_Exit_Destination}&nbsp;&nbsp;{WD_EXIT_DESTINATION}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>VSN</strong>&nbsp;<img onclick="javascript:alert('Victorian Student Number Aug 2009');return false;" id="vsn_icon" title="Victorian Student Number Aug 2009" border="0" name="VSNIcon" alt="Victorian Student Number" src="images/icon_info.gif"></th>
+ 
+                                <td>{VSN}&nbsp;</td> 
+                                <td><strong>VSR Enrolled</strong>&nbsp;&nbsp;<img onclick="javascript:alert('Student registered with Victorian Student Registry for VSN Aug 2009');return false;" id="vsr_enrolled_icon" title="Student registered with Victorian Student Registry for VSN Aug 2009" border="0" name="VSR_EnrolledIcon" alt="Student registered with Victorian Student Registry for VSN" src="images/icon_info.gif"></td> 
+                                <td>&nbsp;{VSR_Enrolled}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th>&nbsp;</th>
+ 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Surname</strong></th>
+ 
+                                <td>
+                                    <h2>{surname}</h2>
+                                </td> 
+                                <td><strong>&nbsp;First Name </strong></td> 
+                                <td>
+                                    <h2>{first_name}</h2>
+                                </td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Middle Name</strong></th>
+ 
+                                <td>{middle_name}&nbsp;</td> 
+                                <td><strong>&nbsp;Preferred Name</strong></td> 
+                                <td>&nbsp;{preferred_name}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th>&nbsp;</th>
+ 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Gender</strong></th>
+ 
+                                <td>{SEX}</td> 
+                                <td>&nbsp;<strong>Birth Date&nbsp;</strong><em>Current Age</em></td> 
+                                <td>&nbsp;{birth_date}&nbsp;&nbsp;&nbsp;<em>{label_Age}</em>&nbsp;{cake}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Year Level</strong></th>
+ 
+                                <td>{YEAR_LEVEL}&nbsp;&nbsp;&nbsp;{lblHomeSchooled}&nbsp;&nbsp;&nbsp;</td> 
+                                <td><strong>&nbsp;Enrolment Year</strong></td> 
+                                <td>&nbsp;{EnrolmentYear}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>ATAR Required?</strong>&nbsp;&nbsp;(Yr 11 &amp; 12 only)</th>
+ 
+                                <td>{ATAR_REQUIRED}&nbsp;&nbsp;{lblATARNotRequired}</td> 
+                                <td><strong>&nbsp;Portal Access</strong></td> 
+                                <td>&nbsp;{PORTAL_ACCESS}&nbsp;&nbsp;{lblPortalAccessRestricted}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th>&nbsp;</th>
+ 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Category / Sub Category</strong></th>
+ 
+                                <td>{subcategory_full_title}&nbsp;</td> 
+                                <td>&nbsp;<strong>Learning Advisor ID</strong></td> 
+                                <td>&nbsp;<a href="{LinkLearningAdvisorEmail_Src}" id="viewStudentSummary_DetailLinkLearningAdvisorEmail_{viewStudentSummary_Detail:rowNumber}" title="Create an email to this student's Learning Advisor">{LinkLearningAdvisorEmail}</a>{PASTORAL_CARE_ID}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Attending School</strong> </th>
+ 
+                                <td>{attending_school_name}&nbsp; ({ATTENDING_SCHOOL_ID})</td> 
+                                <td>&nbsp;<strong>Learning Plan</strong></td> 
+                                <td>&nbsp;<span class="LearningPlan_{lblPLP}">{LEARNING_PROGRAM_text}</span></td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Home School</strong> {lblSharedEnrolment}</th>
+ 
+                                <td>{home_school_name}&nbsp;&nbsp;({HOME_SCHOOL_ID})</td> 
+                                <td>&nbsp;<strong>SSG Facilitator ID</strong></td> 
+                                <td>&nbsp;{SSG_FACILITATOR_ID}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Extra Organisation</strong>&nbsp;</th>
+ 
+                                <td>{org_school_name}&nbsp;&nbsp;({ORGANISATION_SCHOOL_ID})&nbsp;</td> 
+                                <td>&nbsp;<strong>Student Folder </strong><img onclick="javascript:alert('Student Work Folder Feb 2010');return false;" id="studentfolder_icon" title="Student Work Folder Feb 2010" border="0" name="studentfolderIcon" alt="Student Work Folder" src="images/icon_info.gif"></td> 
+                                <td>&nbsp; 
+                                    <!-- BEGIN Link link_showstudentfolder --><a href="{link_showstudentfolder_Src}" id="viewStudentSummary_Detaillink_showstudentfolder" target="_blank">Show Student Folder</a><!-- END Link link_showstudentfolder -->&nbsp;{labelContactWho}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th>&nbsp;</th>
+ 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;<strong>Student Reports </strong><img onclick="javascript:alert('Student Report Folder Aug 2013');return false;" id="studentfolder_icon" title="Student Reports Folder Aug 2013" border="0" name="studentfolderIcon" alt="Student Work Folder" src="images/icon_info.gif"></td> 
+                                <td>&nbsp; 
+                                    <!-- BEGIN Link link_showstudentreports --><a href="{link_showstudentreports_Src}" id="viewStudentSummary_Detaillink_showstudentreports" target="_blank">Show Reports</a><!-- END Link link_showstudentreports -->&nbsp;{labelContactWho1}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th>&nbsp;</th>
+ 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Email Virtual School Victoria Teachers</strong></th>
+ 
+                                <td><a href="{link_create_teacheremails_Src}" id="viewStudentSummary_Detaillink_create_teacheremails_{viewStudentSummary_Enrolm:rowNumber}">Email Virtual School Victoria Teachers</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+                                <td><strong>Region</strong> <a href="https://www.education.vic.gov.au/about/department/structure/Pages/regions.aspx" title="open Department Region page" target="_blank">info</a></td> 
+                                <td>&nbsp;{lblRegionDisplay}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Email Student &amp; Parents &amp; Supervisors</strong>&nbsp;</th>
+ 
+                                <td><a href="{link_create_parentemails_Src}" id="viewStudentSummary_Detaillink_create_parentemails_{viewStudentSummary_Detail:rowNumber}" title="create an email to Student & Parents & Supervisors">Email Student &amp; Parents &amp; Supervisors</a></td> 
+                                <td><strong>Area</strong></td> 
+                                <td>&nbsp;{lblAreaDisplay}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th>&nbsp;</th>
+ 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td> 
+                                <td>&nbsp;</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>Student Email / Mobile</strong></th>
+ 
+                                <td colspan="3"><a href="{STUDENT_EMAIL_Src}" id="viewStudentSummary_DetailSTUDENT_EMAIL_{viewStudentSummary_Enrolm:rowNumber}" title="create an email to this Student.">{STUDENT_EMAIL}</a>&nbsp;&nbsp; {STUDENT_MOBILE}&nbsp;&nbsp;</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong></strong></th>
+ 
+                                <td></td> 
+                                <td><strong>&nbsp;Receipt No</strong></td> 
+                                <td>&nbsp;{receipt_no}</td>
+                            </tr>
+ 
+                            <tr class="Controls">
+                                <th><strong>POSTAL/RESID/ORIG ADDRESS ID</strong></th>
+ 
+                                <td colspan="3">{POSTAL_ADDRESS_ID}&nbsp;/ {CURR_RESID_ADDRESS_ID}&nbsp;/ {ORIG_RESID_ADDRESS_ID}&nbsp;&nbsp; 
+                                    <div style="FLOAT: right">
+                                        <script type="text/javascript">
+                            function ResetScaffoldPassword() {
+                                if (confirm("Please confirm you want to reset this student's Scaffold password?")) {
+                                    var xhttp = new XMLHttpRequest();
+                                    xhttp.open("GET", "ResetScaffoldPassword.aspx?STUDENT_ID=<%=Request.QueryString("STUDENT_ID")%>", false);
+                                    xhttp.send();
+                                    alert(xhttp.responseText);
+                                }
+                            }
+                        </script>
+                                        <!-- <input type="button" onclick="javascript:ResetScaffoldPassword()" value="Reset Scaffold Password"> //-->
+                                        No Password Reset - Send <a href="{Link1_Src}" id="viewStudentSummary_DetailLink1" target="_blank">Welcome Letter</a> instead 
+                                    </div>
+                                </td>
+                            </tr>
+ 
+                            <tr class="Bottom">
+                                <th colspan="4" align="right"></th>
+                            </tr>
+                        </table>
+                        <input type="hidden" id="viewStudentSummary_Detailhidden_DATE_STUDENTFOLDER_CREATED" value="{hidden_DATE_STUDENTFOLDER_CREATED}" name="{hidden_DATE_STUDENTFOLDER_CREATED_Name}"><input type="hidden" id="viewStudentSummary_Detailhidden_SEX_SELF_DESCRIBED" value="{hidden_SEX_SELF_DESCRIBED}" name="{hidden_SEX_SELF_DESCRIBED_Name}"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <!-- END Record viewStudentSummary_Detail -->
+</div>
+<div align="center">
+</div>
+&nbsp; 
+<!-- BEGIN Grid viewStudentSummary_SubjectList -->
+<table cellspacing="0" cellpadding="0" width="90%" align="center" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>Subject List</th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+ 
+            <table id="SubjectList" class="Grid tablesorter" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr class="Caption">
+                        <th>Subj ID</th>
+ 
+                        <th>Abbrev</th>
+ 
+                        <th>Subject Title</th>
+ 
+                        <th>Sem.</th>
+ 
+                        <th>Status (Extending)</th>
+ 
+                        <th>Standard<br>
+                        Learning Program&nbsp;</th>
+ 
+                        <th>Enrol. Date </th>
+ 
+                        <th>End Date </th>
+ 
+                        <th>Asst.</th>
+ 
+                        <th>Teacher </th>
+ 
+                        <th>Class Code</th>
+ 
+                        <th>Interim<br>
+                        Result</th>
+ 
+                        <th>Final<br>
+                        Result</th>
+                    </tr>
+ 
+                </thead>
+ 
+                <!-- BEGIN Row -->
+                <tr class="Row">
+                    <td style="TEXT-ALIGN: right">{SUBJECT_ID}&nbsp;</td> 
+                    <td>{SUBJECT_ABBREV}</td> 
+                    <td nowrap>{SUBJECT_TITLE}&nbsp;</td> 
+                    <td>{SEMESTER}</td> 
+                    <td nowrap>{SUBJ_ENROL_STATUS}&nbsp;{EXTENSION_OF_VCE_UNIT_display}&nbsp;<font color="red">{NON_SUBMITTING_FLAG_display}</font></td> 
+                    <td>{CUSTOM_LP_display}</td> 
+                    <td>{enrolment_date}</td> 
+                    <td>{withdrawal_date}</td> 
+                    <td style="TEXT-ALIGN: right">{NUM_ASSMT_SUBMISSIONS}&nbsp;</td> 
+                    <td>{STAFF_ID}</td> 
+                    <td>{CLASS_CODE}</td> 
+                    <td>{INTERIM_PROGRESS_CODE}&nbsp;</td> 
+                    <td>{FINAL_PROGRESS_CODE}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN Separator --><!-- END Separator -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                    <td colspan="13">No Subjects </td>
+                </tr>
+                <!-- END NoRecords -->
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- END Grid viewStudentSummary_SubjectList -->
+<p>
+<div align="center">
+    <!-- BEGIN Grid Grid_Modified_Comment -->
+    <table cellspacing="0" cellpadding="0" width="90%" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th><font color="#ff9900">Modified Subjects or Individual Education Plan&nbsp;Comments (Current Enrolment Year)</font></th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                    <tr class="Caption">
+                        <th>COMMENT</th>
+ 
+                        <th>LAST ALTERED BY</th>
+ 
+                        <th>LAST ALTERED DATE</th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <tr class="Row">
+                        <td>{COMMENT}&nbsp;</td> 
+                        <td>{LAST_ALTERED_BY}&nbsp;</td> 
+                        <td>{LAST_ALTERED_DATE}&nbsp;</td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="3">No Modified Subject or CLP&nbsp;comments for the current enrolment Year.</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END Grid Grid_Modified_Comment -->
+</div>
+<br>
+<div align="center">
+    <!-- BEGIN Grid STUDENT_COMMENT -->
+    <div align="center">
+        <table cellspacing="0" cellpadding="0" width="90%" border="0">
+            <tr>
+                <td valign="top" align="center">
+                    <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                            <th>Public Comments</th>
+ 
+                            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                        </tr>
+                    </table>
+ 
+                    <div align="center">
+                        <table id="STUDENT_COMMENTS_table" class="Grid" cellspacing="0" cellpadding="0">
+                            <tr class="Caption">
+                                <th>Comment</th>
+ 
+                                <th>&nbsp;Type</th>
+ 
+                                <th>Entered By</th>
+ 
+                                <th>Date Entered</th>
+                            </tr>
+ 
+                            <!-- BEGIN Row -->
+                            <tr class="Row">
+                                <td>{COMMENT}&nbsp;</td> 
+                                <td>&nbsp;{COMMENT_TYPE}</td> 
+                                <td>{LAST_ALTERED_BY}&nbsp;</td> 
+                                <td>{LAST_ALTERED_DATE}&nbsp;</td>
+                            </tr>
+ <!-- END Row -->
+                            <!-- BEGIN Separator --><!-- END Separator -->
+                            <!-- BEGIN NoRecords -->
+                            <tr class="NoRecords">
+                                <td colspan="4">No Comments found.</td>
+                            </tr>
+                            <!-- END NoRecords -->
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div align="left">
+    </div>
+    <!-- END Grid STUDENT_COMMENT -->
+</div>
+<br>
+<div align="center">
+    <!-- BEGIN Report viewStudentSummary_Enrolm -->
+    <table cellspacing="0" cellpadding="0" width="90%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Student Enrolment (Misc)</th>
+ 
+                        <th width="150">
+                        <div id="toggle_Enrolment_Misc" class="Button" style="WIDTH: 130px; MARGIN: 5px" align="right">
+                            show/hide Enrolment 
+                        </div>
+                        </th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table id="viewStudentSummary_Enrolm_table" class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+                    <!-- BEGIN Section Page_Header -->
+                    <tr class="Row">
+                        <th style="COLOR: orange" colspan="4"><strong>This panel has been updated mid-2018 to remove old fields</strong></th>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th colspan="4"><em>If you use specific fields that&nbsp;have disappeared, please lodge a service desk ticket, tagged to [Database] and let us know</em></th>
+                    </tr>
+ <!-- END Section Page_Header -->
+                    <!-- BEGIN Section Detail -->
+                    <tr class="Row">
+                        <th><strong>Eligible for Discount</strong></th>
+ 
+                        <td>&nbsp;{eligible_for_discount_desc} </td> 
+                        <td><strong>Paid on Enrolment</strong></td> 
+                        <td>&nbsp;{paid_on_enrolment_desc}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Full Time Student</strong></th>
+ 
+                        <td>&nbsp;{full_time_desc} </td> 
+                        <td><strong>Overseas Full Fee Paying</strong></td> 
+                        <td>&nbsp;{os_full_fee_paying_desc}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>
+                        <p><strong>Address needs Reviewing</strong></p>
+                        </th>
+ 
+                        <td>&nbsp;{address_review_flag_desc} </td> 
+                        <td><strong>Eligible for Funding</strong></td> 
+                        <td>&nbsp;{eligible_for_funding_desc}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>VCE Candidate Number</strong> </th>
+ 
+                        <td>&nbsp;{vce_candidate_number} </td> 
+                        <td><strong>Bulletin Number</strong> </td> 
+                        <td>&nbsp;{bulletin_number}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Last Reviewed Date</strong> </th>
+ 
+                        <td>&nbsp;{last_reviewed_date} </td> 
+                        <td><strong>New Documents Required</strong></td> 
+                        <td>&nbsp;{new_docs_required_desc}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th colspan="4"><strong>Enrolment Comments</strong> &nbsp;{enrolment_comments}&nbsp;&nbsp;</th>
+                    </tr>
+ <!-- END Section Detail -->
+                    <!-- BEGIN Section Report_Footer -->
+                    <!-- BEGIN Panel NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="4">No Enrolment Details found</td>
+                    </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+                    <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+                </table>
+            </td>
+        </tr>
+    </table>
+    &nbsp;<!-- END Report viewStudentSummary_Enrolm --><br>
+</div>
+<div align="center">
+    <hr>
+</div>
+<div align="center">
+    &nbsp; 
+    <table width="90%" border="0">
+        <tr>
+            <td valign="top">&nbsp; 
+                <!-- BEGIN Grid Grid_FamilyGroup -->
+                <table id="Grid_FamilyGroup" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td valign="top">
+                            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                                    <th>Family Group</th>
+ 
+                                    <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                                </tr>
+                            </table>
+ 
+                            <table class="Grid" cellspacing="0" cellpadding="0">
+                                <!-- BEGIN Row -->
+                                <!-- BEGIN Panel RowOpenTag -->
+                                <tr class="Row">
+                                    <!-- END Panel RowOpenTag -->
+                                    <td nowrap>
+                                        <!-- BEGIN Panel RowComponents --><a href="{STUDENT_ID_Src}" id="Grid_FamilyGroupRowComponentsSTUDENT_ID_{Grid_FamilyGroup:rowNumber}" title="show Student Summary">{STUDENT_ID}</a>&nbsp;&nbsp;&nbsp;&nbsp;<em>{last_enrol_year}</em><br>
+                                        {first_name}&nbsp;{surname} <!-- END Panel RowComponents --></td> 
+                                    <!-- BEGIN Panel RowCloseTag -->
+                                </tr>
+ <!-- END Panel RowCloseTag --><!-- END Row -->
+                                <!-- BEGIN NoRecords -->
+                                <tr class="NoRecords">
+                                    <td colspan="{Grid_FamilyGroup:numberOfColumns}">No other Students in this Family Group</td>
+                                </tr>
+                                <!-- END NoRecords -->
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!-- END Grid Grid_FamilyGroup -->&nbsp;</td> 
+            <td valign="top">&nbsp; 
+                <!-- BEGIN Grid STUDENT_CARER_CONTACT -->
+                <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tr>
+                        <td valign="top">
+                            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                                    <th>Parent A /&nbsp;<font color="#ffff00">Primary Carer</font></th>
+ 
+                                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                                </tr>
+                            </table>
+ 
+                            <table class="Grid" cellspacing="0" cellpadding="0">
+                                <!-- BEGIN Row -->
+                                <tr class="Row">
+                                    <th>Name</th>
+ 
+                                    <td>{TITLE}&nbsp;{FIRST_NAME}&nbsp;{SURNAME}</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Relationship</th>
+ 
+                                    <td>
+                                        <select disabled id="STUDENT_CARER_CONTACTRELATIONSHIP_{STUDENT_CARER_CONTACT:rowNumber}" name="{RELATIONSHIP_Name}">
+                                            <option selected value="">Select Value</option>
+                                            {RELATIONSHIP_Options}
+                                        </select>
+ &nbsp; </td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Home Phone</th>
+ 
+                                    <td>{HOME_PHONE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Work Phone</th>
+ 
+                                    <td>{WORK_PHONE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Mobile</th>
+ 
+                                    <td>{MOBILE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Email Address</th>
+ 
+                                    <td><a href="{EMAIL_Src}" id="STUDENT_CARER_CONTACTEMAIL_{STUDENT_CARER_CONTACT:rowNumber}">{EMAIL}</a></td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Last Portal Login&nbsp;&nbsp;</th>
+ 
+                                    <td>{PORTAL_LAST_LOGIN_DATE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Last Altered By / Date / ID</th>
+ 
+                                    <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}&nbsp;/ {CARER_ID}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Bottom">
+                                    <td colspan="2" align="right"></td>
+                                </tr>
+ <!-- END Row -->
+                                <!-- BEGIN NoRecords -->
+                                <tr class="NoRecords">
+                                    <td colspan="2">No Contact Details for Parent A.&nbsp;<br>
+                                    </td>
+                                </tr>
+                                <!-- END NoRecords -->
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!-- END Grid STUDENT_CARER_CONTACT --></td> 
+            <td valign="top">&nbsp; 
+                <!-- BEGIN Grid STUDENT_CARER_CONTACT1 -->
+                <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tr>
+                        <td valign="top">
+                            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                                    <th>Parent&nbsp;B</th>
+ 
+                                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                                </tr>
+                            </table>
+ 
+                            <table class="Grid" cellspacing="0" cellpadding="0">
+                                <!-- BEGIN Row -->
+                                <tr class="Row">
+                                    <th>Name</th>
+ 
+                                    <td>{TITLE}&nbsp;{FIRST_NAME}&nbsp;{SURNAME}</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Relationship</th>
+ 
+                                    <td>
+                                        <select disabled id="STUDENT_CARER_CONTACT1RELATIONSHIP_{STUDENT_CARER_CONTACT:rowNumber}" name="{RELATIONSHIP_Name}">
+                                            <option selected value="">Select Value</option>
+                                            {RELATIONSHIP_Options}
+                                        </select>
+ </td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Home Phone</th>
+ 
+                                    <td>{HOME_PHONE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Work Phone</th>
+ 
+                                    <td>{WORK_PHONE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Mobile</th>
+ 
+                                    <td>{MOBILE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Email Address</th>
+ 
+                                    <td><a href="{EMAIL_Src}" id="STUDENT_CARER_CONTACT1EMAIL_{STUDENT_CARER_CONTACT1:rowNumber}">{EMAIL}</a>&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Last Portal Login&nbsp;</th>
+ 
+                                    <td>{PORTAL_LAST_LOGIN_DATE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Last Altered By / Date / ID</th>
+ 
+                                    <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}&nbsp;/ {CARER_ID}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Bottom">
+                                    <td colspan="2" align="right"></td>
+                                </tr>
+ <!-- END Row -->
+                                <!-- BEGIN NoRecords -->
+                                <tr class="NoRecords">
+                                    <td colspan="2">No Contact Details for Parent B.<br>
+                                    </td>
+                                </tr>
+                                <!-- END NoRecords -->
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                &nbsp;<!-- END Grid STUDENT_CARER_CONTACT1 --></td> 
+            <td valign="top">&nbsp; 
+                <!-- BEGIN Grid STUDENT_CARER_CONTACT2 -->
+                <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tr>
+                        <td valign="top">
+                            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                                    <th>Supervisor <em>(if any)</em></th>
+ 
+                                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                                </tr>
+                            </table>
+ 
+                            <table class="Grid" cellspacing="0" cellpadding="0">
+                                <!-- BEGIN Row -->
+                                <tr class="Row">
+                                    <th colspan="2"><strong>{Supervisortype}</strong>&nbsp;</th>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Name</th>
+ 
+                                    <td>{TITLE}&nbsp;{FIRST_NAME}&nbsp;{SURNAME}</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Position&nbsp;</th>
+ 
+                                    <td>{SUPERVISOR_POSITION}&nbsp;{SUPERVISOR_POSITION_OTHER}</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Work Phone</th>
+ 
+                                    <td>{WORK_PHONE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Mobile</th>
+ 
+                                    <td>{MOBILE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Email Address</th>
+ 
+                                    <td><a href="{EMAIL_Src}" id="STUDENT_CARER_CONTACT2EMAIL_{STUDENT_CARER_CONTACT2:rowNumber}">{EMAIL}</a>&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Last Portal Login&nbsp;</th>
+ 
+                                    <td>{PORTAL_LAST_LOGIN_DATE}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Row">
+                                    <th>Last Altered By / Date / ID</th>
+ 
+                                    <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}&nbsp;/ {CARER_ID}&nbsp;</td>
+                                </tr>
+ 
+                                <tr class="Bottom">
+                                    <td colspan="2" align="right"></td>
+                                </tr>
+ <!-- END Row -->
+                                <!-- BEGIN NoRecords -->
+                                <tr class="NoRecords">
+                                    <td colspan="2">No Contact Details for School Supervisor. <br>
+                                    </td>
+                                </tr>
+                                <!-- END NoRecords -->
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                &nbsp;<!-- END Grid STUDENT_CARER_CONTACT2 --></td>
+        </tr>
+    </table>
+</div>
+<div align="center">
+    <hr>
+</div>
+<div align="center">
+    <!-- BEGIN Report ADDRESS_Postal -->
+    <table cellspacing="0" cellpadding="0" width="90%" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Address</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+                    <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+                    <!-- BEGIN Section Detail -->
+                    <tr class="Row">
+                        <th>
+                        <h4>&nbsp;Postal Address:</h4>
+                        </th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>
+                            <p align="right">&nbsp;<a href="{ImageLink_GoogleMaps_postal}" title="open address in new map window" target="_blank"><img style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="google maps icon" src="images/google_maps48.png"></a></p>
+                        </td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>ADDRESSEE </strong></th>
+ 
+                        <td colspan="2">&nbsp;{ADDRESSEE} &nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>AGENT</strong> </th>
+ 
+                        <td colspan="2">&nbsp;{AGENT} &nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>ADDRESS</strong> </th>
+ 
+                        <td colspan="2">&nbsp;{ADDR1} &nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;{ADDR2} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>SUBURB/TOWN</strong> </th>
+ 
+                        <td>&nbsp;{SUBURB_TOWN} </td> 
+                        <td>&nbsp;<strong>STATE </strong></td> 
+                        <td>&nbsp;{STATE}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>POSTCODE</strong> </th>
+ 
+                        <td>&nbsp;{POSTCODE}</td> 
+                        <td>&nbsp;<strong>COUNTRY</strong> </td> 
+                        <td>&nbsp;{COUNTRY}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>HOME PHONE</strong></th>
+ 
+                        <td>&nbsp;{PHONE_A} </td> 
+                        <td>&nbsp;<strong>MOBILE/PHONE 2</strong></td> 
+                        <td>&nbsp;{PHONE_B}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>FAX</strong> </th>
+ 
+                        <td>&nbsp;{FAX} </td> 
+                        <td>&nbsp;<strong>EMAIL ADDRESS</strong> </td> 
+                        <td>&nbsp;<a href="mailto:{EMAIL_ADDRESS_Src}" id="ADDRESS_PostalDetailEMAIL_ADDRESS_{ADDRESS_Postal:rowNumber}">{EMAIL_ADDRESS}</a></td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>LAST_ALTERED_BY / DATE</th>
+ 
+                        <td>&nbsp;{LAST_ALTERED_BY} / {LAST_ALTERED_DATE}</td> 
+                        <td>ADDRESS_ID</td> 
+                        <td>&nbsp;{ADDRESS_ID}</td>
+                    </tr>
+ <!-- END Section Detail -->
+                    <!-- BEGIN Section Report_Footer -->
+                    <!-- BEGIN Panel NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="4">No Postal Address Record for this Student</td>
+                    </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+                    <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END Report ADDRESS_Postal -->
+</div>
+<div align="center">
+    <br>
+    <!-- BEGIN Report ADDRESS_Current -->
+    <table cellspacing="0" cellpadding="0" width="90%" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+                    <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+                    <!-- BEGIN Section Detail -->
+                    <tr class="Row">
+                        <th>
+                        <h4>Current Address:</h4>
+                        </th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>
+                            <p align="right"><a href="{ImageLink_GoogleMaps_current}" title="open address in new map window" target="_blank"><img style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-TOP-WIDTH: 0px" alt="google maps icon" src="images/google_maps48.png"></a>&nbsp;</p>
+                        </td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>ADDRESSEE</strong> </th>
+ 
+                        <td colspan="2">&nbsp;{ADDRESSEE} &nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>AGENT</strong> </th>
+ 
+                        <td colspan="2">&nbsp;{AGENT} &nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>ADDRESS</strong> </th>
+ 
+                        <td colspan="2">&nbsp;{ADDR1} &nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;{ADDR2} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>SUBURB/TOWN</strong> </th>
+ 
+                        <td>&nbsp;{SUBURB_TOWN} </td> 
+                        <td><strong>STATE</strong> </td> 
+                        <td>&nbsp;{STATE}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>POSTCODE</strong> </th>
+ 
+                        <td>&nbsp;{POSTCODE}</td> 
+                        <td><strong>COUNTRY</strong> </td> 
+                        <td>&nbsp;{COUNTRY}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>HOME PHONE</strong></th>
+ 
+                        <td>&nbsp;{PHONE_A} </td> 
+                        <td><strong>MOBILE/PHONE 2</strong></td> 
+                        <td>&nbsp;{PHONE_B}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>FAX</strong> </th>
+ 
+                        <td>&nbsp;{FAX} </td> 
+                        <td><strong>STUDENT EMAIL ADDRESS</strong> </td> 
+                        <td>&nbsp;<a href="mailto:{EMAIL_ADDRESS_Src}" id="ADDRESS_CurrentDetailEMAIL_ADDRESS_{ADDRESS_Current:rowNumber}">{EMAIL_ADDRESS}</a></td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>LAST_ALTERED_BY / DATE</th>
+ 
+                        <td>&nbsp;{LAST_ALTERED_BY} / {LAST_ALTERED_DATE}</td> 
+                        <td>ADDRESS_ID </td> 
+                        <td>&nbsp;{ADDRESS_ID}</td>
+                    </tr>
+ <!-- END Section Detail -->
+                    <!-- BEGIN Section Report_Footer -->
+                    <!-- BEGIN Panel NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="4">No Current Address Record for this Student</td>
+                    </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+                    <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END Report ADDRESS_Current -->
+</div>
+<br>
+<div align="center">
+    <!-- BEGIN Report ADDRESS_Original -->
+    <table cellspacing="0" cellpadding="0" width="90%" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+                    <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+                    <!-- BEGIN Section Detail -->
+                    <tr class="Row">
+                        <th>
+                        <h4>S.A.C. Address:</h4>
+                        </th>
+ 
+                        <td>&nbsp;<em>(added May-2009, changed to SAC Address July 2014 - in rare cases the 'Original Address' may be displayed. Read and interpret appropriately)</em></td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>ADDRESSEE</strong> </th>
+ 
+                        <td>&nbsp;{ADDRESSEE} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>AGENT</strong> </th>
+ 
+                        <td>&nbsp;{AGENT} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>ADDRESS</strong> </th>
+ 
+                        <td>&nbsp;{ADDR1} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;{ADDR2} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>SUBURB/TOWN</strong> </th>
+ 
+                        <td>&nbsp;{SUBURB_TOWN} </td> 
+                        <td><strong>STATE</strong> </td> 
+                        <td>&nbsp;{STATE}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>POSTCODE</strong> </th>
+ 
+                        <td>&nbsp;{POSTCODE}</td> 
+                        <td><strong>COUNTRY</strong> </td> 
+                        <td>&nbsp;{COUNTRY}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>HOME PHONE</strong></th>
+ 
+                        <td>&nbsp;{PHONE_A} </td> 
+                        <td><strong>MOBILE/PHONE 2</strong></td> 
+                        <td>&nbsp;{PHONE_B}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>FAX</strong> </th>
+ 
+                        <td>&nbsp;{FAX} </td> 
+                        <td><strong>EMAIL ADDRESS</strong> </td> 
+                        <td>&nbsp;<a href="mailto:{EMAIL_ADDRESS_Src}" id="ADDRESS_OriginalDetailEMAIL_ADDRESS_{ADDRESS_Original:rowNumber}">{EMAIL_ADDRESS}</a></td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;<a href="mailto:{EMAIL_ADDRESS2_Src}" id="ADDRESS_OriginalDetailEMAIL_ADDRESS2_{ADDRESS_Original:rowNumber}">{EMAIL_ADDRESS2}</a></td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>LAST_ALTERED_BY / DATE</th>
+ 
+                        <td>&nbsp;{LAST_ALTERED_BY} / {LAST_ALTERED_DATE}</td> 
+                        <td>ADDRESS_ID </td> 
+                        <td>&nbsp;{ADDRESS_ID}</td>
+                    </tr>
+ <!-- END Section Detail -->
+                    <!-- BEGIN Section Report_Footer -->
+                    <!-- BEGIN Panel NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="4">No S.A.C. Address / Original Address Record for this Student</td>
+                    </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+                    <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END Report ADDRESS_Original -->
+</div>
+<p>
+<div align="center">
+    <!-- BEGIN Report STUDENT_CENSUS_DATA -->
+    <table cellspacing="0" cellpadding="0" width="90%" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Census</th>
+ 
+                        <th width="150">
+                        <div id="toggle_Census" class="Button" style="WIDTH: 130px; MARGIN: 5px" align="right">
+                            show/hide Census 
+                        </div>
+                        </th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table id="STUDENT_CENSUS_DATA_table" class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+                    <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+                    <!-- BEGIN Section Detail -->
+                    <tr class="Row">
+                        <th>&nbsp;<strong>Country of Birth:</strong></th>
+ 
+                        <td>&nbsp;{COUNTRY_OF_BIRTH} </td> 
+                        <td>&nbsp;<strong>Date Started in Aust:</strong></td> 
+                        <td>&nbsp;{DATE_STARTED_IN_AUST}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;<strong>Main&nbsp;Language spoken at Home:</strong></th>
+ 
+                        <td>&nbsp;{FIRST_HOME_LANGUAGE}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;<strong>Other Home Language:</strong>&nbsp;</th>
+ 
+                        <td>&nbsp;{OTHER_HOME_LANGUAGE}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;<strong><u>Mother</u></strong></td> 
+                        <td>&nbsp;<strong><u>Father</u></strong></td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Country of Birth:</strong></th>
+ 
+                        <td>&nbsp;{MOTHERS_COB} </td> 
+                        <td>&nbsp;{FATHERS_COB}</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Main Language:</strong></th>
+ 
+                        <td>&nbsp;{MOTHER_LANGUAGE} </td> 
+                        <td>&nbsp;{FATHER_LANGUAGE}</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>School Education</strong></th>
+ 
+                        <td>&nbsp;{MOTHER_EDUCATION_SCHOOL} </td> 
+                        <td>&nbsp;{FATHER_EDUCATION_SCHOOL}</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Post-School Education:</strong></th>
+ 
+                        <td>&nbsp;{MOTHER_EDUCATION_NONSCHOOL} </td> 
+                        <td>&nbsp;{FATHER_EDUCATION_NONSCHOOL}</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>
+                        <p><strong>Occupation Group:</strong></p>
+                        </th>
+ 
+                        <td>&nbsp;{MOTHER_OCCUPATIONGROUP} </td> 
+                        <td>&nbsp;{FATHER_OCCUPATIONGROUP}</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Allowance Code:</strong></th>
+ 
+                        <td>{ALLOWANCE_TITLE} </td> 
+                        <td>
+                            <p>&nbsp;<strong>Koori/Torres:</strong></p>
+                        </td> 
+                        <td>&nbsp;{KOORITORRESFLAG}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Residential Status:</strong></th>
+ 
+                        <td>{RESIDENTIAL_STATUS} </td> 
+                        <td>&nbsp;<strong>Date Arrived in Aust:</strong></td> 
+                        <td>&nbsp;{DATE_ARRIVED_IN_AUST}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Visa Sub Class:</strong></th>
+ 
+                        <td>&nbsp;{VISA_SUB_CLASS} </td> 
+                        <td>&nbsp;<strong>Visa Stat Code:</strong></td> 
+                        <td>&nbsp;{VISA_STATISTICAL_CODE}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Previous School:</strong>&nbsp;</th>
+ 
+                        <td>&nbsp;{PREVIOUS_SCHOOL_ID} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>
+                        <p><strong>Family Occupation Group:</strong></p>
+                        </th>
+ 
+                        <td>&nbsp;{FAMILY_OSG} </td> 
+                        <td>&nbsp;<strong>Household Status:</strong></td> 
+                        <td>&nbsp;{HOUSEHOLD_STATUS}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Disability ID:</strong></th>
+ 
+                        <td>&nbsp;{DISABILITY_ID} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Repeating Year:</strong></th>
+ 
+                        <td>&nbsp;{REPEATING_YEAR} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>
+                        <p><strong>Other School Time Fraction:</strong></p>
+                        </th>
+ 
+                        <td>&nbsp;{OTHER_SCHOOL_TF} </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>LAST_ALTERED_BY / DATE</th>
+ 
+                        <td>&nbsp;{LAST_ALTERED_BY} / {LAST_ALTERED_DATE}</td> 
+                        <td>{STUDENT_ID}</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ <!-- END Section Detail -->
+                    <!-- BEGIN Section Report_Footer -->
+                    <!-- BEGIN Panel NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="4">No Census Data Record</td>
+                    </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+                    <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END Report STUDENT_CENSUS_DATA -->
+</div>
+<p>
+<div align="center">
+    <!-- BEGIN Report STUDENT_EQUIPMENT -->
+    <table cellspacing="0" cellpadding="0" width="90%" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Equipment </th>
+ 
+                        <th width="150">
+                        <div id="toggle_Equipment" class="Button" style="WIDTH: 130px; MARGIN: 5px" align="right">
+                            show/hide Equipment 
+                        </div>
+                        </th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table id="STUDENT_EQUIPMENT_table" class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+                    <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+                    <!-- BEGIN Section Detail -->
+                    <tr class="Row">
+                        <th>Permission for teachers to access Student WORK EXAMPLES&nbsp;</th>
+ 
+                        <td>&nbsp;{ACCESS_WORKEXAMPLES}</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>Student&nbsp;has Access to a COMPUTER:&nbsp;</th>
+ 
+                        <td>&nbsp;{ACCESS_COMPUTER}&nbsp;<em>(new for 2010)</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>Student&nbsp;has Access to&nbsp;the INTERNET:&nbsp;</th>
+ 
+                        <td>&nbsp;{ACCESS_INTERNET}<em>&nbsp;(new for 2010)</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>Student has Digitial Education Revolution PC?&nbsp;<img onclick="javascript:alert('Student has DER or DECV Computer (See PC Support for details)');return false;" id="has_der_pc_info_icon" title="Student has DER or DECV Computer (See PC Support) April 2009" border="0" name="DERPCInfoIcon" alt="DER Computer type" src="images/icon_info.gif"></th>
+ 
+                        <td>&nbsp;{HAS_DER_PC} </td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td><em>&nbsp;N:None; Y:Yes (Own or Full access); L:Limited (Shared or restricted); U:Unknown (default)</em></td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>LAST_ALTERED_BY / DATE</th>
+ 
+                        <td>&nbsp;{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}&nbsp;{STUDENT_ID}</td>
+                    </tr>
+ <!-- END Section Detail -->
+                    <!-- BEGIN Section Report_Footer -->
+                    <!-- BEGIN Panel NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="2">No Student Equipment found</td>
+                    </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+                    <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END Report STUDENT_EQUIPMENT -->
+</div>
+<br>
+<div align="center">
+    <!-- BEGIN Report viewStudentSummary_Medica -->
+    <div align="left">
+        <table cellspacing="0" cellpadding="0" width="90%" align="center" border="0">
+            <tr>
+                <td valign="top">
+                    <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                            <th>Medical</th>
+ 
+                            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                        </tr>
+                    </table>
+ 
+                    <table class="Grid" cellspacing="0" cellpadding="0">
+                        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+                        <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+                        <!-- BEGIN Section Detail -->
+                        <tr class="Row">
+                            <th><strong>Immunisation Certificate</strong> </th>
+ 
+                            <td>&nbsp;{immun_certificate_desc} </td>
+                        </tr>
+ 
+                        <tr class="Row">
+                            <th><strong>Immunisations</strong> </th>
+ 
+                            <td>&nbsp;Diptheria:&nbsp;{immun_diptheria_desc}&nbsp; Tetanus: {immun_tetanus_desc}&nbsp;&nbsp; Polio:&nbsp;{immun_polio_desc}&nbsp;Measles:&nbsp;{immun_measles_desc}&nbsp; Mumps:{immun_mumps_desc}</td>
+                        </tr>
+ 
+                        <tr class="Row">
+                            <th>&nbsp;</th>
+ 
+                            <td>&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Row">
+                            <th><strong>Allergies?</strong>&nbsp;</th>
+ 
+                            <td>&nbsp;{allergies_flag_desc}<em>&nbsp;(if Yes, check Enrolment form)</em></td>
+                        </tr>
+ 
+                        <tr class="Row">
+                            <th><strong>Anaphylaxis?</strong>&nbsp;</th>
+ 
+                            <td>&nbsp;{anaphylaxis_flag_desc} <img id="viewStudentSummary_MedicaDetailanaphylaxis_warning" alt="Anaphylaxis warning icon" src="{anaphylaxis_warning}"><em>&nbsp;(if Yes, check Enrolment form)</em></td>
+                        </tr>
+ 
+                        <tr class="Row">
+                            <th><strong>Diagnosed Condition?</strong>&nbsp;</th>
+ 
+                            <td>&nbsp;{HASOTHERCONDITIONS_desc}&nbsp;{OTHERCONDITIONS}&nbsp;{DIAGNOSED_CONDITION}&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Row">
+                            <th>Medical Conditions, if any&nbsp;(self-diagnosed)&nbsp;</th>
+ 
+                            <td>{all_medical_conditions_desc}</td>
+                        </tr>
+ 
+                        <tr class="Row">
+                            <th>&nbsp;</th>
+ 
+                            <td>&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Row">
+                            <th>LAST_ALTERED_BY / DATE</th>
+ 
+                            <td>&nbsp;{LAST_ALTERED_BY}&nbsp;/ &nbsp;{LAST_ALTERED_DATE}&nbsp; {STUDENT_ID}</td>
+                        </tr>
+ <!-- END Section Detail -->
+                        <!-- BEGIN Section Report_Footer -->
+                        <!-- BEGIN Panel NoRecords -->
+                        <tr class="NoRecords">
+                            <td colspan="2">No Medical Details found</td>
+                        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+                        <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div align="left">
+    </div>
+    <!-- END Report viewStudentSummary_Medica -->
+</div>
+<br>
+<br>
+<br>
+<script language="JavaScript" src="js/jquery_min.js" type="text/javascript" charset="windows-1252"></script>
+{lblModified}
+<script language="JavaScript" src="js/jquery.tablesorter.min.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+    // -------------------------
+    // ERA: using jquery, attach the toggles to the toggle_Census and toggle_Equipment links
+                $('div#toggle_Enrolment_Misc').click(function() {
+                $('table#viewStudentSummary_Enrolm_table').slideToggle('slow');
+        });
+        $('div#toggle_Census').click(function() {
+                $('table#STUDENT_CENSUS_DATA_table').slideToggle('slow');
+        });
+        $('div#toggle_Equipment').click(function() {
+                $('table#STUDENT_EQUIPMENT_table').slideToggle('slow');
+        });
+
+                $('table#viewStudentSummary_Enrolm_table').toggle(false);
+        $('table#STUDENT_CENSUS_DATA_table').toggle(false);
+        $('table#STUDENT_EQUIPMENT_table').toggle(false);
+
+        // and let's show/hide all comments after first 5
+        var numShown = 6; // Initial rows shown & index
+        var numMore = 10; // Increment
+        var numRows = $('#STUDENT_COMMENTS_table').find('tr').length; // Total # rows
+
+                // Hide rows and add clickable div
+                $('#STUDENT_COMMENTS_table')
+                        .find('tr:gt(' + (numShown - 1) + ')').hide().end()
+                        .after('<div id="more" class="Button"><br>Show <span>' + numMore + '</span> More Comments<br></div>');
+
+                $('#more').click(function(){
+                        numShown = numShown + numMore;
+                        // no more show more if done
+                        if ( numShown >= numRows ) $('#more').remove();
+                        // change rows remaining if less than increment
+                        if ( numRows - numShown < numMore ) $('#more span').html(numRows - numShown);
+                        $('#STUDENT_COMMENTS_table').find('tr:lt('+numShown+')').show();
+                })
+
+    // -------------------------
+    // -------------------------
+    // Oct-2018|EA| add table sorting on subjects
+    $("table#SubjectList").tablesorter({cssHeader:"ts_header", dateFormat: "uk"}); 
+    
+    // -------------------------
+</script>
+</body>
+</html>

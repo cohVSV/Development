@@ -1,0 +1,332 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SCHOOL - Add/Edit</title>
+<meta name="description" content="Edit main details of School, and access the School Address record">
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_SCHOOL_SCHOOL_TYPE_CODE_OnChange @8-FFED599D
+function page_SCHOOL_SCHOOL_TYPE_CODE_OnChange()
+{
+    var result;
+//End page_SCHOOL_SCHOOL_TYPE_CODE_OnChange
+
+//Custom Code @67-2A29BDB7
+    // -------------------------
+    // 31-Oct-2018|EA| if 'X' then show certain fields required
+    let itemList = document.getElementById("SCHOOLSCHOOL_TYPE_CODE");
+        if (itemList.selectedOptions[0].value == "X") {
+                alert("VSV Extra Organisations need Name, Principal and 'Active' fields completed\nUse SCHOOL ID starting with 990xx.00\n\n Other fields are optional");
+                           document.getElementById("SCHOOLREGION_ID").value ="99" ;
+                result = true;
+        }
+    // -------------------------
+//End Custom Code
+
+//Close page_SCHOOL_SCHOOL_TYPE_CODE_OnChange @8-BC33A33A
+    return result;
+}
+//End Close page_SCHOOL_SCHOOL_TYPE_CODE_OnChange
+
+//page_SCHOOL_Button_Delete_OnClick @5-B0AC9B9A
+function page_SCHOOL_Button_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End page_SCHOOL_Button_Delete_OnClick
+
+//bind_events @1-2556A66F
+function bind_events() {
+    addEventHandler("SCHOOLSCHOOL_TYPE_CODE","change",page_SCHOOL_SCHOOL_TYPE_CODE_OnChange);
+    addEventHandler("SCHOOLButton_Delete","click",page_SCHOOL_Button_Delete_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+window.onload = bind_events;
+
+</script>
+</head>
+<body>
+<p>{Header} </p>
+<p><a href="{linkSchoolList_Src}" id="linkSchoolList" class="Button">Back to School List</a></p>
+<!-- BEGIN Record SCHOOL -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Add/Edit SCHOOL </th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>SCHOOL ID</th>
+ 
+                        <td><input type="text" id="SCHOOLSCHOOL_ID" size="9" value="{SCHOOL_ID}" name="{SCHOOL_ID_Name}">{SchoolID_view}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SCHOOL NAME</th>
+ 
+                        <td><input type="text" id="SCHOOLSCHOOL_NAME" maxlength="60" size="50" value="{SCHOOL_NAME}" name="{SCHOOL_NAME_Name}"></td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>REGION ID</th>
+ 
+                        <td>
+                            <select id="SCHOOLREGION_ID" name="{REGION_ID_Name}">
+                                <option selected value="">Select Value</option>
+                                {REGION_ID_Options}
+                            </select>
+ </td> 
+                        <td>&nbsp;SCHOOL TYPE</td> 
+                        <td>
+                            <select id="SCHOOLSCHOOL_TYPE_CODE" name="{SCHOOL_TYPE_CODE_Name}">
+                                <option selected value="">Select Value</option>
+                                {SCHOOL_TYPE_CODE_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>PRINCIPAL</th>
+ 
+                        <td><input type="text" id="SCHOOLPRINCIPAL" maxlength="30" size="30" value="{PRINCIPAL}" name="{PRINCIPAL_Name}"></td> 
+                        <td>&nbsp;VBOS NUMBER</td> 
+                        <td><input type="text" id="SCHOOLVBOSNUMBER" maxlength="12" size="12" value="{VBOSNUMBER}" name="{VBOSNUMBER_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>METRO CATEGORY</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton METRO_CATEGORY --><input type="radio" id="SCHOOLMETRO_CATEGORY_{METRO_CATEGORY:optionNumber}" value="{Value}" name="{METRO_CATEGORY_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton METRO_CATEGORY -->&nbsp;</td> 
+                        <td>&nbsp;STATUS</td> 
+                        <td>&nbsp;<input type="checkbox" id="SCHOOLSTATUS" value="1" name="{STATUS_Name}" {STATUS}>&nbsp;Active/Open?</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>SCHOOL ADDRESS</th>
+ 
+                        <td><a href="{ADDRESS_ID_Src}" id="SCHOOLADDRESS_ID" class="Button">Edit Address</a>{lbl_SaveBeforeAddress}</td> 
+                        <td>&nbsp;{lblAddressID}</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY / DATE</th>
+ 
+                        <td>{lbl_LAST_ALTERED_BY}&nbsp;/ {lbl_LAST_ALTERED_DATE}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="4" align="right">
+                            <!-- BEGIN Button Button_Insert --><input type="submit" id="SCHOOLButton_Insert" class="Button" value="Add School" name="{Button_Name}"><!-- END Button Button_Insert -->
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="SCHOOLButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                            <!-- BEGIN Button Button_Delete --><input type="submit" id="SCHOOLButton_Delete" class="Button" value="Close this School" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="SCHOOLLAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="SCHOOLLAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"><input type="hidden" id="SCHOOLHidden_address_id" value="{Hidden_address_id}" name="{Hidden_address_id_Name}"></td>
+        </tr>
+    </table>
+</form>
+&nbsp;{lblDebug}<!-- END Record SCHOOL -->
+<p></p>
+<p align="left">
+<!-- BEGIN Report ADDRESS_Postal -->
+<div align="left">
+    <table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>School Address</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+                    <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+                    <!-- BEGIN Section Detail -->
+                    <tr class="Row">
+                        <th>
+                        <h4>Postal Address:</h4>
+                        </th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>ADDRESSEE </strong></th>
+ 
+                        <td>{ADDRESSEE}&nbsp; </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp; </td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>AGENT</strong> </th>
+ 
+                        <td>{AGENT}&nbsp; </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>ADDRESS</strong> </th>
+ 
+                        <td>{ADDR1}&nbsp; </td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>{ADDR2}&nbsp; </td> 
+                        <td>&nbsp; </td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>SUBURB/TOWN</strong> </th>
+ 
+                        <td>{SUBURB_TOWN}&nbsp; </td> 
+                        <td><strong>STATE </strong></td> 
+                        <td>{STATE}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>POSTCODE</strong> </th>
+ 
+                        <td>{POSTCODE}&nbsp;</td> 
+                        <td><strong>COUNTRY</strong> </td> 
+                        <td>{COUNTRY}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>PHONE 1</strong></th>
+ 
+                        <td>{PHONE_A}&nbsp;&nbsp;</td> 
+                        <td><strong>PHONE 2</strong></td> 
+                        <td>{PHONE_B}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>FAX</strong> </th>
+ 
+                        <td>{FAX}&nbsp; </td> 
+                        <td><strong>EMAIL ADDRESS</strong> </td> 
+                        <td>&nbsp;<a href="mailto:{EMAIL_ADDRESS_Src}" id="ADDRESS_PostalDetailEMAIL_ADDRESS_{ADDRESS_Postal:rowNumber}">{EMAIL_ADDRESS}</a>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th><strong>Billing / Accounts Email</strong>&nbsp;</th>
+ 
+                        <td>&nbsp;<a href="mailto:{EMAIL_ADDRESS2_Src}" id="ADDRESS_PostalDetailEMAIL_ADDRESS2_{ADDRESS_Postal:rowNumber}">{EMAIL_ADDRESS2}</a>&nbsp;</td> 
+                        <td><em>&nbsp;only for Invoices / Accounts</em></td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Row">
+                        <th>LAST_ALTERED_BY / DATE</th>
+ 
+                        <td>{LAST_ALTERED_BY} / {LAST_ALTERED_DATE}&nbsp;</td> 
+                        <td>ADDRESS_ID&nbsp;</td> 
+                        <td>{ADDRESS_ID}&nbsp;</td>
+                    </tr>
+ <!-- END Section Detail -->
+                    <!-- BEGIN Section Report_Footer -->
+                    <!-- BEGIN Panel NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="4">No Postal Address Record</td>
+                    </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+                    <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<div align="left">
+</div>
+<!-- END Report ADDRESS_Postal -->
+<p></p>
+<p><br>
+&nbsp;</p>
+</body>
+</html>

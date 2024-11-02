@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student {STUDENT_ID} - LMS Activity</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style_Components.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+<p align="center"><br>
+<br>
+Back to:&nbsp; <a href="{link_Menu_Src}" id="link_Menu" class="Button">Main Menu</a>|&nbsp;&nbsp;<a href="{Link_SearchRequest_Src}" id="Link_SearchRequest" class="Button">Search Request</a>|&nbsp;&nbsp;<a href="{link_Assignments_Src}" id="link_Assignments" class="Button">Assignments</a>| <a href="{Link10_Src}" id="Link10" class="Button">SMS</a> |&nbsp;<a href="{Link6_Src}" id="Link6" class="Button">Future Intentions</a> | &nbsp; <a href="{Link5_Src}" id="Link5" class="Button">Comments</a><br>
+<br>
+<p>&nbsp; <a href="OnlineHelp/Assignment%20Edit%20Return%20Details/Assignment_EditReturnDetails.html" title="show help for this page" target="_blank"><img border="0" alt="show help for this page" src="images/help.png" align="right"></a> 
+<!-- BEGIN Panel Panel_MenuStudentMaintain -->{Menu_Student_maintain}&nbsp;&nbsp;<!-- END Panel Panel_MenuStudentMaintain --></p>
+<p align="center"><a href="{Link_Backtosummary_Src}" id="Link_Backtosummary" class="Button">Back to Summary</a>|&nbsp;&nbsp;<a href="{Link_BacktoPastoralList_Src}" id="Link_BacktoPastoralList" class="Button">Back to Student Support Group List</a></p>
+<p align="center">&nbsp;</p>
+<p style="FONT-SIZE: xx-large; COLOR: cornflowerblue">This page is maintained in Visual Studio</p><br>
+<br>
+<br>
+<br>
+<script language="JavaScript" type="text/javascript">
+        function limitMaxLength(formitem, maxlength, displaydivname)
+        {
+            if (isNaN(maxlength))
+            {
+                return false;
+            } else
+            {
+                var outputdiv = document.getElementById(displaydivname)
+                outputdiv.innerHTML = (maxlength - formitem.value.length) + ' characters allowed';
+                if (formitem.value.length + 1 > maxlength)
+                {
+                    formitem.value = formitem.value.substring(0, maxlength);
+                }
+            }
+        }
+    </script>
+<br>
+<br>
+<br>
+</body>
+</html>

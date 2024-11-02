@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>WITHDRAWAL EXIT DESTINATION</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{Header}</p>
+<p align="center"><a href="{Link_AddNew_Src}" class="Button" id="Link_AddNew">Add New</a></p>
+<!-- BEGIN Grid WITHDRAWAL_EXIT_DESTINATI -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of WITHDRAWAL EXIT DESTINATION</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>Detail</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_WD_DEST_ID --><a href="{Sort_URL}" id="WITHDRAWAL_EXIT_DESTINATISorter_WD_DEST_ID">WD DEST ID</a><!-- END Sorter Sorter_WD_DEST_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_EXIT_DESTINATION_DESCRIPTION --><a href="{Sort_URL}" id="WITHDRAWAL_EXIT_DESTINATISorter_EXIT_DESTINATION_DESCRIPTION">EXIT DESTINATION DESCRIPTION</a><!-- END Sorter Sorter_EXIT_DESTINATION_DESCRIPTION --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_DISPLAY_ORDER --><a href="{Sort_URL}" id="WITHDRAWAL_EXIT_DESTINATISorter_DISPLAY_ORDER">DISPLAY ORDER</a><!-- END Sorter Sorter_DISPLAY_ORDER --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_GROUPING --><a href="{Sort_URL}" id="WITHDRAWAL_EXIT_DESTINATISorter_GROUPING">GROUPING</a><!-- END Sorter Sorter_GROUPING --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><a href="{Sort_URL}" id="WITHDRAWAL_EXIT_DESTINATISorter_LAST_ALTERED_BY">LAST ALTERED BY</a><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><a href="{Sort_URL}" id="WITHDRAWAL_EXIT_DESTINATISorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{Detail_Src}" id="WITHDRAWAL_EXIT_DESTINATIDetail_{WITHDRAWAL_EXIT_DESTINATI:rowNumber}">edit</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{WD_DEST_ID}&nbsp;</td> 
+          <td>{EXIT_DESTINATION_DESCRIPTION}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{DISPLAY_ORDER}&nbsp;</td> 
+          <td>{GROUPING}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr class="AltRow">
+          <td><a href="{Alt_Detail_Src}" id="WITHDRAWAL_EXIT_DESTINATIAlt_Detail_{WITHDRAWAL_EXIT_DESTINATI:rowNumber}">edit</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Alt_WD_DEST_ID}&nbsp;</td> 
+          <td>{Alt_EXIT_DESTINATION_DESCRIPTION}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Alt_DISPLAY_ORDER}&nbsp;</td> 
+          <td>{Alt_GROUPING}&nbsp;</td> 
+          <td>{Alt_LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{Alt_LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No Withdrawal Exit Destination Details found</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="7"><a href="{WITHDRAWAL_EXIT_DESTINATI_Insert_Src}" id="WITHDRAWAL_EXIT_DESTINATIWITHDRAWAL_EXIT_DESTINATI_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a><!-- END First_On -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a><!-- END Prev_On -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a><!-- END Next_On -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a><!-- END Last_On --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid WITHDRAWAL_EXIT_DESTINATI --><br>
+</body>
+</html>

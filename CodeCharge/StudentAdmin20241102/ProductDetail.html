@@ -1,0 +1,50 @@
+<!-- BEGIN Panel Head -->
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+
+<!-- BEGIN Record add_to_cart -->
+<form id="Contentadd_to_cart" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable">
+<tr>
+<td style="vertical-align:top;">
+        <!-- BEGIN Error -->
+        <div style="POSITION: relative; DISPLAY: inline">
+        <p>{Error}</p>
+        </div>
+        <!-- END Error -->
+        <div style="POSITION: relative; DISPLAY: inline">
+          <label>Qty: </label><input type="text" style="WIDTH: 51px" id="Contentadd_to_cartquantity" name="{quantity_Name}" maxlength="7" value="{quantity}"><input type="hidden" id="Contentadd_to_cartshopping_cart_id" name="{shopping_cart_id_Name}" value="{shopping_cart_id}"><input type="hidden" id="Contentadd_to_cartproduct_id" name="{product_id_Name}" value="{product_id}">
+          <!-- BEGIN Button Button_Insert --><input type="submit" id="Contentadd_to_cartButton_Insert" class="Button" name="{Button_Name}" alt="Add to Cart" value="Add to Cart"><!-- END Button Button_Insert -->
+        </div>
+      </td> 
+      <div>
+      </div>
+    </tr>
+  </table>
+</form>
+<!-- END Record add_to_cart -->
+<!-- BEGIN Record store_products -->
+<h3>{product_name}</h3>
+<form id="Contentstore_products" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable">
+<tr>
+<td style="vertical-align:top;">
+  <table class="Record">
+    <tr>
+      <td style="border: 0px;"><img src="{image_url}" alt="" id="Contentstore_productsimage_url"></td>
+      <td style="border: 0px;">
+      	<p><b>Category</b>: {Category}</p>
+      	<p><b>Price</b>: {price}</p>
+        <p  style="text-align:justify;">{description1}</p>
+      </td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record store_products --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{Search}{Categories}{Recommended}<!-- END Panel Sidebar -->

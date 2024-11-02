@@ -1,0 +1,369 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Details - Maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-E768D9C8
+
+var STUDENTDatePicker_BIRTH_DATE = new Object(); 
+STUDENTDatePicker_BIRTH_DATE.format           = "dd/mm/yyyy";
+STUDENTDatePicker_BIRTH_DATE.style            = "Styles/Blueprint/Style.css";
+STUDENTDatePicker_BIRTH_DATE.relativePathPart = "";
+STUDENTDatePicker_BIRTH_DATE.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_STUDENT_Button_Update_OnClick @4-DB04562F
+function page_STUDENT_Button_Update_OnClick()
+{
+    var result;
+//End page_STUDENT_Button_Update_OnClick
+
+//Custom Code @87-2A29BDB7
+    // -------------------------
+    // Write your own code here.
+        result = ValidateVSN();
+    // -------------------------
+//End Custom Code
+
+//Close page_STUDENT_Button_Update_OnClick @4-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_Button_Update_OnClick
+
+//page_STUDENT_cbPORTAL_ACCESS_OnClick @255-EFA8E618
+function page_STUDENT_cbPORTAL_ACCESS_OnClick()
+{
+    var result;
+//End page_STUDENT_cbPORTAL_ACCESS_OnClick
+
+//Custom Code @256-2A29BDB7
+    // -------------------------
+    // 18-Aug-2017|EA|(unfuddle #707) 
+    // If clicking it ON (Yes) from OFF (No) then popup message to confirm
+        result = true;
+    var portal = $F('STUDENTcbPORTAL_ACCESS');
+
+        if (portal =='on'){
+                alert('Obtain an undertaking not to provide information (username and password) to the individual being restricted that would enable him or her to breach the Portal security system.\n\nRecord undertaking in comments on database.');
+        }
+    // -------------------------
+//End Custom Code
+
+//Close page_STUDENT_cbPORTAL_ACCESS_OnClick @255-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_cbPORTAL_ACCESS_OnClick
+
+//page_STUDENT_Button_Cancel_OnClick @5-AF0AE409
+function page_STUDENT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_Button_Cancel_OnClick
+
+
+//bind_events @1-85F41300
+function bind_events() {
+    addEventHandler("STUDENTcbPORTAL_ACCESS","click",page_STUDENT_cbPORTAL_ACCESS_OnClick);
+    addEventHandler("STUDENTButton_Update","click",page_STUDENT_Button_Update_OnClick);
+    addEventHandler("STUDENTButton_Cancel","click",page_STUDENT_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+<script language="JavaScript" type="text/javascript">
+function OpenPopUpList_School(FieldName)
+{
+        //FieldName = "txtAttendingSchoolID";FieldName = "txtHomeSchoolID";
+        if (!FieldName==''){
+            var win=window.open("popup_SchoolList.aspx?returncontrol="+FieldName, "SchoolList", "left=40,top=10,width=380,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+            win.focus();
+        }
+}
+function OpenPopUpList_Subjects()
+{
+        var win=window.open("StudentEnrolment_AddSubject.aspx?STUDENT_ID="+FieldName, "AddSubject", "left=40,top=10,width=380,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+        win.focus();
+}
+</script>
+<script language="JavaScript" type="text/javascript">
+/*
+'******************************
+        'Date Modified : 24 July 2009
+        'Modified by : Vikas
+        'Task: VSN implementation
+        '******************Code Starts Here******************
+*/
+
+   function ValidateVSN()
+    {
+    var tmpformname='';
+    var VSN=document.getElementById(tmpformname + 'STUDENTVSN');
+    
+    if (VSN.value!='')
+    {
+        if (VSN.value.length!=9)
+            {
+                alert('VSN should be 9 digits');
+                return false;
+            }
+        else
+            {
+            var strVSN=VSN.value;
+            
+            //Use weight factor- 1, 4, 3, 7, 5, 8, 6, 9, 10
+            var Weightfactor=new Array("1", "4", "3", "7","5", "8", "6", "9", "10");
+            var bitsVSR=new Array(9);
+            var i=0;
+            var totalVSN=0;
+            
+            for (i = 0; i < 9 ; i++)
+                {
+                    bitsVSR[i]=strVSN.substring(i,i+1);
+                }
+                       
+            for (i = 0; i < 9 ; i++)
+                {
+                    totalVSN = totalVSN + (bitsVSR[i] * Weightfactor[i]);
+                }
+            
+            var outVSN=totalVSN%11;
+            
+            if (outVSN!=0)
+                {
+                    alert('Invalid VSN Number');
+                    VSN.value='';
+                    return false;
+                }
+            else
+                {      
+                    return true;
+                }
+            } 
+        }  
+       else
+       {
+            return true;
+       } 
+    }
+    /*
+'******************************
+        'Date Modified : 24 July 2009
+        'Modified by : Vikas
+        'Task: VSN implementation
+        '******************Code Ends Here******************
+*/
+</script>
+</head>
+<body>
+<div align="center">
+    &nbsp;{Menu_Student_maintain} 
+</div>
+<div align="center">
+</div>
+<div align="center">
+</div>
+<!-- BEGIN Record STUDENT -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Edit Student Details</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th><strong>STUDENT ID</strong></th>
+ 
+                        <td>&nbsp;{lblStudentID}</td> 
+                        <td><strong>VSN</strong></td> 
+                        <td>&nbsp;<input type="text" onblur="javascript: return ValidateVSN();" id="STUDENTVSN" maxlength="9" size="10" value="{VSN}" name="{VSN_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>SURNAME</strong></th>
+ 
+                        <td><input type="text" id="STUDENTSURNAME" maxlength="30" size="30" value="{SURNAME}" name="{SURNAME_Name}"></td> 
+                        <td><strong>FIRST NAME</strong></td> 
+                        <td>&nbsp;<input type="text" id="STUDENTFIRST_NAME" maxlength="30" size="30" value="{FIRST_NAME}" name="{FIRST_NAME_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th colspan="2">&nbsp;<em>NOTE: First, Preferred, Middle, and Surname will NOT be changed to Upper Case when 'Updated' (Nov 2011)</em></th>
+ 
+                        <td><strong>PREFERRED NAME</strong></td> 
+                        <td>&nbsp;<input type="text" id="STUDENTPREFERRED_NAME" maxlength="30" size="30" value="{PREFERRED_NAME}" name="{PREFERRED_NAME_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>MIDDLE NAME</strong></th>
+ 
+                        <td><input type="text" id="STUDENTMIDDLE_NAME" maxlength="30" size="30" value="{MIDDLE_NAME}" name="{MIDDLE_NAME_Name}"></td> 
+                        <td><strong>DATE OF BIRTH (DD/MM/YY)</strong></td> 
+                        <td>&nbsp;<input type="text" id="STUDENTBIRTH_DATE" maxlength="100" size="8" value="{BIRTH_DATE}" name="{BIRTH_DATE_Name}">
+                            <!-- BEGIN DatePicker DatePicker_BIRTH_DATE --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="STUDENTDatePicker_BIRTH_DATE"><img border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a>&nbsp;<!-- END DatePicker DatePicker_BIRTH_DATE --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>GENDER</strong></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton SEX --><input type="radio" id="STUDENTSEX_{SEX:optionNumber}" value="{Value}" name="{SEX_Name}" {Check}>{Description}<!-- END RadioButton SEX -->&nbsp;<input type="text" id="STUDENTSEX_SELF_DESCRIBED" style="MARGIN-LEFT: 10px" maxlength="30" size="30" value="{SEX_SELF_DESCRIBED}" name="{SEX_SELF_DESCRIBED_Name}"></td> 
+                        <td><strong>REGION</strong>&nbsp;</td> 
+                        <td>
+                            <select id="STUDENTlist_REGION" name="{list_REGION_Name}">
+                                <option selected value="">Select Value</option>
+                                {list_REGION_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td><strong>VCE CANDIDATE NUMBER&nbsp;(12345678A)<img onclick="javascript:alert('VCE / VASS Candidate Number April 2011');return false;" id="vce_candidate_icon" title="VCE / VASS Candidate Number April 2011" border="0" name="vce_candidate_icon" alt="VCE / VASS Candidate Number" src="images/icon_info.gif"></strong></td> 
+                        <td><input type="text" id="STUDENTVCE_CANDIDATE_NUMBER" maxlength="10" size="12" value="{VCE_CANDIDATE_NUMBER}" name="{VCE_CANDIDATE_NUMBER_Name}">&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>Student Email Address</strong>&nbsp;<img onclick="javascript:alert('Student Email Address\n\nChanging this will Update the Student Current Address\n\nadded May 2011');return false;" id="studentemail_icon" title="Student Email Address - Changing this will Update the Student Current Address -added May 2011" border="0" name="studentemailIcon" alt="Student Email Address" src="images/icon_info.gif"></th>
+ 
+                        <td><input type="text" id="STUDENTSTUDENT_EMAIL" maxlength="250" size="45" value="{STUDENT_EMAIL}" name="{STUDENT_EMAIL_Name}">&nbsp; <br>
+                            <em>Updates to Student Email will automatically update Current Address email</em></td> 
+                        <td>&nbsp;<strong>STUDENT ACCESSIBLE ON&nbsp;PORTAL</strong>&nbsp;<img onclick="javascript:alert('Untick to remove student from Portal\n at next update (added Aug 2016)');return false;" id="studentemail_icon" title="Untick to remove student from Portal at next update (added Aug 2016)" border="0" name="studentemailIcon" alt="Student Access on Portal" src="images/icon_info.gif"></td> 
+                        <td><input type="checkbox" id="STUDENTcbPORTAL_ACCESS" value="1" name="{cbPORTAL_ACCESS_Name}" {cbPORTAL_ACCESS}>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>Student Mobile</strong></th>
+ 
+                        <td><input type="text" id="STUDENTSTUDENT_MOBILE" maxlength="20" value="{STUDENT_MOBILE}" name="{STUDENT_MOBILE_Name}">&nbsp;</td> 
+                        <td><em></em></td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;&nbsp; </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>CATEGORY / SUBCATEGORY</strong></th>
+ 
+                        <td colspan="3">
+                            <select id="STUDENTListBox_SubCategory" name="{ListBox_SubCategory_Name}">
+                                <option selected value="">Select Value</option>
+                                {ListBox_SubCategory_Options}
+                            </select>
+ &nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><a href="#" onclick="OpenPopUpList_School('STUDENTATTENDING_SCHOOL_ID');">Attending School ID</a></th>
+ 
+                        <td colspan="3"><input type="text" id="STUDENTATTENDING_SCHOOL_ID" maxlength="12" size="12" value="{ATTENDING_SCHOOL_ID}" name="{ATTENDING_SCHOOL_ID_Name}">&nbsp;&nbsp;{lblAttendingSchoolName}</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><a href="#" onclick="OpenPopUpList_School('STUDENTHOME_SCHOOL_ID');">Home School ID</a></th>
+ 
+                        <td colspan="3"><input type="text" id="STUDENTHOME_SCHOOL_ID" maxlength="12" size="12" value="{HOME_SCHOOL_ID}" name="{HOME_SCHOOL_ID_Name}">&nbsp;&nbsp;{lblHomeSchoolName}</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>Extra Organisation</strong>&nbsp;</th>
+ 
+                        <td colspan="3">
+                            <select id="STUDENTlistORG_SCHOOL_ID" name="{listORG_SCHOOL_ID_Name}">
+                                <option value="">Select Value</option>
+                                <option selected value="0">- none -</option>
+                                {listORG_SCHOOL_ID_Options}
+                            </select>
+ <em>&nbsp;(ie: Sports or Drama organisations)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>STUDENT FILES </strong><img onclick="javascript:alert('Student Work Folder Feb 2010');return false;" id="studentfolder_icon" title="Student Work Folder Feb 2010" border="0" name="studentfolderIcon" alt="Student Work Folder" src="images/icon_info.gif"></th>
+ 
+                        <td colspan="3">
+                            <!-- BEGIN Link link_showstudentfolder --><a href="{link_showstudentfolder_Src}" id="STUDENTlink_showstudentfolder" target="_blank">Show Student Files</a><!-- END Link link_showstudentfolder -->&nbsp; {labelContactPCSupport}&nbsp; 
+                            <!-- BEGIN Button Button_CreateStudentWorkFolder --><input type="submit" id="STUDENTButton_CreateStudentWorkFolder" class="Button" value="Create Folder" name="{Button_Name}"><!-- END Button Button_CreateStudentWorkFolder -->&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY / DATE&nbsp;</th>
+ 
+                        <td colspan="3">{LAST_ALTERED_BY}&nbsp; / {LAST_ALTERED_DATE}&nbsp;/ {label_StudentFilesCreated}</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="4" align="right">&nbsp; 
+                            <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENTButton_Insert" class="Button" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENTButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENTButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STUDENTCATEGORY_CODE" value="{CATEGORY_CODE}" name="{CATEGORY_CODE_Name}"><input type="hidden" id="STUDENTSUBCATEGORY_CODE" value="{SUBCATEGORY_CODE}" name="{SUBCATEGORY_CODE_Name}"><input type="hidden" id="STUDENTEnrolmentCategoryTemp" value="{EnrolmentCategoryTemp}" name="{EnrolmentCategoryTemp_Name}"><input type="hidden" id="STUDENThidden_old_ATTENDING_SCHOOL_ID" value="{hidden_old_ATTENDING_SCHOOL_ID}" name="{hidden_old_ATTENDING_SCHOOL_ID_Name}"><input type="hidden" id="ENROLLEDBEFORE" value="{ENROLLEDBEFORE}" name="{ENROLLEDBEFORE_Name}"><input type="hidden" id="STUDENThidden_DATE_STUDENTFOLDER_CREATED" value="{hidden_DATE_STUDENTFOLDER_CREATED}" name="{hidden_DATE_STUDENTFOLDER_CREATED_Name}"><input type="hidden" id="STUDENThidden_LAST_ALTERED_BY" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"><input type="hidden" id="STUDENThidden_LAST_ALTERED_DATE" value="{hidden_LAST_ALTERED_DATE}" name="{hidden_LAST_ALTERED_DATE_Name}"></td>
+        </tr>
+    </table>
+</form>
+&nbsp;<input type="hidden" id="STUDENTHidden_CURR_RESID_ADDRESS_ID" value="{Hidden_CURR_RESID_ADDRESS_ID}" name="{Hidden_CURR_RESID_ADDRESS_ID_Name}"><!-- END Record STUDENT -->
+<p><br>
+&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

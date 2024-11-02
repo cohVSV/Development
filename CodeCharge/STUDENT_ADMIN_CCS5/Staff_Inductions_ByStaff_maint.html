@@ -1,0 +1,150 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Staff Inductions - By Staff</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-3A4616CF
+
+var STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED = new Object(); 
+STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED.format           = "dd/mm/yyyy";
+STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED.style            = "Styles/Blueprint/Style.css";
+STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED.relativePathPart = "";
+STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_STAFF_INDUCTIONS_PROGRESS_Button_Delete_OnClick @38-B22C9A81
+function page_STAFF_INDUCTIONS_PROGRESS_Button_Delete_OnClick()
+{
+    var result;
+//End page_STAFF_INDUCTIONS_PROGRESS_Button_Delete_OnClick
+
+//Confirmation Message @39-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close page_STAFF_INDUCTIONS_PROGRESS_Button_Delete_OnClick @38-BC33A33A
+    return result;
+}
+//End Close page_STAFF_INDUCTIONS_PROGRESS_Button_Delete_OnClick
+
+//page_STAFF_INDUCTIONS_PROGRESS_Button_Cancel_OnClick @40-E3D0FE50
+function page_STAFF_INDUCTIONS_PROGRESS_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STAFF_INDUCTIONS_PROGRESS_Button_Cancel_OnClick
+
+//bind_events @1-3DC41C24
+function bind_events() {
+    addEventHandler("STAFF_INDUCTIONS_PROGRESSButton_Delete","click",page_STAFF_INDUCTIONS_PROGRESS_Button_Delete_OnClick);
+    addEventHandler("STAFF_INDUCTIONS_PROGRESSButton_Cancel","click",page_STAFF_INDUCTIONS_PROGRESS_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+<script type="text/javascript">
+ function toggle_hide(divID) {
+ var item = document.getElementById(divID);
+ if (item) {
+        item.style.display = (item.style.display=='none')?'block':'none';}
+ }
+ </script>
+</head>
+<body>
+<p>{Header}</p>
+<p><a href="{link_backtolist_Src}" class="Button" id="link_backtolist">back to list</a><br>
+<!-- BEGIN Record STAFF_INDUCTIONS_PROGRESS -->
+<form id="STAFF_INDUCTIONS_PROGRESS" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Staff Inductions</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>STAFF&nbsp;ID&nbsp;</th>
+ 
+            <td>{lbl_STAFF_ID}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>INDUCTION&nbsp;</th>
+ 
+            <td>
+              <select id="STAFF_INDUCTIONS_PROGRESSlistbox_InductionCourses" name="{listbox_InductionCourses_Name}">
+                <option value="" selected>Select Value</option>
+                {listbox_InductionCourses_Options}
+              </select>
+ &nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STATUS</th>
+ 
+            <td>
+              <select id="STAFF_INDUCTIONS_PROGRESSSTAFF_INDUCTIONS_PROGRESS_STATUS" name="{STAFF_INDUCTIONS_PROGRESS_STATUS_Name}">
+                <option value="" selected>Select Value</option>
+                {STAFF_INDUCTIONS_PROGRESS_STATUS_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DATE COMPLETED</th>
+ 
+            <td><input id="STAFF_INDUCTIONS_PROGRESSDATE_COMPLETED" maxlength="100" size="10" value="{DATE_COMPLETED}" name="{DATE_COMPLETED_Name}">
+              <!-- BEGIN DatePicker DatePicker_DATE_COMPLETED --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED"><img id="STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED_Image" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif" border="0"></a>&nbsp;&nbsp;<!-- END DatePicker DatePicker_DATE_COMPLETED --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / DATE&nbsp;</th>
+ 
+            <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="STAFF_INDUCTIONS_PROGRESSButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="STAFF_INDUCTIONS_PROGRESSButton_Update" type="submit" value="Save" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="STAFF_INDUCTIONS_PROGRESSButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input class="Button" id="STAFF_INDUCTIONS_PROGRESSButton_Cancel" type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input id="STAFF_INDUCTIONS_PROGRESSHidden_last_altered_by" type="hidden" value="{Hidden_last_altered_by}" name="{Hidden_last_altered_by_Name}"><input id="STAFF_INDUCTIONS_PROGRESSHidden_last_altered_date" type="hidden" value="{Hidden_last_altered_date}" name="{Hidden_last_altered_date_Name}"><input id="STAFF_INDUCTIONS_PROGRESSHidden_STAFF_ID" type="hidden" value="{Hidden_STAFF_ID}" name="{Hidden_STAFF_ID_Name}"></td>
+    </tr>
+  </table>
+</form>
+&nbsp;<!-- BEGIN Link Link1_David --><a href="{Link1_David_Src}" id="STAFF_INDUCTIONS_PROGRESSLink1_David" onclick="toggle_hide('unic');">David? Is that you?</a><!-- END Link Link1_David --><!-- END Record STAFF_INDUCTIONS_PROGRESS --><br>
+<br>
+<br>
+<p><img id="unic" style="DISPLAY: none; MARGIN: auto; cursor: hand; cursor: pointer;" onclick="toggle_hide('unic');" src="images/unic.jpg" name="unic"></p>
+</body>
+</html>

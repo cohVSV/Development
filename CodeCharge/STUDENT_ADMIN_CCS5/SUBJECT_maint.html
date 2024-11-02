@@ -1,0 +1,345 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SUBJECT</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_SUBJECT_TEACHER_Button_Submit_OnClick @117-8A44DC84
+function page_SUBJECT_TEACHER_Button_Submit_OnClick()
+{
+    var result;
+//End page_SUBJECT_TEACHER_Button_Submit_OnClick
+
+//Confirmation Message @118-257FDD03
+    return confirm('Submit records?');
+//End Confirmation Message
+
+//Close page_SUBJECT_TEACHER_Button_Submit_OnClick @117-BC33A33A
+    return result;
+}
+//End Close page_SUBJECT_TEACHER_Button_Submit_OnClick
+
+//page_NewRecord1_Button_Cancel_OnClick @32-E10D8BD9
+function page_NewRecord1_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_NewRecord1_Button_Cancel_OnClick
+
+//page_SUBJECT_TEACHER_Cancel_OnClick @119-6DE00F65
+function page_SUBJECT_TEACHER_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_SUBJECT_TEACHER_Cancel_OnClick
+
+//bind_events @1-3B599B1E
+function bind_events() {
+    if(typeof(initSUBJECT_TEACHERElements) == "function")
+        initSUBJECT_TEACHERElements();
+    if(typeof(SUBJECT_TEACHERStaticElementsID) == "object" && typeof(SUBJECT_TEACHERStaticElementsID[SUBJECT_TEACHERButton_SubmitID]) == "object" && SUBJECT_TEACHERStaticElementsID[SUBJECT_TEACHERButton_SubmitID]!=null)
+        addEventHandler(SUBJECT_TEACHERStaticElementsID[SUBJECT_TEACHERButton_SubmitID].id, "click", page_SUBJECT_TEACHER_Button_Submit_OnClick);
+    addEventHandler("NewRecord1Button_Cancel","click",page_NewRecord1_Button_Cancel_OnClick);
+    addEventHandler("SUBJECT_TEACHERCancel","click",page_SUBJECT_TEACHER_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p align="center"><a href="{Link1_Src}" id="Link1" class="Button">Return to Subject Search</a></p>
+<!-- BEGIN Record NewRecord1 -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  <table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add/Edit SUBJECT </th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>SUBJECT ID</th>
+ 
+            <td><input type="text" id="NewRecord1SUBJECT_ID" maxlength="10" size="10" value="{SUBJECT_ID}" name="{SUBJECT_ID_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUBJECT ABBREV</th>
+ 
+            <td><input type="text" id="NewRecord1SUBJECT_ABBREV" maxlength="6" size="6" value="{SUBJECT_ABBREV}" name="{SUBJECT_ABBREV_Name}"></td> 
+            <td>&nbsp;SUBJECT TITLE</td> 
+            <td>&nbsp;<input type="text" id="NewRecord1SUBJECT_TITLE" maxlength="37" size="40" value="{SUBJECT_TITLE}" name="{SUBJECT_TITLE_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;</td> 
+            <td nowrap>&nbsp;<em>New Title (for next year)</em></td> 
+            <td>&nbsp;<input type="text" id="NewRecord1SUBJECT_TITLE_NEW" maxlength="37" size="40" value="{SUBJECT_TITLE_NEW}" name="{SUBJECT_TITLE_NEW_Name}"><br>
+              <em>2016 Enrolments onwards, if supplied, then some Enrolment areas will use this Title</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CORE FOR YEAR LEVEL (7-10)</th>
+ 
+            <td>
+              <select id="NewRecord1CORE_YEARLEVELS" name="{CORE_YEARLEVELS_Name}">
+                <option selected value="">Not set</option>
+                {CORE_YEARLEVELS_Options}
+              </select>
+ &nbsp;</td> 
+            <td>&nbsp;YEAR LEVEL</td> 
+            <td>&nbsp;<input type="text" id="NewRecord1YEAR_LEVEL" maxlength="5" size="5" value="{YEAR_LEVEL}" name="{YEAR_LEVEL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CORE / NON-CORE SUBJECT</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton rbCORE_SUBJECT_FLAG --><input type="radio" id="NewRecord1rbCORE_SUBJECT_FLAG_{rbCORE_SUBJECT_FLAG:optionNumber}" value="{Value}" name="{rbCORE_SUBJECT_FLAG_Name}" {Check}>{Description}<!-- END RadioButton rbCORE_SUBJECT_FLAG -->&nbsp;</td> 
+            <td>LINKED SUBJECT ID</td> 
+            <td>&nbsp;<input type="text" id="NewRecord1LINKED_SUBJECT_ID" maxlength="10" size="10" value="{LINKED_SUBJECT_ID}" name="{LINKED_SUBJECT_ID_Name}"><em>&nbsp;(subsequent subject id, else 0)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>MAX STUDENT ALLOCATION&nbsp;</th>
+ 
+            <td><input type="text" id="NewRecord1ALLOCATE_STUDENTS_MAX" maxlength="3" size="4" value="{ALLOCATE_STUDENTS_MAX}" name="{ALLOCATE_STUDENTS_MAX_Name}">&nbsp;</td> 
+            <td>EXTENDABLE SUBJECT?&nbsp;</td> 
+            <td>&nbsp;<input type="checkbox" id="NewRecord1checkEXTENDABLE_SUBJECT" value="1" name="{checkEXTENDABLE_SUBJECT_Name}" {checkEXTENDABLE_SUBJECT}>&nbsp;<em>(tick for Extending&nbsp;allowed)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Parent / Full Year Grouping&nbsp;</th>
+ 
+            <td colspan="2">
+              <select id="NewRecord1listParentGroupSubject" name="{listParentGroupSubject_Name}">
+                <option value="0">No grouping (default)</option>
+                {listParentGroupSubject_Options}
+              </select>
+ &nbsp;</td> 
+            <td><em>(create Parent Subject first if not shown)</em>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DEFAULT SEMESTER</th>
+ 
+            <td>
+              <select id="NewRecord1DEFAULT_SEMESTER" name="{DEFAULT_SEMESTER_Name}">
+                <option selected value="">Select Value</option>
+                {DEFAULT_SEMESTER_Options}
+              </select>
+ </td> 
+            <td>&nbsp;DEFAULT TEACHER ID</td> 
+            <td>&nbsp; 
+              <select id="NewRecord1DEFAULT_TEACHER_ID" name="{DEFAULT_TEACHER_ID_Name}">
+                <option selected value="">Select Value</option>
+                {DEFAULT_TEACHER_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUB SCHOOL</th>
+ 
+            <td><input type="text" id="NewRecord1SUB_SCHOOL" maxlength="10" size="6" value="{SUB_SCHOOL}" name="{SUB_SCHOOL_Name}">&nbsp;<em>(used if Core 'Elective')</em></td> 
+            <td>&nbsp;KEY LEARNING AREA</td> 
+            <td>&nbsp; 
+              <select id="NewRecord1KLA_ID" name="{KLA_ID_Name}">
+                <option selected value="">Select Value</option>
+                {KLA_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CSF CLASS LEVEL</th>
+ 
+            <td><input type="text" id="NewRecord1CSF_CLASS_LEVEL" maxlength="5" size="6" value="{CSF_CLASS_LEVEL}" name="{CSF_CLASS_LEVEL_Name}"></td> 
+            <td>&nbsp;MAX NO OF BOOKS</td> 
+            <td>&nbsp;<input type="text" id="NewRecord1MAX_BOOKS" maxlength="3" size="3" value="{MAX_BOOKS}" name="{MAX_BOOKS_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CAMPUS CODE</th>
+ 
+            <td colspan="2">
+              <select id="NewRecord1CAMPUS_CODE" name="{CAMPUS_CODE_Name}">
+                <option selected value="">Select Value</option>
+                {CAMPUS_CODE_Options}
+              </select>
+ </td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>VALID COURSE DISTRIBUTION</th>
+ 
+            <td colspan="2">Book:<input type="checkbox" id="NewRecord1cbx_COURSE_B" value="1" name="{cbx_COURSE_B_Name}" {cbx_COURSE_B}>&nbsp;&nbsp; CD:<input type="checkbox" id="NewRecord1cbx_COURSE_C" value="1" name="{cbx_COURSE_C_Name}" {cbx_COURSE_C}>&nbsp;&nbsp; Email:<input type="checkbox" id="NewRecord1cbx_COURSE_E" value="1" name="{cbx_COURSE_E_Name}" {cbx_COURSE_E}>&nbsp;&nbsp; Internet:<input type="checkbox" id="NewRecord1cbx_COURSE_I" value="1" name="{cbx_COURSE_I_Name}" {cbx_COURSE_I}>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DESCRIPTION LINE 1</th>
+ 
+            <td colspan="2"><textarea id="NewRecord1DESCRIPTION_LINE1" rows="3" cols="50" name="{DESCRIPTION_LINE1_Name}">{DESCRIPTION_LINE1}</textarea>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DESCRIPTION LINE 2</th>
+ 
+            <td colspan="2"><textarea id="NewRecord1DESCRIPTION_LINE2" rows="3" cols="50" name="{DESCRIPTION_LINE2_Name}">{DESCRIPTION_LINE2}</textarea>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STATUS</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton STATUS --><input type="radio" id="NewRecord1STATUS_{STATUS:optionNumber}" value="{Value}" name="{STATUS_Name}" {Check}>{Description}<!-- END RadioButton STATUS --></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY</th>
+ 
+            <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="4" align="right">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="NewRecord1Button_Insert" class="Button" value="Add new" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="NewRecord1Button_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="NewRecord1Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input type="hidden" id="NewRecord1hidden_VALID_COURSE_DISTRIBUTION" value="{hidden_VALID_COURSE_DISTRIBUTION}" name="{hidden_VALID_COURSE_DISTRIBUTION_Name}"><input type="hidden" id="NewRecord1hidden_LAST_ALTERED_BY" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"><input type="hidden" id="NewRecord1hidden_LAST_ALTERED_DATE" value="{hidden_LAST_ALTERED_DATE}" name="{hidden_LAST_ALTERED_DATE_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record NewRecord1 --><br>
+<br>
+<div align="center">
+  <!-- BEGIN EditableGrid SUBJECT_TEACHER -->
+  <form id="SUBJECT_TEACHER" method="post" name="{HTMLFormName}" action="{Action}">
+    <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+              <th>List of Subject Teachers for Automatic Allocations&nbsp;<em><font color="#800000">only used if DEFAULT TEACHER ID ='NA' or 'N-A'</font></em></th>
+ 
+              <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+            </tr>
+          </table>
+ 
+          <table class="Grid" cellspacing="0" cellpadding="0" width="80%" align="center">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="5">{Error}</td>
+            </tr>
+            <!-- END Error -->
+            <tr class="Caption">
+              <th>TEACHER</th>
+ 
+              <th>SUBJECT TIME FRACTION</th>
+ 
+              <th>ALLOCATE TO?</th>
+ 
+              <th>LAST ALTERED BY / DATE</th>
+ 
+              <th>Delete?</th>
+            </tr>
+ 
+            <!-- BEGIN Row -->
+            <!-- BEGIN RowError -->
+            <tr class="Error">
+              <td colspan="5">{Error}</td>
+            </tr>
+            <!-- END RowError -->
+            <tr class="Row">
+              <td>
+                <select id="SUBJECT_TEACHERSTAFF_ID_{SUBJECT_TEACHER:rowNumber}" name="{STAFF_ID_Name}">
+                  <option selected value="">Select Value</option>
+                  {STAFF_ID_Options}
+                </select>
+ <input type="hidden" id="SUBJECT_TEACHERSUBJECT_ID_{SUBJECT_TEACHER:rowNumber}" value="{SUBJECT_ID}" name="{SUBJECT_ID_Name}"></td> 
+              <td><input type="text" id="SUBJECT_TEACHERSUBJECT_TIMEFRACTION_{SUBJECT_TEACHER:rowNumber}" maxlength="4" size="5" value="{SUBJECT_TIMEFRACTION}" name="{SUBJECT_TIMEFRACTION_Name}"></td> 
+              <td>
+                <!-- BEGIN RadioButton ALLOCATABLE_FLAG --><input type="radio" id="SUBJECT_TEACHERALLOCATABLE_FLAG_{SUBJECT_TEACHER:rowNumber}_{ALLOCATABLE_FLAG:optionNumber}" value="{Value}" name="{ALLOCATABLE_FLAG_Name}" {Check}>{Description}<!-- END RadioButton ALLOCATABLE_FLAG --></td> 
+              <td>{lblLAST_ALTERED_BY}&nbsp;/ {lblLAST_ALTERED_DATE}<input type="hidden" id="SUBJECT_TEACHERLAST_ALTERED_BY_{SUBJECT_TEACHER:rowNumber}" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="SUBJECT_TEACHERLAST_ALTERED_DATE_{SUBJECT_TEACHER:rowNumber}" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td> 
+              <td>
+                <!-- BEGIN CheckBox CheckBox_Delete --><input type="checkbox" id="SUBJECT_TEACHERCheckBox_Delete_{SUBJECT_TEACHER:rowNumber}" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+            </tr>
+ <!-- END Row -->
+            <!-- BEGIN NoRecords -->
+            <tr class="NoRecords">
+              <td colspan="5">No Subject Teachers found!</td>
+            </tr>
+            <!-- END NoRecords -->
+            <tr class="Footer">
+              <td style="TEXT-ALIGN: right" colspan="5">
+                <!-- BEGIN Button Button_Submit --><input type="submit" id="SUBJECT_TEACHERButton_Submit" class="Button" value="Save changes" name="{Button_Name}"><!-- END Button Button_Submit -->
+                <!-- BEGIN Button Cancel --><input type="submit" id="SUBJECT_TEACHERCancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Cancel --></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <!-- END EditableGrid SUBJECT_TEACHER -->
+</div>
+<br>
+</body>
+</html>

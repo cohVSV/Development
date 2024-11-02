@@ -1,0 +1,410 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Carer - Family Grouping</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_STUDENT_CARER_CONTACT3_Button_Update_OnClick @6-9E3F4781
+function page_STUDENT_CARER_CONTACT3_Button_Update_OnClick()
+{
+    var result;
+//End page_STUDENT_CARER_CONTACT3_Button_Update_OnClick
+
+//Confirmation Message @282-8414BA6D
+    return confirm('Update Both to This Carer?');
+//End Confirmation Message
+
+//Close page_STUDENT_CARER_CONTACT3_Button_Update_OnClick @6-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_CARER_CONTACT3_Button_Update_OnClick
+
+//page_STUDENT_CARER_CONTACT3_Button_Delete_OnClick @7-A519FDB5
+function page_STUDENT_CARER_CONTACT3_Button_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_CARER_CONTACT3_Button_Delete_OnClick
+
+//page_STUDENT_CARER_CONTACT4_Button_Delete_OnClick @102-8F6CBCE0
+function page_STUDENT_CARER_CONTACT4_Button_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_CARER_CONTACT4_Button_Delete_OnClick
+
+//bind_events @1-17335667
+function bind_events() {
+    addEventHandler("STUDENT_CARER_CONTACT3Button_Update","click",page_STUDENT_CARER_CONTACT3_Button_Update_OnClick);
+    addEventHandler("STUDENT_CARER_CONTACT3Button_Delete","click",page_STUDENT_CARER_CONTACT3_Button_Delete_OnClick);
+    addEventHandler("STUDENT_CARER_CONTACT4Button_Delete","click",page_STUDENT_CARER_CONTACT4_Button_Delete_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Menu_Student_maintain}</p>
+<p>{StudentNamePlate}<img border="0" alt="show help for this page" align="right" src="images/help.png"></p>
+<table border="0" cellpadding="3" width="70%" align="center">
+  <tr>
+    <td style="WIDTH: 50%" valign="top" align="right">
+      <!-- BEGIN Grid Grid_FamilyGroup -->
+      <table id="Grid_FamilyGroup" class="MainTable" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                <th>Family Group</th>
+ 
+                <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <!-- BEGIN Row -->
+              <!-- BEGIN Panel RowOpenTag -->
+              <tr class="Row">
+                <!-- END Panel RowOpenTag -->
+                <td nowrap>
+                  <!-- BEGIN Panel RowComponents --><a href="{STUDENT_ID_Src}" id="Grid_FamilyGroupRowComponentsSTUDENT_ID_{Grid_FamilyGroup:rowNumber}" title="show Student Summary">{STUDENT_ID}</a>&nbsp;&nbsp;&nbsp;&nbsp;<em>{last_enrol_year}</em><br>
+                  {first_name}&nbsp;{surname} <!-- END Panel RowComponents --></td> 
+                <!-- BEGIN Panel RowCloseTag -->
+              </tr>
+ <!-- END Panel RowCloseTag --><!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="{Grid_FamilyGroup:numberOfColumns}">No other Students in this Family Group</td>
+              </tr>
+              <!-- END NoRecords -->
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid Grid_FamilyGroup -->&nbsp;</td> 
+    <td style="WIDTH: 50%" valign="top" align="right">
+      <!-- BEGIN Record STUDENT_CARER_CONTACT3 -->
+      <form id="STUDENT_CARER_CONTACT3" method="post" name="{HTMLFormName}" action="{Action}">
+        <div align="center">
+          <table border="0" cellspacing="0" cellpadding="0" width="50%" align="center">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>Carer for main Student</th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <th>Student Name&nbsp;</th>
+ 
+                    <td>{Student_Firstname}&nbsp;{Student_Surname}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>Carer Name</th>
+ 
+                    <td>{FIRST_NAME}&nbsp;{SURNAME}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>RELATIONSHIP</th>
+ 
+                    <td>
+                      <select id="STUDENT_CARER_CONTACT3RELATIONSHIP" disabled name="{RELATIONSHIP_Name}">
+                        <option selected value="">Select Value</option>
+                        {RELATIONSHIP_Options}
+                      </select>
+ </td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>HOME PHONE</th>
+ 
+                    <td>{HOME_PHONE}<em></em></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>WORK PHONE</th>
+ 
+                    <td>{WORK_PHONE}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>MOBILE</th>
+ 
+                    <td>{MOBILE}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>EMAIL ADDRESS</th>
+ 
+                    <td>{EMAIL}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>LAST ALTERED BY</th>
+ 
+                    <td>{LAST_ALTERED_BY} / {LAST_ALTERED_DATE}</td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">
+                      <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENT_CARER_CONTACT3Button_Insert" class="Button" name="{Button_Name}" value="Add"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_CARER_CONTACT3Button_Update" class="Button" name="{Button_Name}" value="Update BOTH Students to THIS Carer"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Delete --><input type="submit" id="STUDENT_CARER_CONTACT3Button_Delete" class="Button" name="{Button_Name}" value="Delete"><!-- END Button Button_Delete --></td>
+                  </tr>
+                </table>
+                <input type="hidden" id="STUDENT_CARER_CONTACT3Hidden_STUDENT_ID" name="{Hidden_STUDENT_ID_Name}" value="{Hidden_STUDENT_ID}"><input type="hidden" id="STUDENT_CARER_CONTACT3Hidden_LAST_ALTERED_BY" name="{Hidden_LAST_ALTERED_BY_Name}" value="{Hidden_LAST_ALTERED_BY}"><input type="hidden" id="STUDENT_CARER_CONTACT3Hidden_STUDENT_ID_OTHER" name="{Hidden_STUDENT_ID_OTHER_Name}" value="{Hidden_STUDENT_ID_OTHER}"><input type="hidden" id="STUDENT_CARER_CONTACT3Dupe_CARER_ID" name="{Dupe_CARER_ID_Name}" value="{Dupe_CARER_ID}"></td>
+            </tr>
+          </table>
+        </div>
+      </form>
+      <!-- END Record STUDENT_CARER_CONTACT3 --></td> 
+    <td style="WIDTH: 50%" valign="top" align="left">
+      <!-- BEGIN Record viewMaintainSearchRequestSearch -->
+      <form id="viewMaintainSearchRequestSearch" method="post" name="{HTMLFormName}" action="{Action}">
+        <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                  <th>Search </th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr id="{@error-block}" class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th>SURNAME</th>
+ 
+                  <td><input type="text" id="viewMaintainSearchRequestSearchs_SURNAME" name="{s_SURNAME_Name}" maxlength="30" value="{s_SURNAME}" size="30"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>STUDENT ID</th>
+ 
+                  <td><input type="text" id="viewMaintainSearchRequestSearchs_STUDENT_ID" name="{s_STUDENT_ID_Name}" maxlength="12" value="{s_STUDENT_ID}" size="12"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td><a href="{ClearParameters_Src}" id="viewMaintainSearchRequestSearchClearParameters">Clear</a></td> 
+                  <td style="TEXT-ALIGN: right">
+                    <!-- BEGIN Button Button_DoSearch --><input type="submit" id="viewMaintainSearchRequestSearchButton_DoSearch" class="Button" name="{Button_Name}" value="Search"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record viewMaintainSearchRequestSearch --><br>
+      <!-- BEGIN Grid viewMaintainSearchRequest -->
+      <table id="viewMaintainSearchRequest" class="MainTable" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                <th>Other Student to add to Family Group </th>
+ 
+                <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th>
+                <!-- BEGIN Sorter Sorter_STUDENT_ID --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_STUDENT_ID">STUDENT ID</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_SURNAME --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_SURNAME">SURNAME</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SURNAME --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_FIRST_NAME --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_FIRST_NAME">FIRST NAME</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_YEAR_LEVEL">YEAR LEVEL</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_ENROLMENT_STATUS --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_ENROLMENT_STATUS">ENROLMENT STATUS</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ENROLMENT_STATUS --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_PASTORAL_CARE_ID --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_PASTORAL_CARE_ID">PASTORAL CARE ID</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PASTORAL_CARE_ID --></th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td><a href="{STUDENT_ID_Src}" id="viewMaintainSearchRequestSTUDENT_ID_{viewMaintainSearchRequest:rowNumber}">{STUDENT_ID}</a>&nbsp;</td> 
+                <td>{SURNAME}&nbsp;</td> 
+                <td>{FIRST_NAME}&nbsp;</td> 
+                <td style="TEXT-ALIGN: right">{YEAR_LEVEL}&nbsp;</td> 
+                <td>{ENROLMENT_STATUS}&nbsp;</td> 
+                <td>{PASTORAL_CARE_ID}&nbsp;</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="6">No Student Details found!</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="6">
+                  <!-- BEGIN Navigator Navigator --><span class="Navigator">
+                  <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+                  <!-- BEGIN First_Off -->First <!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+                  <!-- BEGIN Pages -->
+                  <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                  <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off -->Last <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid viewMaintainSearchRequest -->
+      <!-- BEGIN Record STUDENT_CARER_CONTACT4 -->
+      <form id="STUDENT_CARER_CONTACT4" method="post" name="{HTMLFormName}" action="{Action}">
+        <div align="center">
+          <table style="WIDTH: 50%" border="0" cellspacing="0" cellpadding="0" align="left">
+            <tr>
+              <td valign="top">
+                <table class="Header" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>Carer for Other Student</th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                  </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                  <!-- BEGIN Error -->
+                  <tr class="Error">
+                    <td colspan="2">{Error}</td>
+                  </tr>
+                  <!-- END Error -->
+                  <tr class="Controls">
+                    <th>Student Name </th>
+ 
+                    <td>{Student_Firstname} {Student_Surname}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>Carer Name</th>
+ 
+                    <td>{FIRST_NAME} {SURNAME}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>RELATIONSHIP</th>
+ 
+                    <td>
+                      <select id="STUDENT_CARER_CONTACT4RELATIONSHIP" disabled name="{RELATIONSHIP_Name}">
+                        <option selected value="">Select Value</option>
+                        {RELATIONSHIP_Options}
+                      </select>
+ </td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>HOME PHONE</th>
+ 
+                    <td>{HOME_PHONE}<em></em></td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>WORK PHONE</th>
+ 
+                    <td>{WORK_PHONE}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>MOBILE</th>
+ 
+                    <td>{MOBILE}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>EMAIL ADDRESS</th>
+ 
+                    <td>{EMAIL}</td>
+                  </tr>
+ 
+                  <tr class="Controls">
+                    <th>LAST ALTERED BY</th>
+ 
+                    <td>{LAST_ALTERED_BY} / {LAST_ALTERED_DATE}</td>
+                  </tr>
+ 
+                  <tr class="Bottom">
+                    <td colspan="2" align="right">{lblNoCarer} 
+                      <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENT_CARER_CONTACT4Button_Insert" class="Button" name="{Button_Name}" value="Add"><!-- END Button Button_Insert -->
+                      <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_CARER_CONTACT4Button_Update" class="Button" name="{Button_Name}" value="Update BOTH Students to THIS Carer"><!-- END Button Button_Update -->
+                      <!-- BEGIN Button Button_Delete --><input type="submit" id="STUDENT_CARER_CONTACT4Button_Delete" class="Button" name="{Button_Name}" value="Delete"><!-- END Button Button_Delete --></td>
+                  </tr>
+                </table>
+ 
+                <p><input type="hidden" id="STUDENT_CARER_CONTACT4Hidden_STUDENT_ID" name="{Hidden_STUDENT_ID_Name}" value="{Hidden_STUDENT_ID}"><input type="hidden" id="STUDENT_CARER_CONTACT4Hidden_LAST_ALTERED_BY" name="{Hidden_LAST_ALTERED_BY_Name}" value="{Hidden_LAST_ALTERED_BY}"><input type="hidden" id="STUDENT_CARER_CONTACT4Hidden_STUDENT_ID_OTHER" name="{Hidden_STUDENT_ID_OTHER_Name}" value="{Hidden_STUDENT_ID_OTHER}"><input type="hidden" id="STUDENT_CARER_CONTACT4Dupe_CARER_ID" name="{Dupe_CARER_ID_Name}" value="{Dupe_CARER_ID}"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>
+      <!-- END Record STUDENT_CARER_CONTACT4 --></td>
+  </tr>
+ 
+  <tr>
+    <td>&nbsp;</td> 
+    <td>&nbsp;</td> 
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

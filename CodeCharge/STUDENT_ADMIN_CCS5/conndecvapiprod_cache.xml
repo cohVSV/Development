@@ -1,0 +1,33 @@
+<LldlCache allCatalogs="True" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False">
+  <catalog CATALOG_NAME="ActivityAPI" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True">
+    <schema SCHEMA_NAME="dbo" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="True" allProcedureParameters="False" full="True">
+      <table TABLE_NAME="__MigrationHistory" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="GradeProblems" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="Grades" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SubmissionProblems" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="Submissions" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwStudentActivity" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" full="True">
+        <column COLUMN_NAME="ActivityId" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ActivityType" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="20" OCTET_LENGTH="40" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ActivityName" ORDINAL_POSITION="3" DATA_TYPE="8" CCS_TYPE="CCMemo" NATIVE_TYPE="System.String" MAX_LENGTH="0" OCTET_LENGTH="0" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="CourseId" ORDINAL_POSITION="4" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="CourseIdNum" ORDINAL_POSITION="5" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="CourseName" ORDINAL_POSITION="6" DATA_TYPE="8" CCS_TYPE="CCMemo" NATIVE_TYPE="System.String" MAX_LENGTH="0" OCTET_LENGTH="0" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="StudentUsername" ORDINAL_POSITION="7" DATA_TYPE="130" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="100" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="LastSubmissionDate" ORDINAL_POSITION="8" DATA_TYPE="135" CCS_TYPE="CCDateTime" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="23" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="StaffUsername" ORDINAL_POSITION="9" DATA_TYPE="130" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="100" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="Mark" ORDINAL_POSITION="10" DATA_TYPE="8" CCS_TYPE="CCMemo" NATIVE_TYPE="System.String" MAX_LENGTH="0" OCTET_LENGTH="0" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="LastReturnDate" ORDINAL_POSITION="11" DATA_TYPE="135" CCS_TYPE="CCDateTime" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="23" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+      </table>
+      <table TABLE_NAME="vwStudentGradeSubmission" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwStudentSubmissionGrade" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+    </schema>
+    <schema SCHEMA_NAME="INFORMATION_SCHEMA" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="sys" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  </catalog>
+  <catalog CATALOG_NAME="master" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="model" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="msdb" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="STUDENT_ADMIN" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="tempdb" allSchemes="True" allColumns="True" allPrimaryKeys="True" allForeignKeys="True" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+</LldlCache>

@@ -1,0 +1,419 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Defaulting Students Status</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-959AF67C
+
+var Student_SubjectStatus_ResultDatePicker_WARNING_SENT_DATE = new Object(); 
+Student_SubjectStatus_ResultDatePicker_WARNING_SENT_DATE.format           = "dd/mm/yy";
+Student_SubjectStatus_ResultDatePicker_WARNING_SENT_DATE.style            = "Styles/Blueprint/Style.css";
+Student_SubjectStatus_ResultDatePicker_WARNING_SENT_DATE.relativePathPart = "";
+Student_SubjectStatus_ResultDatePicker_WARNING_SENT_DATE.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_Student_SubjectStatus_search_List_Staff_ID_OnChange @80-C2404A5F
+function page_Student_SubjectStatus_search_List_Staff_ID_OnChange()
+{
+    var result;
+//End page_Student_SubjectStatus_search_List_Staff_ID_OnChange
+
+//Custom Code @109-2A29BDB7
+    // -------------------------
+   if (document.getElementById('Student_SubjectStatus_searchList_Staff_ID').value!='')
+   {
+                        document.getElementById('Student_SubjectStatus_searchhidden_Staff_id').value=document.getElementById('Student_SubjectStatus_searchList_Staff_ID').value;
+   }
+    // -------------------------
+//End Custom Code
+
+//Close page_Student_SubjectStatus_search_List_Staff_ID_OnChange @80-BC33A33A
+    return result;
+}
+//End Close page_Student_SubjectStatus_search_List_Staff_ID_OnChange
+
+//DEL        var txtStatusid= this.id.replace('DEFAULTING_STATUS_DATE','DEFAULTING_STATUS_ID');
+//DEL        if (document.getElementById(txtStatusid).value=='')
+//DEL                  {
+//DEL                          alert('Select Defaulting Status first');
+//DEL                          document.getElementById(txtStatusid).focus();
+//DEL                  }
+
+//page_Student_SubjectStatus_Result_Button_Submit_OnClick @36-B077D20B
+function page_Student_SubjectStatus_Result_Button_Submit_OnClick()
+{
+    var result;
+//End page_Student_SubjectStatus_Result_Button_Submit_OnClick
+
+//Confirmation Message @37-257FDD03
+    return confirm('Submit records?');
+//End Confirmation Message
+
+//Close page_Student_SubjectStatus_Result_Button_Submit_OnClick @36-BC33A33A
+    return result;
+}
+//End Close page_Student_SubjectStatus_Result_Button_Submit_OnClick
+
+//page_Student_SubjectStatus_Result_DEFAULTING_STATUS_ID_OnChange @55-E27A81CB
+function page_Student_SubjectStatus_Result_DEFAULTING_STATUS_ID_OnChange()
+{
+    var result;
+//End page_Student_SubjectStatus_Result_DEFAULTING_STATUS_ID_OnChange
+
+//Custom Code @68-2A29BDB7
+    // -------------------------
+        // set date to today when status changes
+     if(this.value == "A" || this.value == "I") 
+         {
+                  var TodayDate=new Date();
+          var tdate = TodayDate.getDate();
+          var month = TodayDate.getMonth()+1;
+          var yr = TodayDate.getFullYear().toString();
+    
+                  if (tdate<10)
+                      tdate = "0" + tdate;
+                  if (month<10)
+                      month = "0" + month;
+                  yr= yr.substring(2,4);
+        
+                  var setDateFormat= tdate + "/" +  month + "/" + yr ;
+                  var txtdateid= this.id.replace('DEFAULTING_STATUS_ID','DEFAULTING_STATUS_DATE');
+          document.getElementById(txtdateid).value=setDateFormat;
+    }
+        else
+        {
+                var txtdateid= this.id.replace('DEFAULTING_STATUS_ID','DEFAULTING_STATUS_DATE');
+        document.getElementById(txtdateid).value='';
+        }
+    // -------------------------
+//End Custom Code
+
+//Close page_Student_SubjectStatus_Result_DEFAULTING_STATUS_ID_OnChange @55-BC33A33A
+    return result;
+}
+//End Close page_Student_SubjectStatus_Result_DEFAULTING_STATUS_ID_OnChange
+
+//page_Student_SubjectStatus_Result_WARNING_LETTER_Id_OnChange @87-9C8E60B3
+function page_Student_SubjectStatus_Result_WARNING_LETTER_Id_OnChange()
+{
+    var result;
+//End page_Student_SubjectStatus_Result_WARNING_LETTER_Id_OnChange
+
+//Custom Code @118-2A29BDB7
+    // -------------------------
+        // set date to today when status changes
+     if(this.value == "Y" || this.value == "N") 
+         {
+                        var TodayDate=new Date();
+          var tdate = TodayDate.getDate();
+          var month = TodayDate.getMonth()+1;
+          var yr = TodayDate.getFullYear().toString();
+    
+          if (tdate<10)
+              tdate = "0" + tdate;
+          if (month<10)
+              month = "0" + month;
+          yr= yr.substring(2,4);
+          var setDateFormat= tdate + "/" +  month + "/" + yr ;
+          var txtdateid= this.id.replace('WARNING_LETTER_Id','WARNING_SENT_DATE');
+          document.getElementById(txtdateid).value=setDateFormat;
+    }
+        else
+        {
+        var txtdateid= this.id.replace('WARNING_LETTER_Id','WARNING_SENT_DATE');
+        document.getElementById(txtdateid).value='';
+        }
+    // -------------------------
+//End Custom Code
+
+//Close page_Student_SubjectStatus_Result_WARNING_LETTER_Id_OnChange @87-BC33A33A
+    return result;
+}
+//End Close page_Student_SubjectStatus_Result_WARNING_LETTER_Id_OnChange
+
+//DEL      // -------------------------
+//DEL            var txtStatusid= this.id.replace('DEFAULTING_STATUS_DATE','DEFAULTING_STATUS_ID');
+//DEL        if (document.getElementById(txtStatusid).value=='')
+//DEL                  {
+//DEL                          alert('Select Defaulting Status first');
+//DEL                          document.getElementById(txtStatusid).focus();
+//DEL                  }
+//DEL      // -------------------------
+
+//page_Student_SubjectStatus_Result_Cancel_OnClick @38-50A32E9D
+function page_Student_SubjectStatus_Result_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_Student_SubjectStatus_Result_Cancel_OnClick
+
+//bind_events @1-64A2253F
+function bind_events() {
+    if(typeof(initStudent_SubjectStatus_ResultElements) == "function")
+        initStudent_SubjectStatus_ResultElements();
+    if(typeof(initStudent_SubjectStatus_ResultElements) == "function"){
+        for(var i = 0; i < Student_SubjectStatus_ResultElements.length; i++){
+            addEventHandler(Student_SubjectStatus_ResultElements[i][Student_SubjectStatus_ResultWARNING_LETTER_IdID].id, "change", page_Student_SubjectStatus_Result_WARNING_LETTER_Id_OnChange);
+        }
+    }
+    if(typeof(initStudent_SubjectStatus_ResultElements) == "function"){
+        for(var i = 0; i < Student_SubjectStatus_ResultElements.length; i++){
+            addEventHandler(Student_SubjectStatus_ResultElements[i][Student_SubjectStatus_ResultDEFAULTING_STATUS_IDID].id, "change", page_Student_SubjectStatus_Result_DEFAULTING_STATUS_ID_OnChange);
+        }
+    }
+    if(typeof(Student_SubjectStatus_ResultStaticElementsID) == "object" && typeof(Student_SubjectStatus_ResultStaticElementsID[Student_SubjectStatus_ResultButton_SubmitID]) == "object" && Student_SubjectStatus_ResultStaticElementsID[Student_SubjectStatus_ResultButton_SubmitID]!=null)
+        addEventHandler(Student_SubjectStatus_ResultStaticElementsID[Student_SubjectStatus_ResultButton_SubmitID].id, "click", page_Student_SubjectStatus_Result_Button_Submit_OnClick);
+    addEventHandler("Student_SubjectStatus_searchList_Staff_ID","change",page_Student_SubjectStatus_search_List_Staff_ID_OnChange);
+    addEventHandler("Student_SubjectStatus_ResultCancel","click",page_Student_SubjectStatus_Result_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+window.onload = bind_events;
+//End CCS script
+</script>
+<style type="text/css">
+<!--
+u.fade  { color: #AEAEAE; text-decoration: line-through; }
+-->
+</style>
+</head>
+<body>
+<p align="center">{Header} </p>
+<p align="center">
+<!-- BEGIN Record Student_SubjectStatus_search -->
+<form id="Student_SubjectStatus_search" method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search Students Subject Status</th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>STAFF ID</th>
+ 
+            <td>{s_Staff_ID} 
+              <select style="WIDTH: 200px" id="Student_SubjectStatus_searchList_Staff_ID" name="{List_Staff_ID_Name}">
+                <option selected value="">Select Staff Member First</option>
+                {List_Staff_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUBJECT ID</th>
+ 
+            <td>
+              <select id="Student_SubjectStatus_searchs_STAFF_SUBJECT_ID" name="{s_STAFF_SUBJECT_ID_Name}">
+                <option selected value="">Select a subject</option>
+                {s_STAFF_SUBJECT_ID_Options}
+              </select>
+ 
+              <select style="WIDTH: 310px" id="Student_SubjectStatus_searchselected_STAFF_SUBJECT_ID" name="{selected_STAFF_SUBJECT_ID_Name}">
+                <option selected value="">Click 'Search' to fill this list, then select Subject</option>
+                {selected_STAFF_SUBJECT_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Defaulting?&nbsp;</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton s_DefaultingFlag --><input type="radio" id="Student_SubjectStatus_searchs_DefaultingFlag_{s_DefaultingFlag:optionNumber}" name="{s_DefaultingFlag_Name}" value="{Value}" {Check}>{Description}<!-- END RadioButton s_DefaultingFlag -->&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="Student_SubjectStatus_search_searchClearParameters">Clear</a></td> 
+            <td align="right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="Student_SubjectStatus_search_searchButton_DoSearch" class="Button" name="{Button_Name}" value="Search"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <input type="hidden" id="Student_SubjectStatus_searchhidden_Staff_id" name="{hidden_Staff_id_Name}" value="{hidden_Staff_id}">
+</form>
+<!-- END Record Student_SubjectStatus_search --></p>
+<div align="center">
+  <!-- BEGIN Panel Panel1 -->
+  <div class="wrapperbox" align="left">
+    <div class="success">
+      Updates saved Successfully! 
+    </div>
+  </div>
+  <div align="left">
+    <br>
+    &nbsp; 
+  </div>
+  <!-- END Panel Panel1 -->
+</div>
+<!-- BEGIN EditableGrid Student_SubjectStatus_Result -->
+<form id="Student_SubjectStatus_Result" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" name="FormState" value="{FormState}">{FormScript} 
+  <table border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Change Defaulting Student's Subject Status</th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="14">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Row">
+            <td colspan="14">Total Records:&nbsp;{Student_SubjectStatus_TotalRecords}</td>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>
+            <!-- BEGIN Sorter Sorter_ASSIGNMENT_SUBMISSION_SUBJECT_ID --><a href="{Sort_URL}" id="Student_SubjectStatus_ResultSorter_ASSIGNMENT_SUBMISSION_SUBJECT_ID">Subject ID</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ASSIGNMENT_SUBMISSION_SUBJECT_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ASSIGNMENT_SUBMISSION_STUDENT_ID --><a href="{Sort_URL}" id="Student_SubjectStatus_ResultSorter_ASSIGNMENT_SUBMISSION_STUDENT_ID">Student ID</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ASSIGNMENT_SUBMISSION_STUDENT_ID --></th>
+ 
+            <th>&nbsp;Student Name</th>
+ 
+            <th>&nbsp;</th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SUBJ_ENROL_STATUS --><a href="{Sort_URL}" id="Student_SubjectStatus_ResultSorter_SUBJ_ENROL_STATUS">Subject Status</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJ_ENROL_STATUS --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ASSMT_SUBMISSIONS --><a href="{Sort_URL}" id="Student_SubjectStatus_ResultSorter_ASSMT_SUBMISSIONS">Assignments Submitted</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ASSMT_SUBMISSIONS --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_DEFAULTING_STATUS --><a href="{Sort_URL}" id="Student_SubjectStatus_ResultSorter_DEFAULTING_STATUS">Send Warning Letter?</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_DEFAULTING_STATUS --></th>
+ 
+            <th align="center">&nbsp; 
+            <!-- BEGIN Sorter Sorter_DEFAULTING_STATUS_DATE --><a href="{Sort_URL}" id="Student_SubjectStatus_ResultSorter_DEFAULTING_STATUS_DATE">'Send Warning Letter'<br>
+            Last changed Date</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_DEFAULTING_STATUS_DATE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_WARNING_LETTER --><a href="{Sort_URL}" id="Student_SubjectStatus_ResultSorter_WARNING_LETTER">Warning Letter Sent?</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_WARNING_LETTER --></th>
+ 
+            <th colspan="5">
+            <!-- BEGIN Sorter Sorter_Warning_Sent_Date --><a href="{Sort_URL}" id="Student_SubjectStatus_ResultSorter_Warning_Sent_Date">Warning Sent Date</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_Warning_Sent_Date --></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="14">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td>{SS_SUBJECT_ID}&nbsp;</td> 
+            <td><a href="{SS_STUDENT_ID_Src}" id="Student_SubjectStatus_ResultSS_STUDENT_ID_{Student_SubjectStatus_Result:rowNumber}">{SS_STUDENT_ID}</a>&nbsp;{label_ALERTS}</td> 
+            <td>{lbl_StudentName}<br>
+<a href="{lbl_StudentEmail_Src}" id="Student_SubjectStatus_Resultlbl_StudentEmail_{Student_SubjectStatus_Result:rowNumber}" title="create an email to this Student.">{lbl_StudentEmail}</a></td> 
+            <td>&nbsp;</td> 
+            <td>
+              <div align="center">
+                {SUBJ_ENROL_STATUS} 
+              </div>
+              &nbsp;</td> 
+            <td>
+              <div align="center">
+                {NUM_OF_ASSIGNMENTS} <br>
+                {LIST_OF_ASSIGNMENTS} 
+              </div>
+              &nbsp;</td> 
+            <td>
+              <select id="Student_SubjectStatus_ResultDEFAULTING_STATUS_ID_{Student_SubjectStatus_Result:rowNumber}" name="{DEFAULTING_STATUS_ID_Name}">
+                <option selected value="">Select Value</option>
+                {DEFAULTING_STATUS_ID_Options}
+              </select>
+ <input type="hidden" id="Student_SubjectStatus_ResultHidden_DefaultingStatus" name="{Hidden_DefaultingStatus_Name}" value="{Hidden_DefaultingStatus}"></td> 
+            <td>{lblDefaultingStatusDate}<input type="hidden" id="Student_SubjectStatus_ResultDEFAULTING_STATUS_DATE" name="{DEFAULTING_STATUS_DATE_Name}" value="{DEFAULTING_STATUS_DATE}"></td> 
+            <td align="center">{Lbl_Warning_Letter} 
+              <select id="Student_SubjectStatus_ResultWARNING_LETTER_Id_{Student_SubjectStatus_Result:rowNumber}" name="{WARNING_LETTER_Id_Name}">
+                <option selected value="">Select Value</option>
+                {WARNING_LETTER_Id_Options}
+              </select>
+ </td> 
+            <td colspan="5" align="center">{Lbl_Warning_Sent_Date}<input type="text" id="Student_SubjectStatus_ResultWARNING_SENT_DATE_{Student_SubjectStatus_Result:rowNumber}" name="{WARNING_SENT_DATE_Name}" maxlength="100" value="{WARNING_SENT_DATE}" size="10">&nbsp; 
+              <!-- BEGIN DatePicker DatePicker_WARNING_SENT_DATE --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Student_SubjectStatus_ResultDatePicker_WARNING_SENT_DATE_{Student_SubjectStatus_Result:rowNumber}"><img id="Student_SubjectStatus_ResultDatePicker_WARNING_SENT_DATE_Image_{Student_SubjectStatus_Result:rowNumber}" border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_WARNING_SENT_DATE --></td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="14">No Defaulting Students found.</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td colspan="13">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN Page_Parameter --><input type="hidden" name="{Name}" value="{Value}"><!-- END Page_Parameter -->Per page: 
+              <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                <option selected value="">-</option>
+ {PageSize_Options}
+              </select>
+ 
+              <!-- BEGIN First_On --><a href="{First_URL}"><img border="0" src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img border="0" src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img border="0" src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img border="0" src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img border="0" src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img border="0" src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img border="0" src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img border="0" src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+            <td>
+              <!-- BEGIN Button Button_Submit --><input type="submit" id="Student_SubjectStatus_ResultButton_Submit" class="Button" name="{Button_Name}" value="Submit"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input type="submit" id="Student_SubjectStatus_ResultCancel" class="Button" name="{Button_Name}" value="Cancel"><!-- END Button Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid Student_SubjectStatus_Result -->{Footer} 
+</body>
+</html>

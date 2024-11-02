@@ -1,0 +1,79 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ASSIGNMENT</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{Header}</p>
+<p align="center"><a href="{Link1_Src}" class="Button" id="Link1">back to Assignment List</a></p>
+<p>
+<!-- BEGIN Record Assignment_maint -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" width="60%" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Assignment</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th colspan="2">Subject: {lblSubjectID}&nbsp;: {lblSubjectName}</th>
+ 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Assignment ID:</th>
+ 
+            <td><input maxlength="4" size="4" value="{txtASSIGNMENT_ID}" name="{txtASSIGNMENT_ID_Name}" id="Assignment_mainttxtASSIGNMENT_ID"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Assignment Description:</th>
+ 
+            <td><input maxlength="60" size="60" value="{txtASSIGNMENT_DESCRIPTION}" name="{txtASSIGNMENT_DESCRIPTION_Name}" id="Assignment_mainttxtASSIGNMENT_DESCRIPTION"><br>
+              <em>(max. 60 chars.)</em></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Status:</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton radioSTATUS --><input type="radio" checked value="{Value}" name="{radioSTATUS_Name}" {Check} id="Assignment_maintradioSTATUS_{radioSTATUS:optionNumber}">{Description}<!-- END RadioButton radioSTATUS -->&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / DATE</th>
+ 
+            <td>{lblLAST_ALTERED_BY}&nbsp;/ {lblLAST_ALTERED_DATE}</td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" type="submit" value="Add" name="{Button_Name}" id="Assignment_maintButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" type="submit" value="Update" name="{Button_Name}" id="Assignment_maintButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input class="Button" type="submit" value="Cancel" name="{Button_Name}" id="Assignment_maintButton_Cancel"><!-- END Button Button_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ <input type="hidden" value="{hidden_SUBJECT_ID}" name="{hidden_SUBJECT_ID_Name}" id="Assignment_mainthidden_SUBJECT_ID"><input type="hidden" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}" id="Assignment_mainthidden_LAST_ALTERED_BY"><input type="hidden" value="{hidden_LAST_ALTERED_DATE}" name="{hidden_LAST_ALTERED_DATE_Name}" id="Assignment_mainthidden_LAST_ALTERED_DATE"></td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record Assignment_maint --></p>
+</body>
+</html>

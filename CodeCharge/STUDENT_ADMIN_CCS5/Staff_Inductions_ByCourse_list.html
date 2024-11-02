@@ -1,0 +1,146 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Staff Inductions - By Course List</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<style media="print">
+#STAFF_INDUCTIONS_COURSESSearch .noprint{display:none;} 
+#STAFF_INDUCTIONS_COURSESRepeater {width: 100%; margin: 0; float: none;}
+a:link, a:visited {color: #781351}
+</style>
+</head>
+<body>
+<p class="noprint">{Header}</p>
+<p>
+<!-- BEGIN Record STAFF_INDUCTIONS_COURSESSearch -->
+<form id="STAFF_INDUCTIONS_COURSESSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search Staff Inductions</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th>
+ 
+            <td><input id="STAFF_INDUCTIONS_COURSESSearchs_INDUCTION_TITLE" maxlength="50" size="50" value="{s_INDUCTION_TITLE}" name="{s_INDUCTION_TITLE_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Status</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton s_STATUS --><input id="STAFF_INDUCTIONS_COURSESSearchs_STATUS_{s_STATUS:optionNumber}" type="radio" value="{Value}" name="{s_STATUS_Name}" {Check}>{Description}<!-- END RadioButton s_STATUS --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="STAFF_INDUCTIONS_COURSESSearchClearParameters">Clear</a></td> 
+            <td align="right">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="STAFF_INDUCTIONS_COURSESSearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STAFF_INDUCTIONS_COURSESSearch --></p>
+<p align="right"><a href="{Link_AddNEw_Src}" class="Button noprint" id="Link_AddNEw">Add New</a></p>
+<p><br>
+</p>
+<p>
+<!-- BEGIN Grid STAFF_INDUCTIONS_COURSES -->
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of Staff Inductions</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="6">Total Records:&nbsp;{STAFF_INDUCTIONS_COURSES_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_INDUCTION_TITLE --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_COURSESSorter_INDUCTION_TITLE">INDUCTION TITLE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_INDUCTION_TITLE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_INDUCTION_DESCRIPTION --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_COURSESSorter_INDUCTION_DESCRIPTION">INDUCTION DESCRIPTION</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_INDUCTION_DESCRIPTION --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STATUS --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_COURSESSorter_STATUS">STATUS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STATUS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_COURSESSorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_COURSESSorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{id_Src}" id="STAFF_INDUCTIONS_COURSESid_{STAFF_INDUCTIONS_COURSES:rowNumber}">edit</a>&nbsp;</td> 
+          <td><a href="{INDUCTION_TITLE_Src}" id="STAFF_INDUCTIONS_COURSESINDUCTION_TITLE_{STAFF_INDUCTIONS_COURSES:rowNumber}">{INDUCTION_TITLE}</a>&nbsp;</td> 
+          <td>{INDUCTION_DESCRIPTION}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{STATUS}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No Inductions found.</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid STAFF_INDUCTIONS_COURSES --></p>
+<p><br>
+</p>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Class List Reports</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_CLASS_LIST_Panel_Button_DoSearch_OnClick @80-645F28F1
+function page_CLASS_LIST_Panel_Button_DoSearch_OnClick()
+{
+    var result;
+//End page_CLASS_LIST_Panel_Button_DoSearch_OnClick
+
+//Custom Code @90-2A29BDB7
+    // -------------------------
+    if (document.getElementById('CLASS_LIST_PanelList_SUBJECT_ID').value=='')
+        {
+                alert('Select Subject');
+                return false;
+        }
+        else if (document.getElementById('CLASS_LIST_PanelList_SUBJECT_ENROL_STATUS').value=='')
+        {
+                alert('Select Subject Enrolment Status');
+                return false;
+}
+    // -------------------------
+//End Custom Code
+
+//Close page_CLASS_LIST_Panel_Button_DoSearch_OnClick @80-BC33A33A
+    return result;
+}
+//End Close page_CLASS_LIST_Panel_Button_DoSearch_OnClick
+
+//page_STUDENT_COMMENT_Button_Cancel_OnClick @15-3BF1766F
+function page_STUDENT_COMMENT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_COMMENT_Button_Cancel_OnClick
+
+//bind_events @1-BF2C88A7
+function bind_events() {
+    addEventHandler("CLASS_LIST_PanelButton_DoSearch","click",page_CLASS_LIST_Panel_Button_DoSearch_OnClick);
+    addEventHandler("STUDENT_COMMENTButton_Cancel","click",page_STUDENT_COMMENT_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+&nbsp;&nbsp; 
+<!-- BEGIN Record CLASS_LIST_Panel -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Search My Classes</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>&nbsp;Subject: </th>
+ 
+                        <td>&nbsp; 
+                            <select id="CLASS_LIST_PanelList_SUBJECT_ID" style="WIDTH: 313px" name="{List_Subject_id_Name}">
+                                <option selected value="">Select Subject</option>
+                                {List_Subject_id_Options}
+                            </select>
+ &nbsp;&nbsp; </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;<span style="FONT-SIZE: 9pt; FONT-FAMILY: 'Verdana','sans-serif'; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Subject Enrolment Status:</span></th>
+ 
+                        <td>&nbsp; 
+                            <select id="CLASS_LIST_PanelList_SUBJECT_ENROL_STATUS" style="WIDTH: 313px" name="{List_SUBJECT_ENROL_STATUS_Name}">
+                                <option selected value="">Select Subject Enrolment Status</option>
+                                {List_SUBJECT_ENROL_STATUS_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Semester:</th>
+ 
+                        <td>&nbsp; 
+                            <select id="CLASS_LIST_PanelList_SEMESTER" name="{List_SEMESTER_Name}">
+                                {List_SEMESTER_Options}
+                            </select>
+ &nbsp;&nbsp;&nbsp; </td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="2" align="right"><a href="{ClearParameters_Src}" id="CLASS_LIST_PanelClearParameters">Clear</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+                            <!-- BEGIN Button Button_DoSearch --><input type="submit" id="CLASS_LIST_PanelButton_DoSearch" class="Button" value="Show My Students" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                    </tr>
+                </table>
+                <em>(only your subjects are shown - Use 'Teacher Allocations' to view other Subjects)</em></td>
+        </tr>
+    </table>
+</form>
+&nbsp;&nbsp;&nbsp;<!-- END Record CLASS_LIST_Panel -->
+<p></p>
+<p><a href="{LinkExportToExcel_Src}" id="LinkExportToExcel" title="Export list to Excel" class="Button" style="BORDER-LEFT-WIDTH: 2px; BORDER-RIGHT-WIDTH: 2px; BORDER-BOTTOM-WIDTH: 2px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BORDER-TOP-WIDTH: 2px">Export to Excel</a>&nbsp;&nbsp; 
+<!-- BEGIN Link Link_ShowBulkComment --><a href="{Link_ShowBulkComment_Src}" id="Link_ShowBulkComment" title="show Class Comment entry form" class="Button" style="BORDER-LEFT-WIDTH: 2px; BORDER-RIGHT-WIDTH: 2px; BORDER-BOTTOM-WIDTH: 2px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BORDER-TOP-WIDTH: 2px">Add Class Comment</a><!-- END Link Link_ShowBulkComment --></p>
+<p>
+<!-- BEGIN Record STUDENT_COMMENT -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    &nbsp; 
+    <table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Add Comment to ALL Students on this Class List</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>COMMENT 
+                        <div id="maxchar_comment">
+                            255 characters allowed 
+                        </div>
+                        </th>
+ 
+                        <td><textarea onkeyup="limitMaxLength(this,255,'maxchar_comment');" id="STUDENT_COMMENTCOMMENT" rows="3" cols="60" name="{COMMENT_Name}">{COMMENT}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Contact Type</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton lbSpecialCommentType1 --><input type="radio" id="STUDENT_COMMENTlbSpecialCommentType1_{lbSpecialCommentType1:optionNumber}" value="{Value}" name="{lbSpecialCommentType1_Name}" {Check}>{Description}<!-- END RadioButton lbSpecialCommentType1 --></td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="2" align="right">&nbsp; 
+                            <!-- BEGIN Button Button_Insert --><input type="submit" id="STUDENT_COMMENTButton_Insert" class="Button" value="Add Class Comment" name="{Button_Name}"><!-- END Button Button_Insert -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_COMMENTButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STUDENT_COMMENThidden_SUBJECT_ID" value="{hidden_SUBJECT_ID}" name="{hidden_SUBJECT_ID_Name}"><input type="hidden" id="STUDENT_COMMENThidden_ENROLSTATUS" value="{hidden_ENROLSTATUS}" name="{hidden_ENROLSTATUS_Name}"><input type="hidden" id="STUDENT_COMMENTHidden_SEMESTER" value="{Hidden_SEMESTER}" name="{Hidden_SEMESTER_Name}"></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_COMMENT --></p>
+<!-- BEGIN Grid Students_Grid -->
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>Class List </th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Row">
+                    <td colspan="16">Total Student Count:&nbsp;{STUDENT_ClassList_TotalRecords}</td>
+                </tr>
+ 
+                <tr class="Caption">
+                    <th>&nbsp;#</th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_STUDENT_ID --><a href="{Sort_URL}" id="Students_GridSorter_STUDENT_ID">STUDENT ID</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+                    <th>&nbsp;Actions</th>
+ 
+                    <th>Standard Learning Program</th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="Students_GridSorter_SURNAME">SURNAME</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_SURNAME --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="Students_GridSorter_FIRST_NAME">FIRST NAME</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_SCHOOL_NAME --><a href="{Sort_URL}" id="Students_GridSorter_SCHOOL_NAME">SCHOOL NAME</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_SCHOOL_NAME --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_ATTENDING_SCHOOL_ID --><a href="{Sort_URL}" id="Students_GridSorter_ATTENDING_SCHOOL_ID">ATTENDING SCHOOL ID</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_ATTENDING_SCHOOL_ID --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_STAFF_ID --><a href="{Sort_URL}" id="Students_GridSorter_STAFF_ID">STAFF ID</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_STAFF_ID --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_CLASS_CODE --><a href="{Sort_URL}" id="Students_GridSorter_CLASS_CODE">CLASS CODE</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_CLASS_CODE -->&nbsp;</th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_SUBJECT_ABBREV --><a href="{Sort_URL}" id="Students_GridSorter_SUBJECT_ABBREV">SUBJECT ABBREV</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_SUBJECT_ABBREV --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_SUBJECT_ID --><a href="{Sort_URL}" id="Students_GridSorter_SUBJECT_ID">SUBJECT ID</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_SUBJECT_ID --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_SUBJ_ENROL_STATUS --><a href="{Sort_URL}" id="Students_GridSorter_SUBJ_ENROL_STATUS">SUBJ ENROL STATUS</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_SUBJ_ENROL_STATUS --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_SEMESTER --><a href="{Sort_URL}" id="Students_GridSorter_SEMESTER">SEMESTER</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_SEMESTER --></th>
+ 
+                    <th colspan="2">
+                    <!-- BEGIN Sorter Sorter_ENROLMENT_DATE --><a href="{Sort_URL}" id="Students_GridSorter_ENROLMENT_DATE">ENROLMENT DATE</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_DATE -->&nbsp;</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr class="Row">
+                    <td style="TEXT-ALIGN: right">{lblCnt}&nbsp;</td> 
+                    <td style="TEXT-ALIGN: right"><a href="{STUDENT_ID_Src}" id="Students_GridSTUDENT_ID">{STUDENT_ID}</a>&nbsp; {label_ALERTS}</td> 
+                    <td>&nbsp;<a href="{Link1_Src}" id="Students_GridLink1_{Students_Grid:rowNumber}">Comments</a> 
+                        <!-- BEGIN ImageLink ClippyLink1 --><a href="{ClippyLink1}" title="copy this student"><img onclick="copyToClipboard('Students_GridHidden_clipboardtext');return false;" style="BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; BORDER-LEFT: 0px" src="images/page_white_excel.png"></a><!-- END ImageLink ClippyLink1 -->&nbsp;<input type="hidden" id="Students_GridHidden_clipboardtext" value="{Hidden_clipboardtext}" name="{Hidden_clipboardtext_Name}"></td> 
+                    <td>&nbsp;&nbsp;{StandardLearningProgram}</td> 
+                    <td>{SURNAME}&nbsp;&nbsp;</td> 
+                    <td>{FIRST_NAME}&nbsp;</td> 
+                    <td>{SCHOOL_NAME}&nbsp;</td> 
+                    <td>{ATTENDING_SCHOOL_ID}&nbsp;</td> 
+                    <td>{STAFF_ID}&nbsp;</td> 
+                    <td>{CLASS_CODE}</td> 
+                    <td>{SUBJECT_ABBREV}&nbsp;</td> 
+                    <td style="TEXT-ALIGN: right">{SUBJECT_ID}&nbsp;</td> 
+                    <td>{SUBJ_ENROL_STATUS}&nbsp;</td> 
+                    <td>{SEMESTER}&nbsp;</td> 
+                    <td colspan="2">{ENROLMENT_DATE}&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                    <td colspan="16">No Students found for this Teacher and Subject.</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                    <td colspan="16">
+                        <!-- BEGIN Navigator Navigator -->
+                        <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+                        <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                            <option selected value="">-</option>
+ {PageSize_Options}
+                        </select>
+ 
+                        <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+                        <!-- BEGIN First_Off -->First <!-- END First_Off -->
+                        <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+                        <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+                        <!-- BEGIN Pages -->
+                        <!-- BEGIN Page_On -->&nbsp;<a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                        <!-- BEGIN Page_Off -->{Page_Number}<!-- END Page_Off --><!-- END Pages -->&nbsp;of &nbsp;{Total_Pages}&nbsp; 
+                        <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+                        <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+                        <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+                        <!-- BEGIN Last_Off -->Last <!-- END Last_Off -->&nbsp;<!-- END Navigator Navigator -->&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+&nbsp;<!-- END Grid Students_Grid -->&nbsp;&nbsp;
+<script language="JavaScript" type="text/javascript">
+function limitMaxLength(formitem,maxlength,displaydivname) {
+        if (isNaN(maxlength)) {
+                return false;
+        } else {
+                var outputdiv = document.getElementById(displaydivname)
+                outputdiv.innerHTML = (maxlength-formitem.value.length) + ' characters allowed';
+                if (formitem.value.length+1>maxlength) {
+                        formitem.value=formitem.value.substring(0,maxlength);
+                }
+        }
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="js/css/ui-lightness/jquery-ui-1.8.8.custom.css">
+<script src="js/jquery_min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-ui-1.8.8.custom.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+function animateClick() {
+        $('<div class="overlay"></div>')
+                        .appendTo('span#STUDENT_COMMENTHolder')
+                        .fadeIn(1500)
+                        .delay(1000)
+                        .fadeOut(500);
+        return true;
+};
+
+$('a#Link_ShowBulkComment').click(function() {
+        $('span#STUDENT_COMMENTHolder').slideToggle('slow');
+                $('textarea#STUDENT_COMMENTCOMMENT').focus();
+});
+
+// check if any errors and show, otherwise hide
+if ( ($('span#STUDENT_COMMENTErrorLabel').text().length) != 0) {
+        $('span#STUDENT_COMMENTHolder').toggle(true);
+} else {
+        $('span#STUDENT_COMMENTHolder').toggle(false);
+}
+
+</script>
+<style type="text/css">
+<!--
+.overlay {
+        background: black no-repeat 50% 50%;
+                background-image: url(images/ajax_loader_bigwhite.gif);
+        display: none;
+        height: 100%;
+        left: 0;
+        opacity: .9;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+-->
+</style>
+</body>
+</html>

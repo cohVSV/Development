@@ -1,0 +1,460 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Medical Maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//DEL      // -------------------------
+//DEL   // Just to double up on New Records
+//DEL          result = true;
+//DEL      if(theForm.STUDENT_MEDICAL_DETAILSANAPHYLAXIS_FLAG[0].checked ==true) {
+//DEL          alert("Please ensure the Student Anaphylaxis Plan \n is in the Student Folder.")
+//DEL          return true;
+//DEL      }
+//DEL      // -------------------------
+
+//page_STUDENT_MEDICAL_DETAILS_ANAPHYLAXIS_FLAG_OnClick @22-2F3B2B28
+function page_STUDENT_MEDICAL_DETAILS_ANAPHYLAXIS_FLAG_OnClick()
+{
+    var result;
+//End page_STUDENT_MEDICAL_DETAILS_ANAPHYLAXIS_FLAG_OnClick
+
+//Custom Code @30-2A29BDB7
+    // -------------------------
+    //9-Oct-2014|EA| unfuddle #666 add reminder when selecting "Y" for Anaphylaxis
+    // needed to do '[0].checked ==true' instead of '.value == "Y"' as stupid IE wasn't returning 'Y'. Stupid IE.
+    result = true;
+    if(theForm.STUDENT_MEDICAL_DETAILSANAPHYLAXIS_FLAG[0].checked ==true) {
+        alert("Please remember to scan the Student Anaphylaxis Plan \n and Save it to the Student Folder.")
+        return true;
+    }
+    // -------------------------
+//End Custom Code
+
+//Close page_STUDENT_MEDICAL_DETAILS_ANAPHYLAXIS_FLAG_OnClick @22-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_MEDICAL_DETAILS_ANAPHYLAXIS_FLAG_OnClick
+
+//page_STUDENT_MEDICAL_DETAILS_Button_Cancel_OnClick @122-B5D387DF
+function page_STUDENT_MEDICAL_DETAILS_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_MEDICAL_DETAILS_Button_Cancel_OnClick
+
+//page_STUDENT_MEDICAL_DETAILS1_Button_Cancel_OnClick @58-FAADD279
+function page_STUDENT_MEDICAL_DETAILS1_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_MEDICAL_DETAILS1_Button_Cancel_OnClick
+
+//bind_events @1-1C8AF268
+function bind_events() {
+    addEventHandler("STUDENT_MEDICAL_DETAILSANAPHYLAXIS_FLAG","click",page_STUDENT_MEDICAL_DETAILS_ANAPHYLAXIS_FLAG_OnClick);
+    addEventHandler("STUDENT_MEDICAL_DETAILSButton_Cancel","click",page_STUDENT_MEDICAL_DETAILS_Button_Cancel_OnClick);
+    addEventHandler("STUDENT_MEDICAL_DETAILS1Button_Cancel","click",page_STUDENT_MEDICAL_DETAILS1_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+window.onload = bind_events;
+//End Assign bind_events
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+<p>{Menu_Student_maintain}</p>
+<p>
+<!-- BEGIN Record STUDENT_MEDICAL_DETAILS -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Edit Student Medical Details </th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th width="10%"><strong>STUDENT ID</strong></th>
+ 
+                        <td>{STUDENT_ID} 
+                            <!-- BEGIN Link Link_DiagnosisConfirmed --><a href="{Link_DiagnosisConfirmed_Src}" id="STUDENT_MEDICAL_DETAILSLink_DiagnosisConfirmed" title="open Diagnosis Confirmed" class="Button StrongBold">Wellbeing Information</a><!-- END Link Link_DiagnosisConfirmed --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td colspan="2">
+                            <h2>&nbsp;Student Medical Information</h2>
+                            <em>&nbsp;(2016 Enrolments onwards)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td nowrap><strong>Deaf or hearing Impaired?</strong></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton HEARING --><input type="radio" id="STUDENT_MEDICAL_DETAILSHEARING_{HEARING:optionNumber}" value="{Value}" name="{HEARING_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton HEARING --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Blind or Vision Impaired?</strong></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton VISION --><input type="radio" id="STUDENT_MEDICAL_DETAILSVISION_{VISION:optionNumber}" value="{Value}" name="{VISION_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton VISION --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Diagnosed with ASD/Aspergers?</strong></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton ASDASPERGERS --><input type="radio" id="STUDENT_MEDICAL_DETAILSASDASPERGERS_{ASDASPERGERS:optionNumber}" value="{Value}" name="{ASDASPERGERS_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton ASDASPERGERS --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Intellectual Disability?</strong></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton INTELLECTUAL --><input type="radio" id="STUDENT_MEDICAL_DETAILSINTELLECTUAL_{INTELLECTUAL:optionNumber}" value="{Value}" name="{INTELLECTUAL_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton INTELLECTUAL --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Physical Disability?</strong></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton PHYSICAL --><input type="radio" id="STUDENT_MEDICAL_DETAILSPHYSICAL_{PHYSICAL:optionNumber}" value="{Value}" name="{PHYSICAL_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton PHYSICAL --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Severe Behavioural Disorder?</strong></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton BEHAVIOURAL --><input type="radio" id="STUDENT_MEDICAL_DETAILSBEHAVIOURAL_{BEHAVIOURAL:optionNumber}" value="{Value}" name="{BEHAVIOURAL_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton BEHAVIOURAL --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Severe Language Disorder?</strong></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton LANGUAGE --><input type="radio" id="STUDENT_MEDICAL_DETAILSLANGUAGE_{LANGUAGE:optionNumber}" value="{Value}" name="{LANGUAGE_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton LANGUAGE --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Mental Health Condition?</strong></td> 
+                        <td nowrap>&nbsp; 
+                            <!-- BEGIN RadioButton MENTALHEALTH --><input type="radio" id="STUDENT_MEDICAL_DETAILSMENTALHEALTH_{MENTALHEALTH:optionNumber}" value="{Value}" name="{MENTALHEALTH_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton MENTALHEALTH --><br>
+                            &nbsp;If&nbsp;Yes:&nbsp;<input type="text" id="STUDENT_MEDICAL_DETAILSMENTALHEALTH_HISTORY" size="40" value="{MENTALHEALTH_HISTORY}" name="{MENTALHEALTH_HISTORY_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>History of Allergies?</strong></td> 
+                        <td nowrap>&nbsp; 
+                            <!-- BEGIN RadioButton HASALLERGYHISTORY --><input type="radio" id="STUDENT_MEDICAL_DETAILSHASALLERGYHISTORY_{HASALLERGYHISTORY:optionNumber}" value="{Value}" name="{HASALLERGYHISTORY_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton HASALLERGYHISTORY --><br>
+                            &nbsp;If&nbsp;Yes:&nbsp;<input type="text" id="STUDENT_MEDICAL_DETAILSALLERGYHISTORY" size="40" value="{ALLERGYHISTORY}" name="{ALLERGYHISTORY_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Diagnosed as at Risk of Anaphylaxis?</strong></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton ANAPHYLAXIS --><input type="radio" id="STUDENT_MEDICAL_DETAILSANAPHYLAXIS_{ANAPHYLAXIS:optionNumber}" value="{Value}" name="{ANAPHYLAXIS_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton ANAPHYLAXIS --><br>
+                            <em>if Yes - load Individual Anaphylaxis Management Plan to Student Folder</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Student Diagnosed with Asthma?</strong> <em>(2020)</em><br>
+                            <em>If Yes - get copy of Medical Management Plan</em></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton DIAGNOSED_ASTHMA --><input type="radio" id="STUDENT_MEDICAL_DETAILSDIAGNOSED_ASTHMA_{DIAGNOSED_ASTHMA:optionNumber}" value="{Value}" name="{DIAGNOSED_ASTHMA_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton DIAGNOSED_ASTHMA --><br>
+                            <em>Management Plan loaded to student folder? 
+                            <!-- BEGIN RadioButton MANAGE_PLAN_ASTHMA --><input type="radio" id="STUDENT_MEDICAL_DETAILSMANAGE_PLAN_ASTHMA_{MANAGE_PLAN_ASTHMA:optionNumber}" value="{Value}" name="{MANAGE_PLAN_ASTHMA_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton MANAGE_PLAN_ASTHMA --></em> </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Student Diagnosed with Diabetes?</strong> <em>(2020)</em><br>
+                            <em>If Yes - get copy of Medical Management Plan</em></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton DIAGNOSED_DIABETES --><input type="radio" id="STUDENT_MEDICAL_DETAILSDIAGNOSED_DIABETES_{DIAGNOSED_DIABETES:optionNumber}" value="{Value}" name="{DIAGNOSED_DIABETES_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton DIAGNOSED_DIABETES --><br>
+                            <em>Management Plan loaded to student folder? 
+                            <!-- BEGIN RadioButton MANAGE_PLAN_DIABETES --><input type="radio" id="STUDENT_MEDICAL_DETAILSMANAGE_PLAN_DIABETES_{MANAGE_PLAN_DIABETES:optionNumber}" value="{Value}" name="{MANAGE_PLAN_DIABETES_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton MANAGE_PLAN_DIABETES --></em> </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Student Diagnosed with Epilepsy?</strong> <em>(2020)</em><br>
+                            <em>If Yes - get copy of Medical Management Plan</em></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton DIAGNOSED_EPILEPSY --><input type="radio" id="STUDENT_MEDICAL_DETAILSDIAGNOSED_EPILEPSY_{DIAGNOSED_EPILEPSY:optionNumber}" value="{Value}" name="{DIAGNOSED_EPILEPSY_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton DIAGNOSED_EPILEPSY --><br>
+                            <em>Management Plan loaded to student folder? 
+                            <!-- BEGIN RadioButton MANAGE_PLAN_EPILEPSY --><input type="radio" id="STUDENT_MEDICAL_DETAILSMANAGE_PLAN_EPILEPSY_{MANAGE_PLAN_EPILEPSY:optionNumber}" value="{Value}" name="{MANAGE_PLAN_EPILEPSY_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton MANAGE_PLAN_EPILEPSY --></em> </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Diagnosed with any other condition?</strong></td> 
+                        <td nowrap>&nbsp; 
+                            <!-- BEGIN RadioButton HASOTHERCONDITIONS --><input type="radio" id="STUDENT_MEDICAL_DETAILSHASOTHERCONDITIONS_{HASOTHERCONDITIONS:optionNumber}" value="{Value}" name="{HASOTHERCONDITIONS_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton HASOTHERCONDITIONS --><br>
+                            &nbsp;If&nbsp;Yes:&nbsp;<input type="text" id="STUDENT_MEDICAL_DETAILSOTHERCONDITIONS" size="40" value="{OTHERCONDITIONS}" name="{OTHERCONDITIONS_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Other Medical Issues VSV should be aware of?</strong></td> 
+                        <td>&nbsp; <textarea id="STUDENT_MEDICAL_DETAILSOTHERMEDICALISSUES" rows="3" cols="40" name="{OTHERMEDICALISSUES_Name}">{OTHERMEDICALISSUES}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td colspan="2">
+                            <h2>&nbsp;Student (Parent) Assessment</h2>
+                        </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td colspan="2"><strong>Received Support from these Programs or Services?</strong> <em>(2018)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td colspan="2">
+                            <!-- BEGIN CheckBoxList cbRECEIVED_SUPPORT_PROGRAMS_SERVICES --><input type="checkbox" id="STUDENT_MEDICAL_DETAILScbRECEIVED_SUPPORT_PROGRAMS_SERVICES_{cbRECEIVED_SUPPORT_PROGRAMS_SERVICES:optionNumber}" value="{Value}" name="{cbRECEIVED_SUPPORT_PROGRAMS_SERVICES_Name}" {Check}>{Description}<!-- END CheckBoxList cbRECEIVED_SUPPORT_PROGRAMS_SERVICES --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td>If Other Support Program:</td> 
+                        <td><input type="text" id="STUDENT_MEDICAL_DETAILSRECEIVED_SUPPORT_PROGRAMS_SERVICES_OTHER" maxlength="50" size="35" value="{RECEIVED_SUPPORT_PROGRAMS_SERVICES_OTHER}" name="{RECEIVED_SUPPORT_PROGRAMS_SERVICES_OTHER_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td colspan="2">
+                            <h2>&nbsp;School Referral</h2>
+                        </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td colspan="2"><strong>PSD Eligibility</strong></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Assessed</strong> for funding through DET Program for Students with Disabilities?</td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton PSD_FUNDING_ASSESSED --><input type="radio" id="STUDENT_MEDICAL_DETAILSPSD_FUNDING_ASSESSED_{PSD_FUNDING_ASSESSED:optionNumber}" value="{Value}" name="{PSD_FUNDING_ASSESSED_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton PSD_FUNDING_ASSESSED --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Approved</strong> for funding through DET Program for Students with Disabilities?</td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton PSD_FUNDING_ELIGIBLE --><input type="radio" id="STUDENT_MEDICAL_DETAILSPSD_FUNDING_ELIGIBLE_{PSD_FUNDING_ELIGIBLE:optionNumber}" value="{Value}" name="{PSD_FUNDING_ELIGIBLE_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton PSD_FUNDING_ELIGIBLE --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td colspan="2"><strong>PSD Category</strong> <em>(may select more than one) (2019)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td colspan="2">
+                            <!-- BEGIN CheckBoxList cbPSD_FUNDING_CATEGORY --><input type="checkbox" id="STUDENT_MEDICAL_DETAILScbPSD_FUNDING_CATEGORY_{cbPSD_FUNDING_CATEGORY:optionNumber}" value="{Value}" name="{cbPSD_FUNDING_CATEGORY_Name}" {Check}>{Description}<!-- END CheckBoxList cbPSD_FUNDING_CATEGORY --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>Level of PSD funding approved:</strong> <em>(2020)</em></td> 
+                        <td>
+                            <!-- BEGIN RadioButton PSD_FUNDING_LEVEL --><input type="radio" id="STUDENT_MEDICAL_DETAILSPSD_FUNDING_LEVEL_{PSD_FUNDING_LEVEL:optionNumber}" value="{Value}" name="{PSD_FUNDING_LEVEL_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END RadioButton PSD_FUNDING_LEVEL --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <td><strong>PSD Details / level of funding if approved?</strong></td> 
+                        <td>&nbsp; <textarea id="STUDENT_MEDICAL_DETAILSPSD_FUNDING_OTHER" rows="3" cols="30" name="{PSD_FUNDING_OTHER_Name}">{PSD_FUNDING_OTHER}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th colspan="2"><strong>NCCD Eligibility</strong></th>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <p>Approved for funding through the Commonwealth<br>
+                        NCCD?</p>
+                        </th>
+ 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton NCCD_FUNDING_ELIGIBLE --><input type="radio" id="STUDENT_MEDICAL_DETAILSNCCD_FUNDING_ELIGIBLE_{NCCD_FUNDING_ELIGIBLE:optionNumber}" value="{Value}" name="{NCCD_FUNDING_ELIGIBLE_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END RadioButton NCCD_FUNDING_ELIGIBLE --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>NCCD Category</th>
+ 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton NCCD_FUNDING_CATEGORY --><input type="radio" id="STUDENT_MEDICAL_DETAILSNCCD_FUNDING_CATEGORY_{NCCD_FUNDING_CATEGORY:optionNumber}" value="{Value}" name="{NCCD_FUNDING_CATEGORY_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END RadioButton NCCD_FUNDING_CATEGORY --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Level of NCCD funding approved</th>
+ 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton NCCD_FUNDING_LEVEL --><input type="radio" id="STUDENT_MEDICAL_DETAILSNCCD_FUNDING_LEVEL_{NCCD_FUNDING_LEVEL:optionNumber}" value="{Value}" name="{NCCD_FUNDING_LEVEL_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END RadioButton NCCD_FUNDING_LEVEL --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th colspan="2"><br>
+                        <strong>Below - Not used 2016 Onwards - kept for history</strong></th>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><em>Allergies?</em></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton ALLERGIES_FLAG --><input type="radio" id="STUDENT_MEDICAL_DETAILSALLERGIES_FLAG_{ALLERGIES_FLAG:optionNumber}" value="{Value}" name="{ALLERGIES_FLAG_Name}" {Check}>{Description}<!-- END RadioButton ALLERGIES_FLAG -->&nbsp;<em>(new for 2010 enrolments; if Yes, check Enrolment form)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><em>Anaphylaxis?</em></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton ANAPHYLAXIS_FLAG --><input type="radio" id="STUDENT_MEDICAL_DETAILSANAPHYLAXIS_FLAG_{ANAPHYLAXIS_FLAG:optionNumber}" value="{Value}" name="{ANAPHYLAXIS_FLAG_Name}" {Check}>{Description}<!-- END RadioButton ANAPHYLAXIS_FLAG -->&nbsp;<em>(If 'Yes', scan Anaphylaxis Plan to Student Folder)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><em>Diagnosed Condition </em><br>
+                        <em>use 'ASD/Aspergers' for any new Autism Spectrum <br>
+                        Disorder or Aspergers diagnosed conditions</em></th>
+ 
+                        <td>&nbsp; 
+                            <select id="STUDENT_MEDICAL_DETAILSlbDiagnosedConditions" name="{lbDiagnosedConditions_Name}">
+                                <option selected value="">Select Value</option>
+                                {lbDiagnosedConditions_Options}
+                            </select>
+ <br>
+                            <em>(updated for 2014&nbsp;enrolments;)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <th>&nbsp;</th>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY / DATE</th>
+ 
+                        <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="2" align="right">
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_MEDICAL_DETAILSButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->&nbsp; &nbsp;&nbsp; &nbsp; 
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_MEDICAL_DETAILSButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STUDENT_MEDICAL_DETAILShidden_LAST_ALTERED_BY" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"><input type="hidden" id="STUDENT_MEDICAL_DETAILShidden_LAST_ALTERED_DATE" value="{hidden_LAST_ALTERED_DATE}" name="{hidden_LAST_ALTERED_DATE_Name}"><input type="hidden" id="STUDENT_MEDICAL_DETAILShidden_STUDENT_ID" value="{hidden_STUDENT_ID}" name="{hidden_STUDENT_ID_Name}"><input type="hidden" id="STUDENT_MEDICAL_DETAILShidden_RECEIVED_SUPPORT_PROGRAMS_SERVICES" value="{hidden_RECEIVED_SUPPORT_PROGRAMS_SERVICES}" name="{hidden_RECEIVED_SUPPORT_PROGRAMS_SERVICES_Name}"><input type="hidden" id="STUDENT_MEDICAL_DETAILShidden_PSD_FUNDING_CATEGORY" value="{hidden_PSD_FUNDING_CATEGORY}" name="{hidden_PSD_FUNDING_CATEGORY_Name}"></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_MEDICAL_DETAILS --></p>
+<p>
+<!-- BEGIN Record STUDENT_MEDICAL_DETAILS1 -->
+<form id="STUDENT_MEDICAL_DETAILS1" method="post" name="{HTMLFormName}" action="{Action}">
+    <table class="MainTable" cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Edit Practitioner Referral</th>
+ 
+                        <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr id="ErrorBlock" class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>PRACTITIONER ORGANISATION</th>
+ 
+                        <td><input type="text" id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_ORGANISATION" maxlength="50" size="50" value="{PRACTITIONER_ORGANISATION}" name="{PRACTITIONER_ORGANISATION_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>DISCIPLINE</th>
+ 
+                        <td>
+                            <select id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_DISCIPLINE" name="{PRACTITIONER_DISCIPLINE_Name}">
+                                <option selected value="">Select Value</option>
+                                {PRACTITIONER_DISCIPLINE_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>DISCIPLINE (OTHER)</th>
+ 
+                        <td><input type="text" id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_DISCIPLINE_OTHER" maxlength="50" size="50" value="{PRACTITIONER_DISCIPLINE_OTHER}" name="{PRACTITIONER_DISCIPLINE_OTHER_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>ORGANISATION TYPE <em>(2020)</em></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton PRACTITIONER_ORGTYPE --><input type="radio" id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_ORGTYPE_{PRACTITIONER_DISABILITIES:optionNumber}" value="{Value}" name="{PRACTITIONER_ORGTYPE_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton PRACTITIONER_ORGTYPE -->If 'Other': <input type="text" id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_ORGTYPE_OTHER" maxlength="50" size="50" value="{PRACTITIONER_ORGTYPE_OTHER}" name="{PRACTITIONER_ORGTYPE_OTHER_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>PRIMARY PRESENTING&nbsp;ISSUES</th>
+ 
+                        <td>
+                            <!-- BEGIN CheckBoxList PRACTITIONER_PRIMARY_ISSUES --><input type="checkbox" id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_PRIMARY_ISSUES_{PRACTITIONER_DISABILITIES:optionNumber}" value="{Value}" name="{PRACTITIONER_PRIMARY_ISSUES_Name}" {Check}>{Description}<!-- END CheckBoxList PRACTITIONER_PRIMARY_ISSUES --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>PRIMARY (OTHER)</th>
+ 
+                        <td><input type="text" id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_PRIMARY_OTHER" maxlength="50" size="50" value="{PRACTITIONER_PRIMARY_OTHER}" name="{PRACTITIONER_PRIMARY_OTHER_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>DISABILITIES</th>
+ 
+                        <td>
+                            <!-- BEGIN CheckBoxList PRACTITIONER_DISABILITIES --><input type="checkbox" id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_DISABILITIES_{PRACTITIONER_DISABILITIES:optionNumber}" value="{Value}" name="{PRACTITIONER_DISABILITIES_Name}" {Check}>{Description}<!-- END CheckBoxList PRACTITIONER_DISABILITIES --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>DISABILITY DETAILS</th>
+ 
+                        <td><textarea id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITY_DETAILS" rows="3" cols="40" name="{PRACTITIONER_DISABILITY_DETAILS_Name}">{PRACTITIONER_DISABILITY_DETAILS}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY / DATE&nbsp;</th>
+ 
+                        <td>{lblLAST_MODIFIED_BY}&nbsp;/ {lblLAST_MODIFIED_DATE}</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td style="TEXT-ALIGN: right" colspan="2">
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_MEDICAL_DETAILS1Button_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_MEDICAL_DETAILS1Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input type="hidden" id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_LAST_MODIFIED_BY" value="{PRACTITIONER_LAST_MODIFIED_BY}" name="{PRACTITIONER_LAST_MODIFIED_BY_Name}"><input type="hidden" id="STUDENT_MEDICAL_DETAILS1PRACTITIONER_DISABILITIES_LAST_MODIFIED_DATE" value="{PRACTITIONER_LAST_MODIFIED_DATE}" name="{PRACTITIONER_LAST_MODIFIED_DATE_Name}"></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STUDENT_MEDICAL_DETAILS1Hidden_PRIMARY_ISSUES" value="{Hidden_PRIMARY_ISSUES}" name="{Hidden_PRIMARY_ISSUES_Name}"><input type="hidden" id="STUDENT_MEDICAL_DETAILS1Hidden_DISABILITIES" value="{Hidden_DISABILITIES}" name="{Hidden_DISABILITIES_Name}"></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_MEDICAL_DETAILS1 --><br>
+</p>
+<p><br>
+</p>
+</body>
+</html>

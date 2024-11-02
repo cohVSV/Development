@@ -1,0 +1,205 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ENROL CHECKLIST maint</title>
+<meta name="description" content="Admin page for managing the Enrolment Checklist items. Nov 2018">
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+<p>{Header}</p>
+<p>
+<!-- BEGIN Record ENROL_CHECKLISTSearch -->
+<form id="ENROL_CHECKLISTSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th>
+ 
+            <td><input type="text" id="ENROL_CHECKLISTSearchs_keyword" maxlength="200" value="{s_keyword}" name="{s_keyword_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="ENROL_CHECKLISTSearchClearParameters">Clear</a></td> 
+            <td style="TEXT-ALIGN: right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ENROL_CHECKLISTSearchButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ENROL_CHECKLISTSearch --><br>
+<br>
+<!-- BEGIN Grid ENROL_CHECKLIST -->
+<table id="ENROL_CHECKLIST" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>List of ENROL CHECKLIST Items </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="6">Total Records:&nbsp;{ENROL_CHECKLIST_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_ID --><span class="Sorter"><a href="{Sort_URL}" id="ENROL_CHECKLISTSorter_ID">ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_DESCRIPTION --><span class="Sorter"><a href="{Sort_URL}" id="ENROL_CHECKLISTSorter_DESCRIPTION">DESCRIPTION</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_DESCRIPTION --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_CATEGORIES_REQUIRED --><span class="Sorter"><a href="{Sort_URL}" id="ENROL_CHECKLISTSorter_CATEGORIES_REQUIRED">CATEGORIES REQUIRED</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_CATEGORIES_REQUIRED --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ACTIVE --><span class="Sorter"><a href="{Sort_URL}" id="ENROL_CHECKLISTSorter_ACTIVE">ACTIVE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ACTIVE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><span class="Sorter"><a href="{Sort_URL}" id="ENROL_CHECKLISTSorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><span class="Sorter"><a href="{Sort_URL}" id="ENROL_CHECKLISTSorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{ID_Src}" id="ENROL_CHECKLISTID_{ENROL_CHECKLIST:rowNumber}">{ID}</a>&nbsp;</td> 
+          <td>{DESCRIPTION}&nbsp;</td> 
+          <td>{CATEGORIES_REQUIRED}&nbsp;</td> 
+          <td>{ACTIVE}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No Enrol Checklist items found!</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6"><a href="{ENROL_CHECKLIST_Insert_Src}" id="ENROL_CHECKLISTENROL_CHECKLIST_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid ENROL_CHECKLIST --><br>
+<!-- BEGIN Record ENROL_CHECKLIST1 -->
+<form id="ENROL_CHECKLIST1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add/Edit ENROL CHECKLIST Item</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>DESCRIPTION</th>
+ 
+            <td><input type="text" id="ENROL_CHECKLIST1DESCRIPTION" maxlength="200" size="50" value="{DESCRIPTION}" name="{DESCRIPTION_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CATEGORIES REQUIRED</th>
+ 
+            <td><input type="text" id="ENROL_CHECKLIST1CATEGORIES_REQUIRED" maxlength="100" size="50" value="{CATEGORIES_REQUIRED}" name="{CATEGORIES_REQUIRED_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CATEGORIES OPTIONAL</th>
+ 
+            <td><input type="text" id="ENROL_CHECKLIST1CATEGORIES_OPTIONAL" maxlength="100" size="50" value="{CATEGORIES_OPTIONAL}" name="{CATEGORIES_OPTIONAL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CATEGORIES NOTAPPLICABLE</th>
+ 
+            <td><input type="text" id="ENROL_CHECKLIST1CATEGORIES_NOTAPPLICABLE" maxlength="100" size="50" value="{CATEGORIES_NOTAPPLICABLE}" name="{CATEGORIES_NOTAPPLICABLE_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ACTIVE</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton ACTIVE --><input type="radio" id="ENROL_CHECKLIST1ACTIVE_{ACTIVE:optionNumber}" value="{Value}" name="{ACTIVE_Name}" {Check}>{Description}<!-- END RadioButton ACTIVE --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / WHEN&nbsp;</th>
+ 
+            <td>{lblLastAlteredBy}&nbsp;/ {lblLastAlteredWhen}</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="ENROL_CHECKLIST1Button_Insert" class="Button" value="Add Item" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="ENROL_CHECKLIST1Button_Update" class="Button" value="Update Item" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="ENROL_CHECKLIST1Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input type="hidden" id="ENROL_CHECKLIST1LAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="ENROL_CHECKLIST1LAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ENROL_CHECKLIST1 --><br>
+<br>
+</p>
+</body>
+</html>

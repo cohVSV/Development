@@ -1,0 +1,554 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Census Maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-2F156497
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/scriptaculous.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/controls.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/Services.js" type="text/javascript" charset="windows-1252"></script>
+<link rel="stylesheet" type="text/css" href="Student_Census_maintainSTUDENT_CENSUS_DATASCHOOL_NAME_style.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-6A2D0D98
+
+var STUDENT_CENSUS_DATADatePicker_DATE_STARTED_IN_AUST = new Object(); 
+STUDENT_CENSUS_DATADatePicker_DATE_STARTED_IN_AUST.format           = "d/m/yyyy";
+STUDENT_CENSUS_DATADatePicker_DATE_STARTED_IN_AUST.style            = "Styles/Blueprint/Style.css";
+STUDENT_CENSUS_DATADatePicker_DATE_STARTED_IN_AUST.relativePathPart = "";
+STUDENT_CENSUS_DATADatePicker_DATE_STARTED_IN_AUST.themeVersion     = "3.0";
+var STUDENT_CENSUS_DATADatePicker_DATE_ARRIVED_IN_AUST = new Object(); 
+STUDENT_CENSUS_DATADatePicker_DATE_ARRIVED_IN_AUST.format           = "d/m/yyyy";
+STUDENT_CENSUS_DATADatePicker_DATE_ARRIVED_IN_AUST.style            = "Styles/Blueprint/Style.css";
+STUDENT_CENSUS_DATADatePicker_DATE_ARRIVED_IN_AUST.relativePathPart = "";
+STUDENT_CENSUS_DATADatePicker_DATE_ARRIVED_IN_AUST.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_STUDENT_CENSUS_DATA_Button_Cancel_OnClick @4-C43C1CAE
+function page_STUDENT_CENSUS_DATA_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_CENSUS_DATA_Button_Cancel_OnClick
+
+//page_STUDENT_CENSUS_DATA1_Button_Cancel_OnClick @136-DDDE7C48
+function page_STUDENT_CENSUS_DATA1_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_CENSUS_DATA1_Button_Cancel_OnClick
+
+//Initialize STUDENT_CENSUS_DATASCHOOL_NAMEPTAutocomplete2 @87-6FD6389E
+function STUDENT_CENSUS_DATASCHOOL_NAMEPTAutocomplete2_start() {
+    if ($("STUDENT_CENSUS_DATASCHOOL_NAME"))
+        new Ajax.Autocompleter("STUDENT_CENSUS_DATASCHOOL_NAME", "STUDENT_CENSUS_DATASCHOOL_NAME_choices", "services/MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutocomplete1.aspx", {indicator:'STUDENT_CENSUS_DATAajaxBusy'});
+}
+//End Initialize STUDENT_CENSUS_DATASCHOOL_NAMEPTAutocomplete2
+
+//Handle STUDENT_CENSUS_DATACondition1 @70-460C4752
+function STUDENT_CENSUS_DATACondition1_start(sender) {
+//End Handle STUDENT_CENSUS_DATACondition1
+
+//Custom STUDENT_CENSUS_DATACondition1 @70-A8225497
+        // ERA: kooky JS created from Wizard. Fixed by Eric
+    if ($("STUDENT_CENSUS_DATASCHOOL_NAME").value != "")
+    {
+        STUDENT_CENSUS_DATAPTAutoFill1_start(sender);
+    } else {
+    }
+//End Custom STUDENT_CENSUS_DATACondition1
+
+//STUDENT_CENSUS_DATACondition1 Tail @70-FCB6E20C
+}
+//End STUDENT_CENSUS_DATACondition1 Tail
+
+//PTAutoFill1 Loading @75-0D9C8967
+function STUDENT_CENSUS_DATAPTAutoFill1_start(sender) {
+        // ERA fixing keyword selection as it grabbed the form, not the field
+    new Ajax.Request("services/MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutoFill1.aspx?keyword=" + encodeURI($("STUDENT_CENSUS_DATASCHOOL_NAME").value), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            $("STUDENT_CENSUS_DATAPREVIOUS_SCHOOL_ID").value = valuesRow["SCHOOL_ID"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//bind_events @1-65B4BE36
+function bind_events() {
+    STUDENT_CENSUS_DATASCHOOL_NAMEPTAutocomplete2_start();
+        addEventHandler("STUDENT_CENSUS_DATASCHOOL_NAME", "focus", STUDENT_CENSUS_DATACondition1_start);   //ERA: add to 'focus' to ensure firing
+    addEventHandler("STUDENT_CENSUS_DATASCHOOL_NAME", "keyup", STUDENT_CENSUS_DATACondition1_start);   //ERA: change event from 'keypress' to 'keyup' (better browser support)
+    addEventHandler("STUDENT_CENSUS_DATAButton_Cancel","click",page_STUDENT_CENSUS_DATA_Button_Cancel_OnClick);
+
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+<style type="text/css">
+<!--
+#STUDENT_CENSUS_DATAHIGHEST_SCHOOL_LEVEL td  { border-top-style: none; border-right-style: none; }
+#STUDENT_CENSUS_DATARadioButton_Employment_Status td  { border-top-style: none; border-right-style: none; }
+#STUDENT_CENSUS_DATARadioButton_Reason_for_Study td  { border-top-style: none; border-right-style: none; }
+#STUDENT_CENSUS_DATACheckBoxList_Disability td  { border-top-style: none; border-right-style: none; }
+#STUDENT_CENSUS_DATACheckBoxList_PriorQualifications td  { border-top-style: none; border-right-style: none; }
+-->
+</style>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+<div align="center">
+</div>
+<div align="left">
+    {Menu_Student_maintain} 
+</div>
+<div align="left">
+</div>
+<!-- BEGIN Record STUDENT_CENSUS_DATA1 -->
+<form id="STUDENT_CENSUS_DATA1" method="post" name="{HTMLFormName}" action="{Action}">
+    <table class="MainTable" style="WIDTH: 80%" cellspacing="0" cellpadding="0" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Edit STUDENT Access / Alert</th>
+ 
+                        <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr id="STUDENT_CENSUS_DATA1ErrorBlock" class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th>STUDENT ID</th>
+ 
+                        <td>{STUDENT_ID} </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Is the Student AT RISK?</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton RESTRICT_ACCESS_ATRISK --><input type="radio" id="STUDENT_CENSUS_DATA1RESTRICT_ACCESS_ATRISK_{RESTRICT_ACCESS_ATRISK:optionNumber}" value="{Value}" name="{RESTRICT_ACCESS_ATRISK_Name}" {Check}>{Description}<!-- END RadioButton RESTRICT_ACCESS_ATRISK --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>If Yes - briefly describe AT RISK Restrictions</th>
+ 
+                        <td><textarea id="STUDENT_CENSUS_DATA1RESTRICT_ACCESS_ATRISK_DESCRIPTION" rows="3" cols="70" name="{RESTRICT_ACCESS_ATRISK_DESCRIPTION_Name}">{RESTRICT_ACCESS_ATRISK_DESCRIPTION}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Is there an ACCESS ALERT for the student?</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton RESTRICT_ACCESS_ALERT --><input type="radio" id="STUDENT_CENSUS_DATA1RESTRICT_ACCESS_ALERT_{RESTRICT_ACCESS_ALERT:optionNumber}" value="{Value}" name="{RESTRICT_ACCESS_ALERT_Name}" {Check}>{Description}<!-- END RadioButton RESTRICT_ACCESS_ALERT --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;<u>If Yes - has ACCESS ALERT been RECEIVED?</u></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton RESTRICT_ACCESS_ALERT_RECEIVED --><input type="radio" id="STUDENT_CENSUS_DATA1RESTRICT_ACCESS_ALERT_RECEIVED_{RESTRICT_ACCESS_ALERT_RECEIVED:optionNumber}" value="{Value}" name="{RESTRICT_ACCESS_ALERT_RECEIVED_Name}" {Check}>{Description}<!-- END RadioButton RESTRICT_ACCESS_ALERT_RECEIVED --><em>(VSV Use)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>ACCESS TYPE</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton RESTRICT_ACCESS_TYPE --><input type="radio" id="STUDENT_CENSUS_DATA1RESTRICT_ACCESS_TYPE_{RESTRICT_ACCESS_TYPE:optionNumber}" value="{Value}" name="{RESTRICT_ACCESS_TYPE_Name}" {Check}>{Description}<!-- END RadioButton RESTRICT_ACCESS_TYPE --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Briefly describe any ACCESS Restrictions</th>
+ 
+                        <td><textarea id="STUDENT_CENSUS_DATA1RESTRICT_ACCESS_DESCRIPTION" rows="3" cols="70" name="{RESTRICT_ACCESS_DESCRIPTION_Name}">{RESTRICT_ACCESS_DESCRIPTION}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Is there an ACTIVITY ALERT for the Student?</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton RESTRICT_ACTIVITY_ALERT --><input type="radio" id="STUDENT_CENSUS_DATA1RESTRICT_ACTIVITY_ALERT_{RESTRICT_ACTIVITY_ALERT:optionNumber}" value="{Value}" name="{RESTRICT_ACTIVITY_ALERT_Name}" {Check}>{Description}<!-- END RadioButton RESTRICT_ACTIVITY_ALERT --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>If Yes - briefly describe any ACTIVITY Restrictions</th>
+ 
+                        <td><textarea id="STUDENT_CENSUS_DATA1RESTRICT_ACTIVITY_DESCRIPTION" rows="3" cols="70" name="{RESTRICT_ACTIVITY_DESCRIPTION_Name}">{RESTRICT_ACTIVITY_DESCRIPTION}</textarea></td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td style="TEXT-ALIGN: right" colspan="2">
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_CENSUS_DATA1Button_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_CENSUS_DATA1Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_CENSUS_DATA1 --><br>
+<br>
+<!-- BEGIN Record STUDENT_CENSUS_DATA -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <table class="MainTable" style="WIDTH: 80%" cellspacing="0" cellpadding="0" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Edit Student Census Data</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th><strong>STUDENT ID:</strong>&nbsp;<br>
+                        <br>
+                        <br>
+                        </th>
+ 
+                        <td><br>
+                            &nbsp;{STUDENT_ID}&nbsp;&nbsp;&nbsp; 
+                            <!-- BEGIN Link Link_gotoTAFECensusPage --><a href="{Link_gotoTAFECensusPage_Src}" id="STUDENT_CENSUS_DATALink_gotoTAFECensusPage" class="Button" style="PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px">TAFE Census page</a><!-- END Link Link_gotoTAFECensusPage --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>In which COUNTRY was the student BORN (COUNTRY OF BIRTH)</th>
+ 
+                        <td>
+                            <select id="STUDENT_CENSUS_DATACOUNTRY_OF_BIRTH" name="{COUNTRY_OF_BIRTH_Name}">
+                                <option selected value="">Select Value</option>
+                                {COUNTRY_OF_BIRTH_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>RESIDENTIAL STATUS (in Australia)</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton RESIDENTIAL_STATUS --><input type="radio" id="STUDENT_CENSUS_DATARESIDENTIAL_STATUS_{RESIDENTIAL_STATUS:optionNumber}" value="{Value}" name="{RESIDENTIAL_STATUS_Name}" {Check}>{Description}<!-- END RadioButton RESIDENTIAL_STATUS --></td>
+                    </tr>
+ 
+                    <tr class="Error">
+                        <td colspan="2"><em>&nbsp;If Residential status is "Temporary" then:</em>&nbsp; <strong>{ResidentialStatusErrormessage}</strong> </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>VISA SUB CLASS (eg: 457, 309, 672)</th>
+ 
+                        <td><input type="text" id="STUDENT_CENSUS_DATAVISA_SUB_CLASS" maxlength="3" size="4" value="{VISA_SUB_CLASS}" name="{VISA_SUB_CLASS_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>VISA STATISTICAL CODE</th>
+ 
+                        <td><input type="text" id="STUDENT_CENSUS_DATAVISA_STATISTICAL_CODE" maxlength="4" size="4" value="{VISA_STATISTICAL_CODE}" name="{VISA_STATISTICAL_CODE_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>DATE STARTED IN AUST <em>(d/m/yyyy)</em></th>
+ 
+                        <td><input type="text" id="STUDENT_CENSUS_DATADATE_STARTED_IN_AUST" maxlength="12" size="12" value="{DATE_STARTED_IN_AUST}" name="{DATE_STARTED_IN_AUST_Name}">
+                            <!-- BEGIN DatePicker DatePicker_DATE_STARTED_IN_AUST --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="STUDENT_CENSUS_DATADatePicker_DATE_STARTED_IN_AUST"><img border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_DATE_STARTED_IN_AUST --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>DATE ARRIVED IN AUST<em>(d/m/yyyy)</em></th>
+ 
+                        <td><input type="text" id="STUDENT_CENSUS_DATADATE_ARRIVED_IN_AUST" maxlength="12" size="12" value="{DATE_ARRIVED_IN_AUST}" name="{DATE_ARRIVED_IN_AUST_Name}">
+                            <!-- BEGIN DatePicker DatePicker_DATE_ARRIVED_IN_AUST --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="STUDENT_CENSUS_DATADatePicker_DATE_ARRIVED_IN_AUST"><img border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_DATE_ARRIVED_IN_AUST --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th colspan="2">
+                        <p><strong></strong>&nbsp;</p>
+ 
+                        <p><strong>&nbsp;All Students</strong>&nbsp;</p>
+                        </th>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>FIRST LANGUAGE (Student speaks this&nbsp;language at home, or English)</th>
+ 
+                        <td>
+                            <select id="STUDENT_CENSUS_DATAFIRST_HOME_LANGUAGE" name="{FIRST_HOME_LANGUAGE_Name}">
+                                <option selected value="">Select Value</option>
+                                {FIRST_HOME_LANGUAGE_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>OTHER LANGUAGE (use 'English' if student speaks English <br>
+                        AND a&nbsp;non-English First Language, otherwise leave blank)</th>
+ 
+                        <td>
+                            <select id="STUDENT_CENSUS_DATAOTHER_HOME_LANGUAGE" name="{OTHER_HOME_LANGUAGE_Name}">
+                                <option selected value="">Select Value</option>
+                                {OTHER_HOME_LANGUAGE_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Is the student of ABORIGINAL / KOORI / TORRES STRAIT origin?<input type="hidden" id="STUDENT_CENSUS_DATAHidden_KoorieTorresFlag" value="{Hidden_KoorieTorresFlag}" name="{Hidden_KoorieTorresFlag_Name}"></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton KOORITORRESFLAG --><input type="radio" id="STUDENT_CENSUS_DATAKOORITORRESFLAG_{KOORITORRESFLAG:optionNumber}" value="{Value}" name="{KOORITORRESFLAG_Name}" {Check}>{Description} <br>
+                            <!-- END RadioButton KOORITORRESFLAG --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>What are the Student's LIVING ARRANGEMENTS? (HOUSEHOLD STATUS)<input type="hidden" id="STUDENT_CENSUS_DATAHidden_household_status" value="{Hidden_household_status}" name="{Hidden_household_status_Name}"></th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton HOUSEHOLD_STATUS --><input type="radio" id="STUDENT_CENSUS_DATAHOUSEHOLD_STATUS_{HOUSEHOLD_STATUS:optionNumber}" value="{Value}" name="{HOUSEHOLD_STATUS_Name}" {Check}>{Description} <br>
+                            <!-- END RadioButton HOUSEHOLD_STATUS --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>CRIS ID <em>(Statutory/Court-ordered Out of Home Care only)</em></th>
+ 
+                        <td>
+                            <!-- BEGIN TextBox CRIS_ID --><input type="text" id="STUDENT_CENSUS_DATACRIS_ID" maxlength="20" value="{CRIS_ID}" name="{CRIS_ID_Name}"><!-- END TextBox CRIS_ID --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th colspan="2">
+                        <p><strong></strong>&nbsp;</p>
+ 
+                        <p><strong>&nbsp;Non-Enrollment form items</strong>&nbsp;</p>
+                        </th>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <p align="right">&nbsp;<em>Type School Name to automatically fill in Previous School ID</em></p>
+                        </th>
+ 
+                        <td id="ajax_busy">
+                            <!-- BEGIN TextBox SCHOOL_NAME --><input type="text" id="STUDENT_CENSUS_DATASCHOOL_NAME" size="50" value="{SCHOOL_NAME}" name="{SCHOOL_NAME_Name}" autocomplete="off">
+                            <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+                            <div id="STUDENT_CENSUS_DATASCHOOL_NAME_choices">
+                            </div>
+                            <!-- ENDF PTAutocomplete PTAutocomplete1 -->&nbsp; 
+                            <!-- BEGINF PTAutocomplete PTAutocomplete2 -->
+                            <div id="STUDENT_CENSUS_DATASCHOOL_NAME_choices">
+                            </div>
+                            <!-- ENDF PTAutocomplete PTAutocomplete2 --><!-- END TextBox SCHOOL_NAME --><img id="STUDENT_CENSUS_DATAajaxBusy" style="DISPLAY: none" name="ajaxBusy" alt="looking..." src="images/ajax-loader_small.gif"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>PREVIOUS SCHOOL ID <em>(Mandatory 2020+, <u>cannot be VSV</u>)</em></th>
+ 
+                        <td><input type="text" id="STUDENT_CENSUS_DATAPREVIOUS_SCHOOL_ID" maxlength="10" size="9" value="{PREVIOUS_SCHOOL_ID}" name="{PREVIOUS_SCHOOL_ID_Name}">&nbsp;{lblPREVIOUS_SCHOOL_NAME}</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>DATE LAST ATTENDED SCHOOL &nbsp;</th>
+ 
+                        <td><input type="text" id="STUDENT_CENSUS_DATADATE_LAST_ATTENDED_SCHOOL" size="12" value="{DATE_LAST_ATTENDED_SCHOOL}" name="{DATE_LAST_ATTENDED_SCHOOL_Name}">&nbsp;<em>(added April 2011)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>ALLOWANCE CODE (ie: receives AUSTUDY; ABSTUDY; EMA)</th>
+ 
+                        <td>
+                            <select id="STUDENT_CENSUS_DATAALLOWANCE_CODE" name="{ALLOWANCE_CODE_Name}">
+                                <option selected value="">Select Value</option>
+                                {ALLOWANCE_CODE_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>FAMILY OCCUPATION GROUP</th>
+ 
+                        <td>
+                            <select id="STUDENT_CENSUS_DATAFAMILY_OSG" name="{FAMILY_OSG_Name}">
+                                <option selected value="">Select Value</option>
+                                {FAMILY_OSG_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>DISABILITY ID</th>
+ 
+                        <td><input type="text" id="STUDENT_CENSUS_DATADISABILITY_ID" maxlength="6" size="6" value="{DISABILITY_ID}" name="{DISABILITY_ID_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>REPEATING YEAR</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton REPEATING_YEAR --><input type="radio" id="STUDENT_CENSUS_DATAREPEATING_YEAR_{REPEATING_YEAR:optionNumber}" value="{Value}" name="{REPEATING_YEAR_Name}" {Check}>{Description}<!-- END RadioButton REPEATING_YEAR --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>OTHER SCHOOL TIME FRACTION</th>
+ 
+                        <td><input type="text" id="STUDENT_CENSUS_DATAOTHER_SCHOOL_TF" maxlength="3" size="3" value="{OTHER_SCHOOL_TF}" name="{OTHER_SCHOOL_TF_Name}">&nbsp;</td>
+                    </tr>
+                </table>
+ 
+                <p>
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <tr class="Controls">
+                        <th colspan="3"><strong><em>Additional Family details (Parent Census)</em></strong></th>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td><strong><em>Mother&nbsp; /&nbsp;Parent 1 /&nbsp;Guardian 1</em></strong></td> 
+                        <td><strong><em>Father /&nbsp;Parent&nbsp;2 /&nbsp;Guardian 2</em></strong></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>In which COUNTRY were they BORN (COUNTRY OF BIRTH)</th>
+ 
+                        <td>
+                            <select id="STUDENT_CENSUS_DATAMOTHERS_COB" name="{MOTHERS_COB_Name}">
+                                <option selected value="">Select Value</option>
+                                {MOTHERS_COB_Options}
+                            </select>
+ </td> 
+                        <td>&nbsp; 
+                            <select id="STUDENT_CENSUS_DATAFATHERS_COB" name="{FATHERS_COB_Name}">
+                                <option selected value="">Select Value</option>
+                                {FATHERS_COB_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Speak a language other than English at home? (MAIN LANGUAGE)</th>
+ 
+                        <td>
+                            <select id="STUDENT_CENSUS_DATAMOTHER_LANGUAGE" name="{MOTHER_LANGUAGE_Name}">
+                                <option selected value="">Select Value</option>
+                                {MOTHER_LANGUAGE_Options}
+                            </select>
+ </td> 
+                        <td>&nbsp; 
+                            <select id="STUDENT_CENSUS_DATAFATHER_LANGUAGE" name="{FATHER_LANGUAGE_Name}">
+                                <option selected value="">Select Value</option>
+                                {FATHER_LANGUAGE_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><em>Highest</em> year of Primary-Secondary school <br>
+                        (SCHOOL EDUCATION)</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton MOTHER_EDUCATION_SCHOOL --><input type="radio" id="STUDENT_CENSUS_DATAMOTHER_EDUCATION_SCHOOL_{MOTHER_EDUCATION_SCHOOL:optionNumber}" value="{Value}" name="{MOTHER_EDUCATION_SCHOOL_Name}" {Check}>{Description} <br>
+                            <!-- END RadioButton MOTHER_EDUCATION_SCHOOL --></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton FATHER_EDUCATION_SCHOOL --><input type="radio" id="STUDENT_CENSUS_DATAFATHER_EDUCATION_SCHOOL_{FATHER_EDUCATION_SCHOOL:optionNumber}" value="{Value}" name="{FATHER_EDUCATION_SCHOOL_Name}" {Check}>{Description}<!-- END RadioButton FATHER_EDUCATION_SCHOOL --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Level of <em>highest</em>&nbsp; qualification <br>
+                        (POST-SCHOOL EDUCATION) </th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton MOTHER_EDUCATION_NONSCHOOL --><input type="radio" id="STUDENT_CENSUS_DATAMOTHER_EDUCATION_NONSCHOOL_{MOTHER_EDUCATION_NONSCHOOL:optionNumber}" value="{Value}" name="{MOTHER_EDUCATION_NONSCHOOL_Name}" {Check}>{Description} <br>
+                            <!-- END RadioButton MOTHER_EDUCATION_NONSCHOOL --></td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton FATHER_EDUCATION_NONSCHOOL --><input type="radio" id="STUDENT_CENSUS_DATAFATHER_EDUCATION_NONSCHOOL_{FATHER_EDUCATION_NONSCHOOL:optionNumber}" value="{Value}" name="{FATHER_EDUCATION_NONSCHOOL_Name}" {Check}>{Description}<!-- END RadioButton FATHER_EDUCATION_NONSCHOOL --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>OCCUPATION GROUP</th>
+ 
+                        <td>
+                            <select id="STUDENT_CENSUS_DATAMOTHER_OCCUPATIONGROUP" name="{MOTHER_OCCUPATIONGROUP_Name}">
+                                <option selected value="">Select Value</option>
+                                {MOTHER_OCCUPATIONGROUP_Options}
+                            </select>
+ </td> 
+                        <td>&nbsp; 
+                            <select id="STUDENT_CENSUS_DATAFATHER_OCCUPATIONGROUP" name="{FATHER_OCCUPATIONGROUP_Name}">
+                                <option selected value="">Select Value</option>
+                                {FATHER_OCCUPATIONGROUP_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY / DATE (entire form)</th>
+ 
+                        <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="3" align="right">
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_CENSUS_DATAButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_CENSUS_DATAButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STUDENT_CENSUS_DATAHidden_last_altered_by" value="{Hidden_last_altered_by}" name="{Hidden_last_altered_by_Name}"><input type="hidden" id="STUDENT_CENSUS_DATAHidden_last_altered_date" value="{Hidden_last_altered_date}" name="{Hidden_last_altered_date_Name}"></p>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_CENSUS_DATA --><br>
+</body>
+</html>

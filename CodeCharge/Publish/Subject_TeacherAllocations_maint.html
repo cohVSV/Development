@@ -1,0 +1,340 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Subject Teacher Allocationsmaintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<meta name="description" content="Page to allow AP or similar to manage the Teacher Allocations from a single plage instead of checking each subject separately. The data is stored with the SUBJECT_TEACHER table for simplicity and to allow switching on/off based on ALLOCATABLE flag. (unfuddle #708)">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_SUBJECT_SUBJECT_TEACHER_ButtonResetDevToNo_OnClick @120-EFA9F11D
+function page_SUBJECT_SUBJECT_TEACHER_ButtonResetDevToNo_OnClick()
+{
+    var result;
+//End page_SUBJECT_SUBJECT_TEACHER_ButtonResetDevToNo_OnClick
+
+//Confirmation Message @122-87A028DA
+    return confirm('This will reset ALL Teachers in ALL Subjects to [Allocatable] of NO?\n(you must also select 'Yes' on Confirm Reset first)');
+//End Confirmation Message
+
+//Close page_SUBJECT_SUBJECT_TEACHER_ButtonResetDevToNo_OnClick @120-BC33A33A
+    return result;
+}
+//End Close page_SUBJECT_SUBJECT_TEACHER_ButtonResetDevToNo_OnClick
+
+//page_SUBJECT_TEACHER_SUBJECT_S_ButtonCancel_OnClick @115-1D7100C9
+function page_SUBJECT_TEACHER_SUBJECT_S_ButtonCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_SUBJECT_TEACHER_SUBJECT_S_ButtonCancel_OnClick
+
+//page_SUBJECT_SUBJECT_TEACHER_Button_DoSearch_OnClick @42-C422020E
+function page_SUBJECT_SUBJECT_TEACHER_Button_DoSearch_OnClick()
+{
+    disableValidation = true;
+}
+//End page_SUBJECT_SUBJECT_TEACHER_Button_DoSearch_OnClick
+
+//page_SUBJECT_TEACHER_ButtonCancel_OnClick @112-F607E9C1
+function page_SUBJECT_TEACHER_ButtonCancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_SUBJECT_TEACHER_ButtonCancel_OnClick
+
+//bind_events @1-A4AF9233
+function bind_events() {
+    addEventHandler("SUBJECT_SUBJECT_TEACHERButtonResetDevToNo","click",page_SUBJECT_SUBJECT_TEACHER_ButtonResetDevToNo_OnClick);
+    addEventHandler("SUBJECT_TEACHER_SUBJECT_SButtonCancel","click",page_SUBJECT_TEACHER_SUBJECT_S_ButtonCancel_OnClick);
+    addEventHandler("SUBJECT_SUBJECT_TEACHERButton_DoSearch","click",page_SUBJECT_SUBJECT_TEACHER_Button_DoSearch_OnClick);
+    addEventHandler("SUBJECT_TEACHERButtonCancel","click",page_SUBJECT_TEACHER_ButtonCancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p align="center">
+<!-- BEGIN Record SUBJECT_SUBJECT_TEACHER -->
+<form id="SUBJECT_SUBJECT_TEACHER" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Get Subject&nbsp;</th>
+ 
+            <td>
+              <select id="SUBJECT_SUBJECT_TEACHERs_SUBJECT_ID" name="{s_SUBJECT_ID_Name}">
+                <option selected value="">Select Value</option>
+                {s_SUBJECT_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td><em>&nbsp;OR</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Search for...</th>
+ 
+            <td><input type="text" id="SUBJECT_SUBJECT_TEACHERs_keyword" maxlength="30" size="40" value="{s_keyword}" name="{s_keyword_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th colspan="2"><em>(searches on Subject Title, Subject Abbrev, Staff Firstname, Staff Lastname, Staff login)</em></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;Show...</th>
+ 
+            <td>&nbsp; 
+              <!-- BEGIN RadioButton rbShow --><input type="radio" id="SUBJECT_SUBJECT_TEACHERrbShow_{rbShow:optionNumber}" value="{Value}" name="{rbShow_Name}" {Check}>{Description}<!-- END RadioButton rbShow --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="SUBJECT_SUBJECT_TEACHERClearParameters">Clear</a></td> 
+            <td style="TEXT-ALIGN: right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="SUBJECT_SUBJECT_TEACHERButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td> 
+      <td valign="top">&nbsp;</td> 
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Bulk Changes</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <tr class="Controls">
+            <th>&nbsp;Handy for start of Semester or Year resets</th>
+ 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>
+            <p>Set ALL Teachers in ALL Subjects&nbsp;'Allocate'&nbsp;to NO?</p>
+ 
+            <p>Confirm Reset:&nbsp;&nbsp; 
+            <!-- BEGIN RadioButton rbConfirm --><input type="radio" id="SUBJECT_SUBJECT_TEACHERrbConfirm_{rbConfirm:optionNumber}" value="{Value}" name="{rbConfirm_Name}" {Check}>{Description}<!-- END RadioButton rbConfirm --></p>
+            </th>
+ 
+            <td>
+              <!-- BEGIN Button ButtonResetDevToNo --><input type="submit" id="SUBJECT_SUBJECT_TEACHERButtonResetDevToNo" class="Button" value="Reset Allocatable to NO" name="{Button_Name}"><!-- END Button ButtonResetDevToNo --></td>
+          </tr>
+ 
+          <tr class="Error">
+            <td colspan="2">&nbsp;{lblConfirmError}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SUBJECT_SUBJECT_TEACHER --><br>
+&nbsp; 
+<!-- BEGIN Record SUBJECT_TEACHER -->
+<form id="SUBJECT_TEACHER" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" width="90%" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"></td> 
+            <td class="th"><strong>Add Subject Teacher</strong></td> 
+            <td class="HeaderRight"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4"><span id="SUBJECT_TEACHERErrorBlock">{Error}</span></td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th>Subject </th>
+ 
+            <th>Staff</th>
+ 
+            <th>&nbsp;Time Fraction</th>
+ 
+            <th>&nbsp;Allocatable? </th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>
+              <select id="SUBJECT_TEACHERSUBJECT_ID" name="{SUBJECT_ID_Name}">
+                <option selected value="">Select Value</option>
+                {SUBJECT_ID_Options}
+              </select>
+ </td> 
+            <td>
+              <select id="SUBJECT_TEACHERSTAFF_ID" name="{STAFF_ID_Name}">
+                <option selected value="">Select Value</option>
+                {STAFF_ID_Options}
+              </select>
+ <input type="hidden" id="SUBJECT_TEACHERSCAFFOLD_COURSEDEV_UPDATED" value="{SCAFFOLD_COURSEDEV_UPDATED}" name="{SCAFFOLD_COURSEDEV_UPDATED_Name}"><input type="hidden" id="SUBJECT_TEACHERSCAFFOLD_COURSEDEV_FLAG" value="{SCAFFOLD_COURSEDEV_FLAG}" name="{SCAFFOLD_COURSEDEV_FLAG_Name}"></td> 
+            <td>&nbsp;<input type="text" id="SUBJECT_TEACHERTIME_FRACTION" size="6" value="{TIME_FRACTION}" name="{TIME_FRACTION_Name}"></td> 
+            <td>
+              <!-- BEGIN RadioButton rbAllocatable --><input type="radio" id="SUBJECT_TEACHERrbAllocatable_{rbAllocatable:optionNumber}" value="{Value}" name="{rbAllocatable_Name}" {Check}>{Description}<!-- END RadioButton rbAllocatable --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="4">
+              <!-- BEGIN Button ButtonInsert --><input type="submit" id="SUBJECT_TEACHERButtonInsert" class="Button" value="Add Teacher" name="{Button_Name}"><!-- END Button ButtonInsert -->&nbsp;&nbsp; 
+              <!-- BEGIN Button ButtonCancel --><input type="submit" id="SUBJECT_TEACHERButtonCancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button ButtonCancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SUBJECT_TEACHER --><br>
+<!-- BEGIN EditableGrid SUBJECT_TEACHER_SUBJECT_S -->
+<form id="SUBJECT_TEACHER_SUBJECT_S" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table class="MainTable" cellspacing="0" cellpadding="0" width="90%" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Manage Subject Teachers</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="8">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Row">
+            <td colspan="8">Total Records:&nbsp;{TotalRecords}</td>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>
+            <!-- BEGIN Sorter Sorter_SUBJECT_ABBREV --><span class="Sorter"><a href="{Sort_URL}" id="SUBJECT_TEACHER_SUBJECT_SSorter_SUBJECT_ABBREV">SUBJECT ABBREV</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUBJECT_ABBREV --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SUBJECT_TITLE --><span class="Sorter"><a href="{Sort_URL}" id="SUBJECT_TEACHER_SUBJECT_SSorter_SUBJECT_TITLE">SUBJECT TITLE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUBJECT_TITLE --></th>
+ 
+            <th>Staff Name</th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SCAFFOLD_COURSEDEV_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="SUBJECT_TEACHER_SUBJECT_SSorter_SCAFFOLD_COURSEDEV_FLAG">COURSE DEV?</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SCAFFOLD_COURSEDEV_FLAG --></th>
+ 
+            <th>&nbsp;Time Fraction</th>
+ 
+            <th>Allocatable?&nbsp;</th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SCAFFOLD_COURSEDEV_UPDATED --><span class="Sorter"><a href="{Sort_URL}" id="SUBJECT_TEACHER_SUBJECT_SSorter_SCAFFOLD_COURSEDEV_UPDATED">Allocations Updated</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SCAFFOLD_COURSEDEV_UPDATED --></th>
+ 
+            <th>&nbsp;<font color="#c0504d">Delete!</font></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="8">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td>{SUBJECT_ABBREV}<input type="hidden" id="SUBJECT_TEACHER_SUBJECT_SSUBJECT_TEACHER_SUBJECT_ID_{SUBJECT_TEACHER_SUBJECT_S:rowNumber}" value="{SUBJECT_TEACHER_SUBJECT_ID}" name="{SUBJECT_TEACHER_SUBJECT_ID_Name}"></td> 
+            <td>{SUBJECT_TITLE}</td> 
+            <td>
+              <p>{FIRSTNAME}&nbsp;{SURNAME}<input type="hidden" id="SUBJECT_TEACHER_SUBJECT_SSUBJECT_TEACHER_STAFF_ID_{SUBJECT_TEACHER_SUBJECT_S:rowNumber}" value="{SUBJECT_TEACHER_STAFF_ID}" name="{SUBJECT_TEACHER_STAFF_ID_Name}"></p>
+            </td> 
+            <td>{SCAFFOLD_COURSEDEV_FLAG}<input type="hidden" id="SUBJECT_TEACHER_SUBJECT_SSCAFFOLD_COURSEDEV_UPDATED" value="{SCAFFOLD_COURSEDEV_UPDATED}" name="{SCAFFOLD_COURSEDEV_UPDATED_Name}"><input type="hidden" id="SUBJECT_TEACHER_SUBJECT_SSCAFFOLD_COURSEDEV_FLAG1" value="{SCAFFOLD_COURSEDEV_FLAG1}" name="{SCAFFOLD_COURSEDEV_FLAG1_Name}"></td> 
+            <td>&nbsp;<input type="text" id="SUBJECT_TEACHER_SUBJECT_STIME_FRACTION" size="6" value="{TIME_FRACTION}" name="{TIME_FRACTION_Name}"></td> 
+            <td>
+              <!-- BEGIN RadioButton rbAllocatable --><input type="radio" id="SUBJECT_TEACHER_SUBJECT_SrbAllocatable_{rbAllocatable:optionNumber}" value="{Value}" name="{rbAllocatable_Name}" {Check}>{Description}<!-- END RadioButton rbAllocatable --></td> 
+            <td nowrap>&nbsp;{lblLastUpdated}<input type="hidden" id="SUBJECT_TEACHER_SUBJECT_SLAST_UPDATED_{SUBJECT_TEACHER_SUBJECT_S:rowNumber}" value="{LAST_UPDATED}" name="{LAST_UPDATED_Name}"></td> 
+            <td nowrap>&nbsp;<input type="checkbox" id="SUBJECT_TEACHER_SUBJECT_ScheckDelete" value="1" name="{checkDelete_Name}" {checkDelete}>&nbsp;Delete</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="8">No Staff or Subjects Found!</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="8">
+              <!-- BEGIN Navigator Navigator1 --><span class="Navigator">Records per page 
+              <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+                <option selected value="">-</option>
+ {PageSize_Options}
+              </select>
+ 
+              <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+              <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number}&nbsp;of&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator1 -->&nbsp; 
+              <!-- BEGIN Button ButtonUpdate --><input type="submit" id="SUBJECT_TEACHER_SUBJECT_SButtonUpdate" class="Button" value="Save Changes" name="{Button_Name}"><!-- END Button ButtonUpdate -->&nbsp;&nbsp; 
+              <!-- BEGIN Button ButtonCancel --><input type="submit" id="SUBJECT_TEACHER_SUBJECT_SButtonCancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button ButtonCancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+&nbsp;<!-- END EditableGrid SUBJECT_TEACHER_SUBJECT_S --><br>
+<br>
+<br>
+</p>
+</body>
+</html>

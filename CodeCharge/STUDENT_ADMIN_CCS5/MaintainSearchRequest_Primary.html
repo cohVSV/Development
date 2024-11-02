@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>MaintainSearchRequest_Primary</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @29-9A52F8DE
+    if (theForm.viewPrimaryTeacherSearchRs_SURNAME) theForm.viewPrimaryTeacherSearchRs_SURNAME.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//bind_events @1-B716D3FC
+function bind_events() {
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>
+<!-- BEGIN Record viewPrimaryTeacherSearchR -->
+<form id="viewPrimaryTeacherSearchR" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" width="30%" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Primary Teacher Search</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>SURNAME*</th>
+ 
+            <td><input id="viewPrimaryTeacherSearchRs_SURNAME" tabindex="1" maxlength="30" value="{s_SURNAME}" name="{s_SURNAME_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STUDENT ID</th>
+ 
+            <td><input id="viewPrimaryTeacherSearchRs_STUDENT_ID" tabindex="2" maxlength="12" value="{s_STUDENT_ID}" name="{s_STUDENT_ID_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ENROLMENT YEAR</th>
+ 
+            <td><input id="viewPrimaryTeacherSearchRs_ENROLMENT_YEAR" tabindex="3" maxlength="12" size="5" value="{s_ENROLMENT_YEAR}" name="{s_ENROLMENT_YEAR_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td>
+              <div align="left">
+<a href="{Link1_Src}" id="viewPrimaryTeacherSearchRLink1">Simple Search</a>
+              </div>
+            </td> 
+            <td align="right"><a href="{ClearParameters_Src}" id="viewPrimaryTeacherSearchRClearParameters" tabindex="5">Clear</a>&nbsp;&nbsp; 
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="viewPrimaryTeacherSearchRButton_DoSearch" tabindex="4" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+        <em>SURNAME is an automatic wildcard search</em></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record viewPrimaryTeacherSearchR --><br>
+<!-- BEGIN Grid viewPrimaryTeacherSearchR1 -->
+<table cellspacing="0" cellpadding="0" width="60%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>Search Results - Prep to 6 only</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_STUDENT_ID --><a href="{Sort_URL}" id="viewPrimaryTeacherSearchR1Sorter_STUDENT_ID">STUDENT ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="viewPrimaryTeacherSearchR1Sorter_SURNAME">SURNAME</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="viewPrimaryTeacherSearchR1Sorter_FIRST_NAME">FIRST NAME</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><a href="{Sort_URL}" id="viewPrimaryTeacherSearchR1Sorter_YEAR_LEVEL">YEAR LEVEL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROLMENT_STATUS --><a href="{Sort_URL}" id="viewPrimaryTeacherSearchR1Sorter_ENROLMENT_STATUS">ENROL STATUS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_STATUS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STAFF_ID --><a href="{Sort_URL}" id="viewPrimaryTeacherSearchR1Sorter_STAFF_ID">TEACHER</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STAFF_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PASTORAL_CARE_ID --><a href="{Sort_URL}" id="viewPrimaryTeacherSearchR1Sorter_PASTORAL_CARE_ID">STUDENT SUPPORT</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_PASTORAL_CARE_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROLMENT_YEAR --><a href="{Sort_URL}" id="viewPrimaryTeacherSearchR1Sorter_ENROLMENT_YEAR">ENROLMENT YEAR</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_YEAR --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">{STUDENT_ID}&nbsp;</td> 
+          <td>{SURNAME}&nbsp;</td> 
+          <td>{FIRST_NAME}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{YEAR_LEVEL}&nbsp;</td> 
+          <td>{ENROLMENT_STATUS}&nbsp;</td> 
+          <td>{STAFF_ID}&nbsp;</td> 
+          <td>{PASTORAL_CARE_ID}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{ENROLMENT_YEAR}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">No records - try changing the search criteria</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid viewPrimaryTeacherSearchR1 --><br>
+</p>
+</body>
+</html>

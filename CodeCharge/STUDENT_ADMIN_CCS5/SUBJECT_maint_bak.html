@@ -1,0 +1,144 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SUBJECT</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{Header}</p>
+<p align="center"><a href="{Link1_Src}" class="Button" id="Link1">Return to Subject Search</a></p>
+<!-- BEGIN Record SUBJECT -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit SUBJECT </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>SUBJECT ID</th>
+ 
+            <td>
+              <!-- BEGIN TextBox txtNewSubjectID --><input maxlength="6" size="6" value="{txtNewSubjectID}" name="{txtNewSubjectID_Name}" id="SUBJECTtxtNewSubjectID"><!-- END TextBox txtNewSubjectID -->{lblSubjectID}&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUBJECT ABBREVIATION</th>
+ 
+            <td><input maxlength="6" size="6" value="{SUBJECT_ABBREV}" name="{SUBJECT_ABBREV_Name}" id="SUBJECTSUBJECT_ABBREV"></td> 
+            <td>&nbsp;SUBJECT TITLE</td> 
+            <td>&nbsp;<input maxlength="37" size="37" value="{SUBJECT_TITLE}" name="{SUBJECT_TITLE_Name}" id="SUBJECTSUBJECT_TITLE"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CAMPUS CODE</th>
+ 
+            <td>
+              <select name="{CAMPUS_CODE_Name}" id="SUBJECTCAMPUS_CODE">
+                <option value="" selected>Select Value</option>
+                {CAMPUS_CODE_Options}
+              </select>
+ </td> 
+            <td>&nbsp;YEAR LEVEL</td> 
+            <td>&nbsp;<input maxlength="5" size="5" value="{YEAR_LEVEL}" name="{YEAR_LEVEL_Name}" id="SUBJECTYEAR_LEVEL"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DEFAULT SEMESTER</th>
+ 
+            <td><input maxlength="1" size="1" value="{DEFAULT_SEMESTER}" name="{DEFAULT_SEMESTER_Name}" id="SUBJECTDEFAULT_SEMESTER"></td> 
+            <td>&nbsp;DEFAULT TEACHER ID</td> 
+            <td>&nbsp; 
+              <select name="{DEFAULT_TEACHER_ID_Name}" id="SUBJECTDEFAULT_TEACHER_ID">
+                <option value="" selected>Select Value</option>
+                {DEFAULT_TEACHER_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUB SCHOOL</th>
+ 
+            <td><input maxlength="10" size="10" value="{SUB_SCHOOL}" name="{SUB_SCHOOL_Name}" id="SUBJECTSUB_SCHOOL"></td> 
+            <td>&nbsp;KEY LEARNING AREA</td> 
+            <td>&nbsp; 
+              <select name="{KLA_ID_Name}" id="SUBJECTKLA_ID">
+                <option value="" selected>Select Value</option>
+                {KLA_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CSF CLASS LEVEL</th>
+ 
+            <td><input maxlength="5" size="5" value="{CSF_CLASS_LEVEL}" name="{CSF_CLASS_LEVEL_Name}" id="SUBJECTCSF_CLASS_LEVEL"></td> 
+            <td>&nbsp;MAX NO. OF BOOKS</td> 
+            <td>&nbsp;<input maxlength="3" size="3" value="{MAX_BOOKS}" name="{MAX_BOOKS_Name}" id="SUBJECTMAX_BOOKS"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>VALID COURSE DISTRIBUTION</th>
+ 
+            <td colspan="3">
+              <!-- BEGIN CheckBoxList VALID_COURSE_DISTRIBUTION --><input type="checkbox" value="{Value}" name="{VALID_COURSE_DISTRIBUTION_Name}" {Check} id="SUBJECTVALID_COURSE_DISTRIBUTION_{VALID_COURSE_DISTRIBUTION:optionNumber}">{Description}<!-- END CheckBoxList VALID_COURSE_DISTRIBUTION -->&nbsp;&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DESCRIPTION LINE 1</th>
+ 
+            <td colspan="3"><textarea name="{DESCRIPTION_LINE1_Name}" rows="3" cols="50" id="SUBJECTDESCRIPTION_LINE1">{DESCRIPTION_LINE1}</textarea>&nbsp;&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DESCRIPTION LINE 2</th>
+ 
+            <td colspan="3"><textarea name="{DESCRIPTION_LINE2_Name}" rows="3" cols="50" id="SUBJECTDESCRIPTION_LINE2">{DESCRIPTION_LINE2}</textarea>&nbsp;&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STATUS</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton STATUS --><input type="radio" value="{Value}" name="{STATUS_Name}" {Check} id="SUBJECTSTATUS_{STATUS:optionNumber}">{Description}<!-- END RadioButton STATUS --></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / DATE</th>
+ 
+            <td>{LAST_ALTERED_BY}</td> 
+            <td>&nbsp;{LAST_ALTERED_DATE}</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="4">
+              <!-- BEGIN Button Button_Insert --><input class="Button" type="submit" value="Add new" name="{Button_Name}" id="SUBJECTButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" type="submit" value="Update" name="{Button_Name}" id="SUBJECTButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" type="submit" value="Delete" name="{Button_Name}" id="SUBJECTButton_Delete"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record SUBJECT --><br>
+</body>
+</html>

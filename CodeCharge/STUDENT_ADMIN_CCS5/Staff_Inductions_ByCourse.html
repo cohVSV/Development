@@ -1,0 +1,332 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Staff Inductions - By Course</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-3A4616CF
+
+var STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED = new Object(); 
+STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED.format           = "dd/mm/yyyy";
+STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED.style            = "Styles/Blueprint/Style.css";
+STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED.relativePathPart = "";
+STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_STAFF_INDUCTIONS_COURSES1_Button_Cancel_OnClick @24-88302EFF
+function page_STAFF_INDUCTIONS_COURSES1_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STAFF_INDUCTIONS_COURSES1_Button_Cancel_OnClick
+
+//page_STAFF_INDUCTIONS_PROGRESS_Cancel_OnClick @54-C424F40B
+function page_STAFF_INDUCTIONS_PROGRESS_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STAFF_INDUCTIONS_PROGRESS_Cancel_OnClick
+
+//bind_events @1-A433CB67
+function bind_events() {
+    addEventHandler("STAFF_INDUCTIONS_COURSES1Button_Cancel","click",page_STAFF_INDUCTIONS_COURSES1_Button_Cancel_OnClick);
+    addEventHandler("STAFF_INDUCTIONS_PROGRESSCancel","click",page_STAFF_INDUCTIONS_PROGRESS_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp; 
+<table style="WIDTH: 80%" align="center" border="0">
+  <tr valign="top">
+    <td width="50%">&nbsp; 
+      <!-- BEGIN Record STAFF_INDUCTIONS_COURSESSearch -->
+      <form id="STAFF_INDUCTIONS_COURSESSearch" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+                  <th>Search Induction Courses</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th>Keyword</th>
+ 
+                  <td><input id="STAFF_INDUCTIONS_COURSESSearchs_keyword" maxlength="50" size="30" value="{s_keyword}" name="{s_keyword_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td><a href="{ClearParameters_Src}" id="STAFF_INDUCTIONS_COURSESSearchClearParameters">Clear</a></td> 
+                  <td align="right">
+                    <!-- BEGIN Button Button_DoSearch --><input class="Button" id="STAFF_INDUCTIONS_COURSESSearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record STAFF_INDUCTIONS_COURSESSearch -->
+      <div align="right">
+      </div>
+ 
+      <div align="right">
+        &nbsp;
+      </div>
+      <br>
+      <!-- BEGIN Grid STAFF_INDUCTIONS_COURSES -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+                <th>List of Induction Courses </th>
+ 
+                <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Row">
+                <td colspan="3">Total Records:&nbsp;{STAFF_INDUCTIONS_COURSES_TotalRecords}</td>
+              </tr>
+ 
+              <tr class="Caption">
+                <th>
+                <!-- BEGIN Sorter Sorter_id --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_COURSESSorter_id">Id</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_id --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_INDUCTION_TITLE --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_COURSESSorter_INDUCTION_TITLE">INDUCTION TITLE</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_INDUCTION_TITLE --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_STATUS --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_COURSESSorter_STATUS">STATUS</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STATUS --></th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td style="TEXT-ALIGN: right"><a href="{id_Src}" id="STAFF_INDUCTIONS_COURSESid_{STAFF_INDUCTIONS_COURSES:rowNumber}">{id}</a>&nbsp;</td> 
+                <td>{INDUCTION_TITLE}&nbsp;</td> 
+                <td style="TEXT-ALIGN: right">{STATUS}&nbsp;</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="3">No Induction Courses found</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="3"><a href="{Link1_Src}" class="Button" id="STAFF_INDUCTIONS_COURSESLink1_{STAFF_INDUCTIONS_COURSES:rowNumber}">Add New Course</a> 
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif" border="0"></a> <!-- END First_On -->
+                  <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid STAFF_INDUCTIONS_COURSES --><br>
+    </td> 
+    <td width="50%">&nbsp; 
+      <!-- BEGIN Record STAFF_INDUCTIONS_COURSES1 -->
+      <form id="STAFF_INDUCTIONS_COURSES1" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+                  <th>Add/Edit Induction Courses</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th>TITLE</th>
+ 
+                  <td><input id="STAFF_INDUCTIONS_COURSES1INDUCTION_TITLE" maxlength="50" size="50" value="{INDUCTION_TITLE}" name="{INDUCTION_TITLE_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>DESCRIPTION</th>
+ 
+                  <td><textarea id="STAFF_INDUCTIONS_COURSES1INDUCTION_DESCRIPTION" name="{INDUCTION_DESCRIPTION_Name}" rows="3" cols="50">{INDUCTION_DESCRIPTION}</textarea></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>STATUS</th>
+ 
+                  <td>
+                    <!-- BEGIN RadioButton STATUS --><input id="STAFF_INDUCTIONS_COURSES1STATUS_{STATUS:optionNumber}" type="radio" value="{Value}" name="{STATUS_Name}" {Check}>{Description}<!-- END RadioButton STATUS --></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>LAST ALTERED BY / DATE</th>
+ 
+                  <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="STAFF_INDUCTIONS_COURSES1Button_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input class="Button" id="STAFF_INDUCTIONS_COURSES1Button_Update" type="submit" value="Save" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Cancel --><input class="Button" id="STAFF_INDUCTIONS_COURSES1Button_Cancel" type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                </tr>
+              </table>
+              <input id="STAFF_INDUCTIONS_COURSES1Hidden_last_altered_by" type="hidden" value="{Hidden_last_altered_by}" name="{Hidden_last_altered_by_Name}"><input id="STAFF_INDUCTIONS_COURSES1Hidden_last_altered_date" type="hidden" value="{Hidden_last_altered_date}" name="{Hidden_last_altered_date_Name}"></td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record STAFF_INDUCTIONS_COURSES1 --><br>
+      <!-- BEGIN EditableGrid STAFF_INDUCTIONS_PROGRESS -->
+      <form id="STAFF_INDUCTIONS_PROGRESS" name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+                  <th>Staff Completion of Inductions</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="5">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Row">
+                  <td colspan="5">Total Records:&nbsp;{STAFF_INDUCTIONS_PROGRESS_TotalRecords}</td>
+                </tr>
+ 
+                <tr class="Caption">
+                  <th>
+                  <!-- BEGIN Sorter Sorter_STAFF_ID --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_PROGRESSSorter_STAFF_ID">STAFF ID</a> 
+                  <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                  <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STAFF_ID --></th>
+ 
+                  <th>
+                  <!-- BEGIN Sorter Sorter_STATUS --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_PROGRESSSorter_STATUS">STATUS</a> 
+                  <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                  <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STATUS --></th>
+ 
+                  <th>
+                  <!-- BEGIN Sorter Sorter_DATE_COMPLETED --><a href="{Sort_URL}" id="STAFF_INDUCTIONS_PROGRESSSorter_DATE_COMPLETED">DATE COMPLETED</a> 
+                  <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                  <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_DATE_COMPLETED --></th>
+ 
+                  <th colspan="2">Delete</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <!-- BEGIN RowError -->
+                <tr class="Error">
+                  <td colspan="5">{Error}</td>
+                </tr>
+                <!-- END RowError -->
+                <tr class="Row">
+                  <td>
+                    <select id="STAFF_INDUCTIONS_PROGRESSSTAFF_ID_{STAFF_INDUCTIONS_PROGRESS:rowNumber}" name="{STAFF_ID_Name}">
+                      <option value="" selected>Select Value</option>
+                      {STAFF_ID_Options}
+                    </select>
+ </td> 
+                  <td>
+                    <select id="STAFF_INDUCTIONS_PROGRESSSTATUS_{STAFF_INDUCTIONS_PROGRESS:rowNumber}" name="{STATUS_Name}">
+                      <option value="" selected>Select Value</option>
+                      {STATUS_Options}
+                    </select>
+ </td> 
+                  <td><input id="STAFF_INDUCTIONS_PROGRESSDATE_COMPLETED_{STAFF_INDUCTIONS_PROGRESS:rowNumber}" maxlength="100" size="10" value="{DATE_COMPLETED}" name="{DATE_COMPLETED_Name}">
+                    <!-- BEGIN DatePicker DatePicker_DATE_COMPLETED --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED_{STAFF_INDUCTIONS_PROGRESS:rowNumber}"><img id="STAFF_INDUCTIONS_PROGRESSDatePicker_DATE_COMPLETED_Image_{STAFF_INDUCTIONS_PROGRESS:rowNumber}" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_DATE_COMPLETED --><input id="STAFF_INDUCTIONS_PROGRESSinduction_id_{STAFF_INDUCTIONS_PROGRESS:rowNumber}" type="hidden" value="{induction_id}" name="{induction_id_Name}"></td> 
+                  <td colspan="2">
+                    <!-- BEGIN CheckBox CheckBox_Delete --><input id="STAFF_INDUCTIONS_PROGRESSCheckBox_Delete_{STAFF_INDUCTIONS_PROGRESS:rowNumber}" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="5">No Staff / Induction Details found</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td style="TEXT-ALIGN: right" colspan="5">
+                    <!-- BEGIN Navigator Navigator -->
+                    <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+                    <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                      <option value="" selected>-</option>
+ {PageSize_Options}
+                    </select>
+ 
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif" border="0"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator -->
+                    <!-- BEGIN Button Button_Submit --><input class="Button" id="STAFF_INDUCTIONS_PROGRESSButton_Submit" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit -->
+                    <!-- BEGIN Button Cancel --><input class="Button" id="STAFF_INDUCTIONS_PROGRESSCancel" type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Cancel --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END EditableGrid STAFF_INDUCTIONS_PROGRESS --><br>
+    </td>
+  </tr>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>VSREnrolment</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_viewVSNSearch_OnLoad @2-83139F8C
+function page_viewVSNSearch_OnLoad(form)
+{
+    var result;
+//End page_viewVSNSearch_OnLoad
+
+//Set Focus @13-4A088FA4
+    if (theForm.viewVSNSearchs_SURNAME) theForm.viewVSNSearchs_SURNAME.focus();
+//End Set Focus
+
+//Close page_viewVSNSearch_OnLoad @2-BC33A33A
+    return result;
+}
+//End Close page_viewVSNSearch_OnLoad
+
+//bind_events @1-54C6763B
+function bind_events() {
+    if(document.getElementById("viewVSNSearchHolder"))
+    addEventHandler("viewVSNSearch","load",page_viewVSNSearch_OnLoad);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<!-- BEGIN Record viewVSNSearch -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search&nbsp;Student VSN</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>SURNAME*</th>
+ 
+            <td><input id="viewVSNSearchs_SURNAME" tabindex="1" maxlength="30" value="{s_SURNAME}" name="{s_SURNAME_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>STUDENT ID</th>
+ 
+            <td><input id="viewVSNSearchs_STUDENT_ID" tabindex="2" maxlength="12" value="{s_STUDENT_ID}" name="{s_STUDENT_ID_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>VSN</th>
+ 
+            <td><input id="viewVSNSearchs_STUDENT_VSN" tabindex="2" maxlength="12" value="{s_STUDENT_VSN}" name="{s_STUDENT_VSN_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ENROLMENT YEAR</th>
+ 
+            <td><input id="viewVSNSearchs_ENROLMENT_YEAR" tabindex="4" maxlength="12" size="5" value="{s_ENROLMENT_YEAR}" name="{s_ENROLMENT_YEAR_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td></td> 
+            <td align="right"><a href="{ClearParameters_Src}" id="viewVSNSearchClearParameters" tabindex="6">Clear</a> 
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="viewVSNSearchButton_DoSearch" tabindex="5" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td></td> 
+            <td align="right"></td>
+          </tr>
+        </table>
+        <em>SURNAME&nbsp;is automatic wildcard searches</em></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record viewVSNSearch -->&nbsp; 
+<!-- BEGIN Grid viewVSN -->
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>Search Results</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_STUDENT_ID --><a href="{Sort_URL}" id="viewVSNSorter_STUDENT_ID">STUDENT ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="viewVSNSorter_SURNAME">SURNAME</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_SURNAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="viewVSNSorter_FIRST_NAME">FIRST NAME</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><a href="{Sort_URL}" id="viewVSNSorter_YEAR_LEVEL">YEAR LEVEL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROLMENT_STATUS --><a href="{Sort_URL}" id="viewVSNSorter_ENROLMENT_STATUS">ENROLMENT STATUS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_ENROLMENT_STATUS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROLMENT_YEAR --><a href="{Sort_URL}" id="viewVSNSorter_ENROLMENT_YEAR">ENROLMENT YEAR</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_ENROLMENT_YEAR --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_VSN1 --><a href="{Sort_URL}" id="viewVSNSorter_VSN1">VSN</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_VSN1 -->&nbsp;&nbsp;</th>
+ 
+          <th>&nbsp; 
+          <!-- BEGIN Sorter Sorter_VSREnrolled --><a href="{Sort_URL}" id="viewVSNSorter_VSREnrolled">VSR Enrolled</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_VSREnrolled --></th>
+ 
+          <th>&nbsp; 
+          <!-- BEGIN Sorter Sorter_VSRVerified --><a href="{Sort_URL}" id="viewVSNSorter_VSRVerified">VSR Verified</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_VSRVerified --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{STUDENT_ID_Src}" id="viewVSNSTUDENT_ID">{STUDENT_ID}</a></td> 
+          <td>&nbsp;{SURNAME}</td> 
+          <td>&nbsp;{FIRST_NAME}</td> 
+          <td>&nbsp;{YEAR_LEVEL}</td> 
+          <td style="TEXT-ALIGN: right">{ENROLMENT_STATUS}&nbsp;</td> 
+          <td>&nbsp;{ENROLMENT_YEAR}</td> 
+          <td style="TEXT-ALIGN: right">{VSN}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{VSREnrolled}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{VSRVerified}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN Separator -->
+        <tr class="Separator">
+          <td colspan="9"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+        <!-- END Separator -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="9">No records - try changing the search criteria </td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="9">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a><!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid viewVSN -->
+</body>
+</html>

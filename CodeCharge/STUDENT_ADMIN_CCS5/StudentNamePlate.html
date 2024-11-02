@@ -1,0 +1,52 @@
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<p>
+<!-- BEGIN Report viewStudentSummary_Detail -->
+<table border="0" cellspacing="0" cellpadding="0" width="70%" align="center">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>Student Summary</th>
+ 
+          <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">&nbsp;Student</td> 
+          <td style="TEXT-ALIGN: left"><strong>{first_name}&nbsp;{surname}</strong> </td> 
+          <td>&nbsp;{STUDENT_ID}</td> 
+          <td>Birth Date <em>Age</em></td> 
+          <td>{BIRTH_DATE}&nbsp; <em>{AGE}</em></td> 
+          <td>&nbsp;Gender&nbsp;</td> 
+          <td>&nbsp;{GENDER}</td> 
+        </tr>
+ 
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">Category</td> 
+          <td style="TEXT-ALIGN: left" colspan="2">{subcategory_full_title}&nbsp;&nbsp; </td> 
+          <td>Year Level&nbsp;&nbsp;<em>ATAR</em></td> 
+          <td>{YEAR_LEVEL}&nbsp;&nbsp;<em>{ATAR_REQUIRED}</em>&nbsp;&nbsp;{lblATAR_REQUIRED}</td> 
+          <td>&nbsp;Enrolled</td> 
+          <td>&nbsp;{ENROLMENT_STATUS}</td> 
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No Student Details found - Make sure you have selected a student!</td> 
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Report viewStudentSummary_Detail --></p>

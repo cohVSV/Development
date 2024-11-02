@@ -1,0 +1,171 @@
+'Using Statements @1-ECBA6F53
+Imports System
+Imports System.Text
+Imports System.Text.RegularExpressions
+Imports System.Collections
+Imports System.Collections.Specialized
+Imports System.Data
+Imports DECV_PROD2007
+Imports DECV_PROD2007.Data
+Imports DECV_PROD2007.Controls
+Imports DECV_PROD2007.Security
+Imports DECV_PROD2007.Configuration
+'End Using Statements
+
+Namespace DECV_PROD2007.StudentDetails_maintain 'Namespace @1-65C4BA7C
+
+'Page Data Class @1-0B77669F
+Public Class PageItem
+    Public errors As NameValueCollection = New NameValueCollection()
+
+    Public Sub New()
+    End Sub
+
+    Public Shared Function CreateFromHttpRequest() As PageItem
+        Dim item As PageItem = New PageItem()
+        Return item
+    End Function
+
+    Default Public Property Field(fieldName As String) As FieldBase
+        Get
+            Select fieldName
+                Case Else
+                    Throw (New ArgumentOutOfRangeException())
+            End Select
+        End Get
+        Set (ByVal Value As FieldBase)
+            Select fieldName
+                Case Else
+                    Throw (New ArgumentOutOfRangeException())
+            End Select
+        End Set
+    End Property
+
+End Class
+'End Page Data Class
+
+'Page Data Provider Class @1-E3544B64
+Public Class PageDataProvider
+Dim j As Integer
+'End Page Data Provider Class
+
+'Page Data Provider Class Constructor @1-12B526DF
+    Public Sub New()
+    End Sub
+'End Page Data Provider Class Constructor
+
+'Page Data Provider Class GetResultSet Method @1-F73C4626
+    Public Sub FillItem(ByVal item As PageItem)
+'End Page Data Provider Class GetResultSet Method
+
+'Page Data Provider Class GetResultSet Method tail @1-E31F8E2A
+    End Sub
+'End Page Data Provider Class GetResultSet Method tail
+
+'Page Data Provider class Tail @1-A61BA892
+End Class
+'End Page Data Provider class Tail
+
+'DEL          Update.Parameters.Clear()
+'DEL          CType(Update,TableCommand).AddParameter("student_id36",Urlstudent_id, "","student_id",Condition.Equal,False)
+'DEL          If item.surname.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{surname}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{surname}",Update.Dao.ToSql(item.surname.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.first_name.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{first_name}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{first_name}",Update.Dao.ToSql(item.first_name.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.middle_name.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{middle_name}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{middle_name}",Update.Dao.ToSql(item.middle_name.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.birth_date.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{birth_date}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{birth_date}",Update.Dao.ToSql(item.birth_date.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.SEX.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{SEX}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{SEX}",Update.Dao.ToSql(item.SEX.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.ATTENDING_SCHOOL_ID.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{ATTENDING_SCHOOL_ID}",Update.Dao.ToSql(Nothing,FieldType._Float))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{ATTENDING_SCHOOL_ID}",Update.Dao.ToSql(item.ATTENDING_SCHOOL_ID.GetFormattedValue(""),FieldType._Float))
+'DEL          End If
+'DEL          If item.attending_school_name.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{attending_school_name}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{attending_school_name}",Update.Dao.ToSql(item.attending_school_name.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.HOME_SCHOOL_ID.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{HOME_SCHOOL_ID}",Update.Dao.ToSql(Nothing,FieldType._Float))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{HOME_SCHOOL_ID}",Update.Dao.ToSql(item.HOME_SCHOOL_ID.GetFormattedValue(""),FieldType._Float))
+'DEL          End If
+'DEL          If item.home_school_name.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{home_school_name}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{home_school_name}",Update.Dao.ToSql(item.home_school_name.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL  
+'DEL          If item.YEAR_LEVEL.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{YEAR_LEVEL}",Update.Dao.ToSql(Nothing,FieldType._Integer))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{YEAR_LEVEL}",Update.Dao.ToSql(item.YEAR_LEVEL.GetFormattedValue(""),FieldType._Integer))
+'DEL          End If
+'DEL          If item.receipt_no.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{receipt_no}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{receipt_no}",Update.Dao.ToSql(item.receipt_no.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.ENROLMENT_YEAR.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{ENROLMENT_YEAR}",Update.Dao.ToSql(Nothing,FieldType._Float))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{ENROLMENT_YEAR}",Update.Dao.ToSql(item.ENROLMENT_YEAR.GetFormattedValue(""),FieldType._Float))
+'DEL          End If
+'DEL          If item.enrolment_date.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{enrolment_date}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{enrolment_date}",Update.Dao.ToSql(item.enrolment_date.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.withdrawal_date.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{withdrawal_date}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{withdrawal_date}",Update.Dao.ToSql(item.withdrawal_date.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.ENROLMENT_STATUS.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{ENROLMENT_STATUS}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{ENROLMENT_STATUS}",Update.Dao.ToSql(item.ENROLMENT_STATUS.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          If item.WITHDRAWAL_REASON_ID.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{WITHDRAWAL_REASON_ID}",Update.Dao.ToSql(Nothing,FieldType._Float))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{WITHDRAWAL_REASON_ID}",Update.Dao.ToSql(item.WITHDRAWAL_REASON_ID.GetFormattedValue(""),FieldType._Float))
+'DEL          End If
+'DEL          If item.PASTORAL_CARE_ID.Value Is Nothing Then
+'DEL              Update.SqlQuery.Replace("{PASTORAL_CARE_ID}",Update.Dao.ToSql(Nothing,FieldType._Text))
+'DEL          Else
+'DEL              Update.SqlQuery.Replace("{PASTORAL_CARE_ID}",Update.Dao.ToSql(item.PASTORAL_CARE_ID.GetFormattedValue(""),FieldType._Text))
+'DEL          End If
+'DEL          Dim result As Object = 0
+'DEL          Dim E As Exception = Nothing
+'DEL          Try
+'DEL              result = ExecuteUpdate()
+'DEL          Catch ee As Exception
+'DEL              E = ee
+'DEL          Finally
+'DEL              If Not IsParametersPassed Then
+'DEL                  Throw New Exception(Resources.strings.CCS_CustomOperationError_MissingParameters)
+'DEL              End If
+
+'Page Data Provider Tail 2 @1-5EA2E2E0
+End Namespace
+'End Page Data Provider Tail 2
+

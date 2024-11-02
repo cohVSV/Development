@@ -1,0 +1,213 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>StudentEnrolment_AddSubjects</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//DEL  </script>
+//DEL  <script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+//DEL  <script language="JavaScript" type="text/javascript">
+//DEL    
+
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_button_PopupSubjectList_OnClick @22-59DB2511
+function page_button_PopupSubjectList_OnClick()
+{
+    var result;
+//End page_button_PopupSubjectList_OnClick
+
+//Custom Code @23-2A29BDB7
+    // -------------------------
+    // ERA: same OpenPopupList code
+    var FieldName;
+    FieldName = "AddNewSubjects_SUBJECT_ID";        // return field name
+        var YearLevel
+        YearLevel = document.getElementById('AddNewSubjecthidden_ENROLMENT_YEAR');
+    var win=window.open("popup_SubjectList.aspx?returncontrol="+FieldName+"&s_YEAR_LEVEL="+YearLevel, "SubjectList", "left=40,top=10,width=380,height=480,status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+    win.focus();
+    // -------------------------
+//End Custom Code
+
+//Close page_button_PopupSubjectList_OnClick @22-BC33A33A
+    return result;
+}
+//End Close page_button_PopupSubjectList_OnClick
+
+//page_AddNewSubject_Button_DoDelete_OnClick @35-0565413E
+function page_AddNewSubject_Button_DoDelete_OnClick()
+{
+    var result;
+//End page_AddNewSubject_Button_DoDelete_OnClick
+
+//Confirmation Message @36-BCCE3417
+    return confirm('Are you SURE you want to DELETE the selected Subjects from this Student?');
+//End Confirmation Message
+
+//Close page_AddNewSubject_Button_DoDelete_OnClick @35-BC33A33A
+    return result;
+}
+//End Close page_AddNewSubject_Button_DoDelete_OnClick
+
+//bind_events @1-50645147
+function bind_events() {
+    addEventHandler("AddNewSubjectButton_DoDelete","click",page_AddNewSubject_Button_DoDelete_OnClick);
+    addEventHandler("button_PopupSubjectList","click",page_button_PopupSubjectList_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{Header}</p>
+<p align="center">
+<!-- BEGIN Button button_PopupSubjectList --><input class="Button" type="submit" value="Select via Popup List" name="{Button_Name}" id="button_PopupSubjectList"><!-- END Button button_PopupSubjectList --></p>
+<p>
+<!-- BEGIN Grid SubjectList -->
+<table style="WIDTH: 90%" cellspacing="0" cellpadding="0" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of New Student's Subjects</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Bottom">
+          <td><strong>&nbsp;STUDENT ID</strong></td> 
+          <td>
+            <p align="left">&nbsp;{lbldisplay_STUDENTID}</p>
+          </td> 
+          <td><strong>ENROLMENT YEAR</strong></td> 
+          <td>
+            <p align="left">&nbsp;{lbldisplay_ENROL_YEAR}</p>
+          </td> 
+          <td><strong>YEAR LEVEL</strong></td> 
+          <td>
+            <p align="left">&nbsp;{lbldisplay_YEARLEVEL}</p>
+          </td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>SUBJECT ID</th>
+ 
+          <th>SUBJECT TITLE</th>
+ 
+          <th>COURSE DISTRIBUTION</th>
+ 
+          <th>SEMESTER</th>
+ 
+          <th>ENROLMENT DATE&nbsp;</th>
+ 
+          <th>&nbsp;DELETE</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">{SUBJECT_ID}&nbsp;</td> 
+          <td>{SUBJECT_TITLE}&nbsp;</td> 
+          <td>{COURSE_DISTRIBUTION}&nbsp;</td> 
+          <td>{SEMESTER}&nbsp;</td> 
+          <td>&nbsp;{ENROL_DATE}</td> 
+          <td>
+            <p align="center">&nbsp;<input type="checkbox" value="1" name="{cbox_Name}" {cbox} id="SubjectListcbox"></p>
+          </td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords --><!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid SubjectList --><br>
+<!-- BEGIN Record AddNewSubject -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table style="WIDTH: 90%" cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add New Subject</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="6">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th>SUBJECT ID</th>
+ 
+            <th>SUBJECT TITLE</th>
+ 
+            <th>COURSE DISTRIBUTION</th>
+ 
+            <th>SEMESTER</th>
+ 
+            <th>&nbsp;ENROLMENT DATE&nbsp;</th>
+ 
+            <th>&nbsp;</th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input maxlength="8" size="6" value="{s_SUBJECT_ID}" name="{s_SUBJECT_ID_Name}" id="AddNewSubjects_SUBJECT_ID"></td> 
+            <td>{lbladdSUBJECT_TITLE}&nbsp;</td> 
+            <td>&nbsp; 
+              <select name="{addCOURSE_DISTRIBUTION_Name}" id="AddNewSubjectaddCOURSE_DISTRIBUTION">
+                <option value="" selected>Select Value</option>
+                {addCOURSE_DISTRIBUTION_Options}
+              </select>
+ </td> 
+            <td>&nbsp; 
+              <select name="{addSEMESTER_Name}" id="AddNewSubjectaddSEMESTER">
+                <option value="" selected>Select Value</option>
+                {addSEMESTER_Options}
+              </select>
+ </td> 
+            <td>&nbsp;<input maxlength="12" size="10" value="{addENROL_DATE}" name="{addENROL_DATE_Name}" id="AddNewSubjectaddENROL_DATE"></td> 
+            <td>
+              <p align="center">
+              <!-- BEGIN Button Button_DoAdd --><input class="Button" type="submit" value="Add" name="{Button_Name}" id="AddNewSubjectButton_DoAdd"><!-- END Button Button_DoAdd --></p>
+            </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="6"><strong>&nbsp;DELETE CHECKED SUBJECTS: 
+              <!-- BEGIN Button Button_DoDelete --><input class="Button" type="submit" value="Delete" name="{Button_Name}" id="AddNewSubjectButton_DoDelete"><!-- END Button Button_DoDelete --></strong></td>
+          </tr>
+        </table>
+        <input type="hidden" value="{hidden_STUDENT_ID}" name="{hidden_STUDENT_ID_Name}" id="AddNewSubjecthidden_STUDENT_ID"><input type="hidden" value="{hidden_ENROLMENT_YEAR}" name="{hidden_ENROLMENT_YEAR_Name}" id="AddNewSubjecthidden_ENROLMENT_YEAR"><input id="AddNewSubjecthidden_YEARLEVEL" type="hidden" value="{hidden_YEARLEVEL}" name="{hidden_YEARLEVEL_Name}"></td>
+    </tr>
+  </table>
+</form>
+&nbsp; 
+<div align="center">
+  {lblMessages} 
+</div>
+<!-- END Record AddNewSubject -->
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>

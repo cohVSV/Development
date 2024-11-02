@@ -1,0 +1,259 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Maintain Search Request - Advanced</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-76783C91
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/scriptaculous.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/controls.js" type="text/javascript" charset="windows-1252"></script>
+<link rel="stylesheet" type="text/css" href="MaintainSearchRequest_Advanced_style.css">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @62-719C21AF
+    if (theForm.viewMaintainSearchRequests_SCHOOLNAME) theForm.viewMaintainSearchRequests_SCHOOLNAME.focus();
+//End Set Focus
+        result = true;  // ERA
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//Initialize viewMaintainSearchRequests_SCHOOLNAMEPTAutocomplete1 @60-5D949568
+function viewMaintainSearchRequests_SCHOOLNAMEPTAutocomplete1_start() {
+    if ($("viewMaintainSearchRequests_SCHOOLNAME"))
+        new Ajax.Autocompleter("viewMaintainSearchRequests_SCHOOLNAME", "viewMaintainSearchRequests_SCHOOLNAME_choices", "services/MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutocomplete1.aspx", {});
+}
+//End Initialize viewMaintainSearchRequests_SCHOOLNAMEPTAutocomplete1
+
+//Handle viewMaintainSearchRequestCondition1 @48-22A3BE89
+function viewMaintainSearchRequestCondition1_start(sender) {
+//End Handle viewMaintainSearchRequestCondition1
+
+//Custom viewMaintainSearchRequestCondition1 @48-84D3DE00
+        // ERA: kooky JS created from Wizard. Fixed by Eric
+    if ($("viewMaintainSearchRequests_SCHOOLNAME").value != "")
+    {
+        viewMaintainSearchRequestPTAutoFill1_start(sender);
+    } else {
+    }
+//End Custom viewMaintainSearchRequestCondition1
+
+//viewMaintainSearchRequestCondition1 Tail @48-FCB6E20C
+}
+//End viewMaintainSearchRequestCondition1 Tail
+
+//PTAutoFill1 Loading @54-613F2F45
+function viewMaintainSearchRequestPTAutoFill1_start(sender) {
+        // ERA fixing keyword selection as it grabbed the form, not the field
+    new Ajax.Request("services/MaintainSearchRequest_Advanced_viewMaintainSearchRequest_s_SCHOOLNAME_PTAutoFill1.aspx?keyword=" + encodeURI($("viewMaintainSearchRequests_SCHOOLNAME").value), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            $("viewMaintainSearchRequests_HOME_SCHOOL_ID").value = valuesRow["SCHOOL_ID"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//bind_events @1-EDEBB42E
+function bind_events() {
+    viewMaintainSearchRequests_SCHOOLNAMEPTAutocomplete1_start();       //ERA
+    addEventHandler("viewMaintainSearchRequests_SCHOOLNAME", "focus", viewMaintainSearchRequestCondition1_start);//ERA
+        addEventHandler("viewMaintainSearchRequests_SCHOOLNAME", "keyup", viewMaintainSearchRequestCondition1_start);//ERA
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>
+<!-- BEGIN Record viewMaintainSearchRequest -->
+<form id="viewMaintainSearchRequest" method="post" name="{HTMLFormName}" action="{Action}">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search&nbsp;Schools </th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>SCHOOL NAME&nbsp;</th>
+ 
+            <td>
+              <!-- BEGIN TextBox s_SCHOOLNAME --><input type="text" id="viewMaintainSearchRequests_SCHOOLNAME" size="40" value="{s_SCHOOLNAME}" name="{s_SCHOOLNAME_Name}" autocomplete="off">
+              <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+              <div id="viewMaintainSearchRequests_SCHOOLNAME_choices">
+              </div>
+              <!-- ENDF PTAutocomplete PTAutocomplete1 --><!-- END TextBox s_SCHOOLNAME -->&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ATTENDING SCHOOL ID *</th>
+ 
+            <td><input type="text" id="viewMaintainSearchRequests_HOME_SCHOOL_ID" maxlength="8" size="8" value="{s_HOME_SCHOOL_ID}" name="{s_HOME_SCHOOL_ID_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ENROLMENT YEAR</th>
+ 
+            <td><input type="text" id="viewMaintainSearchRequests_ENROLMENT_YEAR" maxlength="8" size="8" value="{s_ENROLMENT_YEAR}" name="{s_ENROLMENT_YEAR_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td>
+              <p align="left"><a href="{Link1_Src}" id="viewMaintainSearchRequestLink1">Simple Search</a>&nbsp;</p>
+            </td> 
+            <td align="right"><a href="{ClearParameters_Src}" id="viewMaintainSearchRequestClearParameters">Clear</a> 
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="viewMaintainSearchRequestButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td>&nbsp;</td> 
+            <td align="right">&nbsp;</td>
+          </tr>
+        </table>
+        <input type="hidden" id="viewMaintainSearchRequesthidden_auto" value="{hidden_auto}" name="{hidden_auto_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record viewMaintainSearchRequest -->
+<p><a href="{LinkExportToExcel_Src}" id="LinkExportToExcel">Export to Excel</a> 
+<p>
+<p>
+<!-- BEGIN Grid viewMaintainSearchRequest1 -->
+<div align="right">
+  <p><br>
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search Results</th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <tr class="Row">
+            <td colspan="9">Total Records:&nbsp;{viewMaintainSearchRequest1_TotalRecords}</td>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>
+            <!-- BEGIN Sorter Sorter_STUDENT_ID --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_STUDENT_ID">STUDENT ID</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_SURNAME">SURNAME</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_FIRST_NAME">FIRST NAME</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_YEAR_LEVEL">YEAR LEVEL</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ENROLMENT_STATUS --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_ENROLMENT_STATUS">ENROLMENT STATUS</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_STATUS --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ENROLMENT_DATE --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_ENROLMENT_DATE">ENROLMENT DATE</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_DATE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_HOME_SCHOOL_ID --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_HOME_SCHOOL_ID">HOME SCHOOL ID</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_HOME_SCHOOL_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ATTENDING_SCHOOL_ID --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_ATTENDING_SCHOOL_ID">ATTENDING SCHOOL ID</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ATTENDING_SCHOOL_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ENROLMENT_YEAR --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_ENROLMENT_YEAR">ENROLMENT YEAR</a> 
+            <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_YEAR --></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <tr class="Row">
+            <td style="TEXT-ALIGN: right"><a href="{STUDENT_ID_Src}" id="viewMaintainSearchRequest1STUDENT_ID_{viewMaintainSearchRequest1:rowNumber}">{STUDENT_ID}</a>&nbsp;</td> 
+            <td>{SURNAME}&nbsp;</td> 
+            <td>{FIRST_NAME}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{YEAR_LEVEL}&nbsp;</td> 
+            <td>{ENROLMENT_STATUS}&nbsp;</td> 
+            <td>{ENROLMENT_DATE}&nbsp;</td> 
+            <td>{HOME_SCHOOL_ID}&nbsp;</td> 
+            <td>{ATTENDING_SCHOOL_ID}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{ENROLMENT_YEAR}&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="9">No Students found</td>
+          </tr>
+          <!-- END NoRecords -->
+        </table>
+      </td>
+    </tr>
+  </table>
+  &nbsp; </p>
+</div>
+<!-- END Grid viewMaintainSearchRequest1 --><br>
+<br>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>CONTRIBUTION</title>
+<meta content="CodeCharge Studio 3.1.1.0" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{Header} </p>
+<p><a href="{Link1_Src}" id="Link1">back to list</a></p>
+<!-- BEGIN Record CONTRIBUTION -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit CONTRIBUTION </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>CATEGORY&nbsp;CODE</th>
+ 
+            <td><input id="CONTRIBUTIONCATEGORY" value="{CATEGORY}" name="{CATEGORY_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SCHOOL TYPE CODE</th>
+ 
+            <td>
+              <select id="CONTRIBUTIONSCHOOL_TYPE_CODE" name="{SCHOOL_TYPE_CODE_Name}">
+                <option value="" selected>Select Value</option>
+                {SCHOOL_TYPE_CODE_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CAMPUS CODE</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton CAMPUS_CODE --><input id="CONTRIBUTIONCAMPUS_CODE_{CAMPUS_CODE:optionNumber}" type="radio" value="{Value}" name="{CAMPUS_CODE_Name}" {Check}>{Description}<!-- END RadioButton CAMPUS_CODE --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>FROM YEAR LEVEL</th>
+ 
+            <td><input id="CONTRIBUTIONFROM_YEAR_LEVEL" maxlength="5" size="5" value="{FROM_YEAR_LEVEL}" name="{FROM_YEAR_LEVEL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>TO YEAR LEVEL</th>
+ 
+            <td><input id="CONTRIBUTIONTO_YEAR_LEVEL" maxlength="5" size="5" value="{TO_YEAR_LEVEL}" name="{TO_YEAR_LEVEL_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PER SUBJECT FLAG</th>
+ 
+            <td><input id="CONTRIBUTIONPER_SUBJECT_FLAG" type="checkbox" value="1" name="{PER_SUBJECT_FLAG_Name}" {PER_SUBJECT_FLAG}></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DEFAULT CONTRIBUTION</th>
+ 
+            <td><input id="CONTRIBUTIONDEFAULT_CONTRIBUTION" maxlength="15" size="15" value="{DEFAULT_CONTRIBUTION}" name="{DEFAULT_CONTRIBUTION_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DISCOUNT AMOUNT</th>
+ 
+            <td><input id="CONTRIBUTIONDISCOUNT_AMOUNT" maxlength="15" size="15" value="{DISCOUNT_AMOUNT}" name="{DISCOUNT_AMOUNT_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY</th>
+ 
+            <td><input id="CONTRIBUTIONLAST_ALTERED_BY" maxlength="8" size="8" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED DATE</th>
+ 
+            <td><input id="CONTRIBUTIONLAST_ALTERED_DATE" maxlength="100" size="10" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="CONTRIBUTIONButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="CONTRIBUTIONButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="CONTRIBUTIONButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Buttoncancel --><input class="Button" id="CONTRIBUTIONButtoncancel" type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Buttoncancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record CONTRIBUTION --><br>
+{Footer} 
+</body>
+</html>

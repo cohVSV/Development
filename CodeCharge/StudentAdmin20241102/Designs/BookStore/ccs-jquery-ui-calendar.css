@@ -1,0 +1,110 @@
+.timepicker {
+	font-size: 16px;
+	margin: 5px 0;
+	clear: both;
+    border: 1px solid #AAA/*	border: 1px solid #ACA5B1;*/;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    padding-top: 5px;
+}
+.timepicker table { 
+    width: 30%;
+    width: 25%;
+    margin: 0 auto;
+}
+.timepicker td {
+	vertical-align: middle;
+	width-: 10px;
+}
+.timepicker-input[type=text] {
+	border: 1px solid #999;
+	font-size: 16px;
+	width: 30px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.timepicker-up, .timepicker-down {
+	cursor: pointer;
+	border: 1px solid #999;
+	width: 30px;
+	height: 10px;
+}
+.timepicker-up {
+	border-bottom: 0;
+	border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+}
+.timepicker-down {
+	border-top: 0;
+	border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+	/*margin-top: -2px;*/
+}
+.timepicker-up-bg, .timepicker-down-bg {
+    width: 10px;
+	height: 10px;
+	background-image: url(Images/jquery/ui-icons_default.png);
+}
+.timepicker-up-bg {
+	background-position: 0 -18px;       
+	margin-left: 8px;
+	margin-top: -2px;
+}
+.timepicker-down-bg {
+	background-position: -64px -18px;       
+	margin-left: 7px;
+	/*margin-top: 2px;*/
+}
+
+.timepicker-ampm, .timepicker-ampm-active {
+    border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	font-size: 11px;
+	margin: 2px;
+	padding: 3px;
+	cursor: pointer;
+}
+    
+.timepicker-ampm {
+	border: 1px solid #abadb3;
+	background: #FF9233 url('Images/button.png') scroll;
+	background: linear-gradient(top, rgba(255, 208, 167, 0.18) 0, rgba(231, 108, 0, 0.07) 81%, rgba(185, 86, 0, 0.08) 100%) no-repeat, url('Images/button.png'), linear-gradient(top, #FFBB80 0, #FF7700 81%, #E06900 100%) no-repeat;
+	background: -webkit-linear-gradient(top, rgba(255, 208, 167, 0.18) 0, rgba(231, 108, 0, 0.07) 81%, rgba(185, 86, 0, 0.08) 100%) no-repeat, url('Images/button.png'), -webkit-linear-gradient(top, #FFBB80 0, #FF7700 81%, #E06900 100%) no-repeat;
+	background: -moz-linear-gradient(top, rgba(255, 208, 167, 0.18) 0, rgba(231, 108, 0, 0.07) 81%, rgba(185, 86, 0, 0.08) 100%) no-repeat, url('Images/button.png'), -moz-linear-gradient(top, #FFBB80 0, #FF7700 81%, #E06900 100%) no-repeat;
+	background: -o-linear-gradient(top, rgba(255, 208, 167, 0.18) 0, rgba(231, 108, 0, 0.07) 81%, rgba(185, 86, 0, 0.08) 100%) no-repeat, url('Images/button.png'), -o-linear-gradient(top, #FFBB80 0, #FF7700 81%, #E06900 100%) no-repeat;
+	background: -ms-linear-gradient(top, rgba(255, 208, 167, 0.18) 0, rgba(231, 108, 0, 0.07) 81%, rgba(185, 86, 0, 0.08) 100%) no-repeat, url('Images/button.png'), -ms-linear-gradient(top, #FFBB80 0, #FF7700 81%, #E06900 100%) no-repeat;
+	background: linear-gradient(top, rgba(255, 208, 167, 0.18) 0, rgba(231, 108, 0, 0.07) 81%, rgba(185, 86, 0, 0.08) 100%) no-repeat, url('Images/button.png'), linear-gradient(top, #FFBB80 0, #FF7700 81%, #E06900 100%) no-repeat;
+	font-weight: bold;
+	color: #101723;
+}
+.timepicker-ampm-active {
+	border: 1px solid #fcefa1;
+	background: #C75D00 url('Images/activebutton.png') scroll;
+	background: linear-gradient(top, rgba(255, 151, 60, 0.16) 0, rgba(255, 135, 29, 0.14) 13%, rgba(78, 36, 0, 0.09) 100%) no-repeat, url('Images/activebutton.png'), linear-gradient(top, #FF8214 0, #FF7700 13%, #753700 100%) no-repeat;
+	background: -webkit-linear-gradient(top, rgba(255, 151, 60, 0.16) 0, rgba(255, 135, 29, 0.14) 13%, rgba(78, 36, 0, 0.09) 100%) no-repeat, url('Images/activebutton.png'), -webkit-linear-gradient(top, #FF8214 0, #FF7700 13%, #753700 100%) no-repeat;
+	background: -moz-linear-gradient(top, rgba(255, 151, 60, 0.16) 0, rgba(255, 135, 29, 0.14) 13%, rgba(78, 36, 0, 0.09) 100%) no-repeat, url('Images/activebutton.png'), -moz-linear-gradient(top, #FF8214 0, #FF7700 13%, #753700 100%) no-repeat;
+	background: -o-linear-gradient(top, rgba(255, 151, 60, 0.16) 0, rgba(255, 135, 29, 0.14) 13%, rgba(78, 36, 0, 0.09) 100%) no-repeat, url('Images/activebutton.png'), -o-linear-gradient(top, #FF8214 0, #FF7700 13%, #753700 100%) no-repeat;
+	background: -ms-linear-gradient(top, rgba(255, 151, 60, 0.16) 0, rgba(255, 135, 29, 0.14) 13%, rgba(78, 36, 0, 0.09) 100%) no-repeat, url('Images/activebutton.png'), -ms-linear-gradient(top, #FF8214 0, #FF7700 13%, #753700 100%) no-repeat;
+	background: linear-gradient(top, rgba(255, 151, 60, 0.16) 0, rgba(255, 135, 29, 0.14) 13%, rgba(78, 36, 0, 0.09) 100%) no-repeat, url('Images/activebutton.png'), linear-gradient(top, #FF8214 0, #FF7700 13%, #753700 100%) no-repeat;
+	font-weight: bold;
+	color: #DEDCE0 !important;
+}
+.timepicker-state-hover {
+	background: #FF7700 url('Images/hoveredbutton.png') scroll;
+	background: linear-gradient(top, rgba(255, 180, 115, 0.17) 0, transparent 50%, rgba(140, 65, 0, 0.08) 100%) no-repeat, url('Images/hoveredbutton.png'), linear-gradient(top, #FFA04C 0, #FF7700 50%, #B25300 100%) no-repeat;
+	background: -webkit-linear-gradient(top, rgba(255, 180, 115, 0.17) 0, transparent 50%, rgba(140, 65, 0, 0.08) 100%) no-repeat, url('Images/hoveredbutton.png'), -webkit-linear-gradient(top, #FFA04C 0, #FF7700 50%, #B25300 100%) no-repeat;
+	background: -moz-linear-gradient(top, rgba(255, 180, 115, 0.17) 0, transparent 50%, rgba(140, 65, 0, 0.08) 100%) no-repeat, url('Images/hoveredbutton.png'), -moz-linear-gradient(top, #FFA04C 0, #FF7700 50%, #B25300 100%) no-repeat;
+	background: -o-linear-gradient(top, rgba(255, 180, 115, 0.17) 0, transparent 50%, rgba(140, 65, 0, 0.08) 100%) no-repeat, url('Images/hoveredbutton.png'), -o-linear-gradient(top, #FFA04C 0, #FF7700 50%, #B25300 100%) no-repeat;
+	background: -ms-linear-gradient(top, rgba(255, 180, 115, 0.17) 0, transparent 50%, rgba(140, 65, 0, 0.08) 100%) no-repeat, url('Images/hoveredbutton.png'), -ms-linear-gradient(top, #FFA04C 0, #FF7700 50%, #B25300 100%) no-repeat;
+	background: linear-gradient(top, rgba(255, 180, 115, 0.17) 0, transparent 50%, rgba(140, 65, 0, 0.08) 100%) no-repeat, url('Images/hoveredbutton.png'), linear-gradient(top, #FFA04C 0, #FF7700 50%, #B25300 100%) no-repeat;
+	font-weight: normal;
+}
+.timepicker-state-hover .timepicker-up-bg, .timepicker-state-hover .timepicker-down-bg {
+	background-image: url(Images/jquery/ui-icons_hover.png); 
+}
+	

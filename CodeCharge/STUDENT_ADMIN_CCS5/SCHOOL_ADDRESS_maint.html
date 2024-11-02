@@ -1,0 +1,202 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>SCHOOL - Address Maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.01.00.06">
+<meta name="description" content="Add or Edit School address (only accessable from School Maint page)">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_SCHOOLADDRESS_Button_Delete_OnClick @6-DB0D54F8
+function page_SCHOOLADDRESS_Button_Delete_OnClick()
+{
+    var result;
+//End page_SCHOOLADDRESS_Button_Delete_OnClick
+
+//Confirmation Message @7-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close page_SCHOOLADDRESS_Button_Delete_OnClick @6-BC33A33A
+    return result;
+}
+//End Close page_SCHOOLADDRESS_Button_Delete_OnClick
+
+//page_SCHOOLADDRESS_Button_Cancel_OnClick @8-E8E53573
+function page_SCHOOLADDRESS_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_SCHOOLADDRESS_Button_Cancel_OnClick
+
+//bind_events @1-76035F58
+function bind_events() {
+    addEventHandler("SCHOOLADDRESSButton_Delete","click",page_SCHOOLADDRESS_Button_Delete_OnClick);
+    addEventHandler("SCHOOLADDRESSButton_Cancel","click",page_SCHOOLADDRESS_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<!-- BEGIN Record SCHOOLADDRESS -->
+<form id="SCHOOLADDRESS" method="post" name="{HTMLFormName}" action="{Action}">
+  <p><a href="{linkSchoolMaint_Src}" id="SCHOOLADDRESSlinkSchoolMaint" class="Button">Back to School Page</a></p>
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add/Edit ADDRESS </th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>SCHOOL&nbsp;</th>
+ 
+            <td>{lblSCHOOLNO}&nbsp; {lblSCHOOLNAME}</td> 
+            <td>&nbsp;Address ID</td> 
+            <td>{lblADDRESS_ID}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ADDRESSEE</th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSADDRESSEE" maxlength="60" size="50" value="{ADDRESSEE}" name="{ADDRESSEE_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>AGENT</th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSAGENT" maxlength="60" size="50" value="{AGENT}" name="{AGENT_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ADDRESS</th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSADDR1" maxlength="50" size="50" value="{ADDR1}" name="{ADDR1_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSADDR2" maxlength="50" size="50" value="{ADDR2}" name="{ADDR2_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUBURB /&nbsp;TOWN</th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSSUBURB_TOWN" maxlength="30" size="30" value="{SUBURB_TOWN}" name="{SUBURB_TOWN_Name}"></td> 
+            <td>STATE&nbsp;</td> 
+            <td><input type="text" id="SCHOOLADDRESSSTATE" maxlength="20" value="{STATE}" name="{STATE_Name}" size="20">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>POSTCODE</th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSPOSTCODE" maxlength="10" size="10" value="{POSTCODE}" name="{POSTCODE_Name}"></td> 
+            <td>COUNTRY&nbsp;</td> 
+            <td><input type="text" id="SCHOOLADDRESSCOUNTRY" maxlength="20" value="{COUNTRY}" name="{COUNTRY_Name}" size="20">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PHONE 1</th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSPHONE_A" maxlength="15" size="15" value="{PHONE_A}" name="{PHONE_A_Name}"></td> 
+            <td>PHONE 2&nbsp;</td> 
+            <td><input type="text" id="SCHOOLADDRESSPHONE_B" maxlength="15" size="15" value="{PHONE_B}" name="{PHONE_B_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>FAX</th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSFAX" maxlength="15" size="15" value="{FAX}" name="{FAX_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>EMAIL ADDRESS</th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSEMAIL_ADDRESS" maxlength="50" size="50" value="{EMAIL_ADDRESS}" name="{EMAIL_ADDRESS_Name}"></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Billing / Accounts Email</strong></th>
+ 
+            <td><input type="text" id="SCHOOLADDRESSEMAIL_ADDRESS2" maxlength="50" size="50" value="{EMAIL_ADDRESS2}" name="{EMAIL_ADDRESS2_Name}"></td> 
+            <td>&nbsp;<em>Only for Invoices / Accounts</em></td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / DATE</th>
+ 
+            <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="4" align="right">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="SCHOOLADDRESSButton_Insert" class="Button" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="SCHOOLADDRESSButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" id="SCHOOLADDRESSButton_Delete" class="Button" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="SCHOOLADDRESSButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+        <input type="hidden" id="SCHOOLADDRESSHidden_LAST_ALTERED_BY" value="{Hidden_LAST_ALTERED_BY}" name="{Hidden_LAST_ALTERED_BY_Name}"><input type="hidden" id="SCHOOLADDRESSHidden_LAST_ALTERED_DATE" value="{Hidden_LAST_ALTERED_DATE}" name="{Hidden_LAST_ALTERED_DATE_Name}"><input type="hidden" id="SCHOOLADDRESSHiddenSCHOOLNO" value="{HiddenSCHOOLNO}" name="{HiddenSCHOOLNO_Name}"></td>
+    </tr>
+  </table>
+</form>
+&nbsp;{lblDebug}<!-- END Record SCHOOLADDRESS --><br>
+</body>
+</html>

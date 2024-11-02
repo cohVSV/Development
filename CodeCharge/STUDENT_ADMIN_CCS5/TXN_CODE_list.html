@@ -1,0 +1,155 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>TXN CODE</title>
+<meta name="description" content="Finance Transactions Codes - rebuilt with single page and some nicer bits Oct 2018">
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+{Header} 
+<p>
+<!-- BEGIN Grid TXN_CODE -->
+<table id="TXN_CODE" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>List of Transactions Codes </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_TXN_CODE --><span class="Sorter"><a href="{Sort_URL}" id="TXN_CODESorter_TXN_CODE">TXN CODE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_TXN_CODE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_TXN_TYPE --><span class="Sorter"><a href="{Sort_URL}" id="TXN_CODESorter_TXN_TYPE">TXN TYPE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_TXN_TYPE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_CR_DR_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="TXN_CODESorter_CR_DR_FLAG">CR DR FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_CR_DR_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_DESCRIPTION --><span class="Sorter"><a href="{Sort_URL}" id="TXN_CODESorter_DESCRIPTION">DESCRIPTION</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_DESCRIPTION --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><span class="Sorter"><a href="{Sort_URL}" id="TXN_CODESorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><span class="Sorter"><a href="{Sort_URL}" id="TXN_CODESorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{Detail_Src}" id="TXN_CODEDetail_{TXN_CODE:rowNumber}">edit</a>&nbsp;</td> 
+          <td>{TXN_CODE1}&nbsp;</td> 
+          <td>{TXN_TYPE}&nbsp;</td> 
+          <td>{CR_DR_FLAG}&nbsp;</td> 
+          <td>{DESCRIPTION}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No Transaction Codes found!</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="7"><a href="{TXN_CODE_Insert_Src}" id="TXN_CODETXN_CODE_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid TXN_CODE --><br>
+<!-- BEGIN Record TXN_CODE1 -->
+<form id="TXN_CODE1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add/Edit Transaction Code</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>TXN CODE</th>
+ 
+            <td><input type="text" id="TXN_CODE1TXN_CODE" maxlength="1" size="1" value="{TXN_CODE}" name="{TXN_CODE_Name}">&nbsp;<em>(single character, unique)</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>TXN TYPE</th>
+ 
+            <td><input type="text" id="TXN_CODE1TXN_TYPE" maxlength="20" value="{TXN_TYPE}" name="{TXN_TYPE_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CR DR FLAG</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton CR_DR_FLAG --><input type="radio" id="TXN_CODE1CR_DR_FLAG_{CR_DR_FLAG:optionNumber}" value="{Value}" name="{CR_DR_FLAG_Name}" {Check}>{Description}&nbsp; <em>(default to)</em><!-- END RadioButton CR_DR_FLAG --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DESCRIPTION</th>
+ 
+            <td><input type="text" id="TXN_CODE1DESCRIPTION" maxlength="60" size="50" value="{DESCRIPTION}" name="{DESCRIPTION_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="TXN_CODE1Button_Insert" class="Button" value="Add Code" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="TXN_CODE1Button_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="TXN_CODE1Button_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input type="hidden" id="TXN_CODE1LAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="TXN_CODE1LAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record TXN_CODE1 --><br>
+</p>
+<p><br>
+{Footer} </p>
+</body>
+</html>

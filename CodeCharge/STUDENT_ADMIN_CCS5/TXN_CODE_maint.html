@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+
+<title>TXN CODE</title>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+{Header}
+
+<!-- BEGIN Record TXN_CODE -->
+<form method="post" action="{Action}" name="{HTMLFormName}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+            <th>Add/Edit TXN CODE </th>
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>TXN TYPE</th>
+ 
+            <td><input type="text" name="{TXN_TYPE_Name}" value="{TXN_TYPE}" maxlength="20" size="20" id="TXN_CODETXN_TYPE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CR DR FLAG</th>
+ 
+            <td><input type="text" name="{CR_DR_FLAG_Name}" value="{CR_DR_FLAG}" maxlength="1" size="1" id="TXN_CODECR_DR_FLAG"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DESCRIPTION</th>
+ 
+            <td><input type="text" name="{DESCRIPTION_Name}" value="{DESCRIPTION}" maxlength="60" size="50" id="TXN_CODEDESCRIPTION"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY</th>
+ 
+            <td><input type="text" name="{LAST_ALTERED_BY_Name}" value="{LAST_ALTERED_BY}" maxlength="8" size="8" id="TXN_CODELAST_ALTERED_BY"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED DATE</th>
+ 
+            <td><input type="text" name="{LAST_ALTERED_DATE_Name}" value="{LAST_ALTERED_DATE}" maxlength="100" size="10" id="TXN_CODELAST_ALTERED_DATE"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" class="Button" id="TXN_CODEButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" class="Button" id="TXN_CODEButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" class="Button" id="TXN_CODEButton_Delete"><!-- END Button Button_Delete --></td> 
+          </tr>
+        </table>
+ </td> 
+    </tr>
+  </table>
+</form>
+<!-- END Record TXN_CODE --><br>
+{Footer}
+</body>
+</html>

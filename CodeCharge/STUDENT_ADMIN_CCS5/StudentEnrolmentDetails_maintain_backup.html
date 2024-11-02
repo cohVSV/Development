@@ -1,0 +1,250 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Enrolment Details - Maintain</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-FE63B364
+
+var STUDENT_ENROLMENTDatePicker_ENROLMENT_DATE = new Object(); 
+STUDENT_ENROLMENTDatePicker_ENROLMENT_DATE.format           = "dd/mm/yy";
+STUDENT_ENROLMENTDatePicker_ENROLMENT_DATE.style            = "Styles/Blueprint/Style.css";
+STUDENT_ENROLMENTDatePicker_ENROLMENT_DATE.relativePathPart = "";
+STUDENT_ENROLMENTDatePicker_ENROLMENT_DATE.themeVersion     = "3.0";
+var STUDENT_ENROLMENTDatePicker_WITHDRAWAL_DATE = new Object(); 
+STUDENT_ENROLMENTDatePicker_WITHDRAWAL_DATE.format           = "dd/mm/yy";
+STUDENT_ENROLMENTDatePicker_WITHDRAWAL_DATE.style            = "Styles/Blueprint/Style.css";
+STUDENT_ENROLMENTDatePicker_WITHDRAWAL_DATE.relativePathPart = "";
+STUDENT_ENROLMENTDatePicker_WITHDRAWAL_DATE.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_STUDENT_ENROLMENT_Button_Cancel_OnClick @5-287A9D41
+function page_STUDENT_ENROLMENT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_ENROLMENT_Button_Cancel_OnClick
+
+//bind_events @1-7E64AEB0
+function bind_events() {
+    addEventHandler("STUDENT_ENROLMENTButton_Cancel","click",page_STUDENT_ENROLMENT_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<div align="center">
+  {Menu_Student_maintain} 
+</div>
+<div align="center">
+</div>
+<div align="center">
+</div>
+<!-- BEGIN Record STUDENT_ENROLMENT -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Edit Student Enrolment</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>&nbsp;<strong><font size="3">Enrolment Details</font></strong></th>
+ 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>STUDENT ID</strong></th>
+ 
+            <td>&nbsp;{STUDENT_ID}</td> 
+            <td>&nbsp;<strong>ENROLMENT DATE</strong></td> 
+            <td>&nbsp;<input maxlength="100" size="8" value="{ENROLMENT_DATE}" name="{ENROLMENT_DATE_Name}" id="STUDENT_ENROLMENTENROLMENT_DATE">
+              <!-- BEGIN DatePicker DatePicker_ENROLMENT_DATE --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="STUDENT_ENROLMENTDatePicker_ENROLMENT_DATE"><img alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif" border="0"></a>&nbsp;<!-- END DatePicker DatePicker_ENROLMENT_DATE -->&nbsp;&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>END DATE</strong></th>
+ 
+            <td><input maxlength="100" size="8" value="{WITHDRAWAL_DATE}" name="{WITHDRAWAL_DATE_Name}" id="STUDENT_ENROLMENTWITHDRAWAL_DATE">
+              <!-- BEGIN DatePicker DatePicker_WITHDRAWAL_DATE --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="STUDENT_ENROLMENTDatePicker_WITHDRAWAL_DATE"><img alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_WITHDRAWAL_DATE --></td> 
+            <td>&nbsp;<strong>ENROLMENT STATUS</strong></td> 
+            <td>&nbsp;
+              <select name="{ENROLMENT_STATUS_Name}" id="STUDENT_ENROLMENTENROLMENT_STATUS">
+                <option value="" selected>Select Value</option>
+                {ENROLMENT_STATUS_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>WITHDRAWAL REASON</strong></th>
+ 
+            <td colspan="3">
+              <select name="{WITHDRAWAL_REASON_ID_Name}" id="STUDENT_ENROLMENTWITHDRAWAL_REASON_ID">
+                <option value="" selected>Select Value</option>
+                {WITHDRAWAL_REASON_ID_Options}
+              </select>
+ &nbsp;&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>YEAR LEVEL</strong></th>
+ 
+            <td>
+              <select name="{YEAR_LEVEL_Name}" id="STUDENT_ENROLMENTYEAR_LEVEL">
+                <option value="" selected>Select Value</option>
+                {YEAR_LEVEL_Options}
+              </select>
+ </td> 
+            <td>&nbsp;<strong>ENROLMENT YEAR</strong></td> 
+            <td>&nbsp;{ENROLMENT_YEAR}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>CAMPUS</strong></th>
+ 
+            <td>
+              <!-- BEGIN RadioButton CAMPUS --><input type="radio" value="{Value}" name="{CAMPUS_Name}" {Check} id="STUDENT_ENROLMENTCAMPUS_{CAMPUS:optionNumber}">{Description}<!-- END RadioButton CAMPUS --></td> 
+            <td>&nbsp;<strong>RECEIPT NO</strong></td> 
+            <td>&nbsp;<input maxlength="10" size="10" value="{RECEIPT_NO}" name="{RECEIPT_NO_Name}" id="STUDENT_ENROLMENTRECEIPT_NO"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;<strong><font size="3">Enrolment (Misc.)</font></strong></th>
+ 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;<strong>ELIGIBLE FOR DISCOUNT</strong></th>
+ 
+            <td>&nbsp;
+              <!-- BEGIN RadioButton ELIGIBLE_FOR_DISCOUNT --><input type="radio" checked value="{Value}" name="{ELIGIBLE_FOR_DISCOUNT_Name}" {Check} id="STUDENT_ENROLMENTELIGIBLE_FOR_DISCOUNT_{ELIGIBLE_FOR_DISCOUNT:optionNumber}">{Description}<!-- END RadioButton ELIGIBLE_FOR_DISCOUNT --></td> 
+            <td>&nbsp;<strong>PAID ON ENROLMENT</strong></td> 
+            <td>&nbsp;
+              <!-- BEGIN RadioButton PAID_ON_ENROLMENT --><input type="radio" checked value="{Value}" name="{PAID_ON_ENROLMENT_Name}" {Check} id="STUDENT_ENROLMENTPAID_ON_ENROLMENT_{PAID_ON_ENROLMENT:optionNumber}">{Description}<!-- END RadioButton PAID_ON_ENROLMENT --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;<strong>FULL TIME STUDENT</strong></th>
+ 
+            <td>&nbsp;
+              <!-- BEGIN RadioButton FULL_TIME_STUDENT --><input type="radio" checked value="{Value}" name="{FULL_TIME_STUDENT_Name}" {Check} id="STUDENT_ENROLMENTFULL_TIME_STUDENT_{FULL_TIME_STUDENT:optionNumber}">{Description}<!-- END RadioButton FULL_TIME_STUDENT --></td> 
+            <td><strong>&nbsp;OVERSEAS FULL FEE PAYING</strong></td> 
+            <td>&nbsp;
+              <!-- BEGIN RadioButton OS_FULL_FEE_PAYING --><input type="radio" checked value="{Value}" name="{OS_FULL_FEE_PAYING_Name}" {Check} id="STUDENT_ENROLMENTOS_FULL_FEE_PAYING_{OS_FULL_FEE_PAYING:optionNumber}">{Description}<!-- END RadioButton OS_FULL_FEE_PAYING --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;<strong>ADDRESS NEEDS REVIEWING</strong></th>
+ 
+            <td>&nbsp;
+              <!-- BEGIN RadioButton ADDRESS_REVIEW_FLAG --><input type="radio" checked value="{Value}" name="{ADDRESS_REVIEW_FLAG_Name}" {Check} id="STUDENT_ENROLMENTADDRESS_REVIEW_FLAG_{ADDRESS_REVIEW_FLAG:optionNumber}">{Description}<!-- END RadioButton ADDRESS_REVIEW_FLAG --></td> 
+            <td>&nbsp;<strong>ELIGIBLE FOR FUNDING</strong></td> 
+            <td>&nbsp;
+              <!-- BEGIN RadioButton ELIGIBLE_FOR_FUNDING --><input type="radio" checked value="{Value}" name="{ELIGIBLE_FOR_FUNDING_Name}" {Check} id="STUDENT_ENROLMENTELIGIBLE_FOR_FUNDING_{ELIGIBLE_FOR_FUNDING:optionNumber}">{Description}<!-- END RadioButton ELIGIBLE_FOR_FUNDING --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;<strong>VCE CANDIDATE NO</strong></th>
+ 
+            <td>&nbsp;<input maxlength="10" size="10" value="{VCE_CANDIDATE_NO}" name="{VCE_CANDIDATE_NO_Name}" id="STUDENT_ENROLMENTVCE_CANDIDATE_NO"></td> 
+            <td>&nbsp;<strong>BULLETIN NUMBER</strong></td> 
+            <td>&nbsp;<input maxlength="5" size="5" value="{BULLETIN_NO}" name="{BULLETIN_NO_Name}" id="STUDENT_ENROLMENTBULLETIN_NO"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;<strong>SUB SCHOOL</strong></th>
+ 
+            <td>&nbsp;<input maxlength="10" size="10" value="{SUB_SCHOOL}" name="{SUB_SCHOOL_Name}" id="STUDENT_ENROLMENTSUB_SCHOOL"></td> 
+            <td>&nbsp;<strong>PASTORAL CARE ID</strong></td> 
+            <td>&nbsp;
+              <select name="{PASTORAL_CARE_ID_Name}" id="STUDENT_ENROLMENTPASTORAL_CARE_ID">
+                <option value="" selected>Select Value</option>
+                {PASTORAL_CARE_ID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;<strong>DOCUMENTS LAST REVIEWED DATE</strong></th>
+ 
+            <td>&nbsp;<input maxlength="8" size="8" value="{DOCS_LAST_REVIEWED_DATE}" name="{DOCS_LAST_REVIEWED_DATE_Name}" id="STUDENT_ENROLMENTDOCS_LAST_REVIEWED_DATE"></td> 
+            <td><strong>&nbsp;NEW DOCUMENTS REQUIRED</strong></td> 
+            <td>&nbsp;
+              <!-- BEGIN RadioButton NEW_DOCS_REQUIRED --><input type="radio" checked value="{Value}" name="{NEW_DOCS_REQUIRED_Name}" {Check} id="STUDENT_ENROLMENTNEW_DOCS_REQUIRED_{NEW_DOCS_REQUIRED:optionNumber}">{Description}<!-- END RadioButton NEW_DOCS_REQUIRED --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;<strong>COMMENTS</strong></th>
+ 
+            <td colspan="3"><em>&nbsp;(Comments entered below will appear on the [Student&nbsp;Summary] screen, under [Student Comments])</em>&nbsp;&nbsp; </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td colspan="3"><textarea name="{ENROLMENT_COMMENTS_Name}" rows="5" cols="45" id="STUDENT_ENROLMENTENROLMENT_COMMENTS">{ENROLMENT_COMMENTS}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;LAST ALTERED BY / DATE</th>
+ 
+            <td>&nbsp;{LAST_ALTERED_BY}</td> 
+            <td>&nbsp;{LAST_ALTERED_DATE}</td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="4">
+              <!-- BEGIN Button Button_Insert --><input class="Button" type="submit" value="Add" name="{Button_Name}" id="STUDENT_ENROLMENTButton_Insert"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" type="submit" value="Update" name="{Button_Name}" id="STUDENT_ENROLMENTButton_Update"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input class="Button" type="submit" value="Cancel" name="{Button_Name}" id="STUDENT_ENROLMENTButton_Cancel"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STUDENT_ENROLMENT --><br>
+</body>
+</html>

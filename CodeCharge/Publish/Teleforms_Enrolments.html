@@ -1,0 +1,218 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Teacher Allocations - Update</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//DEL  </script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//DEL    
+
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_UpdateForm_button_DoDelete_OnClick @81-E3D25019
+function page_UpdateForm_button_DoDelete_OnClick()
+{
+    var result;
+//End page_UpdateForm_button_DoDelete_OnClick
+
+//Confirmation Message @116-FC5E40F4
+    return confirm('Sure you want to DELETE the selected Students from Teleforms?\n\n(Student Database will not be affected)');
+//End Confirmation Message
+
+//Close page_UpdateForm_button_DoDelete_OnClick @81-BC33A33A
+    return result;
+}
+//End Close page_UpdateForm_button_DoDelete_OnClick
+
+//bind_events @1-611CEA03
+function bind_events() {
+    addEventHandler("UpdateFormbutton_DoDelete","click",page_UpdateForm_button_DoDelete_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+<style type="text/css">
+<!--
+.errorrow  { color: #990000; background-color: #FFC4C4; border-top-color: #FFB4B4; border-right-color: #FFB4B4; border-bottom-color: #FFB4B4; border-left-color: #FFB4B4; }
+-->
+</style>
+</head>
+<body>
+<p>{Header}</p>
+<p align="center"><a href="{Link1_Src}"></a>&nbsp;</p>
+<p>
+<!-- BEGIN Record UpdateForm -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" width="50%" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+              <th>Update Form</th>
+ 
+              <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            </tr>
+ 
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0" width="50%">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td> 
+            </tr>
+ <!-- END Error -->
+            <tr class="Controls">
+              <td>&nbsp; 
+                <!-- BEGIN Button button_DoEnrolment --><input class="Button" id="UpdateFormbutton_DoEnrolment" type="submit" value="Enrol Selected Students" name="{Button_Name}"><!-- END Button button_DoEnrolment -->&nbsp;&nbsp; </td> 
+              <td>&nbsp; 
+                <!-- BEGIN Button button_DoDelete --><input class="Button" id="UpdateFormbutton_DoDelete" type="submit" value="Delete Selected" name="{Button_Name}"><!-- END Button button_DoDelete -->&nbsp;</td> 
+            </tr>
+ 
+            <tr class="Bottom">
+              <th align="right"></th>
+ 
+            </tr>
+ 
+          </table>
+ <input id="UpdateFormhidden_LAST_ALTERED_BY" type="hidden" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"></td> 
+      </tr>
+ 
+    </table>
+ 
+  </div>
+</form>
+<p align="center">&nbsp;{lblSelections}&nbsp;</p>
+<!-- END Record UpdateForm -->
+<p>
+<!-- BEGIN Grid GridStudentList --><br>
+<table cellspacing="0" cellpadding="0" width="95%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of Teleforms Students</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="8">Total Records:&nbsp;{STUD_SUB_INTERIM_STUD_SUB_TotalRecords}</td> 
+        </tr>
+ 
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STUDENT_SUBJECT_STUDENT_ID --><a href="{Sort_URL}" id="GridStudentListSorter_STUDENT_SUBJECT_STUDENT_ID">Student ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_SUBJECT_STUDENT_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="GridStudentListSorter_SURNAME">Surname</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="GridStudentListSorter_FIRST_NAME">First Name</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+          <th>
+          <p align="center">Date of Birth</p>
+ </th>
+ 
+          <th>
+          <p align="center">Category</p>
+ </th>
+ 
+          <th>
+          <p align="center">Scan Date/Time</p>
+ </th>
+ 
+          <th>
+          <p align="center">Teleform Status</p>
+ </th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr {GridStudentList:rowStyle}>
+          <td style="TEXT-ALIGN: right">
+            <p align="center"><input type="checkbox" value="{STUDENT_SUBJECT_STUDENT_ID}" name="{cbox_Name}_{STUDENT_SUBJECT_STUDENT_ID}" {cbox}>&nbsp;</p>
+ </td> 
+          <td style="TEXT-ALIGN: right">
+            <p align="left">{STUDENT_ID}&nbsp;</p>
+ </td> 
+          <td>{SURNAME}&nbsp;</td> 
+          <td>{FIRST_NAME}&nbsp;</td> 
+          <td>
+            <div align="center">
+              {BIRTH_DATE}&nbsp; 
+            </div>
+ </td> 
+          <td>
+            <div align="center">
+              {CATEGORY_CODE}&nbsp; 
+            </div>
+ </td> 
+          <td>
+            <div align="center">
+              {LAST_ALTERED_DATE} 
+            </div>
+ </td> 
+          <td>
+            <div align="center">
+              {TELEFORM_STATUS}&nbsp;[{hidden_TMP_STUDENT_ID}] 
+            </div>
+ </td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN Separator -->
+        <tr class="Separator">
+          <td colspan="8"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ <!-- END Separator -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">No Students found</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="8">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif" border="0"></a> <!-- END Next_On --><!-- END Navigator Navigator --></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid GridStudentList --></p>
+<p>{lblDEBUG}<br>
+</p>
+</body>
+</html>

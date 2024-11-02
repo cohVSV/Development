@@ -1,0 +1,414 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Green Letters</title>
+<meta name="description" content="Allows Coordinators etc to manage the F-10 'Green' (and Amber and Red) letters students.
+Likely that SST will also be allowed to change items too.">
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-46D91441
+
+var viewMaintainSearchRequestDatePicker_GREEN_LETTER_SENT_DATE1 = new Object(); 
+viewMaintainSearchRequestDatePicker_GREEN_LETTER_SENT_DATE1.format           = "dd/mm/yyyy";
+viewMaintainSearchRequestDatePicker_GREEN_LETTER_SENT_DATE1.style            = "Styles/Blueprint/Style.css";
+viewMaintainSearchRequestDatePicker_GREEN_LETTER_SENT_DATE1.relativePathPart = "";
+viewMaintainSearchRequestDatePicker_GREEN_LETTER_SENT_DATE1.themeVersion     = "3.0";
+var viewMaintainSearchRequestDatePicker_AMBER_LETTER_SENT_DATE1 = new Object(); 
+viewMaintainSearchRequestDatePicker_AMBER_LETTER_SENT_DATE1.format           = "dd/mm/yyyy";
+viewMaintainSearchRequestDatePicker_AMBER_LETTER_SENT_DATE1.style            = "Styles/Blueprint/Style.css";
+viewMaintainSearchRequestDatePicker_AMBER_LETTER_SENT_DATE1.relativePathPart = "";
+viewMaintainSearchRequestDatePicker_AMBER_LETTER_SENT_DATE1.themeVersion     = "3.0";
+var viewMaintainSearchRequestDatePicker_RED_LETTER_SENT_DATE1 = new Object(); 
+viewMaintainSearchRequestDatePicker_RED_LETTER_SENT_DATE1.format           = "dd/mm/yyyy";
+viewMaintainSearchRequestDatePicker_RED_LETTER_SENT_DATE1.style            = "Styles/Blueprint/Style.css";
+viewMaintainSearchRequestDatePicker_RED_LETTER_SENT_DATE1.relativePathPart = "";
+viewMaintainSearchRequestDatePicker_RED_LETTER_SENT_DATE1.themeVersion     = "3.0";
+var GREEN_AMBER_RED_LETTERSDatePicker_GREEN_LETTER_SENT_DATE1 = new Object(); 
+GREEN_AMBER_RED_LETTERSDatePicker_GREEN_LETTER_SENT_DATE1.format           = "dd/mm/yyyy";
+GREEN_AMBER_RED_LETTERSDatePicker_GREEN_LETTER_SENT_DATE1.style            = "Styles/Blueprint/Style.css";
+GREEN_AMBER_RED_LETTERSDatePicker_GREEN_LETTER_SENT_DATE1.relativePathPart = "";
+GREEN_AMBER_RED_LETTERSDatePicker_GREEN_LETTER_SENT_DATE1.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_viewMaintainSearchRequest_Cancel_OnClick @52-874AE381
+function page_viewMaintainSearchRequest_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_viewMaintainSearchRequest_Cancel_OnClick
+
+//page_GREEN_AMBER_RED_LETTERS_Button_Cancel_OnClick @180-5974A060
+function page_GREEN_AMBER_RED_LETTERS_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_GREEN_AMBER_RED_LETTERS_Button_Cancel_OnClick
+
+//bind_events @1-8AA7463B
+function bind_events() {
+    addEventHandler("viewMaintainSearchRequestCancel","click",page_viewMaintainSearchRequest_Cancel_OnClick);
+    addEventHandler("GREEN_AMBER_RED_LETTERSButton_Cancel","click",page_GREEN_AMBER_RED_LETTERS_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+<p align="center">{Header}</p>
+<p align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Record GREEN_AMBER_RED_LETTERS_v -->
+      <form id="GREEN_AMBER_RED_LETTERS_v" method="post" name="{HTMLFormName}" action="{Action}">
+        <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                  <th>Search </th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr id="{@error-block}" class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th>Support Teacher</th>
+ 
+                  <td>
+                    <select id="GREEN_AMBER_RED_LETTERS_vs_STAFF_ID" name="{s_STAFF_ID_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_STAFF_ID_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>STUDENT ID</th>
+ 
+                  <td><input type="text" id="GREEN_AMBER_RED_LETTERS_vs_STUDENT_ID" maxlength="12" size="12" value="{s_STUDENT_ID}" name="{s_STUDENT_ID_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>Sub School&nbsp;</th>
+ 
+                  <td>
+                    <!-- BEGIN RadioButton s_SUBSCHOOL --><input type="radio" id="GREEN_AMBER_RED_LETTERS_vs_SUBSCHOOL_{s_SUBSCHOOL:optionNumber}" value="{Value}" name="{s_SUBSCHOOL_Name}" {Check}>{Description}<!-- END RadioButton s_SUBSCHOOL -->&nbsp;</td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td style="TEXT-ALIGN: right" colspan="2">
+                    <!-- BEGIN Button Button_DoSearch --><input type="submit" id="GREEN_AMBER_RED_LETTERS_vButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record GREEN_AMBER_RED_LETTERS_v --></td> 
+    <td valign="top">&nbsp; &nbsp; &nbsp;&nbsp;</td> 
+    <td valign="top">
+      <!-- BEGIN Record GREEN_AMBER_RED_LETTERS -->
+      <form id="GREEN_AMBER_RED_LETTERS" method="post" name="{HTMLFormName}" action="{Action}">
+        <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                  <th>Add Green Letter Student</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr id="ErrorBlock" class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th>STUDENT ID</th>
+ 
+                  <td><input type="text" id="GREEN_AMBER_RED_LETTERSSTUDENT_ID" maxlength="12" size="12" value="{STUDENT_ID}" name="{STUDENT_ID_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>GREEN LETTER SEND?</th>
+ 
+                  <td>
+                    <!-- BEGIN RadioButton GREEN_LETTER_SENT_FLAG --><input type="radio" id="GREEN_AMBER_RED_LETTERSGREEN_LETTER_SENT_FLAG_{GREEN_LETTER_SENT_FLAG:optionNumber}" value="{Value}" name="{GREEN_LETTER_SENT_FLAG_Name}" {Check}>{Description}<!-- END RadioButton GREEN_LETTER_SENT_FLAG --></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>GREEN LETTER SENT DATE<br>
+                  <span style="FONT-SIZE: 10px">leave blank to auto-email</span> </th>
+ 
+                  <td>
+                    <!-- BEGIN TextBox GREEN_LETTER_SENT_DATE --><input type="text" id="GREEN_AMBER_RED_LETTERSGREEN_LETTER_SENT_DATE" maxlength="100" size="10" value="{GREEN_LETTER_SENT_DATE}" name="{GREEN_LETTER_SENT_DATE_Name}"><!-- END TextBox GREEN_LETTER_SENT_DATE -->
+                    <!-- BEGIN DatePicker DatePicker_GREEN_LETTER_SENT_DATE1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="GREEN_AMBER_RED_LETTERSDatePicker_GREEN_LETTER_SENT_DATE1"><img id="viewMaintainSearchRequestDatePicker_GREEN_LETTER_SENT_DATE1_Image" border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a>&nbsp;<!-- END DatePicker DatePicker_GREEN_LETTER_SENT_DATE1 --></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td style="TEXT-ALIGN: right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input type="submit" id="GREEN_AMBER_RED_LETTERSButton_Insert" class="Button" value="Add Student" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Cancel --><input type="submit" id="GREEN_AMBER_RED_LETTERSButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input type="hidden" id="GREEN_AMBER_RED_LETTERSLAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"></td>
+                </tr>
+              </table>
+ 
+              <p><em>Student must be:<br>
+              - Currently Enrolled AND <br>
+              - Not already on the list</em></p>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record GREEN_AMBER_RED_LETTERS --></td>
+  </tr>
+</table>
+<br>
+<!-- BEGIN EditableGrid viewMaintainSearchRequest -->
+<form id="viewMaintainSearchRequest" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Maintain Amber / Red Letters - Current Enrolment Year</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="15">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Row">
+            <td colspan="15">Total Records:&nbsp;{viewMaintainSearchRequest_TotalRecords}</td>
+          </tr>
+ 
+          <tr>
+            <th colspan="6">&nbsp;&nbsp;</th>
+ 
+            <th style="BACKGROUND-COLOR: lightgreen" colspan="2">GREEN LETTER&nbsp;&nbsp;<br>
+            <span style="FONT-SIZE: 10px">'Y' and blank date to auto-email</span> </th>
+ 
+            <th style="BACKGROUND-COLOR: orange" colspan="2">AMBER LETTER&nbsp;&nbsp;<br>
+            <span style="FONT-SIZE: 10px">Sent manually</span> <img onclick="javascript:alert(this.getAttribute('title'));" title="Requires Green Letter to be SENT AND Green Sent Date over 10 days ago" src="images/icon_info.gif"></th>
+ 
+            <th style="BACKGROUND-COLOR: firebrick" colspan="2">RED LETTER&nbsp;&nbsp;<br>
+            <span style="FONT-SIZE: 10px">Sent manually</span> <img onclick="javascript:alert(this.getAttribute('title'));" title="Requires Green AND Amber Letters to be SENT AND Amber Sent Date over 10 days ago" src="images/icon_info.gif"></th>
+ 
+            <th>&nbsp;</th>
+ 
+            <th>&nbsp;</th>
+ 
+            <th>&nbsp;</th>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>
+            <!-- BEGIN Sorter Sorter_STUDENT_ID --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_STUDENT_ID">STUDENT ID</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SURNAME --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_SURNAME">SURNAME</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SURNAME --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_FIRST_NAME --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_FIRST_NAME">FIRST NAME</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_YEAR_LEVEL">YEAR</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_PASTORAL_CARE_ID --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_PASTORAL_CARE_ID">LAd</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PASTORAL_CARE_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_FIRST_ADDED_DATE --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_FIRST_ADDED_DATE">FIRST ADDED DATE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_FIRST_ADDED_DATE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_GREEN_LETTER_SENT_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_GREEN_LETTER_SENT_FLAG">GREEN SEND?</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_GREEN_LETTER_SENT_FLAG --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_GREEN_LETTER_SENT_DATE --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_GREEN_LETTER_SENT_DATE">GREEN SENT DATE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_GREEN_LETTER_SENT_DATE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_AMBER_LETTER_SENT_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_AMBER_LETTER_SENT_FLAG">AMBER SENT?</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_AMBER_LETTER_SENT_FLAG --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_AMBER_LETTER_SENT_DATE --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_AMBER_LETTER_SENT_DATE">AMBER SENT DATE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_AMBER_LETTER_SENT_DATE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_RED_LETTER_SENT_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_RED_LETTER_SENT_FLAG">RED SENT?</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_RED_LETTER_SENT_FLAG --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_RED_LETTER_SENT_DATE --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_RED_LETTER_SENT_DATE">RED SENT DATE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_RED_LETTER_SENT_DATE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_BY -->/ 
+            <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE1 --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequestSorter_LAST_ALTERED_DATE">DATE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_DATE1 --></th>
+ 
+            <th></th>
+ 
+            <th></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="15">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td><a href="{STUDENT_ID_Src}" id="viewMaintainSearchRequestSTUDENT_ID_{viewMaintainSearchRequest:rowNumber}" title="open Summary in new tab" target="_blank">{STUDENT_ID}</a></td> 
+            <td>{SURNAME}</td> 
+            <td>{FIRST_NAME}</td> 
+            <td>{YEAR_LEVEL}</td> 
+            <td>{PASTORAL_CARE_ID}</td> 
+            <td>{FIRST_ADDED_DATE}</td> 
+            <td>
+              <!-- BEGIN RadioButton GREEN_LETTER_SENT_FLAG --><input type="radio" id="viewMaintainSearchRequestGREEN_LETTER_SENT_FLAG_{viewMaintainSearchRequest:rowNumber}_{GREEN_LETTER_SENT_FLAG:optionNumber}" value="{Value}" name="{GREEN_LETTER_SENT_FLAG_Name}" {Check}>{Description}<!-- END RadioButton GREEN_LETTER_SENT_FLAG --></td> 
+            <td>
+              <!-- BEGIN TextBox GREEN_LETTER_SENT_DATE --><input type="text" onfocus="this.select();" id="viewMaintainSearchRequestGREEN_LETTER_SENT_DATE_{viewMaintainSearchRequest:rowNumber}" maxlength="100" size="10" value="{GREEN_LETTER_SENT_DATE}" name="{GREEN_LETTER_SENT_DATE_Name}"><!-- END TextBox GREEN_LETTER_SENT_DATE -->&nbsp; 
+              <!-- BEGIN DatePicker DatePicker_GREEN_LETTER_SENT_DATE1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="viewMaintainSearchRequestDatePicker_GREEN_LETTER_SENT_DATE1"><img id="viewMaintainSearchRequestDatePicker_GREEN_LETTER_SENT_DATE1_Image" border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_GREEN_LETTER_SENT_DATE1 --></td> 
+            <td>
+              <!-- BEGIN RadioButton AMBER_LETTER_SENT_FLAG --><input type="radio" onclick="javascript:getStatus_SetDate(this.id);" id="viewMaintainSearchRequestAMBER_LETTER_SENT_FLAG_{viewMaintainSearchRequest:rowNumber}_{AMBER_LETTER_SENT_FLAG:optionNumber}" value="{Value}" name="{AMBER_LETTER_SENT_FLAG_Name}" {Check}>{Description}<!-- END RadioButton AMBER_LETTER_SENT_FLAG --></td> 
+            <td>
+              <!-- BEGIN TextBox AMBER_LETTER_SENT_DATE --><input type="text" onfocus="this.select();" id="viewMaintainSearchRequestAMBER_LETTER_SENT_DATE_{viewMaintainSearchRequest:rowNumber}" maxlength="100" size="10" value="{AMBER_LETTER_SENT_DATE}" name="{AMBER_LETTER_SENT_DATE_Name}"><!-- END TextBox AMBER_LETTER_SENT_DATE -->&nbsp; 
+              <!-- BEGIN DatePicker DatePicker_AMBER_LETTER_SENT_DATE1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="viewMaintainSearchRequestDatePicker_AMBER_LETTER_SENT_DATE1"><img id="viewMaintainSearchRequestDatePicker_AMBER_LETTER_SENT_DATE1_Image" border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_AMBER_LETTER_SENT_DATE1 --><input type="hidden" id="viewMaintainSearchRequesthidden_DaysSince_Green" value="{hidden_DaysSince_Green}" name="{hidden_DaysSince_Green_Name}"></td> 
+            <td>
+              <!-- BEGIN RadioButton RED_LETTER_SENT_FLAG --><input type="radio" onclick="javascript:getStatus_SetDate(this.id);" id="viewMaintainSearchRequestRED_LETTER_SENT_FLAG_{viewMaintainSearchRequest:rowNumber}_{RED_LETTER_SENT_FLAG:optionNumber}" value="{Value}" name="{RED_LETTER_SENT_FLAG_Name}" {Check}>{Description}<!-- END RadioButton RED_LETTER_SENT_FLAG --></td> 
+            <td>
+              <!-- BEGIN TextBox RED_LETTER_SENT_DATE --><input type="text" onfocus="this.select();" id="viewMaintainSearchRequestRED_LETTER_SENT_DATE_{viewMaintainSearchRequest:rowNumber}" maxlength="100" size="10" value="{RED_LETTER_SENT_DATE}" name="{RED_LETTER_SENT_DATE_Name}"><!-- END TextBox RED_LETTER_SENT_DATE -->&nbsp; 
+              <!-- BEGIN DatePicker DatePicker_RED_LETTER_SENT_DATE1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="viewMaintainSearchRequestDatePicker_RED_LETTER_SENT_DATE1"><img id="viewMaintainSearchRequestDatePicker_RED_LETTER_SENT_DATE1_Image" border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_RED_LETTER_SENT_DATE1 --><input type="hidden" id="viewMaintainSearchRequesthidden_DaysSince_Amber" value="{hidden_DaysSince_Amber}" name="{hidden_DaysSince_Amber_Name}"></td> 
+            <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td> 
+            <td></td> 
+            <td>
+              <!-- BEGIN CheckBox CheckBox_Delete --><input type="checkbox" id="viewMaintainSearchRequestCheckBox_Delete_{viewMaintainSearchRequest:rowNumber}" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="15">No Students with Green Letters found for that Student ID or Support Teacher!</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="15">
+              <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+              <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+                <option selected value="">-</option>
+ {PageSize_Options}
+              </select>
+ 
+              <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->First <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Last <!-- END Last_Off --></span><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input type="submit" id="viewMaintainSearchRequestButton_Submit" class="Button" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input type="submit" id="viewMaintainSearchRequestCancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid viewMaintainSearchRequest --><br>
+</p>
+<script type="text/javascript">
+function getStatus_SetDate(ctlid)
+{
+// 9-Mar-2015|EA| re-use code from StudentSubject_Details-maintain Runs Taken
+// originally from Vikas 1-Feb-2010 for unfuddle ticket #210 to auto fill date to today when Runs Taken set to 'Sent' and date is blank
+//alert(ctlid);
+ if (ctlid)
+ {
+    var YESRadiobuttonid = ctlid + "_0";
+    var NORadiobuttonid = ctlid + "_1";
+    var dateSentTextBox = ctlid.replace("FLAG","DATE");
+    var TodayDate=new Date();
+    var tdate = TodayDate.getDate();
+    var month = TodayDate.getMonth()+1;
+    var yr = TodayDate.getFullYear().toString();
+    
+    if (tdate<10)
+        tdate = "0" + tdate;
+    if (month<10)
+        month = "0" + month;
+    //yr= yr.substring(2,4);
+        
+    var setDateFormat= tdate + "/" +  month + "/" + yr ;
+    if (document.getElementById(YESRadiobuttonid).checked==true)
+    {
+       document.getElementById(dateSentTextBox).value=setDateFormat;
+    }
+    else if (document.getElementById(NORadiobuttonid).checked==true)
+    {
+        document.getElementById(dateSentTextBox).value="";    
+    }    
+ }
+}
+</script>
+</body>
+</html>

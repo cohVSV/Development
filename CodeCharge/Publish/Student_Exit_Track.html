@@ -1,0 +1,190 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Exit Tracking</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @64-FA107954
+    if (theForm.viewMaintainSearchRequests_STUDENT_ID) theForm.viewMaintainSearchRequests_STUDENT_ID.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//page_Student_Exit_Button_Cancel_OnClick @7-FDFF9EE5
+function page_Student_Exit_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_Student_Exit_Button_Cancel_OnClick
+
+//bind_events @1-C9BB64C9
+function bind_events() {
+    addEventHandler("Student_ExitButton_Cancel","click",page_Student_Exit_Button_Cancel_OnClick);
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+{Header} 
+<p align="center">
+<!-- BEGIN Record viewMaintainSearchRequest -->
+<form id="viewMaintainSearchRequest" method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search Exited Students</th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>STUDENT ID</th>
+ 
+            <td><input type="text" id="viewMaintainSearchRequests_STUDENT_ID" name="{s_STUDENT_ID_Name}" maxlength="12" value="{s_STUDENT_ID}" size="12"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ENROLMENT YEAR</th>
+ 
+            <td><input type="text" id="viewMaintainSearchRequests_ENROLMENT_YEAR" name="{s_ENROLMENT_YEAR_Name}" maxlength="12" value="{s_ENROLMENT_YEAR}" size="12"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td>&nbsp;<a href="{ClearParameters_Src}" id="viewMaintainSearchRequestClearParameters">Clear</a></td> 
+            <td align="right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="viewMaintainSearchRequestButton_DoSearch" class="Button" name="{Button_Name}" value="Search"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+        <em><strong>Currently Enrolled Students will NOT be found</strong></em></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record viewMaintainSearchRequest --><br>
+</p>
+<!-- BEGIN Record Student_Exit -->
+<form id="Student_Exit" method="post" name="{HTMLFormName}" action="{Action}">
+  <table style="WIDTH: 696px; HEIGHT: 368px" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Student Tracking </th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th><strong>Name</strong>&nbsp;</th>
+ 
+            <td>{Lbl_Name}&nbsp;</td> 
+            <td>&nbsp;<strong>Student ID</strong></td> 
+            <td>{Lbl_StudentID}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Withdrawal Reason</strong></th>
+ 
+            <td>{Lbl_WithDrawnReason}&nbsp;</td> 
+            <td>&nbsp;<strong>Withdrawal Date</strong></td> 
+            <td>{Lbl_WithDrawnDate}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong></strong></th>
+ 
+            <td>&nbsp;&nbsp; </td> 
+            <td><strong>&nbsp;</strong></td> 
+            <td>&nbsp; </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Exit Destination</strong></th>
+ 
+            <td>
+              <select id="Student_ExitlbEXIT_DESTINATION" name="{lbEXIT_DESTINATION_Name}">
+                <option selected value="">Select Destination</option>
+                {lbEXIT_DESTINATION_Options}
+              </select>
+ </td> 
+            <td><strong>&nbsp; <input type="hidden" id="Student_ExitHidden_CommentID" name="{Hidden_CommentID_Name}" value="{Hidden_CommentID}"></strong></td> 
+            <td>&nbsp; </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong>Comments</strong></th>
+ 
+            <td colspan="3"><textarea style="WIDTH: 406px; HEIGHT: 54px" id="Student_ExitTextAreaComments" cols="39" rows="3" name="{TextAreaComments_Name}">{TextAreaComments}</textarea>&nbsp; </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp; </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAST ALTERED BY / DATE</th>
+ 
+            <td>&nbsp;{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td> 
+            <td>&nbsp;<input type="hidden" id="Student_ExitTXT_LastAlteredBy" name="{TXT_LastAlteredBy_Name}" value="{TXT_LastAlteredBy}"></td> 
+            <td>&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="4" align="right">&nbsp; 
+              <!-- BEGIN Button Button_Update --><input type="submit" id="Student_ExitButton_Update" class="Button" name="{Button_Name}" value="Save"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="Student_ExitButton_Cancel" class="Button" name="{Button_Name}" value="Cancel"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record Student_Exit -->&nbsp; 
+</body>
+</html>

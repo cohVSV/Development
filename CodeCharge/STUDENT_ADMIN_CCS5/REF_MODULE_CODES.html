@@ -1,0 +1,315 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>MODULE CODES</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_REF_MODULE_CODES2_Button_Cancel_OnClick @48-3581936B
+function page_REF_MODULE_CODES2_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_REF_MODULE_CODES2_Button_Cancel_OnClick
+
+//Handle Condition1 @74-02594818
+function Condition1_start(sender) {
+//End Handle Condition1
+
+//Custom Condition1 @74-67288CCD
+    if (true==(params["click"] == "link"))
+    {
+    } else {
+    }
+//End Custom Condition1
+
+//Condition1 Tail @74-FCB6E20C
+}
+//End Condition1 Tail
+
+//Handle Condition2 @79-2B91FCEA
+function Condition2_start(sender) {
+//End Handle Condition2
+
+//Custom Condition2 @79-D34BA941
+    if (true==(params["click"] == "submit" && $("#ErrorBlock").length == 0))
+    {
+    } else {
+    }
+//End Custom Condition2
+
+//Condition2 Tail @79-FCB6E20C
+}
+//End Condition2 Tail
+
+//Handle Condition3 @84-85F96D7B
+function Condition3_start(sender) {
+//End Handle Condition3
+
+//Custom Condition3 @84-3ACAA933
+    if (true==(params["click"] = "link"))
+    {
+    } else {
+    }
+//End Custom Condition3
+
+//Condition3 Tail @84-FCB6E20C
+}
+//End Condition3 Tail
+
+//Handle Condition4 @95-7800950E
+function Condition4_start(sender) {
+//End Handle Condition4
+
+//Custom Condition4 @95-3B4E074B
+    if (true==(params["click"] = "submit"))
+    {
+    } else {
+    }
+//End Custom Condition4
+
+//Condition4 Tail @95-FCB6E20C
+}
+//End Condition4 Tail
+
+//Handle Condition5 @101-D668049F
+function Condition5_start(sender) {
+//End Handle Condition5
+
+//Custom Condition5 @101-CECB318E
+    if (true==(params["click"] = ""))
+    {
+    } else {
+    }
+//End Custom Condition5
+
+//Condition5 Tail @101-FCB6E20C
+}
+//End Condition5 Tail
+
+//bind_events @1-92FEABDB
+function bind_events() {
+    addEventHandler("REF_MODULE_CODES1REF_MODULE_CODES1_Insert", "click", Condition3_start);
+    addEventHandler("REF_MODULE_CODES1Detail", "click", Condition3_start);
+    addEventHandler("REF_MODULE_CODES2", "submit", Condition4_start);
+    addEventHandler("REF_MODULE_CODES2Button_Cancel","click",page_REF_MODULE_CODES2_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record REF_MODULE_CODESSearch -->
+<form id="Panel1REF_MODULE_CODESSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th>
+ 
+            <td><input type="text" id="Panel1REF_MODULE_CODESSearchs_keyword" name="{s_keyword_Name}" maxlength="50" value="{s_keyword}" size="50"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td><a href="{ClearParameters_Src}" id="Panel1REF_MODULE_CODESSearchClearParameters">Clear</a></td> 
+            <td style="TEXT-ALIGN: right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="Panel1REF_MODULE_CODESSearchButton_DoSearch" class="Button" name="{Button_Name}" value="Search"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record REF_MODULE_CODESSearch -->
+<p><a href="{REF_MODULE_CODES1_Insert_Src}" id="Panel1REF_MODULE_CODES1_Insert">Add New</a></p>
+<!-- BEGIN Grid REF_MODULE_CODES1 -->
+<table id="Panel1REF_MODULE_CODES1" class="MainTable" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>MODULE CODES </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="8">Total Records:&nbsp;{REF_MODULE_CODES1_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>&nbsp;</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_MODULE_CODE --><span class="Sorter"><a href="{Sort_URL}" id="Panel1REF_MODULE_CODES1Sorter_MODULE_CODE">MODULE CODE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_MODULE_CODE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_MODULE_LABEL --><span class="Sorter"><a href="{Sort_URL}" id="Panel1REF_MODULE_CODES1Sorter_MODULE_LABEL">MODULE LABEL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_MODULE_LABEL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SEMESTER --><span class="Sorter"><a href="{Sort_URL}" id="Panel1REF_MODULE_CODES1Sorter_SEMESTER">SEMESTER</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SEMESTER --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PRIMARY_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="Panel1REF_MODULE_CODES1Sorter_PRIMARY_FLAG">PRIMARY FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PRIMARY_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STATUS --><span class="Sorter"><a href="{Sort_URL}" id="Panel1REF_MODULE_CODES1Sorter_STATUS">STATUS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_STATUS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><span class="Sorter"><a href="{Sort_URL}" id="Panel1REF_MODULE_CODES1Sorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><span class="Sorter"><a href="{Sort_URL}" id="Panel1REF_MODULE_CODES1Sorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{Detail_Src}" id="Panel1REF_MODULE_CODES1Detail_{REF_MODULE_CODES1:rowNumber}">Detail</a>&nbsp;</td> 
+          <td>{MODULE_CODE}&nbsp;</td> 
+          <td>{MODULE_LABEL}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SEMESTER}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{PRIMARY_FLAG}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{STATUS}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">No Modules found!</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="8"><a href="{REF_MODULE_CODES1_Insert_Src}" id="Panel1REF_MODULE_CODES1REF_MODULE_CODES1_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid REF_MODULE_CODES1 --><br>
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record REF_MODULE_CODES2 -->
+<form id="Panel1Panel2REF_MODULE_CODES2" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add/Edit MODULE CODES </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Module Code</th>
+ 
+            <td><input type="text" id="Panel1Panel2REF_MODULE_CODES2MODULE_CODE" name="{MODULE_CODE_Name}" maxlength="50" value="{MODULE_CODE}" size="50">{lblMODULE_CODE}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Module Label</th>
+ 
+            <td><input type="text" id="Panel1Panel2REF_MODULE_CODES2MODULE_LABEL" name="{MODULE_LABEL_Name}" maxlength="50" value="{MODULE_LABEL}" size="50"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Sub school?</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton PRIMARY_FLAG --><input type="radio" id="Panel1Panel2REF_MODULE_CODES2PRIMARY_FLAG_{PRIMARY_FLAG:optionNumber}" name="{PRIMARY_FLAG_Name}" value="{Value}" {Check}>{Description}<!-- END RadioButton PRIMARY_FLAG --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Status</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton STATUS --><input type="radio" id="Panel1Panel2REF_MODULE_CODES2STATUS_{STATUS:optionNumber}" name="{STATUS_Name}" value="{Value}" {Check}>{Description}<!-- END RadioButton STATUS --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="Panel1Panel2REF_MODULE_CODES2Button_Insert" class="Button" name="{Button_Name}" value="Add"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="Panel1Panel2REF_MODULE_CODES2Button_Update" class="Button" name="{Button_Name}" value="Save"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="Panel1Panel2REF_MODULE_CODES2Button_Cancel" class="Button" name="{Button_Name}" value="Cancel"><!-- END Button Button_Cancel --><input type="hidden" id="Panel1Panel2REF_MODULE_CODES2SEMESTER" name="{SEMESTER_Name}" value="{SEMESTER}"><input type="hidden" id="Panel1Panel2REF_MODULE_CODES2LAST_ALTERED_BY" name="{LAST_ALTERED_BY_Name}" value="{LAST_ALTERED_BY}"><input type="hidden" id="Panel1Panel2REF_MODULE_CODES2LAST_ALTERED_DATE" name="{LAST_ALTERED_DATE_Name}" value="{LAST_ALTERED_DATE}"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record REF_MODULE_CODES2 --><!-- END Panel Panel2 --><br>
+<!-- END Panel Panel1 -->
+<p></p>
+<p>{Footer}</p>
+</body>
+</html>

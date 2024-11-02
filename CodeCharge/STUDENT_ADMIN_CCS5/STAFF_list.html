@@ -1,0 +1,218 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>STAFF</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css" />
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//DEL    </script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @68-D55FD018
+    if (theForm.STAFFSearchs_keyword) theForm.STAFFSearchs_keyword.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//bind_events @1-B716D3FC
+function bind_events() {
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+{Header} 
+<!-- BEGIN Record STAFFSearch -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search STAFF </th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>Keyword</th>
+ 
+            <td><input type="text" id="STAFFSearchs_keyword" name="{s_keyword_Name}" maxlength="20" value="{s_keyword}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Active?</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton rbStatus --><input type="radio" id="STAFFSearchrbStatus_{rbStatus:optionNumber}" name="{rbStatus_Name}" value="{Value}" checked {Check}>{Description}<!-- END RadioButton rbStatus -->&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="STAFFSearchButton_DoSearch" class="Button" name="{Button_Name}" value="Search"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record STAFFSearch -->
+<div align="center">
+<a href="{Link_AddNew_Src}" id="Link_AddNew" class="Button">Add New</a> 
+</div>
+<div align="right">
+</div>
+<br>
+<!-- BEGIN Grid STAFF -->
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>List of STAFF </th>
+ 
+          <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_STAFF_ID --><a href="{Sort_URL}" id="STAFFSorter_STAFF_ID">ID</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STAFF_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="STAFFSorter_SURNAME">SURNAME</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_FIRSTNAME --><a href="{Sort_URL}" id="STAFFSorter_FIRSTNAME">FIRSTNAME</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_FIRSTNAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_TEACHER_FLAG --><a href="{Sort_URL}" id="STAFFSorter_TEACHER_FLAG">TEACHER FLAG</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_TEACHER_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_GROUP_NAME --><a href="{Sort_URL}" id="STAFFSorter_GROUP_NAME">GROUP NAME</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_GROUP_NAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STATUS --><a href="{Sort_URL}" id="STAFFSorter_STATUS">ACTIVE</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STATUS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><a href="{Sort_URL}" id="STAFFSorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><a href="{Sort_URL}" id="STAFFSorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{STAFF_ID_Src}" id="STAFFSTAFF_ID">{STAFF_ID}</a>&nbsp;</td> 
+          <td>{SURNAME}&nbsp;</td> 
+          <td>{FIRSTNAME}&nbsp;</td> 
+          <td>{TEACHER_FLAG}&nbsp;</td> 
+          <td>{GROUP_NAME}&nbsp;</td> 
+          <td>{STATUS}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN AltRow -->
+        <tr class="AltRow">
+          <td><a href="{Alt_STAFF_ID_Src}" id="STAFFAlt_STAFF_ID">{Alt_STAFF_ID}</a>&nbsp;</td> 
+          <td>{Alt_SURNAME}&nbsp;</td> 
+          <td>{Alt_FIRSTNAME}&nbsp;</td> 
+          <td>{Alt_TEACHER_FLAG}&nbsp;</td> 
+          <td>{Alt_GROUP_NAME}&nbsp;</td> 
+          <td>{Alt_STATUS}&nbsp;</td> 
+          <td>{Alt_LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{Alt_LAST_ALTERED_DATE}&nbsp;</td> 
+        </tr>
+ <!-- END AltRow -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="8"><a href="{STAFF_Insert_Src}" id="STAFFSTAFF_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator1 --><span class="Navigator">Records per page 
+            <select style="VERTICAL-ALIGN: middle" onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option selected value="">-</option>
+ {PageSize_Options} 
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a> <!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number} <!-- END Page_Off --><!-- END Pages -->of {Total_Pages} 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span> <!-- END Navigator Navigator1 --></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid STAFF --><br>
+{Footer} 
+</body>
+</html>

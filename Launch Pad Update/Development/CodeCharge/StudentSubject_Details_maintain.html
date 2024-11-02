@@ -1,0 +1,515 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Subject Details maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_viewStudentSummary_Subjec_Button_Update_OnClick @5-D2C6C036
+function page_viewStudentSummary_Subjec_Button_Update_OnClick()
+{
+    var result;
+//End page_viewStudentSummary_Subjec_Button_Update_OnClick
+
+//Confirmation Message @97-D47BE4F7
+    return confirm('Are you sure you want to update the Subject Details?');
+//End Confirmation Message
+
+//Close page_viewStudentSummary_Subjec_Button_Update_OnClick @5-BC33A33A
+    return result;
+}
+//End Close page_viewStudentSummary_Subjec_Button_Update_OnClick
+
+//page_viewStudentSummary_Subjec_Button_Extend_OnClick @301-13FF8DAD
+function page_viewStudentSummary_Subjec_Button_Extend_OnClick()
+{
+    var result;
+//End page_viewStudentSummary_Subjec_Button_Extend_OnClick
+
+//Confirmation Message @302-083FF648
+    return confirm('Extend Subject into Semester 2?\n(can be manually changed back)');
+//End Confirmation Message
+
+//Close page_viewStudentSummary_Subjec_Button_Extend_OnClick @301-BC33A33A
+    return result;
+}
+//End Close page_viewStudentSummary_Subjec_Button_Extend_OnClick
+
+//page_viewStudentSummary_Subjec_Button_Cancel_OnClick @6-14B4033F
+function page_viewStudentSummary_Subjec_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_viewStudentSummary_Subjec_Button_Cancel_OnClick
+
+//page_STUDENT_SUBJECT_Button_Cancel_OnClick @130-E2583AC8
+function page_STUDENT_SUBJECT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_SUBJECT_Button_Cancel_OnClick
+
+//bind_events @1-5CCEB78F
+function bind_events() {
+    addEventHandler("viewStudentSummary_SubjecButton_Extend","click",page_viewStudentSummary_Subjec_Button_Extend_OnClick);
+    addEventHandler("viewStudentSummary_SubjecButton_Update","click",page_viewStudentSummary_Subjec_Button_Update_OnClick);
+    addEventHandler("viewStudentSummary_SubjecButton_Cancel","click",page_viewStudentSummary_Subjec_Button_Cancel_OnClick);
+    addEventHandler("STUDENT_SUBJECTButton_Cancel","click",page_STUDENT_SUBJECT_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+<p>{Header}</p>
+<p align="center"><a href="{linkSubjectList_Src}" id="linkSubjectList" class="Button">Back to Subject List</a></p>
+<p><br>
+<!-- BEGIN Record viewStudentSummary_Subjec -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <div align="center">
+        <table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+            <tr>
+                <td valign="top">
+                    <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                            <th>Edit Subject Details </th>
+ 
+                            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                        </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                        <!-- BEGIN Error -->
+                        <tr class="Error">
+                            <td colspan="4">{Error}</td>
+                        </tr>
+                        <!-- END Error -->
+                        <tr class="Controls">
+                            <th>STUDENT ID</th>
+ 
+                            <td>{student_id}&nbsp;</td> 
+                            <td>&nbsp;ENROLMENT YEAR</td> 
+                            <td>{enrolment_year}&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>SUBJECT ID</th>
+ 
+                            <td>{SUBJECT_ID}&nbsp;</td> 
+                            <td>&nbsp;SUBJECT TITLE</td> 
+                            <td>{SUBJECT_TITLE}&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>SEMESTER</th>
+ 
+                            <td>
+                                <select id="viewStudentSummary_SubjecSEMESTER" name="{SEMESTER_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {SEMESTER_Options}
+                                </select>
+ </td> 
+                            <td>&nbsp;COURSE DISTRIBUTION</td> 
+                            <td>{COURSE_DISTRIBUTION} &nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>&nbsp;</th>
+ 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>ENROLMENT STATUS</th>
+ 
+                            <td>
+                                <select id="viewStudentSummary_SubjecSUBJ_ENROL_STATUS" name="{SUBJ_ENROL_STATUS_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {SUBJ_ENROL_STATUS_Options}
+                                </select>
+ </td> 
+                            <td>&nbsp;ENROLMENT DATE</td> 
+                            <td><input type="text" onfocus="this.select();" id="viewStudentSummary_Subjecenrolment_date" maxlength="10" size="10" value="{enrolment_date}" name="{enrolment_date_Name}">&nbsp;<em>eg:31/05/08</em></td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>EXTENDING IN SUBJECT</th>
+ 
+                            <td>
+                                <!-- BEGIN RadioButton EXTENSION_OF_VCE_UNIT --><input type="radio" id="viewStudentSummary_SubjecEXTENSION_OF_VCE_UNIT_{EXTENSION_OF_VCE_UNIT:optionNumber}" value="{Value}" name="{EXTENSION_OF_VCE_UNIT_Name}" {Check}>{Description} <!-- END RadioButton EXTENSION_OF_VCE_UNIT --></td> 
+                            <td>&nbsp;END DATE</td> 
+                            <td><input type="text" onfocus="this.select();" id="viewStudentSummary_Subjecwithdrawal_date" maxlength="10" size="10" value="{withdrawal_date}" name="{withdrawal_date_Name}">&nbsp;<em>eg:31/05/08</em></td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>WITHDRAWAL REASON</th>
+ 
+                            <td colspan="2">
+                                <select id="viewStudentSummary_SubjecWITHDRAWAL_REASON_ID" name="{WITHDRAWAL_REASON_ID_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {WITHDRAWAL_REASON_ID_Options}
+                                </select>
+ &nbsp;</td> 
+                            <td class="Error">{labelErrorStaffID}&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>No of ASSIGNMENT&nbsp;SUBMISSIONS</th>
+ 
+                            <td>{NUM_ASSMT_SUBMISSIONS}&nbsp;</td> 
+                            <td>&nbsp;TEACHER</td> 
+                            <td>
+                                <select id="viewStudentSummary_SubjecSTAFF_ID" name="{STAFF_ID_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {STAFF_ID_Options}
+                                </select>
+ &nbsp;&nbsp;{lblSTAFF_ID}</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>INTERIM PROGRESS CODE&nbsp;<img onclick="javascript:alert('Interim Result Changes Nov 2010, per VCE Reporting Team');return false;" id="interim_result_icon" title="Interim Result Changes Nov 2010, per VCE Reporting Team" border="0" name="Interim_ResultIcon" alt="Interim Result Changes" src="images/icon_info.gif"></th>
+ 
+                            <td>
+                                <select id="viewStudentSummary_SubjecINTERIM_PROGRESS_CODE" name="{INTERIM_PROGRESS_CODE_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {INTERIM_PROGRESS_CODE_Options}
+                                </select>
+ </td> 
+                            <td>&nbsp;FINAL PROGRESS CODE</td> 
+                            <td>
+                                <select id="viewStudentSummary_SubjecFINAL_PROGRESS_CODE" name="{FINAL_PROGRESS_CODE_Name}">
+                                    <option selected value="">Select Value</option>
+                                    {FINAL_PROGRESS_CODE_Options}
+                                </select>
+ &nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>&nbsp;</th>
+ 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>VBOS REGISTERED</th>
+ 
+                            <td>
+                                <!-- BEGIN RadioButton VBOS_REGISTERED --><input type="radio" id="viewStudentSummary_SubjecVBOS_REGISTERED_{VBOS_REGISTERED:optionNumber}" value="{Value}" name="{VBOS_REGISTERED_Name}" {Check}>{Description}<!-- END RadioButton VBOS_REGISTERED --></td> 
+                            <td>NON SUBMITTING?&nbsp;<img onclick="javascript:alert('Non-Submitting Flag (replaces NSUBMIT Teacher) March 2015');return false;" id="nsubmit_icon" title="Non-Submitting Flag (replaces NSUBMIT Teacher) March 2015" border="0" name="nsubmit_icon" alt="Non-Submitting Flag" src="images/icon_info.gif"></td> 
+                            <td>
+                                <!-- BEGIN RadioButton NON_SUBMITTING_FLAG --><input type="radio" id="viewStudentSummary_SubjecNON_SUBMITTING_FLAG_{NON_SUBMITTING_FLAG:optionNumber}" value="{Value}" name="{NON_SUBMITTING_FLAG_Name}" {Check}>{Description}<!-- END RadioButton NON_SUBMITTING_FLAG --></td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>APPEARS ON VASS</th>
+ 
+                            <td>
+                                <!-- BEGIN RadioButton APPEARS_ON_VASS --><input type="radio" id="viewStudentSummary_SubjecAPPEARS_ON_VASS_{APPEARS_ON_VASS:optionNumber}" value="{Value}" name="{APPEARS_ON_VASS_Name}" {Check}>{Description}<!-- END RadioButton APPEARS_ON_VASS --></td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>&nbsp;</th>
+ 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>LAST ALTERED BY / DATE</th>
+ 
+                            <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td> 
+                            <td>&nbsp;</td> 
+                            <td>&nbsp;</td>
+                        </tr>
+ 
+                        <tr class="Bottom">
+                            <td colspan="4" align="right">
+                                <!-- BEGIN Button Button_Extend --><input type="submit" id="viewStudentSummary_SubjecButton_Extend" class="Button" style="BACKGROUND-COLOR: orange" value="Extend Subject" name="{Button_Name}"><!-- END Button Button_Extend -->&nbsp;&nbsp;&nbsp;&nbsp; 
+                                <!-- BEGIN Button Button_Cancel --><input type="submit" id="viewStudentSummary_SubjecButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel -->
+                                <!-- BEGIN Button Button_Update --><input type="submit" id="viewStudentSummary_SubjecButton_Update" class="Button" value="Update Subject" name="{Button_Name}"><!-- END Button Button_Update --></td>
+                        </tr>
+                    </table>
+                    <input type="hidden" id="viewStudentSummary_Subjechidden_STUDENT_ID" value="{hidden_STUDENT_ID}" name="{hidden_STUDENT_ID_Name}"><input type="hidden" id="viewStudentSummary_Subjechidden_ENROLMENT_YEAR" value="{hidden_ENROLMENT_YEAR}" name="{hidden_ENROLMENT_YEAR_Name}"><input type="hidden" id="viewStudentSummary_Subjechidden_SUBJECT_ID" value="{hidden_SUBJECT_ID}" name="{hidden_SUBJECT_ID_Name}"><input type="hidden" id="viewStudentSummary_Subjechidden_LAST_ALTERED_DATE" value="{hidden_LAST_ALTERED_DATE}" name="{hidden_LAST_ALTERED_DATE_Name}"><input type="hidden" id="viewStudentSummary_Subjechidden_LAST_ALTERED_BY" value="{hidden_LAST_ALTERED_BY}" name="{hidden_LAST_ALTERED_BY_Name}"></td>
+            </tr>
+        </table>
+        {lblDebug2} 
+    </div>
+</form>
+<!-- END Record viewStudentSummary_Subjec -->
+<p align="center">&nbsp; 
+<!-- BEGIN Record STUDENT_SUBJECT -->
+<form id="STUDENT_SUBJECT" method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Edit Individual Learning Plan</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th colspan="4"><em>Note: This should only be altered by Co-ordinators&nbsp;after consultation with Subject Teacher(s). In most cases a 'MODIFIED_SUBJECT'&nbsp; comment is appropriate</em>&nbsp;.&nbsp;&nbsp;</th>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>Individual Education Plan&nbsp;<img onclick="javascript:alert('Individual Education Plan, Apr 2021');return false;" id="customlearningprogram_result_icon" title="Individual Education Plan, Apr 2021" border="0" name="CustomLearningProgram_ResultIcon" alt="Individual Education Plan" src="images/icon_info.gif"></th>
+ 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton MODULE_CUSTOMPROGRAM --><input type="radio" id="STUDENT_SUBJECTMODULE_CUSTOMPROGRAM_{MODULE_CUSTOMPROGRAM:optionNumber}" value="{Value}" name="{MODULE_CUSTOMPROGRAM_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton MODULE_CUSTOMPROGRAM --></td> 
+                        <td>Next Module&nbsp;<img onclick="javascript:alert('Individual Education Plan - Next modules, Apr 2021');return false;" id="customlearningprogram_result_icon" title="Individual Education Plan - next modules, Apr 2021" border="0" name="CustomLearningProgram_modules_ResultIcon" alt="Individual Education Plan - Next Modules" src="images/icon_info.gif"></td> 
+                        <td>
+                            <select id="STUDENT_SUBJECTMODULE_NEXTMODULE" name="{MODULE_NEXTMODULE_Name}">
+                                <option selected value="">Select Value</option>
+                                {MODULE_NEXTMODULE_Options}
+                            </select>
+ </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>MODULE LAST ALTERED BY / DATE</th>
+ 
+                        <td>&nbsp;{MODULE_LAST_ALTERED_BY1}&nbsp;/ {MODULE_LAST_ALTERED_DATE1}</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="4" align="right">
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_SUBJECTButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel -->
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_SUBJECTButton_Update" class="Button" value="Update Module only" name="{Button_Name}"><!-- END Button Button_Update --><input type="hidden" id="STUDENT_SUBJECTENROLMENT_YEAR" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}"><input type="hidden" id="STUDENT_SUBJECTSUBJECT_ID" value="{SUBJECT_ID}" name="{SUBJECT_ID_Name}"><input type="hidden" id="STUDENT_SUBJECTSEMESTER" value="{SEMESTER}" name="{SEMESTER_Name}"><input type="hidden" id="STUDENT_SUBJECTMODULE_LAST_ALTERED_BY" value="{MODULE_LAST_ALTERED_BY}" name="{MODULE_LAST_ALTERED_BY_Name}"><input type="hidden" id="STUDENT_SUBJECTMODULE_LAST_ALTERED_DATE" value="{MODULE_LAST_ALTERED_DATE}" name="{MODULE_LAST_ALTERED_DATE_Name}"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_SUBJECT --><br>
+</p>
+<p align="center">{lblSelections}</p>
+<!-- BEGIN Grid BOOK_DESPATCH -->
+<table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="HeaderLeft">
+                        <p align="center"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></p>
+                    </td> 
+                    <th>Runs Taken</th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Caption">
+                    <th>
+                    <p align="center">BOOK NO (Module)</p>
+                    </th>
+ 
+                    <div align="center">
+                    </div>
+ 
+                    <th>DESPATCH STATUS</th>
+ 
+                    <div>
+                    </div>
+ 
+                    <th>
+                    <p align="center">DESPATCH DATE</p>
+                    </th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {BOOK_DESPATCH:rowStyle}>
+                    <td style="TEXT-ALIGN: right">
+                        <p align="center">{BOOK_ID}&nbsp;&nbsp;{lblModule}</p>
+                    </td> 
+                    <td>
+                        <p align="center">
+                        <!-- BEGIN RadioButton DESPATCH_STATUS --><input type="radio" onclick="javascript:getStatus_SetDate(this.id);" id="BOOK_DESPATCHDESPATCH_STATUS_{DESPATCH_STATUS:optionNumber}" value="{Value}" name="{DESPATCH_STATUS_Name}" {Check}>{Description}<!-- END RadioButton DESPATCH_STATUS -->&nbsp;</p>
+                    </td> 
+                    <td>
+                        <p align="center"><input type="text" onfocus="this.select();" id="BOOK_DESPATCHDESPATCH_DATE" maxlength="100" size="8" value="{DESPATCH_DATE}" name="{DESPATCH_DATE_Name}">&nbsp;</p>
+                    </td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                    <td colspan="3">No Books found for this Subject</td>
+                </tr>
+                <!-- END NoRecords -->
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- END Grid BOOK_DESPATCH -->
+<p></p>
+<p></p>
+<p>
+<table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Bottom">
+                    <td align="right"><em>Only 'Runs Taken' will be updated:</em> 
+                        <asp:button id="BOOK_DESPATCHButton_UpdateRuns" runat="server" text="Update" cssclass="Button" />&nbsp;&nbsp; </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</p>
+<p></p>
+<p align="center">
+<!-- BEGIN EditableGrid EditableGrid1 -->
+<form id="EditableGrid1" method="post" name="{HTMLFormName}" action="{Action}">
+    <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+    <table class="MainTable" cellspacing="0" cellpadding="0" width="70%" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Runs Taken - What Modules to Send</th>
+ 
+                        <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="3">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Caption">
+                        <th>
+                        <p align="center">BOOK ID (Module)</p>
+                        </th>
+ 
+                        <th>
+                        <p align="center">DESPATCH STATUS</p>
+                        </th>
+ 
+                        <th>
+                        <p align="center">DESPATCH DATE</p>
+                        </th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <!-- BEGIN RowError -->
+                    <tr class="Error">
+                        <td colspan="3">{Error}</td>
+                    </tr>
+                    <!-- END RowError -->
+                    <tr class="Row">
+                        <td>
+                            <p align="center"><input type="hidden" id="EditableGrid1BOOK_ID_{EditableGrid1:rowNumber}" value="{BOOK_ID}" name="{BOOK_ID_Name}">{lblBookID}&nbsp;&nbsp;{module_display}</p>
+                        </td> 
+                        <td>
+                            <p align="center">
+                            <!-- BEGIN RadioButton DESPATCH_STATUS --><input type="radio" onclick="javascript:getStatus_SetDate(this.id);" id="EditableGrid1DESPATCH_STATUS_{EditableGrid1:rowNumber}_{DESPATCH_STATUS:optionNumber}" value="{Value}" name="{DESPATCH_STATUS_Name}" {Check}>{Description}<!-- END RadioButton DESPATCH_STATUS --></p>
+                        </td> 
+                        <td>
+                            <p align="center">
+                            <!-- BEGIN TextBox DESPATCH_DATE --><input type="text" onfocus="this.select();" id="EditableGrid1DESPATCH_DATE_{EditableGrid1:rowNumber}" maxlength="12" size="8" value="{DESPATCH_DATE}" name="{DESPATCH_DATE_Name}"><!-- END TextBox DESPATCH_DATE --></p>
+                        </td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="3">No Books found for this Subject!</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                        <td style="TEXT-ALIGN: right" colspan="3"><em>Only 'Runs Taken' will be updated:</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Footer">
+                        <td style="TEXT-ALIGN: right" colspan="3">
+                            <!-- BEGIN Button Button_Submit --><input type="submit" id="EditableGrid1Button_Submit" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- END EditableGrid EditableGrid1 --><br>
+<br>
+&nbsp;</p>
+<script type="text/javascript">
+function getStatus_SetDate(ctlid)
+{
+// Coded by Vikas 1-Feb-2010 for unfuddle ticket #210 to auto fill date to today when Runs Taken set to 'Sent' and date is blank
+//alert(ctlid);
+ if (ctlid)
+ {
+    var sendRadiobuttonid = ctlid + "_0";
+    var NRRadiobuttonid = ctlid + "_1";
+    var ToBesendRadiobuttonid = ctlid + "_2";
+    var dateSentTextBox = ctlid.replace("STATUS","DATE");
+    var TodayDate=new Date();
+    var tdate = TodayDate.getDate();
+    var month = TodayDate.getMonth()+1;
+    var yr = TodayDate.getFullYear().toString();
+    
+    if (tdate<10)
+        tdate = "0" + tdate;
+    if (month<10)
+        month = "0" + month;
+    yr= yr.substring(2,4);
+        
+    var setDateFormat= tdate + "/" +  month + "/" + yr ;
+    if (document.getElementById(sendRadiobuttonid).checked==true)
+    {
+       document.getElementById(dateSentTextBox).value=setDateFormat;
+    }
+    else if (document.getElementById(NRRadiobuttonid).checked==true)
+    {
+        document.getElementById(dateSentTextBox).value="";    
+    }    
+    else if (document.getElementById(ToBesendRadiobuttonid).checked==true)
+    {
+        document.getElementById(dateSentTextBox).value="";        
+    }   
+        
+    
+ }
+}
+</script>
+</body>
+</html>

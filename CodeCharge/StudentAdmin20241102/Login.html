@@ -1,0 +1,82 @@
+<!-- BEGIN Panel Head -->
+<script type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-A8D4FBB4
+</script>
+<script src="{page:pathToRoot}ClientI18N.asp?file=globalize.js&amp;lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-74EB5556
+</script>
+<script src="{page:pathToRoot}js/jquery/jquery-1.9.0.js" type="text/javascript"></script>
+<script src="{page:pathToRoot}js/jquery/event-manager.js" type="text/javascript"></script>
+<script src="{page:pathToRoot}js/jquery/selectors.js" type="text/javascript"></script>
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record Login -->
+<form id="ContentLogin" method="post" action="{Action}" name="{HTMLFormName}">
+  <table class="MainTable">
+    <tr>
+      <td style="vertical-align:top;">
+        <table class="Header">
+          <tr>
+            <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/spacer.gif" alt=""></td> 
+            <td class="th"><strong>Login</strong></td> 
+            <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/spacer.gif" alt=""></td>
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label>Login</label></td> 
+            <td><input type="text" name="{login_Name}" value="{login}" maxlength="100" size="20" id="ContentLoginlogin"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label>Password</label></td> 
+            <td><input type="password" name="{password_Name}" value="{password}" maxlength="100" size="20" id="ContentLoginpassword"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="text-align: center" colspan="2">admin/admin<br>
+              guest/guest&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" style="text-align: right">&nbsp; 
+              <!-- BEGIN Button Button_DoLogin --><input name="{Button_Name}" type="submit" value="Login" alt="Login" id="ContentLoginButton_DoLogin" class="Button"><!-- END Button Button_DoLogin --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+ 
+</form>
+<!-- END Record Login --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{Header}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{Search}{Categories}{Recommended}<!-- END Panel Sidebar -->

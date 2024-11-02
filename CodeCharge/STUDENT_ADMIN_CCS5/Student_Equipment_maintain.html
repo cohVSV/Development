@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Equipment Maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+<p>{Menu_Student_maintain}</p>
+<p>
+<!-- BEGIN Record STUDENT_EQUIPMENT -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Edit Student Equipment </th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="2">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th><strong>&nbsp;STUDENT ID</strong></th>
+ 
+                        <td>{lblStudentNo}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Permission for teachers to access Student WORK EXAMPLES</th>
+ 
+                        <td>
+                            <p>
+                            <!-- BEGIN RadioButton ACCESS_WORKEXAMPLES_radio --><input type="radio" id="STUDENT_EQUIPMENTACCESS_WORKEXAMPLES_radio_{ACCESS_WORKEXAMPLES_radio:optionNumber}" value="{Value}" name="{ACCESS_WORKEXAMPLES_radio_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton ACCESS_WORKEXAMPLES_radio -->&nbsp;&nbsp;<em>(added 2009, modified June 2010)</em></p>
+                        </td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Receive&nbsp;VSV Newsletter by POST ONLY:</th>
+ 
+                        <td><input type="checkbox" id="STUDENT_EQUIPMENTNEWSLETTER_BYMAIL" value="1" name="{NEWSLETTER_BYMAIL_Name}" {NEWSLETTER_BYMAIL}>&nbsp;&nbsp;<em>(added 2009)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student&nbsp;has Access to a COMPUTER:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton ACCESS_COMPUTER --><input type="radio" id="STUDENT_EQUIPMENTACCESS_COMPUTER_{ACCESS_COMPUTER:optionNumber}" value="{Value}" name="{ACCESS_COMPUTER_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton ACCESS_COMPUTER -->&nbsp;<br>
+                            <em>(new for 2010)</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student&nbsp;has Access to the INTERNET:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton ACCESS_INTERNET --><input type="radio" id="STUDENT_EQUIPMENTACCESS_INTERNET_{ACCESS_INTERNET:optionNumber}" value="{Value}" name="{ACCESS_INTERNET_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton ACCESS_INTERNET -->&nbsp;<br>
+                            <em>(new for 2010)</em></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student has Digital Education Revolution PC:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton HAS_DER_PC --><input type="radio" id="STUDENT_EQUIPMENTHAS_DER_PC_{HAS_DER_PC:optionNumber}" checked value="{Value}" name="{HAS_DER_PC_Name}" {Check}>{Description}<!-- END RadioButton HAS_DER_PC -->&nbsp;&nbsp;<br>
+                            <em>(added 2009)</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><em><strong>&nbsp;No longer Used for 2010 Enrolments</strong></em></th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student&nbsp;has Access to their OWN&nbsp;COMPUTER:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton HAS_COMPUTER --><input type="radio" id="STUDENT_EQUIPMENTHAS_COMPUTER_{HAS_COMPUTER:optionNumber}" value="{Value}" name="{HAS_COMPUTER_Name}" {Check}>{Description}<!-- END RadioButton HAS_COMPUTER --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student has Shared Access to a COMPUTER:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton SHARES_COMPUTER --><input type="radio" id="STUDENT_EQUIPMENTSHARES_COMPUTER_{SHARES_COMPUTER:optionNumber}" value="{Value}" name="{SHARES_COMPUTER_Name}" {Check}>{Description}<!-- END RadioButton SHARES_COMPUTER -->&nbsp;&nbsp;<em>(added 2009)</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student has&nbsp;ACCESS to the Internet:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton HAS_INTERNET_ACCESS --><input type="radio" id="STUDENT_EQUIPMENTHAS_INTERNET_ACCESS_{HAS_INTERNET_ACCESS:optionNumber}" value="{Value}" name="{HAS_INTERNET_ACCESS_Name}" {Check}>{Description}<!-- END RadioButton HAS_INTERNET_ACCESS --></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student has&nbsp;LIMITED access to the Internet:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton LIMITED_INTERNET_ACCESS --><input type="radio" id="STUDENT_EQUIPMENTLIMITED_INTERNET_ACCESS_{LIMITED_INTERNET_ACCESS:optionNumber}" checked value="{Value}" name="{LIMITED_INTERNET_ACCESS_Name}" {Check}>{Description}&nbsp;<!-- END RadioButton LIMITED_INTERNET_ACCESS -->&nbsp;<em>(added 2009)</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student has Access to CABLE BROADBAND or better:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton HAS_BROADBAND --><input type="radio" id="STUDENT_EQUIPMENTHAS_BROADBAND_{HAS_BROADBAND:optionNumber}" checked value="{Value}" name="{HAS_BROADBAND_Name}" {Check}>{Description}<!-- END RadioButton HAS_BROADBAND -->&nbsp;&nbsp;<em>(added 2009)</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student Owns a&nbsp;DVD Player:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton HAS_DVD --><input type="radio" id="STUDENT_EQUIPMENTHAS_DVD_{HAS_DVD:optionNumber}" value="{Value}" name="{HAS_DVD_Name}" {Check}>{Description}<!-- END RadioButton HAS_DVD -->&nbsp;&nbsp;<em>(unused&nbsp;after 2008)</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;Student Owns a&nbsp;VCR:</th>
+ 
+                        <td>
+                            <!-- BEGIN RadioButton HAS_VCR --><input type="radio" id="STUDENT_EQUIPMENTHAS_VCR_{HAS_VCR:optionNumber}" value="{Value}" name="{HAS_VCR_Name}" {Check}>{Description}<!-- END RadioButton HAS_VCR -->&nbsp;&nbsp;<em>(unused&nbsp;after 2008)</em>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>LAST ALTERED BY / DATE</th>
+ 
+                        <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="2" align="right">
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="STUDENT_EQUIPMENTButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="STUDENT_EQUIPMENTButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+                    </tr>
+                </table>
+                <input type="hidden" id="STUDENT_EQUIPMENTHidden_lastalteredby" value="{Hidden_lastalteredby}" name="{Hidden_lastalteredby_Name}"><input type="hidden" id="STUDENT_EQUIPMENTHidden_lastaltereddate" value="{Hidden_lastaltereddate}" name="{Hidden_lastaltereddate_Name}"></td>
+        </tr>
+    </table>
+</form>
+<!-- END Record STUDENT_EQUIPMENT --><br>
+</p>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>StudentSubject_TeacherStats</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.1.00.032">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<style type="text/css">
+      tr.highAllocation td
+      {
+         background-color: khaki;
+      }
+
+
+      tr.maxAllocation td
+      {
+         background-color: lightsalmon;
+      }
+   </style>
+</head>
+<body>
+<!-- BEGIN Report rptTeacherAllocation -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>Current Active Subject Enrolments (Excludes Non-Submits)</th>
+ 
+                    <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Section Report_Header -->
+                <tr class="Controls">
+                    <td colspan="6">
+                        <h2 style="MARGIN-TOP: 5px">Enrolment Year: {lblEnrolmentYear}</h2>
+ 
+                        <h2>Subject Abbrev: {lblSubjectAbbreviation}</h2>
+                    </td>
+                </tr>
+ <!-- END Section Report_Header -->
+                <!-- BEGIN Section Page_Header -->
+                <tr class="Caption">
+                    <th>Semester&nbsp;</th>
+ 
+                    <th>Staff ID</th>
+ 
+                    <th>Subj. Time Frac.</th>
+ 
+                    <th>FTE Student Max</th>
+ 
+                    <th>Current Students</th>
+ 
+                    <th>Percentage</th>
+                </tr>
+ <!-- END Section Page_Header -->
+                <!-- BEGIN Section Page_Footer --><!-- END Section Page_Footer -->
+                <!-- BEGIN Section SEMESTER_Header -->
+                <tr class="GroupCaption">
+                    <th>{SEMESTER} </th>
+ 
+                    <th>&nbsp; </th>
+ 
+                    <th>&nbsp; </th>
+ 
+                    <th>&nbsp; </th>
+ 
+                    <th>&nbsp; </th>
+ 
+                    <th>&nbsp; </th>
+                </tr>
+ <!-- END Section SEMESTER_Header -->
+                <!-- BEGIN Section Detail -->
+                <tr class="Row">
+                    <td>&nbsp; </td> 
+                    <td>{STAFF_ID} </td> 
+                    <td>{SUBJECT_TIMEFRACTION} </td> 
+                    <td>{FTE_StudentMax} </td> 
+                    <td style="TEXT-ALIGN: right">{Current_Student_Count} </td> 
+                    <td>{Percentage} </td>
+                </tr>
+ <!-- END Section Detail -->
+                <!-- BEGIN Section SEMESTER_Footer --><!-- END Section SEMESTER_Footer -->
+                <!-- BEGIN Section Report_Footer -->
+                <!-- BEGIN Panel NoRecords -->
+                <tr class="NoRecords">
+                    <td colspan="6">No Student Details found!</td>
+                </tr>
+ <!-- END Panel NoRecords -->
+                <tr class="Total">
+                    <td valign="baseline">Total </td> 
+                    <td>&nbsp; </td> 
+                    <td style="TEXT-ALIGN: right" valign="baseline">{TotalSum_SUBJECT_TIMEFRACTION} </td> 
+                    <td style="TEXT-ALIGN: right" valign="baseline">{TotalSum_FTE_StudentMax} </td> 
+                    <td style="TEXT-ALIGN: right" valign="baseline">{TotalSum_Current_Student_Count} </td> 
+                    <td>{lblTotalAllocationPercentage}&nbsp; </td>
+                </tr>
+ <!-- END Section Report_Footer -->
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- END Report rptTeacherAllocation --><br>
+<br>
+<br>
+&nbsp;
+<script type="text/javascript">
+      function highlightHighAllocations()
+      {
+         var rowElements = document.querySelectorAll("#rptTeacherAllocation .MainTable .Grid tr.Row, #rptTeacherAllocation .MainTable .Grid tr.Total");
+         for (var rowIndex = 0; rowIndex < rowElements.length; rowIndex++)
+         {
+            var rowElement = rowElements[rowIndex];
+            var percentageElement = rowElement.querySelector("td:nth-child(6)");
+            if (percentageElement !== null)
+            {
+               var percentage = parseFloat(percentageElement.textContent);
+               if (!isNaN(percentage))
+               {
+                  if (percentage >= 100)
+                     rowElement.classList.add("maxAllocation");
+                  else if (percentage >= 95)
+                     rowElement.classList.add("highAllocation");
+               }
+            }
+         }
+      }
+
+      highlightHighAllocations();
+   </script>
+</body>
+</html>

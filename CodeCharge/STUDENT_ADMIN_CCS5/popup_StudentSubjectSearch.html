@@ -1,0 +1,226 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>popup_StudentSubjectSearch</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+
+function gup( name )
+{
+        // used to read values from Querystring
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+    return "";
+  else
+    return results[1];
+}
+
+
+// name of return field
+var retFieldName = gup('returncontrol');
+var getSearchValue = gup('p_STUDENTID');
+
+
+function SetOpenerValue(currentObj)
+{
+        var IE  = (document.all) ? 1 : 0;
+        if(IE) {
+                var selVal = currentObj.innerText; 
+        } else {
+                var selVal = currentObj.text;  
+        }
+        window.opener.document.getElementById(retFieldName).value = selVal;
+        window.opener.focus();
+        window.close();
+}
+</script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//DEL  </script>
+//DEL  <script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+//DEL  <script language="JavaScript" type="text/javascript">
+//DEL    
+
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @46-74631056
+    if (theForm.STUDENT_SUBJECT_SUBJECTs_STUDENT_ID) theForm.STUDENT_SUBJECT_SUBJECTs_STUDENT_ID.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//bind_events @1-B716D3FC
+function bind_events() {
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>&nbsp;</p>
+<div align="right">
+<a href="#" onclick="window.close();">close window</a> 
+</div>
+<br>
+<!-- BEGIN Record STUDENT_SUBJECT_SUBJECT -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search for Subjects by Student ID</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>STUDENT ID</th>
+ 
+            <td><input maxlength="12" size="12" value="{s_STUDENT_ID}" name="{s_STUDENT_ID_Name}" id="STUDENT_SUBJECT_SUBJECTs_STUDENT_ID"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" type="submit" value="Search" name="{Button_Name}" id="STUDENT_SUBJECT_SUBJECTButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record STUDENT_SUBJECT_SUBJECT --><br>
+<!-- BEGIN Grid STUDENT_SUBJECT_SUBJECT1 -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of Subjects for Student</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_STUDENT_SUBJECT_SUBJECT_ID --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_STUDENT_SUBJECT_SUBJECT_ID">SUBJECT ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_SUBJECT_SUBJECT_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUBJECT_ABBREV --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_SUBJECT_ABBREV">ABBREV</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJECT_ABBREV --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUBJECT_TITLE --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_SUBJECT_TITLE">TITLE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJECT_TITLE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SEMESTER --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_SEMESTER">SEMESTER</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SEMESTER --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_YEAR_LEVEL">YEAR LEVEL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUBJ_ENROL_STATUS --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_SUBJ_ENROL_STATUS">SUBJ ENROL STATUS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJ_ENROL_STATUS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STAFF_ID --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_STAFF_ID">STAFF ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_STAFF_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROLMENT_DATE --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_ENROLMENT_DATE">ENROLMENT DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_WITHDRAWAL_DATE --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_WITHDRAWAL_DATE">WITHDRAWAL DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_WITHDRAWAL_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROLMENT_YEAR --><a href="{Sort_URL}" id="STUDENT_SUBJECT_SUBJECT1Sorter_ENROLMENT_YEAR">ENROLMENT YEAR</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_YEAR --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr {STUDENT_SUBJECT_SUBJECT1:rowStyle}>
+          <td style="TEXT-ALIGN: right"><a href="{STUDENT_SUBJECT_SUBJECT_ID_Src}" onclick="SetOpenerValue(this);return false;" id="STUDENT_SUBJECT_SUBJECT1STUDENT_SUBJECT_SUBJECT_ID">{STUDENT_SUBJECT_SUBJECT_ID}</a>&nbsp;</td> 
+          <td>{SUBJECT_ABBREV}&nbsp;</td> 
+          <td>{SUBJECT_TITLE}&nbsp;</td> 
+          <td>{SEMESTER}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{YEAR_LEVEL}&nbsp;</td> 
+          <td>{SUBJ_ENROL_STATUS}&nbsp;</td> 
+          <td>{STAFF_ID}&nbsp;</td> 
+          <td>{ENROLMENT_DATE}&nbsp;</td> 
+          <td>{WITHDRAWAL_DATE}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{ENROLMENT_YEAR}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="10">No Subjects found</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="10">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/en/ButtonPrev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/en/ButtonPrevOff.gif" border="0"><!-- END Prev_Off -->
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/en/ButtonNext.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/en/ButtonNextOff.gif" border="0"><!-- END Next_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid STUDENT_SUBJECT_SUBJECT1 --><br>
+<br>
+<p></p>
+</body>
+</html>

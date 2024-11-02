@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>LANGUAGE</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+{Header} 
+<!-- BEGIN Record LANGUAGE -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Add/Edit LANGUAGE </th>
+ 
+            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;Both fields mandatory and to match Department values</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Language Code</th>
+ 
+            <td><input type="text" id="LANGUAGELANG_CODE" maxlength="6" size="6" value="{LANG_CODE}" name="{LANG_CODE_Name}"><br>
+              <em>unique ID, and match Department Codes</em></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Language Description</th>
+ 
+            <td><input type="text" id="LANGUAGELANG_DESCRIPTION" maxlength="30" size="30" value="{LANG_DESCRIPTION}" name="{LANG_DESCRIPTION_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td>&nbsp;{label_Last_altered_by}&nbsp;/ {label_last_altered_date}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="LANGUAGEButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel -->&nbsp;&nbsp;&nbsp;&nbsp;
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="LANGUAGEButton_Insert" class="Button" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="LANGUAGEButton_Update" class="Button" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" id="LANGUAGEButton_Delete" class="Button" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+        <input type="hidden" id="LANGUAGELAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="LANGUAGELAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record LANGUAGE --><br>
+{Footer} 
+</body>
+</html>

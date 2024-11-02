@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>VSV Student Database - Login</title>
+ 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="DECV Student Admin DB 2008 SQL re-write
+- updated Oct-Dec 2019 for VSV branding
+Eric Affleck ERA Technology
+0412 039 611">
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+{Header}&nbsp; 
+<!-- BEGIN Record Login -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <div align="center">
+        <table cellspacing="0" cellpadding="0" align="center" border="0">
+            <tr>
+                <td valign="top">
+                    <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                            <th>Login </th>
+ 
+                            <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                        </tr>
+                    </table>
+ 
+                    <table class="Record" cellspacing="0" cellpadding="0">
+                        <!-- BEGIN Error -->
+                        <tr class="Error">
+                            <td colspan="2">{Error}</td>
+                        </tr>
+                        <!-- END Error -->
+                        <tr class="Controls">
+                            <th>Login</th>
+ 
+                            <td><input type="text" id="Loginlogin" maxlength="100" value="{login}" name="{login_Name}" size="20"></td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>Password</th>
+ 
+                            <td><input type="password" id="Loginpassword" maxlength="100" value="{password}" name="{password_Name}" size="20"></td>
+                        </tr>
+ 
+                        <tr class="Controls">
+                            <th>&nbsp;</th>
+ 
+                            <td><input type="checkbox" id="Logincb_rememberme" value="1" name="{cb_rememberme_Name}" {cb_rememberme}>&nbsp;<em>remember me today</em></td>
+                        </tr>
+ 
+                        <tr class="Bottom">
+                            <td colspan="2" align="right">
+                                <!-- BEGIN Button Button_DoLogin --><input type="submit" id="LoginButton_DoLogin" class="Button" value="Login" name="{Button_Name}"><!-- END Button Button_DoLogin --></td>
+                        </tr>
+                    </table>
+                    <em>Use your usual Student Database Password</em></td>
+            </tr>
+        </table>
+    </div>
+</form>
+<p align="left">&nbsp;&nbsp;</p>
+<!-- END Record Login -->{Footer} 
+</body>
+</html>

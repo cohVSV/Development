@@ -1,0 +1,222 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ASSIGNMENT Maintain (Multiple)</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<meta name="description" content="Added 8-May-2014|EA| per unfuddle #581 to allow non-SysAdmin staff to edit the descriptions of Assignments.">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_ASSIGNMENTSearch_OnLoad @37-51605ABA
+function page_ASSIGNMENTSearch_OnLoad(form)
+{
+    var result;
+//End page_ASSIGNMENTSearch_OnLoad
+
+//Set Focus @109-8B2229BF
+    if (theForm.ASSIGNMENTSearchs_SUBJECT_ID) theForm.ASSIGNMENTSearchs_SUBJECT_ID.focus();
+//End Set Focus
+
+//Close page_ASSIGNMENTSearch_OnLoad @37-BC33A33A
+    return result;
+}
+//End Close page_ASSIGNMENTSearch_OnLoad
+
+//page_ASSIGNMENT_Cancel_OnClick @36-A63A9862
+function page_ASSIGNMENT_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_ASSIGNMENT_Cancel_OnClick
+
+//bind_events @1-EB16992C
+function bind_events() {
+    if(document.getElementById("ASSIGNMENTSearchHolder"))
+    addEventHandler("ASSIGNMENTSearch","load",page_ASSIGNMENTSearch_OnLoad);
+    addEventHandler("ASSIGNMENTCancel","click",page_ASSIGNMENT_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649
+window.onload = bind_events;
+//End Assign bind_events
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p align="center">
+<!-- BEGIN Record ASSIGNMENTSearch -->
+<form id="ASSIGNMENTSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Subject &nbsp;</th>
+ 
+            <td>
+              <select id="ASSIGNMENTSearchs_SUBJECT_ID_list" name="{s_SUBJECT_ID_list_Name}">
+                <option selected value="">Select Value</option>
+                {s_SUBJECT_ID_list_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUBJECT ID</th>
+ 
+            <td>
+              <!-- BEGIN TextBox s_SUBJECT_ID --><input type="text" id="ASSIGNMENTSearchs_SUBJECT_ID" maxlength="10" size="6" value="{s_SUBJECT_ID}" name="{s_SUBJECT_ID_Name}"><!-- END TextBox s_SUBJECT_ID --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>DESCRIPTION</th>
+ 
+            <td>
+              <!-- BEGIN TextBox s_DESCRIPTION --><input type="text" id="ASSIGNMENTSearchs_DESCRIPTION" maxlength="60" size="50" value="{s_DESCRIPTION}" name="{s_DESCRIPTION_Name}"><!-- END TextBox s_DESCRIPTION --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ASSIGNMENTSearchButton_DoSearch" class="Button" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ASSIGNMENTSearch --><br>
+<!-- BEGIN EditableGrid ASSIGNMENT -->
+<form id="ASSIGNMENT" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Edit Assignments</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="6">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Row">
+            <td colspan="6">Total Records:&nbsp;{ASSIGNMENT_TotalRecords}</td>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>
+            <!-- BEGIN Sorter Sorter_SUBJECT_ID --><span class="Sorter"><a href="{Sort_URL}" id="ASSIGNMENTSorter_SUBJECT_ID">SUBJECT ID</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUBJECT_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_ASSIGNMENT_ID --><span class="Sorter"><a href="{Sort_URL}" id="ASSIGNMENTSorter_ASSIGNMENT_ID">ASSIGNMENT ID</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ASSIGNMENT_ID --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_DESCRIPTION --><span class="Sorter"><a href="{Sort_URL}" id="ASSIGNMENTSorter_DESCRIPTION">DESCRIPTION</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_DESCRIPTION --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_STATUS --><span class="Sorter"><a href="{Sort_URL}" id="ASSIGNMENTSorter_STATUS">STATUS</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_STATUS --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SpecialType --><span class="Sorter"><a href="{Sort_URL}" id="ASSIGNMENTSorter_SpecialType">ASSESSMENT</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SpecialType -->&nbsp;</th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><span class="Sorter"><a href="{Sort_URL}" id="ASSIGNMENTSorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="6">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td style="TEXT-ALIGN: center">{SUBJECT_ID}</td> 
+            <td style="TEXT-ALIGN: center">{ASSIGNMENT_ID}</td> 
+            <td><input type="text" id="ASSIGNMENTDESCRIPTION_{ASSIGNMENT:rowNumber}" maxlength="60" size="50" value="{DESCRIPTION}" name="{DESCRIPTION_Name}"></td> 
+            <td>
+              <!-- BEGIN RadioButton STATUS --><input type="radio" id="ASSIGNMENTSTATUS_{ASSIGNMENT:rowNumber}_{STATUS:optionNumber}" value="{Value}" name="{STATUS_Name}" {Check}>{Description}<!-- END RadioButton STATUS --></td> 
+            <td>&nbsp; 
+              <!-- BEGIN RadioButton RadioButtonSpecialType --><input type="radio" id="ASSIGNMENTRadioButtonSpecialType_{RadioButtonSpecialType:optionNumber}" value="{Value}" name="{RadioButtonSpecialType_Name}" {Check}>{Description}<!-- END RadioButton RadioButtonSpecialType --></td> 
+            <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}<input type="hidden" id="ASSIGNMENTHidden_LAST_ALTERED_BY" value="{Hidden_LAST_ALTERED_BY}" name="{Hidden_LAST_ALTERED_BY_Name}"><input type="hidden" id="ASSIGNMENTHidden_LAST_ALTERED_DATE" value="{Hidden_LAST_ALTERED_DATE}" name="{Hidden_LAST_ALTERED_DATE_Name}"></td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="6">No Assignments found for this Subject!</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="6">
+              <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+              <select onchange="CCChangeSize(this, '{FormName}')" style="VERTICAL-ALIGN: middle" name="{FormName}PageSize">
+                <option selected value="">-</option>
+ {PageSize_Options}
+              </select>
+ 
+              <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->First <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Last <!-- END Last_Off --></span><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input type="submit" id="ASSIGNMENTButton_Submit" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input type="submit" id="ASSIGNMENTCancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid ASSIGNMENT --><br>
+</p>
+</body>
+</html>

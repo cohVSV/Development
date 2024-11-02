@@ -1,0 +1,325 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Advisory Group</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.01.00.06">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//DEL  </script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/ajaxpanel.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+
+
+//page_viewMaintainSearchRequest1_Button_Submit_OnClick @70-1E864796
+function page_viewMaintainSearchRequest1_Button_Submit_OnClick()
+{
+    var result;
+//End page_viewMaintainSearchRequest1_Button_Submit_OnClick
+
+//Confirmation Message @71-F1A92402
+    return confirm('This will Update the ticked students to [Standard Learning Program] for all their Subjects not already flagged as Custom Learning.');
+//End Confirmation Message
+
+//Close page_viewMaintainSearchRequest1_Button_Submit_OnClick @70-BC33A33A
+    return result;
+}
+//End Close page_viewMaintainSearchRequest1_Button_Submit_OnClick
+
+//page_viewMaintainSearchRequest2_Button_Submit_OnClick @177-7A663C68
+function page_viewMaintainSearchRequest2_Button_Submit_OnClick()
+{
+    var result;
+//End page_viewMaintainSearchRequest2_Button_Submit_OnClick
+
+//Confirmation Message @283-F1A92402
+    return confirm('This will Update the ticked students to [Standard Learning Program] for all their Subjects not already flagged as Custom Learning.');
+//End Confirmation Message
+
+//Close page_viewMaintainSearchRequest2_Button_Submit_OnClick @177-BC33A33A
+    return result;
+}
+//End Close page_viewMaintainSearchRequest2_Button_Submit_OnClick
+
+//bind_events @1-A5E27BF0
+function bind_events() {
+    if(typeof(initviewMaintainSearchRequest1Elements) == "function")
+        initviewMaintainSearchRequest1Elements();
+    if(typeof(initviewMaintainSearchRequest2Elements) == "function")
+        initviewMaintainSearchRequest2Elements();
+    if(typeof(viewMaintainSearchRequest2StaticElementsID) == "object" && typeof(viewMaintainSearchRequest2StaticElementsID[viewMaintainSearchRequest2Button_SubmitID]) == "object" && viewMaintainSearchRequest2StaticElementsID[viewMaintainSearchRequest2Button_SubmitID]!=null)
+        addEventHandler(viewMaintainSearchRequest2StaticElementsID[viewMaintainSearchRequest2Button_SubmitID].id, "click", page_viewMaintainSearchRequest2_Button_Submit_OnClick);
+    if(typeof(viewMaintainSearchRequest1StaticElementsID) == "object" && typeof(viewMaintainSearchRequest1StaticElementsID[viewMaintainSearchRequest1Button_SubmitID]) == "object" && viewMaintainSearchRequest1StaticElementsID[viewMaintainSearchRequest1Button_SubmitID]!=null)
+        addEventHandler(viewMaintainSearchRequest1StaticElementsID[viewMaintainSearchRequest1Button_SubmitID].id, "click", page_viewMaintainSearchRequest1_Button_Submit_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+<p align="center">{Header}</p>
+<p>
+<p></p>
+<p>
+<!-- BEGIN EditableGrid viewMaintainSearchRequest1 -->
+<form id="viewMaintainSearchRequest1" method="post" name="{HTMLFormName}" action="{Action}">
+    <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+    <table cellspacing="0" cellpadding="0" width="96%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" align="center" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Student Advisory Group for Learning Advisor - {lblPastoralID}</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="13">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Row">
+                        <td colspan="13">Total Records:&nbsp;{viewMaintainSearchRequest1_TotalRecords}</td>
+                    </tr>
+ 
+                    <tr class="Caption">
+                        <th>&nbsp;</th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_STUDENT_ID --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_STUDENT_ID">STUDENT ID</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_SURNAME">SURNAME</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_FIRST_NAME">FIRST NAME</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_YEAR_LEVEL">YEAR<br>
+                        LEVEL</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_ENROLMENT_STATUS --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_ENROLMENT_STATUS">ENROL<br>
+                        STATUS</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_STATUS --></th>
+ 
+                        <th>&nbsp; 
+                        <!-- BEGIN Sorter Sorter_ENROLMENT_DATE --><a href="{Sort_URL}" id="viewMaintainSearchRequest1Sorter_ENROLMENT_DATE">ENROL DATE</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_DATE --></th>
+ 
+                        <th>Student <br>
+                        Profile?</th>
+ 
+                        <th>Pathways <br>
+                        Profile?</th>
+ 
+                        <th>&nbsp;Mandated Cohort&nbsp;<img onclick="javascript:alert('Mandated PLSP cohort details where applicable');return false;" id="LAstudentMandatedCohort_icon" title="Mandated PLSP cohort details where applicable" border="0" alt="Mandated PLSP Cohort" src="images/icon_info.gif"></th>
+ 
+                        <th>Learning Plan&nbsp;<img onclick="javascript:alert('Learning Plan - PLP or PLSP');return false;" id="LAstudentLearningPlan_icon" title="Learning Plan - PLP or PLSP" border="0" alt="Learning Plan - PLP or PLSP" src="images/icon_info.gif"></th>
+ 
+                        <th>Green Letter?&nbsp;&nbsp;<img onclick="javascript:alert('Student 7-10 Green Letter Indicator - Student has Defaulting status in 2 or more Subjects. Added March 2013');return false;" id="LAstudentgreenletter_icon" title="Student F-10 Green Letter Indicator - Student has not received Green Letter or last decision over 7 days ago" border="0" alt="Green Letter" src="images/icon_info.gif"></th>
+ 
+                        <th>Letters Sent and Dates?&nbsp;</th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <!-- BEGIN RowError -->
+                    <tr class="Error">
+                        <td colspan="13">{Error}</td>
+                    </tr>
+                    <!-- END RowError -->
+                    <tr class="Row">
+                        <td>&nbsp;<a href="{Link1_Src}" id="viewMaintainSearchRequest1Link1_{viewMaintainSearchRequest1:rowNumber}" title="go to Student Summary">summary</a></td> 
+                        <td><a href="{STUDENT_ID_Src}" id="viewMaintainSearchRequest1STUDENT_ID_{viewMaintainSearchRequest1:rowNumber}" title="go to Comments">{STUDENT_ID}</a>&nbsp;</td> 
+                        <td>{SURNAME}&nbsp;</td> 
+                        <td>{FIRST_NAME}&nbsp;</td> 
+                        <td>{YEAR_LEVEL}&nbsp;</td> 
+                        <td>{ENROLMENT_STATUS}&nbsp;</td> 
+                        <td nowrap>&nbsp;{ENROLMENT_DATE}&nbsp;{lblNewStudent}<input type="hidden" id="viewMaintainSearchRequest1hidden_days_since_enrolment_{viewMaintainSearchRequest1:rowNumber}" value="{hidden_days_since_enrolment}" name="{hidden_days_since_enrolment_Name}"></td> 
+                        <td><a href="{link_IntakeDone_Src}" id="viewMaintainSearchRequest1link_IntakeDone_{viewMaintainSearchRequest:rowNumber}">{link_IntakeDone}</a>&nbsp;</td> 
+                        <td>&nbsp;<a href="{link_PathwaysDone_Src}" id="viewMaintainSearchRequest1link_PathwaysDone_{viewMaintainSearchRequest:rowNumber}">{link_PathwaysDone}</a></td> 
+                        <td>{MandatedCohort}</td> 
+                        <td>{LearningPlan}</td> 
+                        <td nowrap>&nbsp; 
+                            <!-- BEGIN RadioButton rbGreenLetterSend --><input type="radio" id="viewMaintainSearchRequest1rbGreenLetterSend_{rbGreenLetterSend:optionNumber}" checked value="{Value}" name="{rbGreenLetterSend_Name}" {Check}>{Description}&nbsp;&nbsp;<!-- END RadioButton rbGreenLetterSend -->{lblGreenLetter}</td> 
+                        <td nowrap>&nbsp;<span style="BACKGROUND-COLOR: lightgreen">{GREEN_LETTER_SENT_FLAG}&nbsp;{GREEN_LETTER_SENT_DATE}</span>&nbsp;<span style="BACKGROUND-COLOR: orange">{AMBER_LETTER_SENT_FLAG}&nbsp;{AMBER_LETTER_SENT_DATE}</span>&nbsp;<span style="BACKGROUND-COLOR: firebrick">{RED_LETTER_SENT_FLAG}&nbsp;{RED_LETTER_SENT_DATE}</span></td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="13">No Students for this Learning Advisor were found!</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                        <td style="TEXT-ALIGN: right" colspan="10">&nbsp;</td> 
+                        <td style="TEXT-ALIGN: right">
+                            <!-- BEGIN Button Button_Submit --><input type="submit" id="viewMaintainSearchRequest1Button_Submit" class="Button" value="Update Standard Learning Programs" name="{Button_Name}"><!-- END Button Button_Submit --></td> 
+                        <td style="TEXT-ALIGN: right">
+                            <!-- BEGIN Button Button_Submit1 --><input type="submit" id="viewMaintainSearchRequest1Button_Submit1" class="Button" value="Update Green Letter" name="{Button_Name}"><!-- END Button Button_Submit1 --></td> 
+                        <td style="TEXT-ALIGN: right">&nbsp;</td>
+                    </tr>
+                </table>
+                <em>Click the Student ID to go to the Comments for that Student</em></td>
+        </tr>
+    </table>
+</form>
+<!-- END EditableGrid viewMaintainSearchRequest1 --><br>
+<!-- BEGIN EditableGrid viewMaintainSearchRequest2 -->
+<form id="viewMaintainSearchRequest2" method="post" name="{HTMLFormName}" action="{Action}">
+    <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+    <table cellspacing="0" cellpadding="0" width="96%" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" align="center" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Single-Subject Students with Subject Teacher - {lblPastoralID}</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Grid" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="15">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Row">
+                        <td colspan="15">Total Records:&nbsp;{viewMaintainSearchRequest1_TotalRecords}</td>
+                    </tr>
+ 
+                    <tr class="Caption">
+                        <th>&nbsp;</th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_STUDENT_ID --><a href="{Sort_URL}" id="viewMaintainSearchRequest2Sorter_STUDENT_ID">STUDENT ID</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="viewMaintainSearchRequest2Sorter_SURNAME">SURNAME</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="viewMaintainSearchRequest2Sorter_FIRST_NAME">FIRST NAME</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_YEAR_LEVEL --><a href="{Sort_URL}" id="viewMaintainSearchRequest2Sorter_YEAR_LEVEL">YEAR<br>
+                        LEVEL</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_YEAR_LEVEL --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_ENROLMENT_STATUS --><a href="{Sort_URL}" id="viewMaintainSearchRequest2Sorter_ENROLMENT_STATUS">ENROL<br>
+                        STATUS</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_STATUS --></th>
+ 
+                        <th>&nbsp; 
+                        <!-- BEGIN Sorter Sorter_ENROLMENT_DATE --><a href="{Sort_URL}" id="viewMaintainSearchRequest2Sorter_ENROLMENT_DATE">ENROL DATE</a> 
+                        <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ENROLMENT_DATE --></th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_LADID --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequest2Sorter_LADID">LAd ID</a> 
+                        <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LADID -->&nbsp;</th>
+ 
+                        <th>
+                        <!-- BEGIN Sorter Sorter_CATEGORY_CODE --><span class="Sorter"><a href="{Sort_URL}" id="viewMaintainSearchRequest2Sorter_CATEGORY_CODE">Enrol Category</a> 
+                        <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                        <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_CATEGORY_CODE -->&nbsp;</th>
+ 
+                        <th>Student <br>
+                        Profile?</th>
+ 
+                        <th>Pathways <br>
+                        Profile?</th>
+ 
+                        <th>&nbsp;Mandated Cohort&nbsp;<img onclick="javascript:alert('Mandated PLSP cohort details where applicable');return false;" id="SSstudentMandatedCohort_icon" title="Mandated PLSP cohort details where applicable" border="0" alt="Mandated PLSP Cohort" src="images/icon_info.gif"></th>
+ 
+                        <th>Learning Plan&nbsp;<img onclick="javascript:alert('Learning Plan - PLP or PLSP');return false;" id="SSstudentLearningPlan_icon" title="Learning Plan - PLP or PLSP" border="0" alt="Learning Plan - PLP or PLSP" src="images/icon_info.gif"></th>
+ 
+                        <th>&nbsp;Green Letter?&nbsp;&nbsp;<img onclick="javascript:alert('Student 7-10 Green Letter Indicator - Student has Defaulting status in 2 or more Subjects. Added March 2013');return false;" id="SSstudentgreenletter_icon" title="Student F-10 Green Letter Indicator - Student has not received Green Letter or last decision over 7 days ago" border="0" alt="Green Letter" src="images/icon_info.gif"></th>
+ 
+                        <th>Letters Sent and Dates?&nbsp;&nbsp;</th>
+                    </tr>
+ 
+                    <!-- BEGIN Row -->
+                    <!-- BEGIN RowError -->
+                    <tr class="Error">
+                        <td colspan="15">{Error}</td>
+                    </tr>
+                    <!-- END RowError -->
+                    <tr class="Row">
+                        <td>&nbsp;<a href="{Link1_Src}" id="viewMaintainSearchRequest2Link1_{viewMaintainSearchRequest2:rowNumber}" title="go to Student Summary">summary</a></td> 
+                        <td><a href="{STUDENT_ID_Src}" id="viewMaintainSearchRequest2STUDENT_ID_{viewMaintainSearchRequest2:rowNumber}" title="go to Comments">{STUDENT_ID}</a>&nbsp;</td> 
+                        <td>{SURNAME}&nbsp;</td> 
+                        <td>{FIRST_NAME}&nbsp;</td> 
+                        <td>{YEAR_LEVEL}&nbsp;</td> 
+                        <td>{ENROLMENT_STATUS}&nbsp;</td> 
+                        <td nowrap>&nbsp;{ENROLMENT_DATE}&nbsp;{lblNewStudent}<input type="hidden" id="viewMaintainSearchRequest2hidden_days_since_enrolment_{viewMaintainSearchRequest2:rowNumber}" value="{hidden_days_since_enrolment}" name="{hidden_days_since_enrolment_Name}"></td> 
+                        <td>&nbsp;{LAD}</td> 
+                        <td>&nbsp;{CATEGORY_CODE}</td> 
+                        <td><a href="{link_IntakeDone_Src}" id="viewMaintainSearchRequest2link_IntakeDone_{viewMaintainSearchRequest2:rowNumber}">{link_IntakeDone}</a>&nbsp;</td> 
+                        <td>&nbsp;<a href="{link_PathwaysDone_Src}" id="viewMaintainSearchRequest2link_PathwaysDone_{viewMaintainSearchRequest2:rowNumber}">{link_PathwaysDone}</a></td> 
+                        <td>{MandatedCohort}</td> 
+                        <td>{LearningPlan}</td> 
+                        <td>&nbsp; 
+                            <!-- BEGIN RadioButton rbGreenLetterSend --><input type="radio" id="viewMaintainSearchRequest2rbGreenLetterSend_{rbGreenLetterSend:optionNumber}" checked value="{Value}" name="{rbGreenLetterSend_Name}" {Check}>{Description}&nbsp;&nbsp;&nbsp;<!-- END RadioButton rbGreenLetterSend -->{lblGreenLetter}</td> 
+                        <td nowrap>&nbsp;<span style="BACKGROUND-COLOR: lightgreen">{GREEN_LETTER_SENT_FLAG}&nbsp;{GREEN_LETTER_SENT_DATE}</span>&nbsp;<span style="BACKGROUND-COLOR: orange">{AMBER_LETTER_SENT_FLAG}&nbsp;{AMBER_LETTER_SENT_DATE}</span>&nbsp;<span style="BACKGROUND-COLOR: firebrick">{RED_LETTER_SENT_FLAG}&nbsp;{RED_LETTER_SENT_DATE}</span></td>
+                    </tr>
+ <!-- END Row -->
+                    <!-- BEGIN NoRecords -->
+                    <tr class="NoRecords">
+                        <td colspan="15">No Students with Single Subjects&nbsp;for this Learning Advisor were found!</td>
+                    </tr>
+                    <!-- END NoRecords -->
+                    <tr class="Footer">
+                        <td style="TEXT-ALIGN: right" colspan="12">&nbsp;</td> 
+                        <td style="TEXT-ALIGN: right">
+                            <!-- BEGIN Button Button_Submit --><input type="submit" id="viewMaintainSearchRequest2Button_Submit" class="Button" value="Update Standard Learning Programs" name="{Button_Name}"><!-- END Button Button_Submit --></td> 
+                        <td style="TEXT-ALIGN: right">&nbsp; 
+                            <!-- BEGIN Button Button_Submit1 --><input type="submit" id="viewMaintainSearchRequest2Button_Submit1" class="Button" value="Update Green Letter" name="{Button_Name}"><!-- END Button Button_Submit1 -->&nbsp;</td> 
+                        <td style="TEXT-ALIGN: right">&nbsp;</td>
+                    </tr>
+                </table>
+                <em>Click the Student ID to go to the Comments for that Student</em></td>
+        </tr>
+    </table>
+</form>
+<!-- END EditableGrid viewMaintainSearchRequest2 --></p>
+</body>
+</html>

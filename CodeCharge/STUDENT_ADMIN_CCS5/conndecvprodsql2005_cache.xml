@@ -1,0 +1,838 @@
+<LldlCache allCatalogs="True" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="True" allProcedureParameters="False">
+  <catalog CATALOG_NAME="Accelerus" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="ActivityAPI" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="CASES21" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="decvOnlineEnrolments" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="decvWelfare" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="EduPass" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="master" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="model" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="msdb" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="Scratchpad" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="STUDENT_ADMIN" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True">
+    <schema SCHEMA_NAME="dbo" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="True" allAliases="False" allSynonyms="True" allSystemTables="False" allSystemViews="False" allViews="True" allProcedures="True" allProcedureParameters="False" full="True">
+      <table TABLE_NAME="dtproperties" TABLE_TYPE="3" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="acer_Usernames" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="ADDRESS" TABLE_TYPE="5" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="ADDRESS_ID" ORDINAL_POSITION="1" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="8" NUMERIC_SCALE="0" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ADDRESSEE" ORDINAL_POSITION="2" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="60" OCTET_LENGTH="60" IS_NULLABLE="False" DEFAULT_VALUE="(' ')" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="AGENT" ORDINAL_POSITION="3" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="60" OCTET_LENGTH="60" IS_NULLABLE="True" DEFAULT_VALUE="(' ')" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="ADDR1" ORDINAL_POSITION="4" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="&#xA;&#xA;--&#xD;&#xA;--CREATE DEFAULTS&#xD;&#xA;--&#xD;&#xA;CREATE DEFAULT dbo.D_ADDRESSLINE AS ' '&#xD;&#xA;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="ADDR2" ORDINAL_POSITION="5" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="&#xA;&#xA;--&#xD;&#xA;--CREATE DEFAULTS&#xD;&#xA;--&#xD;&#xA;CREATE DEFAULT dbo.D_ADDRESSLINE AS ' '&#xD;&#xA;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="SUBURB_TOWN" ORDINAL_POSITION="6" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="30" OCTET_LENGTH="30" IS_NULLABLE="False" DEFAULT_VALUE="CREATE DEFAULT dbo.D_SUBURB AS ' '&#xD;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="POSTCODE" ORDINAL_POSITION="7" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="10" OCTET_LENGTH="10" IS_NULLABLE="True" DEFAULT_VALUE="CREATE DEFAULT dbo.D_POSTCODE AS ' '&#xD;&#xD;&#xA;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="STATE" ORDINAL_POSITION="8" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="20" OCTET_LENGTH="20" IS_NULLABLE="True" DEFAULT_VALUE="(' ')" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="COUNTRY" ORDINAL_POSITION="9" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="20" OCTET_LENGTH="20" IS_NULLABLE="False" DEFAULT_VALUE="('AUSTRALIA')" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="PHONE_A" ORDINAL_POSITION="10" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="15" OCTET_LENGTH="15" IS_NULLABLE="True" DEFAULT_VALUE="CREATE DEFAULT dbo.D_PHONE AS ' '&#xD;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="PHONE_B" ORDINAL_POSITION="11" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="15" OCTET_LENGTH="15" IS_NULLABLE="True" DEFAULT_VALUE="CREATE DEFAULT dbo.D_PHONE AS ' '&#xD;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="FAX" ORDINAL_POSITION="12" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="15" OCTET_LENGTH="15" IS_NULLABLE="True" DEFAULT_VALUE="CREATE DEFAULT dbo.D_PHONE AS ' '&#xD;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="EMAIL_ADDRESS" ORDINAL_POSITION="13" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="60" OCTET_LENGTH="60" IS_NULLABLE="True" DEFAULT_VALUE="CREATE DEFAULT dbo.D_EMAIL_ADDRESS AS ' '&#xD;&#xD;&#xA;&#xD;&#xA;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="LAST_ALTERED_BY" ORDINAL_POSITION="14" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="8" OCTET_LENGTH="8" IS_NULLABLE="False" DEFAULT_VALUE="CREATE DEFAULT dbo.D_LAST_ALTERED_BY AS ' '&#xD;&#xD;&#xA;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="LAST_ALTERED_DATE" ORDINAL_POSITION="15" DATA_TYPE="135" CCS_TYPE="CCDateTime" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="23" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="EMAIL_ADDRESS2" ORDINAL_POSITION="16" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="True" DEFAULT_VALUE="CREATE DEFAULT dbo.D_EMAIL_ADDRESS AS ' '&#xD;&#xD;&#xA;&#xD;&#xA;" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="PCStatus" ORDINAL_POSITION="17" DATA_TYPE="17" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Byte" NUMERIC_PRECISION="3" IS_NULLABLE="True" DEFAULT_VALUE="((0))" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="DPID" ORDINAL_POSITION="18" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" DEFAULT_VALUE="((0))" COLUMN_HAS_DEFAULT="True" full="True" />
+        <column COLUMN_NAME="Barcode" ORDINAL_POSITION="19" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="40" OCTET_LENGTH="40" IS_NULLABLE="True" DEFAULT_VALUE="((0))" COLUMN_HAS_DEFAULT="True" full="True" />
+      </table>
+      <table TABLE_NAME="ALLOCATION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="ASSIGNMENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="ASSIGNMENT_SUBMISSION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="BOOK_DESPATCH" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="CAMPUS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="COMMENT_TYPE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="CONFIRMATION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="CONTRIBUTION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="COPIES" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="COUNTRY_OF_BIRTH" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="EARLY_ASSESSMENT_ACTION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="EARLY_ASSESSMENT_AUDIT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="EARLY_ASSESSMENT_RISK_FACTOR" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="EARLY_ASSESSMENT_RISK_FACTOR_ACTION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="EARLY_ASSESSMENT_STUDENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="EARLY_ASSESSMENT_STUDENT_RISK_FACTOR" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="ENROLMENT_CATEGORY" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="FAMILY" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="FTE_RULES" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="FUNNEL_ENUM" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="FUNNEL_ENUM_MAPPING" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="FUNNEL_ENUM_MAPPING_BACKUP" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="FUNNEL_LEAD" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="GOVERNMENT_ALLOWANCE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="GREEN_AMBER_RED_LETTERS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="INTRODUCTORY_SUBJECT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="KEY_LEARNING_AREA" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="LADS_YEARLEVELS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="LANGUAGE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="log_LAd_AutoAllocations" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="LOOKUP" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MapAudits" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="MODULE_ESSENTIAL_QUESTIONS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="Nat60_delete" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="PARENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="PASSWORDS_UNUSED" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="PORTAL_ADDRESS_REQUESTCHANGES" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="POSTCODE_AREAS_REGIONS" TABLE_TYPE="5" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="Postcode" ORDINAL_POSITION="1" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="Area" ORDINAL_POSITION="2" DATA_TYPE="130" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="255" OCTET_LENGTH="510" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="Region" ORDINAL_POSITION="3" DATA_TYPE="130" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="255" OCTET_LENGTH="510" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+      </table>
+      <table TABLE_NAME="POSTCODES_REGION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="POSTCODES_VIC" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="PROGRESS_CODE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="PURCHASE_ATTEMPT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="PURCHASE_ATTEMPT_SUBJECT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="REF_MODULE_CODES" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="REGION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="REPORTS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_ASSIGNMENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_COURSE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_COURSE_GROUP_SYNC" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_COURSE_GROUP_SYNC_EXCEPTIONS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_COURSE_GROUP_SYNC_TRANSACTIONS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_COURSE_OLD" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_COURSE_SEM_1" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_COURSE_SEM_2" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_COURSE_SYNC" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_EXCEPTION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_GRADE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_GROUP" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_GROUP_OLD" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_LOG" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_MODULE_GRADE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_ROLE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_SUBMISSION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_UPDATER_SETTINGS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_COURSE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_COURSE_FULL" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_COURSE_OLD" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_COURSE_TEST" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_EXCLUSION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_GROUP" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_OLD" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_SYNC" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_SYNC_EXCEPTIONS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCAFFOLD_USER_SYNC_TRANSACTIONS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="ScaffoldSyncconfig.servername" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCHOOL" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCHOOL_INVOICE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SCHOOL_TYPE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SECURITY_FUNCTION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SECURITY_GROUP" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SECURITY_GROUP_ACCESS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SEMESTER" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SEND_EMAIL_LOG" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STAFF" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STAFF_INDUCTIONS_COURSES" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STAFF_INDUCTIONS_PROGRESS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STAFF_LAD_ALLOCATION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STAFF_STUDENT_SUPERVISORS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STRAND" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUD_SUB_INTERIM" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUD_SUBJ_FINAL" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_CARER_CONTACT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_CARER_FAMILY_LOG" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_CENSUS_DATA" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_COMMENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_CONTACT_SNAPSHOT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_DETAILCHANGE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_DIAGNOSIS_CONFIRMED" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_ENROLMENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_EQUIPMENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_FUTURE_INTENTIONS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_MEDICAL_DETAILS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="Student_ModuleReports_2016" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_PREEXIT_22122017" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_PROFILE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_SMS_LOG" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_SUBJECT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_SUBJECT_659" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_SUBJECT_AUDIT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_SUBJECT_SMAP_CANCELLATION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_SUBJECT_SMAP_LOG" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_SUBJECT_SMAP_STATUS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_SUBJECT_STRAND" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_SUBJECT_WP" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_TEST_DELETE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="STUDENT_TIME_FRACTION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SUBJECT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SUBJECT_STRAND" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SUBJECT_TEACHER" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SUBJECT_TEACHER_CRT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="SUBJECT_WORK_PRACTICES" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="sysdiagrams" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TEMP_STUD_SUBJ" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TEMP_STUDENT_ENROLMENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TEMP_TXN" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TERM_DATE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TERM_WEEKS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TIMETABLE_IMPORT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_ADDRESS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_BOOK_DESPATCH" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="tmp_filenames" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_POSTCODES_REGION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_RegionEnrolOE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_STUDENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_STUDENT_CENSUS_DATA" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_STUDENT_ENROLMENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_STUDENT_EQUIPMENT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_STUDENT_MEDICAL_DETAILS" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_STUDENT_SUBJECT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_STUDENT_TIME_FRACTION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_TXN" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_VCE_DATA" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TMP_VSN_DATA" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TXN" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="TXN_CODE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VASS_LOG" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VCE_DATA" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VSN_Batch" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VSN_DetailChange" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VSN_EventLog" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VSN_EventLog_old" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VSN_EXCEPTION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VSN_EXPORT" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VSN_Transactions" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="WITHDRAWAL_EXIT_DESTINATION" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="WITHDRAWAL_REASON" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="WORK_PRACTICE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="WORK_PRACTICE_CODE" TABLE_TYPE="5" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="Cross_YearLevel_Reports" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Accelerus_Enrolment_pre3Nov2011_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Address_Label" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Admin_Online_Enrol_Payment_Attempts" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_AssignmentsReceived_NotReturned" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Class_Contact_List" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Class_Contact_List_02022009" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Class_Contact_List_04022011" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Class_List" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Comment_Report" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_COMMENT_SEARCHING" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Credit_Transactions_Report" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="View_CurrentSchoolAddress_LabelsReport" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Despatch_CardPrinter_StudentList" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Despatch_PersonalCD_individual" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Despatch_Welcome_Letter" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Despatch_Welcome_Letter_test_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Desptach_Student_Address_Labels" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_FamilyGrouping" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_GetNewAssignments" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_NON_SCHOOL_BASED_ADDRESS_LABELS" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_POSTCODES_REGION" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_PractitionerReferrals" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Report_BillReport" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Report_StudentEmails" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ReportParams_CategoryCode" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ReportParams_EnrolmentYear" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ReportParams_StaffID" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ReportParams_Subjects" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ReportParams_YearLevel" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ReportSummary_Assignments" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ReportSummary_TeacherAssignmentStatistics_ActiveInactiveUsers_Base" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ReportSummary_TeacherAssignmentStatistics_CurrentYear_Base" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ScaffoldModules" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ScaffoldStudents" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ScaffoldStudentsOnline" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ScaffoldSubmissionsPending" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ScaffoldSubschoolSpaces" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ScaffoldTeachers" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ScaffoldTeachersOnline" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_SCHOOL_BASED_ADDRESS_LABELS" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="View_SchoolAddress_LabelsReport" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Staff_Student_Comments" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Staff_Student_PastoralCare_ShowingPCTeacher" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Staff_Student_PastoralCare_withSubjects" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Staff_Student_Record_Sheets" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Staff_Student_Record_Sheets_test_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Staff_Student_sent_no_work" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Staff_Student_Synopsis" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="View_StaffList_Active_Inactive" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="View_StaffList_Active_only" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Student_Assignment_Details" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="View_STUDENT_BAR_CODE_SHEET_LABELS" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Student_Debtors_Report" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Student_Details_With_Current_Address_LABELS" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Student_Details_With_Postal_Address_LABELS" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_STUDENT_DIAGNOSIS_CONFIRMED" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Student_ModuleReporting" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Student_Subject_Enrolment_Statistics" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Student_WorkReturn_CurrentAddress_LABELS" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Student_WorkReturn_LABELS" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="View_STUDENTBARCODE_SUBJECT_FILTERS" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_StudentEquipment" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="View_StudentExitTRack" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Students_ByRegion" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_StudentsOnACLP" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_StudentsOnACLP_AboveBelow" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_StudentSummary_Alerts" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_StudentVSNHistory" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_StudentWellbeing_Map" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_Subject_Enrolment_Statistics" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_SubReport_ActiveSubjects" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_SubReport_ActiveSubjectsWelcome" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_SubReport_PostalAddress" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_SubReport_ResidAddress" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_tblRegionEnrolments_collate" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_Class" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_Class_oldCrossYears" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_Class_pre3Nov2011_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_CrossYears" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_Enrolment" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_Enrolment_pre3Nov2011_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_NonSubmitting" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_Student" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_StudentAddress" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_StudentYearLevels" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_Subject" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_Support" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_Teacher" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToAccelerus_UnsetStudentEndDates" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToJanison_Staff_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToJanison_Student_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToJanison_StudentClass_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToJanison_Subject_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToJanison_SubjectClass_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToJanison_TeacherClass_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_Class_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_Class_oldCrossYears_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_Class_pre3Nov2011_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_CrossYears_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_Enrolment_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_Enrolment_pre3Nov2011_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_Student_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_StudentAddress_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_Subject_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_Support_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToMarkbook_Teacher_delete" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToPortal_CarerMismatch" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToPortal_RegisterCheck" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToPortal_Student_RecentSubmissions" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToPortal_Student_Subjects_Extended" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToPortal_Students" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToPortal_ValidLogin" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_ToPortal_ValidLoginDetect" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_VSNNotificationReport" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="view_WELCOME_LETTER" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="VIEW_WHETHER_ASSIGNMENT_RETURNED" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewMaintainSearchRequest" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewMaintainSearchRequest_Carers" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewMaintainSearchRequest_Reception" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewMaintainSearchRequest_Schools" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewMaintainSearchRequest_SupportTeacher" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewPrimaryTeacherSearchRequest" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewStudentMaintain_AddressList" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewStudentSummary_CensusData" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewStudentSummary_Details" TABLE_TYPE="6" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" full="True">
+        <column COLUMN_NAME="STUDENT_ID" ORDINAL_POSITION="1" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="8" NUMERIC_SCALE="0" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="surname" ORDINAL_POSITION="2" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="30" OCTET_LENGTH="30" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="first_name" ORDINAL_POSITION="3" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="30" OCTET_LENGTH="30" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="middle_name" ORDINAL_POSITION="4" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="birth_date" ORDINAL_POSITION="5" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="8" OCTET_LENGTH="8" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="SEX" ORDINAL_POSITION="6" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="1" OCTET_LENGTH="1" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="SEX_SELF_DESCRIBED" ORDINAL_POSITION="7" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="30" OCTET_LENGTH="30" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="subcategory_full_title" ORDINAL_POSITION="8" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ATTENDING_SCHOOL_ID" ORDINAL_POSITION="9" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="7" NUMERIC_SCALE="2" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="attending_school_name" ORDINAL_POSITION="10" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="60" OCTET_LENGTH="60" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="HOME_SCHOOL_ID" ORDINAL_POSITION="11" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="7" NUMERIC_SCALE="2" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="home_school_name" ORDINAL_POSITION="12" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="60" OCTET_LENGTH="60" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="POSTAL_ADDRESS_ID" ORDINAL_POSITION="13" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="8" NUMERIC_SCALE="0" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="CURR_RESID_ADDRESS_ID" ORDINAL_POSITION="14" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="8" NUMERIC_SCALE="0" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ORIG_RESID_ADDRESS_ID" ORDINAL_POSITION="15" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="8" NUMERIC_SCALE="0" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="CAMPUS" ORDINAL_POSITION="16" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="1" OCTET_LENGTH="1" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="YEAR_LEVEL" ORDINAL_POSITION="17" DATA_TYPE="2" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int16" NUMERIC_PRECISION="5" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="receipt_no" ORDINAL_POSITION="18" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="10" OCTET_LENGTH="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ENROLMENT_YEAR" ORDINAL_POSITION="19" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="4" NUMERIC_SCALE="0" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="enrolment_date" ORDINAL_POSITION="20" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="8" OCTET_LENGTH="8" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="withdrawal_date" ORDINAL_POSITION="21" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="8" OCTET_LENGTH="8" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ENROLLEDBEFORE" ORDINAL_POSITION="22" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="1" OCTET_LENGTH="1" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="VSN" ORDINAL_POSITION="23" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="9" OCTET_LENGTH="9" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="PREFERRED_NAME" ORDINAL_POSITION="24" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="50" OCTET_LENGTH="50" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ENROLMENT_STATUS" ORDINAL_POSITION="25" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="1" OCTET_LENGTH="1" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="WITHDRAWAL_REASON_ID" ORDINAL_POSITION="26" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="3" NUMERIC_SCALE="0" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="PASTORAL_CARE_ID" ORDINAL_POSITION="27" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="8" OCTET_LENGTH="8" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="WITHDRAWAL_EXIT_DESTINATION" ORDINAL_POSITION="28" DATA_TYPE="131" CCS_TYPE="CCFloat" NATIVE_TYPE="System.Decimal" NUMERIC_PRECISION="3" NUMERIC_SCALE="0" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="DATE_STUDENTFOLDER_CREATED" ORDINAL_POSITION="29" DATA_TYPE="135" CCS_TYPE="CCDateTime" NATIVE_TYPE="System.DateTime" DATE_TIME_PRECISION="23" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="Age" ORDINAL_POSITION="30" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="AgeNow" ORDINAL_POSITION="31" DATA_TYPE="3" CCS_TYPE="CCInteger" NATIVE_TYPE="System.Int32" NUMERIC_PRECISION="10" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="STUDENT_EMAIL" ORDINAL_POSITION="32" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="250" OCTET_LENGTH="250" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="STUDENT_MOBILE" ORDINAL_POSITION="33" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="20" OCTET_LENGTH="20" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ATAR_REQUIRED" ORDINAL_POSITION="34" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="1" OCTET_LENGTH="1" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="PORTAL_ACCESS" ORDINAL_POSITION="35" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="1" OCTET_LENGTH="1" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="ORGANISATION_SCHOOL_ID" ORDINAL_POSITION="36" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="8" OCTET_LENGTH="8" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="org_school_name" ORDINAL_POSITION="37" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="60" OCTET_LENGTH="60" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="LEARNING_PROGRAM" ORDINAL_POSITION="38" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="10" OCTET_LENGTH="10" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="LEARNING_PROGRAM_text" ORDINAL_POSITION="39" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="34" OCTET_LENGTH="34" IS_NULLABLE="False" COLUMN_HAS_DEFAULT="False" full="True" />
+        <column COLUMN_NAME="SSG_FACILITATOR_ID" ORDINAL_POSITION="40" DATA_TYPE="129" CCS_TYPE="CCText" NATIVE_TYPE="System.String" MAX_LENGTH="8" OCTET_LENGTH="8" IS_NULLABLE="True" COLUMN_HAS_DEFAULT="False" full="True" />
+      </table>
+      <table TABLE_NAME="viewStudentSummary_EnrolmentMisc" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewStudentSummary_Medical" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewStudentSummary_SubjectDetails" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewStudentSummary_SubjectList" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="viewVSNSearch" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="Vw_SchoolBasedStudentsSubSchoolEnrolment" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="Vw_StaffSubSchoolEnrolment" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="Vw_StudentLADSubSchoolEnrolment" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwAddress" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwCountry" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwCountryAlpha2Code" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwFunnelLead" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwGender" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwHouseholdStatus" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwIndigenousStatus" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwIntroductorySubject" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwLanguage" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwLiteracySupportSubject" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwNCCDFundingCategory" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwNCCDFundingLevel" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwNumeracySupportSubject" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwParentOccupationGroup" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwParentQualification" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwParentSchoolEducation" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwPractitionerRecommendedClassAttendance" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwPractitionerRecommendedWorkload" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwPractitionerType" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwRelationshipType" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwResidentialStatus" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwSemester" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwSocialEmotionalLearningSubject" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwStaff" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwStudentCarerContact" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwStudentKeyContactChange" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwStudentKeyContactPhoneEmail" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwStudentPostalAddress" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwStudentResidentialAddress" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwSupportProgramService" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwSupportSubject" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwTestStudent" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwVSNException" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwVSNExport" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwYearLevel" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <table TABLE_NAME="vwYearLevelGroup" TABLE_TYPE="6" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" full="True" />
+      <procedure PROCEDURE_NAME="asps_ARC_GetGradedTaskCounts;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="AssignmentSubmissionList;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="Backup_sp_cpyTMP_TABLE_TO_LIVE_Teleforms;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="BusinessDaysDateAdd;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="CalculateTimeFraction;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="CarerTypeLabel;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="Census_CalculateTimeFraction;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="Census_getEnglishSpoken;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="Census_StudentSubjectString;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="Census_StudentSubjectString_new;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="CurrentYear;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="DateToUnixTimestamp;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="DisplayAsDate;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_addtosourcecontrol;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_addtosourcecontrol_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_adduserobject;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_adduserobject_vcs;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_checkinobject;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_checkinobject_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_checkoutobject;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_checkoutobject_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_displayoaerror;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_displayoaerror_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_droppropertiesbyid;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_dropuserobjectbyid;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_generateansiname;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_getobjwithprop;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_getobjwithprop_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_getpropertiesbyid;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_getpropertiesbyid_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_getpropertiesbyid_vcs;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_getpropertiesbyid_vcs_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_isundersourcecontrol;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_isundersourcecontrol_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_removefromsourcecontrol;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_setpropertybyid;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_setpropertybyid_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_validateloginparams;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_validateloginparams_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_vcsenabled;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_verstamp006;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_whocheckedout;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="dt_whocheckedout_u;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="finished_student;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="fn_diagramobjects;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="fnAgeAtDate;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="fnNextCOMMENT_ID;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="fnStaffUniquePrefix;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="FormattedDateToDateTime;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="fte_report3;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="GetAddressPart;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="getStudentDetailChanges;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="InSpace;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="InSpacePadZero;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="IsNullThenBlank;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="IsNullThenZero;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="leosplit;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="PasswordHash;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="pCase;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="proc_fte_report;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="proc_fte_report_status;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="PROC_STUDENT_DEBTORS_REPORT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="ProperCase;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_alterdiagram;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_ADDRESS_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_ADDRESS_Individual;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_BOOK_DESPATCH_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_STUDENT_CENSUS_DATA_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_STUDENT_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_STUDENT_EQUIPMENT_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_STUDENT_MEDICAL_DTLS_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_STUDENT_SUBJECT_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_TABLE_TO_LIVE_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_TABLE_TO_LIVE_Teleforms;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_TXN_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_VCE_DATA;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_cpyTMP_VCE_TO_LIVE;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_creatediagram;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_del_assignment_return;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_del_assignment_submission;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_del_semester;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_del_tmp_book_despatch;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_delSEMESTER;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_delTMP_TABLE_DATA;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_dropdiagram;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_FinaliseStudentSubjectsSem1;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_GetEmailList;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_getStudentSummaryReportData;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_helpdiagramdefinition;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_helpdiagrams;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_importVCENoFromVassFile;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_ins_BOOK_DESPATCH;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_ins_semester;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_ins_tmp_txn_postage;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_ins_tmp_vce_data;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insPURCHASE_ATTEMPT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insSEMESTER;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insSTUDENT_COMMENT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_ADDRESS;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_ADDRESS_Default;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_BOOK_DESPATCH;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_REGION_NUMBER_Save;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_STUDENT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_STUDENT_CENSUS_DATA;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_STUDENT_ENROLMENT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_STUDENT_EQUIPMENT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_STUDENT_MEDICAL_DTLS;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_STUDENT_SUBJECT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_STUDENT_TIME_FRCTN;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_TXN;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_insTMP_VCE_DATA;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_renamediagram;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_repParentPortalRegistrations;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_repVCESubjectEnrolments;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_assignment;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_assignment_archive;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_assignment_archive_list;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_assignment_list;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_COMMENT_SEARCHING;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_FULLTIME_OR_PARTTIME;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_OTTE_120_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_OTTE_60_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_OTTE_80;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_OTTE_85;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_semester_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_semester_list;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_semester_subject_list;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_staff;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_student;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_student_list;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_student_ss_daily;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_subject;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_subject_archive_list;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_subject_ss_daily;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_tmp_vce_data;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_sel_tmp_vce_declaration;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selADDRESS;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selADDRESS_Incomplete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selCONFIRMATION;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selCONFIRMATION_List;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selCONFIRMATION_RECEIVED;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selCONFIRMATION_SUBJECT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selCONTRIBUTION;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selCONTRIBUTION_ExistingStudent;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selCOUNTRY_OF_BIRTH_List;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selENROLMENT_YEAR;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selGOVT_ALLOWANCE_List;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selLANGUAGE_List;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selPeriodDates;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selPURCHASE_ATTEMPT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSCHOOL;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSCHOOL_List;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSCHOOL_Principal_Weekly;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSEMESTER;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSEMESTER_List;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_by_name;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_CENSUS_DATA;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_Count;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_EMAWithdrawals;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_ENROLMENT_byname;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_EQUIPMENT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_Incomplete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_Ldr_Withdrawal;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_MEDICAL_DETAILS;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_Principal_Weekly;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_SSLeader_Daily;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSTUDENT_SUBJECT_Count;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selStudentSubjectSubmissions;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_Allocation;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_Confirmation;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_Ldr_Withdrawal;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_List;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_List_CanEnrol;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_List_CantEnrol;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_Pas_Withdrawal;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_Principal_Weekly;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_SSLeader_Daily;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selSUBJECT_Tch_Withdrawal;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTESTEXTRACT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_ADDRESS;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_REGION_NUMBER_Count;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_STUDENT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_STUDENT_CENSUS_DATA;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_STUDENT_Detail;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_STUDENT_ENROLMENT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_STUDENT_EQUIPMENT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_STUDENT_List;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_STUDENT_MEDICAL_DTLS;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTMP_VCE_DATA;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTRANSACTION;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTRANSACTION_Count;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTRANSACTION_Student;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selTRANSACTION_Subject;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selVASSEntryReport;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_selVCE_DATA;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_semester_load;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_addNewClasses;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_addNewEnrolments;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_addNewStudents;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_addNewSubjects;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_FixDuplicateLAds;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_removeEmptyClasses;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_UpdateAll;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_updateStudentAddress;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_updateStudentNames;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_updateStudentVSN;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toAccelerus_updateWithdrawnStudents;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toDECVSurvey_addDECVSurveyCourses;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toJanison_addNewStaff_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toJanison_addNewStudentClass_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toJanison_addNewStudents_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toJanison_addNewSubjectClass_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toJanison_addNewSubjects_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toJanison_addNewTeacherClass_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toMarkbook_addNewClasses_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toMarkbook_addNewEnrolments_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toMarkbook_addNewEnrolments_speedy;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toMarkbook_addNewEnrolments_speedy_vbtest;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toMarkbook_addNewStudents_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toMarkbook_updateStudentAddress_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toMarkbook_updateStudentNames_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toMarkbook_updateStudentVSN_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toMarkbook_updateWithdrawnStudents_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_addBookDespatch;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_addInterimFinalResults;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_addNote;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_insertNewEnrolment;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_rejectEnrolment;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_removeEnrolment;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_syncSchoolSupervisors;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_updateAddresses;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_updateSchools;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toOnlineEnrol_updateSubjects;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toPortal_addRegoChecks;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toPortal_addStudentModuleReports;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toPortal_addStudentRecentSubmissions;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toPortal_addStudents;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toPortal_addStudentSubjects;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toPortal_UpdateUserSecurity;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetAllScaffoldUsers;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetChangedUsers;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetCourseDevelopersToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetCRTsToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewCourseDeveloperSubjects;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewCRTGroups;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewCRTSubjects;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewGroups;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewGroupsSubschoolSpaces;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewStudents;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewTeachers;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewUserGroups;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewUserGroupsSubschoolSpaces;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewUsers;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewUserSubjects;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetNewUserSubschoolSpaces;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetScaffoldCRTUserGroupsToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetScaffoldGroupsToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetScaffoldStudentCoursesToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetScaffoldTeacherCoursesToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetScaffoldTeacherRolesToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetScaffoldUserGroupsToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetStaffToRemove;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetStudentsToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetStudentsToDeleteNonReturning;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetStudentsToDeleteTemp;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetStudentsToReset;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetStudentsToSuspend;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetTeacherAllocationsGroups;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetTeacherAllocationsToSubjects;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetTeacherAllocationsUserGroups;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetTeachersToAddAsCourseGuest;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetTeachersToSuspendStartOfYear;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_GetTeachersToUnsuspendStartOfYear;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_LogReset;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_NAGetScaffoldGroupsToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_NAGetScaffoldUserGroupsToDelete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_NANewGroups;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_NANewUserGroups;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_NANewUserSubjects;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_Report;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_ResizeLogExceptions;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_toScaffold_SyncRunning;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_Address_Batch_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_assignment_archive_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_assignment_receipt;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_assignment_return_Combined;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_assignment_return_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_assignment_submission;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_semester;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_tmp_vce_data_p6_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_tmp_vce_data_p7_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upd_tmp_vce_data_p8_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updCONFIRMATION_Received;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updCONFIRMATION_Required;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updPURCHASE_ATTEMPT;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updSEMESTER;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_STUDENT_Address_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_STUDENT_Category_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_STUDENT_CENSUS_DP4_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_STUDENT_CENSUS_DP5_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_STUDENT_EQUIPMENT_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_STUDENT_MEDICAL_DTLS_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_STUDENT_School2_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_STUDENT_SUBJECT_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_VCE_DATA_Personal6_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_VCE_DATA_Personal7_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_updTMP_VCE_DATA_Personal8_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sp_upgraddiagrams;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_AddComment;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_AddStudentSubject;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_AddUnit3ForSem2Unit4;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_fromRegion_getComments;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_GreenLetter_AddComments;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_ins_ClassComments_multiple;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_ins_PrimarySubjects_extras;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_ins_PrimarySubjects_multiple;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_PreliminaryEnrolment_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_Scaffold_InsertModuleReports;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeDECV11to12_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeDECVFto10_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeSchoolBased_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeSportsPerfChildSafe_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeUnit2Yr12SAC_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeUnit3Yr12SAC_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeUnit4Yr12SAC_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeUnits1and3SAC_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeYr12SACStudents_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spi_WelcomeYr12SACSupervisors_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="Split;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_CarerContactMatching;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_ENROL_Principal;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_fromRegion_getPaperclipFiles;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_GetParentSupervisorEmailList;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_GetSubjectDistributionMethods;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_GetUserAccessFunctions;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_GreenLetter_AmberStudent;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_GreenLetter_GetStudentList;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_GreenLetter_RedStudent;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_NIGHTLY_Enrolments;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_NIGHTLY_GetNewStudents_Email_Daily;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_NIGHTLY_GetTeachers_Daily;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_NIGHTLY_SendNewStudents_Email;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_NIGHTLY_SendTeachers_Daily_Complete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_NIGHTLY_SSLeader_Daily;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_NIGHTLY_SSLeader_Daily_Complete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_NIGHTLY_StudentSubject;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_PlatinumLetter_Student;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="sps_StudentQuickContactLookup;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_CorrectAssignmentSubmissionTeacher;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_ExitSurvey_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_ExtendStudentSubject;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_getReportData_DOBChanged;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_GreenLetter_SendEmails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_AddLAdLaunchPad;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_EnrolStudentInSubject;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_LAdVCE_Allocation;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_MyVCEForVCESubjects;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_SetPassword;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_SSTeacher_Allocation;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_SSTeacher_Allocation_GetStudents;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_SSTMyVCE_Allocation;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_SubjectTeacher_Allocation;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_NewEnrol_SubjectTeacher_Allocation_GetStudents;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_PlatinumLetter_Student;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_Scaffold_InsertAssignmentSubmissions;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_Scaffold_UpdateAssignmentLinks;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_Scaffold_UpdateAssignmentLinks_TEST;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_Scaffold_UpdateAssignmentReturns;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_SchoolInvoices;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_SSTeacher_NoCLP_Backstop;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_SSTeacher_PrimaryCascade;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_SSTeacher_StudentsNoCLP;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateACERUserDetails;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateDTSLog;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateStudentAddress;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateStudentAddress_Currentpanel;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateStudentAddress_Currentpanel_Back_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateStudentAddress_Originalpanel;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateStudentAddress_Postalpanel;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateStudentAttendingSchoolAddress;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateStudents_EndOfYear;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="spu_UpdateSubmissionStatus_SMAP;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="STUDENT_AGE;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="StudentSplit;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="submission_status;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="TEMP;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="test_delete;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="tf_updater;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="tvfCoreAndSupportSubjectConflict;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="tvfEnrolmentsSinceDate;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="tvfStudentAlertEmail;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="tvfSupportSubjectEnrolmentsSinceDate;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="UnixTimestampToDate;0" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="UpdateStudentWithdrawn;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_GetAreaSchoolsStudentsCount;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_GetAreaStudentsCount;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_LaunchpadPendingToCurrent;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_Rollover_Pending_to_Current_Semester1;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_Rollover_Pending_to_Current_Semester2;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_SCAFFOLD_SYNC_SUBJECT_GROUPS;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="USP_Student_CARER_CONTACT_ADD_UPDATE;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="USP_StudentExitTrack;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_SVTS_NAT00060;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_SVTS_NAT00090;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_SVTS_NAT00100;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_SVTS_NAT00120;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_SVTS_NAT00130;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_to_LaunchPadData;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="usp_to_LaunchPadData_staging;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="view_Report_Staff_Subject_Label;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="VSN_Add_Update_Transactions;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="vsn_ChangeDetailsBatch;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="VSN_Get_XMLBatch_Transactions;1" allProcedureParameters="False" full="True" />
+      <procedure PROCEDURE_NAME="vsn_GetStudentBatch;1" allProcedureParameters="False" full="True" />
+    </schema>
+    <schema SCHEMA_NAME="decv_surveyreader" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="INFORMATION_SCHEMA" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="sys" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="userCardPrinter" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="UserJanison" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+    <schema SCHEMA_NAME="userRegionEnrolDB1" allColumns="False" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  </catalog>
+  <catalog CATALOG_NAME="tempdb" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+  <catalog CATALOG_NAME="VSVDWLite" allSchemes="True" allColumns="True" allPrimaryKeys="False" allForeignKeys="False" allTables="False" allAliases="False" allSynonyms="False" allSystemTables="False" allSystemViews="False" allViews="False" allProcedures="False" allProcedureParameters="False" full="True" />
+</LldlCache>

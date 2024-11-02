@@ -1,0 +1,175 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>CONTRIBUTION</title>
+<meta content="CodeCharge Studio 3.1.1.0" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>{Header} </p>
+<p>
+<!-- BEGIN Record CONTRIBUTION1 -->
+<form id="CONTRIBUTION1" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search CONTRIBUTION </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>CATEGORY CODE</th>
+ 
+            <td><input id="CONTRIBUTION1s_CATEGORY_CODE" maxlength="10" size="10" value="{s_CATEGORY_CODE}" name="{s_CATEGORY_CODE_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CAMPUS CODE</th>
+ 
+            <td>
+              <!-- BEGIN RadioButton s_CAMPUS_CODE --><input id="CONTRIBUTION1s_CAMPUS_CODE_{s_CAMPUS_CODE:optionNumber}" type="radio" value="{Value}" name="{s_CAMPUS_CODE_Name}" {Check}>{Description}<!-- END RadioButton s_CAMPUS_CODE --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="CONTRIBUTION1Button_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record CONTRIBUTION1 --></p>
+<p align="center"><a href="{Link1_Src}" id="Contrib_insert">Add New</a></p>
+<p><br>
+</p>
+<!-- BEGIN Grid CONTRIBUTION -->
+<table cellspacing="0" cellpadding="0" align="left" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of CONTRIBUTION </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <div align="left">
+        <table class="Grid" cellspacing="0" cellpadding="0" align="left">
+          <tr class="Caption">
+            <th>
+            <!-- BEGIN Sorter Sorter_CATEGORY_CODE --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_CATEGORY_CODE">CATEGORY CODE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_CATEGORY_CODE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SCHOOL_TYPE_CODE1 --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_SCHOOL_TYPE_CODE1">SCHOOL TYPE CODE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SCHOOL_TYPE_CODE1 --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_CAMPUS_CODE1 --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_CAMPUS_CODE1">CAMPUS CODE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_CAMPUS_CODE1 --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_FROM_YEAR_LEVEL --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_FROM_YEAR_LEVEL">FROM YEAR LEVEL</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_FROM_YEAR_LEVEL --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_TO_YEAR_LEVEL --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_TO_YEAR_LEVEL">TO YEAR LEVEL</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_TO_YEAR_LEVEL --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_PER_SUBJECT_FLAG --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_PER_SUBJECT_FLAG">PER SUBJECT FLAG</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_PER_SUBJECT_FLAG --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_DEFAULT_CONTRIBUTION --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_DEFAULT_CONTRIBUTION">DEFAULT CONTRIBUTION</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_DEFAULT_CONTRIBUTION --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_DISCOUNT_AMOUNT --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_DISCOUNT_AMOUNT">DISCOUNT AMOUNT</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_DISCOUNT_AMOUNT --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><a href="{Sort_URL}" id="CONTRIBUTIONSorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <tr class="Row">
+            <td><a href="{CATEGORY_CODE_Src}" id="CONTRIBUTIONCATEGORY_CODE">{CATEGORY_CODE}</a>&nbsp;</td> 
+            <td>{SCHOOL_TYPE_CODE1}&nbsp;</td> 
+            <td>{CAMPUS_CODE1}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{FROM_YEAR_LEVEL}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{TO_YEAR_LEVEL}&nbsp;</td> 
+            <td>{PER_SUBJECT_FLAG}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{DEFAULT_CONTRIBUTION}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{DISCOUNT_AMOUNT}&nbsp;</td> 
+            <td>{LAST_ALTERED_BY}&nbsp;</td> 
+            <td>{LAST_ALTERED_DATE}&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN AltRow -->
+          <tr class="AltRow">
+            <td><a href="{Alt_CATEGORY_CODE_Src}" id="CONTRIBUTIONAlt_CATEGORY_CODE">{Alt_CATEGORY_CODE}</a>&nbsp;</td> 
+            <td>{Alt_SCHOOL_TYPE_CODE1}&nbsp;</td> 
+            <td>{Alt_CAMPUS_CODE1}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{Alt_FROM_YEAR_LEVEL}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{Alt_TO_YEAR_LEVEL}&nbsp;</td> 
+            <td>{Alt_PER_SUBJECT_FLAG}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{Alt_DEFAULT_CONTRIBUTION}&nbsp;</td> 
+            <td style="TEXT-ALIGN: right">{Alt_DISCOUNT_AMOUNT}&nbsp;</td> 
+            <td>{Alt_LAST_ALTERED_BY}&nbsp;</td> 
+            <td>{Alt_LAST_ALTERED_DATE}&nbsp;</td>
+          </tr>
+ <!-- END AltRow -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="10">No records</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td colspan="10"><a href="{CONTRIBUTION_Insert_Src}" id="CONTRIBUTIONCONTRIBUTION_Insert">Add New</a>&nbsp; 
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a><!-- END First_On -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a><!-- END Prev_On -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a><!-- END Next_On -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a><!-- END Last_On --><!-- END Navigator Navigator --></td>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>
+<!-- END Grid CONTRIBUTION -->
+<p>&nbsp;</p>
+<p><br>
+{Footer} </p>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!-- BEGIN Panel Head -->
+<script type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-A8D4FBB4
+</script>
+<script src="{page:pathToRoot}ClientI18N.asp?file=globalize.js&amp;lang={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-74EB5556
+</script>
+<script src="{page:pathToRoot}js/jquery/jquery-1.9.0.js" type="text/javascript"></script>
+<script src="{page:pathToRoot}js/jquery/event-manager.js" type="text/javascript"></script>
+<script src="{page:pathToRoot}js/jquery/selectors.js" type="text/javascript"></script>
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Contentstore_statusesButton_DeleteOnClick Event Start @-3C4DBE06
+    actions["Contentstore_statusesButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End Contentstore_statusesButton_DeleteOnClick Event Start
+
+//Contentstore_statusesButton_DeleteOnClick 29 Action @29-8243B274
+        return confirm('Delete record?');
+//End Contentstore_statusesButton_DeleteOnClick 29 Action
+
+//Contentstore_statusesButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End Contentstore_statusesButton_DeleteOnClick Event End
+
+//Event Binding @1-F4869A84
+    $('*:ccsControl(Content, store_statuses, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["Contentstore_statusesButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-1B69E6CF
+    $('*:ccsControl(Content, store_statuses, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(Content, store_statuses, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record store_statuses -->
+<form id="Contentstore_statuses" method="post" action="{Action}" name="{HTMLFormName}"> 
+<table class="MainTable">
+<tr>
+<td style="vertical-align:top;">
+  <table class="Header">
+	<tr>
+	  <td class="HeaderLeft"><img src="{CCS_PathToMasterPage}Images/spacer.gif" alt=""></td>
+	  <td class="th"><strong>Edit Status</strong></td>
+	  <td class="HeaderRight"><img src="{CCS_PathToMasterPage}Images/spacer.gif" alt=""></td>
+	</tr>
+   </table>
+  <table class="Record">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr class="Controls">
+	  <td class="th"><label>Status Name</label></td> 
+      <td><input type="text" name="{status_name_Name}" value="{status_name}" maxlength="50" size="50" id="Contentstore_statusesstatus_name"></td> 
+    </tr>
+ 
+    <tr class="Bottom">
+      <td colspan="2" style="text-align: right">
+        <!-- BEGIN Button Button_Insert --><input name="{Button_Name}" type="submit" value="Add" alt="Add" id="Contentstore_statusesButton_Insert" class="Button"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="submit" value="Submit" alt="Submit" id="Contentstore_statusesButton_Update" class="Button"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input name="{Button_Name}" type="submit" value="Delete" alt="Delete" id="Contentstore_statusesButton_Delete" class="Button"><!-- END Button Button_Delete -->
+        <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="submit" value="Cancel" alt="Cancel" id="Contentstore_statusesButton_Cancel" class="Button"><!-- END Button Button_Cancel --></td> 
+    </tr>
+ 
+  </table>
+     </td>
+    </tr>
+  </table>
+ </form>
+<!-- END Record store_statuses --> 
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{AdmHeader}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar -->{AdmMenu}&nbsp;<!-- END Panel Sidebar -->

@@ -1,0 +1,210 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>StudentEnrolment_AddTXN</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p align="center">{Header}</p>
+<p align="center">&nbsp;
+<!-- BEGIN Grid Grid_Transactions -->
+<table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <p align="center">Transaction Date</p>
+          </th>
+ 
+          <div align="center">
+          </div>
+ 
+          <th>
+          <p align="center">Transaction Code</p>
+          </th>
+ 
+          <div align="center">
+            <div>
+            </div>
+ 
+            <div align="center">
+            </div>
+          </div>
+ 
+          <div align="center">
+          </div>
+ 
+          <th>
+          <p align="center">Amount</p>
+          </th>
+ 
+          <div>
+          </div>
+ 
+          <div align="center">
+            <div>
+            </div>
+ 
+            <div align="center">
+            </div>
+          </div>
+ 
+          <div align="center">
+          </div>
+ 
+          <th>
+          <p align="center">DR/CR</p>
+          </th>
+ 
+          <div>
+          </div>
+ 
+          <div align="center">
+            <div>
+            </div>
+ 
+            <div align="center">
+            </div>
+          </div>
+ 
+          <th>
+          <p align="center">Comments</p>
+          </th>
+ 
+          <div>
+          </div>
+ 
+          <th>
+          <p align="center">Receipt #</p>
+          </th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr {Grid_Transactions:rowStyle}>
+          <td>
+            <div align="center">
+{link_TRANS_DATE} 
+            </div>
+          </td> 
+          <td>
+            <div align="right">
+              <input type="hidden" size="8" value="{TXN_ID}" name="{TXN_ID_Name}" id="Grid_TransactionsTXN_ID">{TRANS_CODE} 
+            </div>
+          </td> 
+          <td style="TEXT-ALIGN: right">
+            <div align="right">
+              {AMOUNT}&nbsp;&nbsp; 
+            </div>
+          </td> 
+          <td>
+            <div align="center">
+              {CR_DR_FLAG} 
+            </div>
+          </td> 
+          <td>{COMMENTS}&nbsp;</td> 
+          <td>{RECEIPT}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <tr class="Bottom">
+          <td align="right" colspan="2">
+            <p align="right"><strong>Account Balance:</strong></p>
+          </td> 
+          <td align="right">${lblAcctBalance}&nbsp;&nbsp;</td> 
+          <td>
+            <div align="center">
+              {lblCRDRFlag} 
+            </div>
+          </td> 
+          <td align="left" colspan="2"></td>
+        </tr>
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No Transactions found for this Student + Year</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid Grid_Transactions --></p>
+ 
+<!-- BEGIN Record txn -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{STUDENT_ID}" name="{STUDENT_ID_Name}" id="txnSTUDENT_ID"><input type="hidden" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}" id="txnENROLMENT_YEAR"><input type="hidden" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}" id="txnLAST_ALTERED_BY"><input type="hidden" value="{CAMPUS_CODE}" name="{CAMPUS_CODE_Name}" id="txnCAMPUS_CODE"><input type="hidden" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}" id="txnLAST_ALTERED_DATE">
+  <div align="center">
+    <table cellspacing="0" cellpadding="0" width="70%" align="center" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+              <th>Add Transaction</th>
+ 
+              <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+            </tr>
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="6">{Error}</td>
+            </tr>
+            <!-- END Error -->
+            <tr class="Controls">
+              <th>
+              <p align="center"><strong>Transaction<br>
+              Date</strong></p>
+              </th>
+ 
+              <td><strong>Transaction Code</strong></td> 
+              <td>
+                <p align="center"><strong>Amount</strong></p>
+              </td> 
+              <td>
+                <p align="center"><strong>DR/CR</strong></p>
+              </td> 
+              <td>
+                <p align="center"><strong>Comments&nbsp;</strong></p>
+              </td> 
+              <td>
+                <p align="center"><strong>Receipt</strong></p>
+              </td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>
+              <p align="center"><input maxlength="12" size="10" value="{TXN_DATE}" name="{TXN_DATE_Name}" id="txnTXN_DATE"></p>
+              </th>
+ 
+              <td>
+                <select name="{TXN_CODE_Name}" id="txnTXN_CODE">
+                  <option value="" selected>Select Value</option>
+                  {TXN_CODE_Options}
+                </select>
+ </td> 
+              <td align="center"><input maxlength="15" size="10" value="{AMOUNT}" name="{AMOUNT_Name}" id="txnAMOUNT"></td> 
+              <td>
+                <select name="{CR_DR_FLAG_Name}" id="txnCR_DR_FLAG">
+                  <option value="" selected>Select Value</option>
+                  {CR_DR_FLAG_Options}
+                </select>
+ </td> 
+              <td><textarea name="{COMMENTS_Name}" cols="15" id="txnCOMMENTS">{COMMENTS}</textarea></td> 
+              <td><input maxlength="10" size="10" value="{RECEIPT_NO}" name="{RECEIPT_NO_Name}" id="txnRECEIPT_NO"></td>
+            </tr>
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="6">
+                <!-- BEGIN Button Button_Insert --><input class="Button" type="submit" value="Add" name="{Button_Name}" id="txnButton_Insert"><!-- END Button Button_Insert --></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+<!-- END Record txn -->
+</body>
+</html>

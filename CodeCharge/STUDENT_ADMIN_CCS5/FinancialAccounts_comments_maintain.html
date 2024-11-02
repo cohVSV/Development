@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Financial Accounts Comments maintain</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+</head>
+<body>
+<p>{Header}</p>
+<p align="center"><a href="{Link_Back_Src}" id="Link_Back" class="Button">Back to Financials</a></p>
+<h1>Financial Accounts - VSV</h1>
+<p>
+<!-- BEGIN Record txn -->
+<form method="post" name="{HTMLFormName}" action="{Action}">
+    <input type="hidden" id="txnTXN_ID" value="{TXN_ID}" name="{TXN_ID_Name}">
+    <table cellspacing="0" cellpadding="0" align="center" border="0">
+        <tr>
+            <td valign="top">
+                <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                        <th>Modify Comments/Receipt #</th>
+ 
+                        <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                    </tr>
+                </table>
+ 
+                <table class="Record" cellspacing="0" cellpadding="0">
+                    <!-- BEGIN Error -->
+                    <tr class="Error">
+                        <td colspan="4">{Error}</td>
+                    </tr>
+                    <!-- END Error -->
+                    <tr class="Controls">
+                        <th><strong>STUDENT ID</strong></th>
+ 
+                        <td>{STUDENT_ID}</td> 
+                        <td><strong>ENROLMENT YEAR</strong>&nbsp;</td> 
+                        <td>{ENROLMENT_YEAR}&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>TRANSACTION DATE</strong></th>
+ 
+                        <td><strong>TRANSACTION CODE</strong></td> 
+                        <td><strong>AMOUNT</strong></td> 
+                        <td><strong>DR/CR</strong></td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>
+                        <div align="center">
+                            {TRANS_DATE} 
+                        </div>
+                        </th>
+ 
+                        <td>{TRANS_CODE}</td> 
+                        <td>{AMOUNT}</td> 
+                        <td>{CR_DR_FLAG}</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th>&nbsp;</th>
+ 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td> 
+                        <td>&nbsp;</td>
+                    </tr>
+ 
+                    <tr class="Controls">
+                        <th><strong>COMMENT</strong><br>
+                        <em>(max. 60 chars)</em></th>
+ 
+                        <td><textarea id="txnCOMMENTS" cols="30" name="{COMMENTS_Name}">{COMMENTS}</textarea></td> 
+                        <td>&nbsp;<strong>RECEIPT #</strong></td> 
+                        <td><input type="text" id="txnRECEIPT_NO" maxlength="10" size="10" value="{RECEIPT_NO}" name="{RECEIPT_NO_Name}"></td>
+                    </tr>
+ 
+                    <tr class="Bottom">
+                        <td colspan="4" align="right">
+                            <!-- BEGIN Button Button_Cancel --><input type="submit" id="txnButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel -->&nbsp;&nbsp;&nbsp; 
+                            <!-- BEGIN Button Button_Update --><input type="submit" id="txnButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update --></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+<!-- END Record txn --><br>
+</p>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Carer Maintenance</title>
+<meta content="CodeCharge Studio 4.1.00.032" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-4397BB47
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/scriptaculous.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/controls.js" type="text/javascript" charset="windows-1252"></script>
+<link href="Student_Carer_Maint_style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//page_STUDENT_CARER_CONTACT_RELATIONSHIP_OnChange @70-DB3AB3C4
+function page_STUDENT_CARER_CONTACT_RELATIONSHIP_OnChange()
+{
+    var result;
+//End page_STUDENT_CARER_CONTACT_RELATIONSHIP_OnChange
+
+//Custom Code @174-2A29BDB7
+    // -------------------------
+    STUDENT_CARER_CONTACTSURNAMEPTAutocomplete1_start();
+    // -------------------------
+//End Custom Code
+
+//Close page_STUDENT_CARER_CONTACT_RELATIONSHIP_OnChange @70-BC33A33A
+    return result;
+}
+//End Close page_STUDENT_CARER_CONTACT_RELATIONSHIP_OnChange
+
+//page_STUDENT_CARER_CONTACT_Button_Cancel_OnClick @34-DF954372
+function page_STUDENT_CARER_CONTACT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_STUDENT_CARER_CONTACT_Button_Cancel_OnClick
+
+//Initialize STUDENT_CARER_CONTACTSURNAMEPTAutocomplete1 @116-61FCC95D
+function STUDENT_CARER_CONTACTSURNAMEPTAutocomplete1_start() {
+        if ( $("STUDENT_CARER_CONTACTRELATIONSHIP").value=='SS')
+    if ($("STUDENT_CARER_CONTACTSURNAME"))
+        new Ajax.Autocompleter("STUDENT_CARER_CONTACTSURNAME", "STUDENT_CARER_CONTACTSURNAME_choices", "services/Student_Carer_Maint_STUDENT_CARER_CONTACT_SURNAME_PTAutocomplete1.aspx", {});
+}
+//End Initialize STUDENT_CARER_CONTACTSURNAMEPTAutocomplete1
+
+//Handle STUDENT_CARER_CONTACTCondition1 @117-773CF585
+function STUDENT_CARER_CONTACTCondition1_start(sender) {
+//End Handle STUDENT_CARER_CONTACTCondition1
+
+//Custom STUDENT_CARER_CONTACTCondition1 @117-AD2E363E
+    if ($("STUDENT_CARER_CONTACTSURNAME").value !="")
+    {
+                if ( $("STUDENT_CARER_CONTACTRELATIONSHIP").value=='SS')
+                                                {
+                                                ResetControls();
+                        if ($("STUDENT_CARER_CONTACTSURNAME").value.length>=2)
+                                                {
+                        STUDENT_CARER_CONTACTPTAutoFill1_start(sender);
+                                                }
+                                                }
+    } else {
+    }
+//End Custom STUDENT_CARER_CONTACTCondition1
+
+//STUDENT_CARER_CONTACTCondition1 Tail @117-FCB6E20C
+}
+//End STUDENT_CARER_CONTACTCondition1 Tail
+function ResetControls()
+{
+        $("STUDENT_CARER_CONTACTTITLE").value ='';
+        $("STUDENT_CARER_CONTACTFIRST_NAME").value ='';
+    $("STUDENT_CARER_CONTACTHOME_PHONE").value ='';
+    $("STUDENT_CARER_CONTACTWORK_PHONE").value ='';
+    $("STUDENT_CARER_CONTACTMOBILE").value ='';
+    $("STUDENT_CARER_CONTACTEMAIL").value ='';
+        $("STUDENT_CARER_CONTACTHidden_Carer_ID").value ='';
+
+}
+//PTAutoFill1 Loading @122-82BDEEF0
+function STUDENT_CARER_CONTACTPTAutoFill1_start(sender) {
+                var cid=0;
+                if (encodeURI($("STUDENT_CARER_CONTACTSURNAME").value)!='')
+                {
+                        cid=$("STUDENT_CARER_CONTACTSURNAME").value.split('~')[1];
+                }
+                else
+                {       cid=0;}
+
+        //new Ajax.Request("services/Student_Carer_Maint_STUDENT_CARER_CONTACT_SURNAME_PTAutoFill1.aspx?keyword=" + encodeURI($("STUDENT_CARER_CONTACTSURNAME").value), {
+    new Ajax.Request("services/Student_Carer_Maint_STUDENT_CARER_CONTACT_SURNAME_PTAutoFill1.aspx?keyword=" + encodeURI(cid), {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+<<<<<<< .mine
+                    $("STUDENT_CARER_CONTACTTITLE").value = valuesRow["TITLE"];
+=======
+                                alert(valuesRow);
+                    $("STUDENT_CARER_CONTACTTITLE").value = valuesRow["TITLE"];
+>>>>>>> .r119
+            $("STUDENT_CARER_CONTACTSURNAME").value = valuesRow["SURNAME"];
+            $("STUDENT_CARER_CONTACTFIRST_NAME").value = valuesRow["FIRST_NAME"];
+            $("STUDENT_CARER_CONTACTRELATIONSHIP").value = valuesRow["RELATIONSHIP"];
+            $("STUDENT_CARER_CONTACTHOME_PHONE").value = valuesRow["HOME_PHONE"];
+            $("STUDENT_CARER_CONTACTWORK_PHONE").value = valuesRow["WORK_PHONE"];
+            $("STUDENT_CARER_CONTACTMOBILE").value = valuesRow["MOBILE"];
+            $("STUDENT_CARER_CONTACTEMAIL").value = valuesRow["EMAIL"];
+                        $("STUDENT_CARER_CONTACTHidden_Carer_ID").value = valuesRow["CARER_ID"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//bind_events @1-5D6A5B7F
+function bind_events() {
+    STUDENT_CARER_CONTACTSURNAMEPTAutocomplete1_start();
+    addEventHandler("STUDENT_CARER_CONTACTSURNAME", "keypress", STUDENT_CARER_CONTACTCondition1_start);
+    addEventHandler("STUDENT_CARER_CONTACTSURNAME", "change", STUDENT_CARER_CONTACTCondition1_start);
+        addEventHandler("STUDENT_CARER_CONTACTSURNAME_choices", "click", STUDENT_CARER_CONTACTCondition1_start);
+    addEventHandler("STUDENT_CARER_CONTACTButton_Cancel","click",page_STUDENT_CARER_CONTACT_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p align="center">{Menu_Student_maintain}</p>
+<p align="center"></p>
+<p align="center">
+<p></p>
+<div align="center">
+  &nbsp; 
+  <!-- BEGIN Grid Grid1 -->
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>STUDENT CARER'S DETAILS</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <tr class="Caption">
+            <th>&nbsp;</th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_TITLE --><a href="{Sort_URL}" id="Grid1Sorter_TITLE">TITLE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_TITLE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_SURNAME --><a href="{Sort_URL}" id="Grid1Sorter_SURNAME">SURNAME</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SURNAME --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_FIRST_NAME --><a href="{Sort_URL}" id="Grid1Sorter_FIRST_NAME">FIRST NAME</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_FIRST_NAME --></th>
+ 
+            <th>&nbsp; 
+            <!-- BEGIN Sorter Sorter_RELATIONSHIP --><a href="{Sort_URL}" id="Grid1Sorter_RELATIONSHIP">RELATIONSHIP</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_RELATIONSHIP -->&nbsp;</th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_HOME_PHONE --><a href="{Sort_URL}" id="Grid1Sorter_HOME_PHONE">HOME PHONE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_HOME_PHONE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_WORK_PHONE --><a href="{Sort_URL}" id="Grid1Sorter_WORK_PHONE">WORK PHONE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_WORK_PHONE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_MOBILE --><a href="{Sort_URL}" id="Grid1Sorter_MOBILE">MOBILE</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_MOBILE --></th>
+ 
+            <th>
+            <!-- BEGIN Sorter Sorter_EMAIL --><a href="{Sort_URL}" id="Grid1Sorter_EMAIL">EMAIL</a> 
+            <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif" border="0"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_EMAIL --></th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <tr class="Row">
+            <td><a href="{Detail_Src}" id="Grid1Detail_{Grid1:rowNumber}">edit</a>&nbsp;</td> 
+            <td>{TITLE}&nbsp;</td> 
+            <td>{SURNAME}&nbsp;</td> 
+            <td>{FIRST_NAME}&nbsp;</td> 
+            <td>&nbsp;{RELATIONSHIP}</td> 
+            <td>{HOME_PHONE}&nbsp;</td> 
+            <td>{WORK_PHONE}&nbsp;</td> 
+            <td>{MOBILE}&nbsp;</td> 
+            <td>{EMAIL}&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="9">No Carer found</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td colspan="9">
+              <p align="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="{Grid1_AddCarer_Src}" class="Button" id="Grid1Grid1_AddCarer">Add New</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="{Grid1_AddSuperVisor_Src}" class="Button" id="Grid1Grid1_AddSuperVisor">Add School SuperVisor</a></p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-- END Grid Grid1 --><br>
+  <!-- BEGIN Record STUDENT_CARER_CONTACT -->
+  <form id="STUDENT_CARER_CONTACT" name="{HTMLFormName}" action="{Action}" method="post">
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td valign="top">
+          <table class="Header" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+              <th>Add/Edit STUDENT {Label_MESSAGE} CONTACT </th>
+ 
+              <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+            </tr>
+          </table>
+ 
+          <table class="Record" cellspacing="0" cellpadding="0">
+            <!-- BEGIN Error -->
+            <tr class="Error">
+              <td colspan="2">{Error}</td>
+            </tr>
+            <!-- END Error -->
+            <tr class="Controls">
+              <th>TITLE</th>
+ 
+              <td>
+                <select id="STUDENT_CARER_CONTACTTITLE" name="{TITLE_Name}">
+                  <option value="" selected>Select Title</option>
+                  {TITLE_Options}
+                </select>
+ </td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>SURNAME</th>
+ 
+              <td>
+                <!-- BEGIN TextBox SURNAME --><input id="STUDENT_CARER_CONTACTSURNAME" maxlength="30" size="30" value="{SURNAME}" name="{SURNAME_Name}" autocomplete="off">
+                <!-- BEGINF PTAutocomplete PTAutocomplete1 -->
+                <div id="STUDENT_CARER_CONTACTSURNAME_choices">
+                </div>
+                <!-- ENDF PTAutocomplete PTAutocomplete1 --><!-- END TextBox SURNAME --></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>FIRST NAME</th>
+ 
+              <td><input id="STUDENT_CARER_CONTACTFIRST_NAME" maxlength="30" size="30" value="{FIRST_NAME}" name="{FIRST_NAME_Name}"></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>RELATIONSHIP</th>
+ 
+              <td>
+                <select id="STUDENT_CARER_CONTACTRELATIONSHIP" name="{RELATIONSHIP_Name}">
+                  <option value="" selected>Select Relation</option>
+                  {RELATIONSHIP_Options}
+                </select>
+ </td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>HOME PHONE</th>
+ 
+              <td><input id="STUDENT_CARER_CONTACTHOME_PHONE" maxlength="20" value="{HOME_PHONE}" name="{HOME_PHONE_Name}" size="20"></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>WORK PHONE</th>
+ 
+              <td><input id="STUDENT_CARER_CONTACTWORK_PHONE" maxlength="20" value="{WORK_PHONE}" name="{WORK_PHONE_Name}" size="20"></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>MOBILE</th>
+ 
+              <td><input id="STUDENT_CARER_CONTACTMOBILE" maxlength="20" value="{MOBILE}" name="{MOBILE_Name}" size="20"></td>
+            </tr>
+ 
+            <tr class="Controls">
+              <th>EMAIL</th>
+ 
+              <td><input id="STUDENT_CARER_CONTACTEMAIL" maxlength="250" size="50" value="{EMAIL}" name="{EMAIL_Name}"></td>
+            </tr>
+ 
+            <tr class="Bottom">
+              <td align="right" colspan="2">
+                <!-- BEGIN Button Button_Insert --><input class="Button" id="STUDENT_CARER_CONTACTButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                <!-- BEGIN Button Button_Update --><input class="Button" id="STUDENT_CARER_CONTACTButton_Update" type="submit" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                <!-- BEGIN Button Button_Cancel --><input class="Button" id="STUDENT_CARER_CONTACTButton_Cancel" type="submit" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input id="STUDENT_CARER_CONTACTLAST_ALTERED_BY" type="hidden" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input id="STUDENT_CARER_CONTACTLAST_ALTERED_DATE" type="hidden" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td>
+            </tr>
+          </table>
+          <input id="STUDENT_CARER_CONTACTHidden_Surname" type="hidden" value="{Hidden_Surname}" name="{Hidden_Surname_Name}"><input id="STUDENT_CARER_CONTACTHidden_Carer_ID" type="hidden" value="{Hidden_Carer_ID}" name="{Hidden_Carer_ID_Name}"></td>
+      </tr>
+    </table>
+  </form>
+  <!-- END Record STUDENT_CARER_CONTACT --><br>
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ASSIGNMENT</title>
+<meta content="CodeCharge Studio 3.2.0.4" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//DEL  </script>
+//DEL  <script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+//DEL  <script language="JavaScript" type="text/javascript">
+//DEL    
+
+//Include Common JSFunctions @1-6208A745
+</script> 
+<script language="JavaScript" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}' type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_OnLoad @1-D0F4E1D3
+function page_OnLoad()
+{
+    var result;
+//End page_OnLoad
+
+//Set Focus @18-8B2229BF
+    if (theForm.ASSIGNMENTSearchs_SUBJECT_ID) theForm.ASSIGNMENTSearchs_SUBJECT_ID.focus();
+//End Set Focus
+
+//Close page_OnLoad @1-BC33A33A
+    return result;
+}
+//End Close page_OnLoad
+
+//bind_events @1-B716D3FC
+function bind_events() {
+    page_OnLoad();
+    forms_onload();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+window.onload = bind_events; 
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p align="right"><a href="{Link1_Src}" class="Button" id="Link1">Add New Assignment</a></p>
+<p>
+<!-- BEGIN Record ASSIGNMENTSearch -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+            <th>Search ASSIGNMENTS</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>SUBJECT ID</th>
+ 
+            <td><input maxlength="10" size="10" value="{s_SUBJECT_ID}" name="{s_SUBJECT_ID_Name}" id="ASSIGNMENTSearchs_SUBJECT_ID"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" type="submit" value="Search" name="{Button_Name}" id="ASSIGNMENTSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record ASSIGNMENTSearch --><br>
+<!-- BEGIN Grid ASSIGNMENT -->
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td> 
+          <th>List of ASSIGNMENTS for Subject&nbsp;</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="6">Total Records:&nbsp;{ASSIGNMENT_TotalRecords}&nbsp;&nbsp; Subject: {lblSubjectID}&nbsp;: {lblSubjectName}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>ASSIGNMENT ID</th>
+ 
+          <th>DESCRIPTION</th>
+ 
+          <th>ACTIVE</th>
+ 
+          <th>LAST ALTERED BY</th>
+ 
+          <th>LAST ALTERED DATE</th>
+ 
+          <th>ARCHIVE</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr {ASSIGNMENT:rowStyle}>
+          <td style="TEXT-ALIGN: right"><a href="{ASSIGNMENT_ID_Src}" id="ASSIGNMENTASSIGNMENT_ID">{ASSIGNMENT_ID}</a>&nbsp;</td> 
+          <td>{DESCRIPTION}&nbsp;</td> 
+          <td>{STATUS}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{ARCHIVE}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No Assignments found for this Subject</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/en/ButtonPrev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/en/ButtonPrevOff.gif" border="0"><!-- END Prev_Off -->
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/en/ButtonNext.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/en/ButtonNextOff.gif" border="0"><!-- END Next_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid ASSIGNMENT --><br>
+</p>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student Module Reports</title>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.0.18696">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+<style type="text/css">
+<!--
+SPAN.ungraded  { font-weight: bold; color: #FFFFFF; background-color: #FF0000; }
+-->
+</style>
+</head>
+<body>
+<p align="center">Back to:&nbsp; <a href="{link_Menu_Src}" id="link_Menu" class="Button">Main Menu</a>|&nbsp;&nbsp;<a href="{Link_SearchRequest_Src}" id="Link_SearchRequest" class="Button">Search Request</a>|&nbsp;&nbsp;<a href="{link_Assignments_Src}" id="link_Assignments" class="Button">Assignments</a>| <a href="{Link10_Src}" id="Link10" class="Button">SMS</a> |&nbsp;<a href="{Link6_Src}" id="Link6" class="Button">Future Intentions</a> | &nbsp; <a href="{Link5_Src}" id="Link5" class="Button">Comments</a><br>
+<br>
+<p><a href="OnlineHelp/Assignment%20Edit%20Return%20Details/Assignment_EditReturnDetails.html" title="show help for this page" target="_blank"><strong></strong></a>&nbsp; 
+<!-- BEGIN Panel Panel_MenuStudentMaintain -->{Menu_Student_maintain}&nbsp;&nbsp;&nbsp;<!-- END Panel Panel_MenuStudentMaintain --></p>
+<p align="center"><a href="{Link_Backtosummary_Src}" id="Link_Backtosummary" class="Button">Back to Summary</a>|&nbsp;&nbsp;<a href="{Link_BacktoPastoralList_Src}" id="Link_BacktoPastoralList" class="Button">Back to Student Support Group List</a></p>
+<p align="right"><strong>Looking for Previous Years? </strong><a href="{linkExternalReport_Src}" id="linkExternalReport" title="open in new window" class="Button" target="_blank">click here</a> <br>
+<!-- BEGIN Report SCAFFOLD_MODULE_GRADE_SCA -->
+<table class="MainTable" cellspacing="0" cellpadding="0" width="90%" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>Module Reports (Current Enrolment Year)</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td colspan="5">
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/Blueprint/Images/First.gif"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="Styles/Blueprint/Images/FirstOff.gif"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/Blueprint/Images/Prev.gif"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="Styles/Blueprint/Images/PrevOff.gif"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/Blueprint/Images/Next.gif"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="Styles/Blueprint/Images/NextOff.gif"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/Blueprint/Images/Last.gif"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="Styles/Blueprint/Images/LastOff.gif"><!-- END Last_Off --></span><!-- END Navigator Navigator --></td>
+        </tr>
+ <!-- END Section Page_Footer -->
+        <!-- BEGIN Section SCAFFOLD_USER_student_id_Header -->
+        <tr class="GroupCaption">
+          <th colspan="5">Student Id: {SCAFFOLD_USER_student_firstname}&nbsp;{SCAFFOLD_USER_student_lastname}&nbsp;{SCAFFOLD_USER_student_id} </th>
+        </tr>
+ <!-- END Section SCAFFOLD_USER_student_id_Header -->
+        <!-- BEGIN Section shortname_Header -->
+        <tr class="GroupCaption">
+          <th colspan="5">Subject:&nbsp;{fullname}&nbsp;&nbsp;({shortname})</th>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>Module Name </th>
+ 
+          <th>Grade </th>
+ 
+          <th>Feedback </th>
+ 
+          <th>Teacher</th>
+ 
+          <th>Date Graded</th>
+        </tr>
+ <!-- END Section shortname_Header -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td><a href="{name_Src}" id="SCAFFOLD_MODULE_GRADE_SCADetailname_{SCAFFOLD_MODULE_GRADE_SCA:rowNumber}" title="open Scaffold Module Report page" target="_blank">{name}</a> </td> 
+          <td><span class="{lblgradestyle}">{str_long_grade}</span> </td> 
+          <td><strong>{essentialquestion}</strong><br>
+            {str_feedback} </td> 
+          <td>{firstname}&nbsp; {lastname}</td> 
+          <td>{dategraded} </td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section shortname_Footer --><!-- END Section shortname_Footer -->
+        <!-- BEGIN Section SCAFFOLD_USER_student_id_Footer --><!-- END Section SCAFFOLD_USER_student_id_Footer -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="5">No Student Reporting found! <strong><em>Looking for Previous Years? </em></strong><a href="{linkExternalReport_Src}" id="SCAFFOLD_MODULE_GRADE_SCAReport_FooterNoRecordslinkExternalReport" title="open in new window" class="Button" target="_blank">click here</a> </td>
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report SCAFFOLD_MODULE_GRADE_SCA --><br>
+</p>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

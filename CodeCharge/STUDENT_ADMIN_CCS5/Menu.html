@@ -1,0 +1,304 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Menu</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<style type="text/css">
+<!--
+A:HOVER  { background-color: #DADADA; }
+-->
+</style>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-6208A745
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//page_MenuSearch_OnLoad @75-9E80A8FC
+function page_MenuSearch_OnLoad(form)
+{
+    var result;
+//End page_MenuSearch_OnLoad
+
+//Set Focus @85-3CF9F55F
+    if (theForm.MenuSearchSTUDENT_ID) theForm.MenuSearchSTUDENT_ID.focus();
+//End Set Focus
+
+//Close page_MenuSearch_OnLoad @75-BC33A33A
+    return result;
+}
+//End Close page_MenuSearch_OnLoad
+
+//bind_events @1-7907F0B3
+function bind_events() {
+    if(document.getElementById("MenuSearchHolder"))
+    addEventHandler("MenuSearch","load",page_MenuSearch_OnLoad);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events;
+
+//End CCS script
+</script>
+</head>
+<body>
+{Header}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<table cellspacing="7" cellpadding="2" width="60%" align="center" bgcolor="#ffffff" border="0">
+    <tr bgcolor="#ffffff" valign="top">
+        <td colspan="3">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>APPLICATION MENU</th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+ 
+    <tr>
+        <td>&nbsp; 
+            <!-- BEGIN Record MenuSearch -->
+            <form id="MenuSearch" method="get" name="{HTMLFormName}" action="{Action}">
+                <table>
+                    <!-- BEGIN Error -->
+                    <tr>
+                        <td colspan="2"><font color="#ff0000">{Error}</font></td><!-- END Error -->
+                        <tr>
+                            <th>Student ID</th>
+ 
+                            <td><input type="text" onfocus="this.select();" id="MenuSearchSTUDENT_ID" maxlength="6" size="6" value="{STUDENT_ID}" name="{STUDENT_ID_Name}">
+                                <!-- BEGIN Button Button_DoSearch --><input type="submit" id="MenuSearchButton_DoSearch" class="Button" value="Show Summary" name="{Button_Name}"><!-- END Button Button_DoSearch --><input type="text" id="MenuSearchENROLMENT_YEAR" style="DISPLAY: none" size="4" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}"></td>
+                        </tr>
+                    </table>
+                </form>
+                <!-- END Record MenuSearch --></td> 
+            <td>&nbsp;</td> 
+            <td>
+                <p align="right"><a href="OnlineHelp/index.html" title="show help" target="_blank"><img border="0" alt="show help" src="images/help.png" align="left"></a>&nbsp;&nbsp;User Login: {lblUserID} </p>
+ 
+                <p align="right">Group:&nbsp;{lblUserLevel}&nbsp;{lblAccessGroups}</p>
+            </td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>
+                <p align="right">&nbsp;</p>
+            </td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<strong><font size="2" face="Verdana">{lblHeadingEnrolment}</font></strong></td> 
+            <td>&nbsp;</td> 
+            <td><strong><font size="2" face="Verdana">{lblHeadingDespatch}</font></strong></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_EnrolNewStudent_Src}" id="link_EnrolNewStudent">Add New Enrolment</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{linkdespatch_1_Src}" id="linkdespatch_1">Assignment Receipts</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_ModifyEnrolmentDetails_Src}" id="link_ModifyEnrolmentDetails">Modify/View Enrolment Details</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{linkdespatch_2_Src}" id="linkdespatch_2">Assignment Returns</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_TeleformsEnrolments_Src}" id="link_TeleformsEnrolments">Online Enrolments Status</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{linkdespatch_3_Src}" id="linkdespatch_3">Despatch Run Update by Year Level</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_VSREnrolments_Src}" id="link_VSREnrolments">VSR Enrolments</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{linkdespatch_4_Src}" id="linkdespatch_4">Despatch Run Update by Enrolment Date</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_ModifyEnrolmentDetails_AddressSearch_Src}" id="link_ModifyEnrolmentDetails_AddressSearch">Contact Details Search</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{linkdespatch_5_Src}" id="linkdespatch_5">Despatch Assignment Maintenance</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_SchoolEdit_Src}" id="link_SchoolEdit">Update School Address</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{linkdespatch_6_Src}" id="linkdespatch_6">Student Exit Tracking</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td><strong><font size="2" face="Verdana">{lblHeadingTeachers}</font></strong></td> 
+            <td><strong><font size="2" face="Verdana">{lblHeadingCoords}</font></strong></td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_TeacgerAllocations_Src}" id="link_TeacgerAllocations">Teacher Allocations</a></td> 
+            <td nowrap>&nbsp;<a href="{link_GreenLetters_Src}" id="link_GreenLetters">Manage Green Letters</a></td> 
+            <td>&nbsp;<a href="{link_ViewStaffInductions_Src}" id="link_ViewStaffInductions">Modify / View Induction Attendance</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_SubjectWithdrawals_Src}" id="link_SubjectWithdrawals">Subject Withdrawals</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{link_ManageStaffInductions1_Src}" id="link_ManageStaffInductions1">Manage Staff Inductions</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_StudentAmendments_Src}" id="link_StudentAmendments">Student Amendments</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_TeacherMyPastoral_Src}" id="link_TeacherMyPastoral">My Advisory Group</a></td> 
+            <td>&nbsp;<strong><font size="2" face="Verdana">LMS Management</font></strong></td> 
+            <td>&nbsp;<a href="{link_ManageSubjectTeacherAllocations_Src}" id="link_ManageSubjectTeacherAllocations">Manage Subject Teacher Allocations</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_TeacherMyClassLists_Src}" id="link_TeacherMyClassLists">My Class Lists</a></td> 
+            <td>&nbsp;<a href="{link_ManageSubjectTeacherCourseDevs_Src}" id="link_ManageSubjectTeacherCourseDevs">Manage Course Devs</a></td> 
+            <td>&nbsp;<a href="{link_ManageSubjectTeacherCRT_Src}" id="link_ManageSubjectTeacherCRT">Manage CRT Subject Teachers</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_TeacherMyClassListsExtender_Src}" id="link_TeacherMyClassListsExtender">Class List - Extender</a> </td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{link_UnallocatedStudentTeachers_Src}" id="link_UnallocatedStudentTeachers">Unallocated Students</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp; 
+                <!-- BEGIN Link link_TeacherMyDefaulting --><a href="{link_TeacherMyDefaulting_Src}" id="link_TeacherMyDefaulting">My Defaulting Students</a><!-- END Link link_TeacherMyDefaulting --></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{Link_ManageLAd_Src}" id="Link_ManageLAd">Manage LAd Allocations</a></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{link_TeacherMyCommentSearch_Src}" id="link_TeacherMyCommentSearch" title="search Comments I have made">My Comment Search</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp; 
+                <!-- BEGIN Link link_ManageAssignmentDescriptions --><a href="{link_ManageAssignmentDescriptions_Src}" id="link_ManageAssignmentDescriptions">Manage Assignment Descriptions</a><!-- END Link link_ManageAssignmentDescriptions --></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp; 
+                <!-- BEGIN Link link_TimetableIntegration --><a href="{link_TimetableIntegration_Src}" id="link_TimetableIntegration">Manage Timetable Integration</a><!-- END Link link_TimetableIntegration --></td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>
+                <div align="right">
+                    &nbsp;
+                </div>
+            </td>
+        </tr>
+    </table>
+    &nbsp; 
+    <p>
+    <!-- BEGIN Panel Panel_controltables -->&nbsp; 
+    <table cellpadding="5" width="60%" align="center" bgcolor="#ffffff" border="0">
+        <tr bgcolor="#4060a0">
+            <td colspan="5">&nbsp;<strong><font color="#ffffff">Control Table List</font></strong>&nbsp; &nbsp; </td>
+        </tr>
+ 
+        <tr>
+            <td width="30%"><a href="{SCHOOL_list_Src}" id="Panel_controltablesSCHOOL_list">School</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{ASSIGNMENT_link_Src}" id="Panel_controltablesASSIGNMENT_link">Assignment</a></td> 
+            <td>&nbsp;<a href="{COUNTRY_OF_BIRT_list_Src}" id="Panel_controltablesCOUNTRY_OF_BIRT_list">Country of Birth</a></td> 
+            <td>&nbsp;<a href="{COMMENT_TYPE_maint_Src}" id="Panel_controltablesCOMMENT_TYPE_maint">Comment Types</a></td>
+        </tr>
+ 
+        <tr>
+            <td><a href="{STAFF_list_Src}" id="Panel_controltablesSTAFF_list">Staff</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{CONTRIBUTION_list_Src}" id="Panel_controltablesCONTRIBUTION_list">Contribution</a></td> 
+            <td>&nbsp;<a href="{GOVERNMENT_ALLO_list_Src}" id="Panel_controltablesGOVERNMENT_ALLO_list">Government Allowance</a></td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td><a href="{Link5_Src}" id="Panel_controltablesLink5">Subject</a>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{ENROLMENT_CATEG_list_Src}" id="Panel_controltablesENROLMENT_CATEG_list">Enrolment Category</a></td> 
+            <td>&nbsp;<a href="{KEY_LEARNING_AR_list_Src}" id="Panel_controltablesKEY_LEARNING_AR_list">Key Learning Area</a></td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{PROGRESS_CODE_list_Src}" id="Panel_controltablesPROGRESS_CODE_list">Progress Code</a></td> 
+            <td>&nbsp;<a href="{LANGUAGE_list_Src}" id="Panel_controltablesLANGUAGE_list">Language</a></td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td><a href="{STAFF_STUDENT_SUPERVISORS_link_Src}" id="Panel_controltablesSTAFF_STUDENT_SUPERVISORS_link" title="aka Year Level Coordinators">Student Supervisors</a>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{REGION_list_Src}" id="Panel_controltablesREGION_list">Region</a></td> 
+            <td>&nbsp;<a href="{SCHOOL_TYPE_list_Src}" id="Panel_controltablesSCHOOL_TYPE_list">School Type</a></td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td><a href="{link_ManageStaffInductions_Src}" id="Panel_controltableslink_ManageStaffInductions">Manage Staff Inductions</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{TXN_CODE_list_Src}" id="Panel_controltablesTXN_CODE_list">Transaction Code</a></td> 
+            <td>&nbsp;<a href="{FTE_RULES_list_Src}" id="Panel_controltablesFTE_RULES_list">FTE Rules</a></td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{WITHDRAWAL_REAS_list_Src}" id="Panel_controltablesWITHDRAWAL_REAS_list">Withdrawal Reason</a></td> 
+            <td>&nbsp;<a href="{WITHDRAWAL_EXIT_list_Src}" id="Panel_controltablesWITHDRAWAL_EXIT_list">Withdrawal Exit Destination</a></td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;{lblLastLogin}</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;<a href="{MODULES_REF_link_Src}" id="Panel_controltablesMODULES_REF_link">Module Codes</a></td> 
+            <td>&nbsp;</td>
+        </tr>
+ 
+        <tr>
+            <td>&nbsp;<a href="{Link4_Src}" id="Panel_controltablesLink4" style="COLOR: rgb(240,160,32)">Update&nbsp;Utilities</a></td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;{lblSMTP_Server}</td> 
+            <td>&nbsp;</td> 
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+    <!-- END Panel Panel_controltables --></p>
+    <p>{Footer} </p>
+    </body>
+    </html>

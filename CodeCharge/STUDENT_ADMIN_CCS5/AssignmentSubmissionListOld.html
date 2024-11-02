@@ -1,0 +1,413 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Student {STUDENT_ID} - Assignment Submission List</title>
+<meta name="GENERATOR" content="CodeCharge Studio 3.2.0.4">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-092F8E28
+</script>
+<script language="JavaScript" type="text/javascript" charset="windows-1252" src='ClientI18N.aspx?file=Functions.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript" charset="utf-8" src='ClientI18N.aspx?file=DatePicker.js&locale={res:CCS_LocaleID}'></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-51F273ED
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" src="js/pt/prototype_ccs.js" type="text/javascript" charset="windows-1252"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-C9A0546B
+
+var ASSIGNMENT_SUBMISSIONDatePicker_RETURNED_DATE = new Object(); 
+ASSIGNMENT_SUBMISSIONDatePicker_RETURNED_DATE.format           = "dd/mm/yyyy";
+ASSIGNMENT_SUBMISSIONDatePicker_RETURNED_DATE.style            = "Styles/Blueprint/Style.css";
+ASSIGNMENT_SUBMISSIONDatePicker_RETURNED_DATE.relativePathPart = "";
+ASSIGNMENT_SUBMISSIONDatePicker_RETURNED_DATE.themeVersion     = "3.0";
+//End Date Picker Object Definitions
+
+//page_ASSIGNMENT_SUBMISSION_Button_Cancel_OnClick @68-CDE02F5A
+function page_ASSIGNMENT_SUBMISSION_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_ASSIGNMENT_SUBMISSION_Button_Cancel_OnClick
+
+//page_RECEIVE_ASSIGNMENT_Button_Cancel_OnClick @194-53A5AF6B
+function page_RECEIVE_ASSIGNMENT_Button_Cancel_OnClick()
+{
+    disableValidation = true;
+}
+//End page_RECEIVE_ASSIGNMENT_Button_Cancel_OnClick
+
+//RECEIVE_ASSIGNMENTlistASSIGNMENTSPTDependentListBox1 Start @247-FBB7D16B
+function RECEIVE_ASSIGNMENTlistASSIGNMENTSPTDependentListBox1_start(sender) {
+    if (!sender || sender === window) return;
+    var dependentElement = $("RECEIVE_ASSIGNMENTlistASSIGNMENTS" + sender.id.substring(30));
+    if (!dependentElement) return;
+    var selected = null;
+    if (addEventHandler.isOnLoad) {
+        if (dependentElement.multiple) {
+            selected = [];
+            for (var i = 0; i < dependentElement.options.length; i++)
+                if (dependentElement.options[i].selected)
+                    selected[dependentElement.options[i].value] = true;
+        }
+        else
+            selected = dependentElement.value;
+    }
+    new Ajax.Request("services/AssignmentSubmissionList_RECEIVE_ASSIGNMENT_listASSIGNMENTS_PTDependentListBox1.aspx?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            for (var i = dependentElement.options.length - 1; i >= 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+            if (CCGetParam(sender.name) == sender.value) {
+                dependentElement.value = CCGetParam(dependentElement.name);
+            }
+            if (selected) {
+                if (dependentElement.multiple) {
+                    for (var i = 0; i < dependentElement.options.length; i++)
+                        if (selected[dependentElement.options[i].value])
+                            dependentElement.options[i].selected = true;
+                }
+                else
+                    dependentElement.value = selected;
+            }
+            RECEIVE_ASSIGNMENTHideShow_ajaxbusy_hide(sender);
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End RECEIVE_ASSIGNMENTlistASSIGNMENTSPTDependentListBox1 Start
+
+//HideShow_ajaxbusy Loading @249-95E8A243
+function RECEIVE_ASSIGNMENTHideShow_ajaxbusy_show(sender) {
+    var control = getSameLevelCtl("RECEIVE_ASSIGNMENTajaxBusy", sender);
+    if (control != null) {
+            control.style.display = "";
+    } else {
+            addProgress();
+    }
+}
+function RECEIVE_ASSIGNMENTHideShow_ajaxbusy_hide(sender) {
+    var control = getSameLevelCtl("RECEIVE_ASSIGNMENTajaxBusy", sender);
+    if (control != null) {
+            control.style.display = "none";
+    } else {
+            removeProgress();
+    }
+}
+//End HideShow_ajaxbusy Loading
+
+//bind_events @1-9B88786D
+function bind_events() {
+    addEventHandler("RECEIVE_ASSIGNMENTlistSUBJECTS", "change", RECEIVE_ASSIGNMENTlistASSIGNMENTSPTDependentListBox1_start);
+    addEventHandler("RECEIVE_ASSIGNMENTlistSUBJECTS", "change", RECEIVE_ASSIGNMENTHideShow_ajaxbusy_show);
+    addEventHandler("RECEIVE_ASSIGNMENT", "load", RECEIVE_ASSIGNMENTHideShow_ajaxbusy_hide);
+    addEventHandler("ASSIGNMENT_SUBMISSIONButton_Cancel","click",page_ASSIGNMENT_SUBMISSION_Button_Cancel_OnClick);
+    addEventHandler("RECEIVE_ASSIGNMENTButton_Cancel","click",page_RECEIVE_ASSIGNMENT_Button_Cancel_OnClick);
+    forms_onload();
+}
+//End bind_events
+
+//Assign bind_events @1-19F7B649window.onload = bind_events;
+//End Assign bind_events
+
+window.onload = bind_events; 
+
+//End CCS script
+
+</script>
+</head>
+<body>
+<p align="center">Back to:&nbsp; <a href="{link_Menu_Src}" id="link_Menu" class="Button">Main Menu</a>|&nbsp;&nbsp;<a href="{Link_SearchRequest_Src}" id="Link_SearchRequest" class="Button">Search Request</a>|&nbsp;&nbsp;<a href="{link_Assignments_Src}" id="link_Assignments" class="Button">Assignments</a>| <a href="{Link10_Src}" id="Link10" class="Button">SMS</a> |&nbsp;<a href="{Link6_Src}" id="Link6" class="Button">Future Intentions</a> | &nbsp; <a href="{Link5_Src}" id="Link5" class="Button">Comments</a><br>
+<br>
+<p>&nbsp; <a href="OnlineHelp/Assignment%20Edit%20Return%20Details/Assignment_EditReturnDetails.html" title="show help for this page" target="_blank"><img border="0" alt="show help for this page" src="images/help.png" align="right"></a> 
+<!-- BEGIN Panel Panel_MenuStudentMaintain -->{Menu_Student_maintain}&nbsp;&nbsp;<!-- END Panel Panel_MenuStudentMaintain --></p>
+<p align="center"><a href="{Link_Backtosummary_Src}" id="Link_Backtosummary" class="Button">Back to Summary</a>|&nbsp;&nbsp;<a href="{Link_BacktoPastoralList_Src}" id="Link_BacktoPastoralList" class="Button">Back to Student Support Group List</a></p>
+<p align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td valign="top">
+            <!-- BEGIN Record RECEIVE_ASSIGNMENT -->
+            <form id="RECEIVE_ASSIGNMENT" method="post" name="{HTMLFormName}" action="{Action}">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td valign="top">
+                            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                                    <th>Receive Assignment</th>
+ 
+                                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                                </tr>
+                            </table>
+ 
+                            <table class="Record" cellspacing="0" cellpadding="0">
+                                <!-- BEGIN Error -->
+                                <tr class="Error">
+                                    <td colspan="2">{Error}</td>
+                                </tr>
+                                <!-- END Error -->
+                                <tr class="Controls">
+                                    <th>Student's Subject</th>
+ 
+                                    <td>
+                                        <select id="RECEIVE_ASSIGNMENTlistSUBJECTS" name="{listSUBJECTS_Name}">
+                                            <option selected value="">Select First</option>
+                                            {listSUBJECTS_Options}
+                                        </select>
+ </td>
+                                </tr>
+ 
+                                <tr class="Controls">
+                                    <th>Assignment <img id="RECEIVE_ASSIGNMENTajaxBusy" style="DISPLAY: none" name="ajaxBusy" alt="updating" src="images/ajax_loader_smallblue.gif"></th>
+ 
+                                    <td>
+                                        <select id="RECEIVE_ASSIGNMENTlistASSIGNMENTS" name="{listASSIGNMENTS_Name}">
+                                            <option selected value="">then select Assignment</option>
+                                            {listASSIGNMENTS_Options}
+                                        </select>
+ </td>
+                                </tr>
+ 
+                                <tr class="Bottom">
+                                    <td colspan="2" align="right">
+                                        <!-- BEGIN Button Button_Insert --><input type="submit" id="RECEIVE_ASSIGNMENTButton_Insert" class="Button" value="Add Assignment" name="{Button_Name}"><!-- END Button Button_Insert -->
+                                        <!-- BEGIN Button Button_Cancel --><input type="submit" id="RECEIVE_ASSIGNMENTButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input type="hidden" id="RECEIVE_ASSIGNMENTSTUDENT_ID" value="{STUDENT_ID}" name="{STUDENT_ID_Name}"><input type="hidden" id="RECEIVE_ASSIGNMENTENROLMENT_YEAR" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}"><input type="hidden" id="RECEIVE_ASSIGNMENTLAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="RECEIVE_ASSIGNMENTLAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <!-- END Record RECEIVE_ASSIGNMENT -->
+            <p></p>
+        </td> 
+        <td valign="top">&nbsp;</td> 
+        <td valign="top">
+            <!-- BEGIN Record ASSIGNMENT_SUBMISSION -->
+            <form id="ASSIGNMENT_SUBMISSION" method="post" name="{HTMLFormName}" action="{Action}">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td valign="top">
+                            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                                    <th>Return Assignment</th>
+ 
+                                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                                </tr>
+                            </table>
+ 
+                            <table class="Record" cellspacing="0" cellpadding="0">
+                                <!-- BEGIN Error -->
+                                <tr class="Error">
+                                    <td colspan="2">{Error}</td>
+                                </tr>
+                                <!-- END Error -->
+                                <tr class="Controls">
+                                    <th>Assignment&nbsp; / Submission</th>
+ 
+                                    <td>{lblAssignment}&nbsp; / {lblSubmission}</td>
+                                </tr>
+ 
+                                <tr class="Controls">
+                                    <th>RECEIVED DATE <em>from Student</em></th>
+ 
+                                    <td>{lblRECEIVED_DATE}<input type="hidden" id="ASSIGNMENT_SUBMISSIONRECEIVED_DATE" value="{RECEIVED_DATE}" name="{RECEIVED_DATE_Name}"></td>
+                                </tr>
+ 
+                                <tr class="Controls">
+                                    <th>RETURNED DATE <em>from VSV</em></th>
+ 
+                                    <td><input type="text" id="ASSIGNMENT_SUBMISSIONRETURNED_DATE" maxlength="100" size="10" value="{RETURNED_DATE}" name="{RETURNED_DATE_Name}">
+                                        <!-- BEGIN DatePicker DatePicker_RETURNED_DATE --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="ASSIGNMENT_SUBMISSIONDatePicker_RETURNED_DATE"><img id="ASSIGNMENT_SUBMISSIONDatePicker_RETURNED_DATE_Image" border="0" alt="Show Date Picker" src="Styles/Blueprint/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_RETURNED_DATE -->{lblDefaulted_Returned}</td>
+                                </tr>
+ 
+                                <tr class="Controls">
+                                    <th>MARKER ID</th>
+ 
+                                    <td>
+                                        <select id="ASSIGNMENT_SUBMISSIONSTAFF_ID" name="{STAFF_ID_Name}">
+                                            <option selected value="">Select Value</option>
+                                            {STAFF_ID_Options}
+                                        </select>
+ {lblDefaulted_Marker}</td>
+                                </tr>
+ 
+                                <tr class="Controls">
+                                    <th>COMMENT 
+                                    <div id="maxchar_comment">
+                                        60 characters allowed 
+                                    </div>
+                                    </th>
+ 
+                                    <td><textarea onkeyup="limitMaxLength(this,60,'maxchar_comment');" id="ASSIGNMENT_SUBMISSIONCOMMENTS" rows="4" cols="45" name="{COMMENTS_Name}">{COMMENTS}</textarea></td>
+                                </tr>
+ 
+                                <tr class="Bottom">
+                                    <td colspan="2" align="right">
+                                        <!-- BEGIN Button Button_Update --><input type="submit" id="ASSIGNMENT_SUBMISSIONButton_Update" class="Button" value="Update" name="{Button_Name}"><!-- END Button Button_Update -->
+                                        <!-- BEGIN Button Button_Cancel --><input type="submit" id="ASSIGNMENT_SUBMISSIONButton_Cancel" class="Button" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --><input type="hidden" id="ASSIGNMENT_SUBMISSIONSTUDENT_ID" value="{STUDENT_ID}" name="{STUDENT_ID_Name}"><input type="hidden" id="ASSIGNMENT_SUBMISSIONENROLMENT_YEAR" value="{ENROLMENT_YEAR}" name="{ENROLMENT_YEAR_Name}"><input type="hidden" id="ASSIGNMENT_SUBMISSIONSUBJECT_ID" value="{SUBJECT_ID}" name="{SUBJECT_ID_Name}"><input type="hidden" id="ASSIGNMENT_SUBMISSIONASSIGNMENT_ID" value="{ASSIGNMENT_ID}" name="{ASSIGNMENT_ID_Name}"><input type="hidden" id="ASSIGNMENT_SUBMISSIONLAST_ALTERED_BY" value="{LAST_ALTERED_BY}" name="{LAST_ALTERED_BY_Name}"><input type="hidden" id="ASSIGNMENT_SUBMISSIONLAST_ALTERED_DATE" value="{LAST_ALTERED_DATE}" name="{LAST_ALTERED_DATE_Name}"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <!-- END Record ASSIGNMENT_SUBMISSION --></td>
+    </tr>
+</table>
+</p>
+<!-- BEGIN Grid ASSIGNMENT_SUBMISSION_SUB -->
+<table cellspacing="0" cellpadding="0" align="center" border="0">
+    <tr>
+        <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td class="HeaderLeft"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td> 
+                    <th>Assignments Submitted <span style="FONT-SIZE: small">(Return to the student&nbsp;VSV Online&nbsp;activity page <a href="AssignmentSubmissionList.aspx">here</a>)</span></th>
+ 
+                    <td class="HeaderRight"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+                <tr class="Row">
+                    <td colspan="5">&nbsp;<strong>Student ID:</strong> {lblStudent}</td> 
+                    <td colspan="6">&nbsp;&nbsp;&nbsp;&nbsp;<strong>Enrolment Year: </strong>{lblYear}</td>
+                </tr>
+ 
+                <tr class="Row">
+                    <td colspan="11">Total Records:&nbsp;{ASSIGNMENT_SUBMISSION_SUB_TotalRecords}&nbsp;&nbsp;&nbsp;&nbsp;<a href="{linkAddAssignment_Src}" id="ASSIGNMENT_SUBMISSION_SUBlinkAddAssignment_{ASSIGNMENT_SUBMISSION_SUB:rowNumber}" class="Button" style="HEIGHT: 10px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px">Add Assignment</a></td>
+                </tr>
+ 
+                <tr class="Caption">
+                    <th>
+                    <!-- BEGIN Sorter Sorter_ASSIGNMENT_SUBMISSION_SUBJECT_ID --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_SUBSorter_ASSIGNMENT_SUBMISSION_SUBJECT_ID">Subject ID</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ASSIGNMENT_SUBMISSION_SUBJECT_ID --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_SUBJECT_TITLE --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_SUBSorter_SUBJECT_TITLE">Subject Title</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SUBJECT_TITLE --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_ASSIGNMENT_ID --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_SUBSorter_ASSIGNMENT_ID">Assignment No.</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ASSIGNMENT_ID --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_SUBMISSION_ID --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_SUBSorter_SUBMISSION_ID">Submission No.</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_SUBMISSION_ID --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_DESCRIPTION --><span class="Sorter"><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_SUBSorter_DESCRIPTION">Description</a> 
+                    <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_DESCRIPTION --></th>
+ 
+                    <th>&nbsp;</th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_received_date --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_SUBSorter_received_date">Received Date</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_received_date --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_returned_date --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_SUBSorter_returned_date">Returned Date</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_returned_date --></th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_STAFF_ID --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_SUBSorter_STAFF_ID">Marker ID</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_STAFF_ID --></th>
+ 
+                    <th>&nbsp;Last Altered By / Date</th>
+ 
+                    <th>
+                    <!-- BEGIN Sorter Sorter_COMMENTS --><a href="{Sort_URL}" id="ASSIGNMENT_SUBMISSION_SUBSorter_COMMENTS">Comments</a> 
+                    <!-- BEGIN Asc_On --><img border="0" src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+                    <!-- BEGIN Desc_On --><img border="0" src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_COMMENTS --></th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <tr {ASSIGNMENT_SUBMISSION_SUB:rowStyle}>
+                    <td style="TEXT-ALIGN: right">{ASSIGNMENT_SUBMISSION_SUBJECT_ID}</td> 
+                    <td>&nbsp;{SUBJECT_TITLE}</td> 
+                    <td style="TEXT-ALIGN: right">{ASSIGNMENT_ID}</td> 
+                    <td style="TEXT-ALIGN: right">{SUBMISSION_ID}</td> 
+                    <td>&nbsp;{DESCRIPTION}</td> 
+                    <td>
+                        <!-- BEGIN Link Link_ReturnAssignment --><a href="{Link_ReturnAssignment_Src}" id="ASSIGNMENT_SUBMISSION_SUBLink_ReturnAssignment_{ASSIGNMENT_SUBMISSION_SUB:rowNumber}" class="Button" style="HEIGHT: 10px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px">edit</a><!-- END Link Link_ReturnAssignment --></td> 
+                    <td>&nbsp;{received_date}</td> 
+                    <td>&nbsp;{returned_date}&nbsp;</td> 
+                    <td>&nbsp;{STAFF_ID}</td> 
+                    <td>{LAST_ALTERED_BY}&nbsp;/ {LAST_ALTERED_DATE}</td> 
+                    <td>&nbsp;{COMMENTS}</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN Separator -->
+                <tr class="Separator">
+                    <td colspan="11"><img border="0" src="Styles/Blueprint/Images/Spacer.gif"></td>
+                </tr>
+                <!-- END Separator -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                    <td colspan="11">No Assignments found</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                    <td colspan="11">
+                        <!-- BEGIN Navigator Navigator -->
+                        <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+                        <!-- BEGIN First_Off -->First <!-- END First_Off -->
+                        <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+                        <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+                        <!-- BEGIN Pages -->
+                        <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                        <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+                        <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+                        <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+                        <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+                        <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- END Grid ASSIGNMENT_SUBMISSION_SUB --><br>
+<br>
+<script language="JavaScript" type="text/javascript">
+function limitMaxLength(formitem,maxlength,displaydivname) {
+        if (isNaN(maxlength)) {
+                return false;
+        } else {
+                var outputdiv = document.getElementById(displaydivname)
+                outputdiv.innerHTML = (maxlength-formitem.value.length) + ' characters allowed';
+                if (formitem.value.length+1>maxlength) {
+                        formitem.value=formitem.value.substring(0,maxlength);
+                }
+        }
+}
+</script>
+</body>
+</html>

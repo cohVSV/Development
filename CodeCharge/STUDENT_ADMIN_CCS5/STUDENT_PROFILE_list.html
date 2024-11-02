@@ -1,0 +1,1042 @@
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18992">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>STUDENT_PROFILE</title>
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/Style.css">
+<link rel="stylesheet" type="text/css" href="Styles/Blueprint/jquery-ui.css">
+</head>
+<body>
+<!-- BEGIN Record STUDENT_PROFILESearch -->
+<form id="STUDENT_PROFILESearch" method="post" action="{Action}" name="{HTMLFormName}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+            <th>Search </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="STUDENT_PROFILESearchErrorBlock" class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>LAST ALTERED BY</th>
+ 
+            <td><input type="text" name="{s_LAST_ALTERED_BY_Name}" value="{s_LAST_ALTERED_BY}" maxlength="8" size="8" id="STUDENT_PROFILESearchs_LAST_ALTERED_BY"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>BACKGROUND INFO</th>
+ 
+            <td><input type="text" name="{s_BACKGROUND_INFO_Name}" value="{s_BACKGROUND_INFO}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_BACKGROUND_INFO"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ENROL REASONS</th>
+ 
+            <td><input type="text" name="{s_ENROL_REASONS_Name}" value="{s_ENROL_REASONS}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_ENROL_REASONS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>WELLBEING INCLUSION CONCERNS</th>
+ 
+            <td><input type="text" name="{s_WELLBEING_INCLUSION_CONCERNS_Name}" value="{s_WELLBEING_INCLUSION_CONCERNS}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_WELLBEING_INCLUSION_CONCERNS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>EXPECT RETURN TO SCHOOL</th>
+ 
+            <td><input type="text" name="{s_EXPECT_RETURN_TO_SCHOOL_Name}" value="{s_EXPECT_RETURN_TO_SCHOOL}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_EXPECT_RETURN_TO_SCHOOL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>RETURN STUDENT</th>
+ 
+            <td><input type="text" name="{s_RETURN_STUDENT_Name}" value="{s_RETURN_STUDENT}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_RETURN_STUDENT"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>KNOWN WELLBEING</th>
+ 
+            <td><input type="text" name="{s_KNOWN_WELLBEING_Name}" value="{s_KNOWN_WELLBEING}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_KNOWN_WELLBEING"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>KNOWN INCLUSION</th>
+ 
+            <td><input type="text" name="{s_KNOWN_INCLUSION_Name}" value="{s_KNOWN_INCLUSION}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_KNOWN_INCLUSION"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>KNOWN PATHWAYS</th>
+ 
+            <td><input type="text" name="{s_KNOWN_PATHWAYS_Name}" value="{s_KNOWN_PATHWAYS}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_KNOWN_PATHWAYS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT DOCS AGENCY REFERRAL</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_DOCS_AGENCY_REFERRAL_Name}" value="{s_SUPPORT_DOCS_AGENCY_REFERRAL}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_SUPPORT_DOCS_AGENCY_REFERRAL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT DOCS PRATITIONER REFERRAL</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_DOCS_PRATITIONER_REFERRAL_Name}" value="{s_SUPPORT_DOCS_PRATITIONER_REFERRAL}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_SUPPORT_DOCS_PRATITIONER_REFERRAL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT DOCS SCHOOL REFERRAL</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_DOCS_SCHOOL_REFERRAL_Name}" value="{s_SUPPORT_DOCS_SCHOOL_REFERRAL}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_SUPPORT_DOCS_SCHOOL_REFERRAL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT DOCS YOUNG ADULT</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_DOCS_YOUNG_ADULT_Name}" value="{s_SUPPORT_DOCS_YOUNG_ADULT}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_SUPPORT_DOCS_YOUNG_ADULT"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT DOCS OTHER</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_DOCS_OTHER_Name}" value="{s_SUPPORT_DOCS_OTHER}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_DOCS_OTHER"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT KEY PROFESSIONAL NAME</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_KEY_PROFESSIONAL_NAME_Name}" value="{s_SUPPORT_KEY_PROFESSIONAL_NAME}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_KEY_PROFESSIONAL_NAME"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT KEY PROFESSIONAL CONTACT</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_KEY_PROFESSIONAL_CONTACT_Name}" value="{s_SUPPORT_KEY_PROFESSIONAL_CONTACT}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_KEY_PROFESSIONAL_CONTACT"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ENGAGEMENT HOBBIES INTERESTS</th>
+ 
+            <td><input type="text" name="{s_ENGAGEMENT_HOBBIES_INTERESTS_Name}" value="{s_ENGAGEMENT_HOBBIES_INTERESTS}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_ENGAGEMENT_HOBBIES_INTERESTS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMM VISIT FLAG</th>
+ 
+            <td><input type="text" name="{s_COMM_VISIT_FLAG_Name}" value="{s_COMM_VISIT_FLAG}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_COMM_VISIT_FLAG"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMM VISIT DATE</th>
+ 
+            <td><input type="text" name="{s_COMM_VISIT_DATE_Name}" value="{s_COMM_VISIT_DATE}" maxlength="20" size="20" id="STUDENT_PROFILESearchs_COMM_VISIT_DATE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMM CONTACT TYPE</th>
+ 
+            <td><input type="text" name="{s_COMM_CONTACT_TYPE_Name}" value="{s_COMM_CONTACT_TYPE}" maxlength="20" size="20" id="STUDENT_PROFILESearchs_COMM_CONTACT_TYPE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMM CONTACT TYPE OTHER</th>
+ 
+            <td><input type="text" name="{s_COMM_CONTACT_TYPE_OTHER_Name}" value="{s_COMM_CONTACT_TYPE_OTHER}" maxlength="200" size="50" id="STUDENT_PROFILESearchs_COMM_CONTACT_TYPE_OTHER"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMM PHONE CONTACT</th>
+ 
+            <td><input type="text" name="{s_COMM_PHONE_CONTACT_Name}" value="{s_COMM_PHONE_CONTACT}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_COMM_PHONE_CONTACT"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CARER CONTACT METHOD</th>
+ 
+            <td><input type="text" name="{s_CARER_CONTACT_METHOD_Name}" value="{s_CARER_CONTACT_METHOD}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_CARER_CONTACT_METHOD"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CARER SUPERVISOR NAME</th>
+ 
+            <td><input type="text" name="{s_CARER_SUPERVISOR_NAME_Name}" value="{s_CARER_SUPERVISOR_NAME}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_CARER_SUPERVISOR_NAME"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CARER SUPERVISOR ROLE</th>
+ 
+            <td><input type="text" name="{s_CARER_SUPERVISOR_ROLE_Name}" value="{s_CARER_SUPERVISOR_ROLE}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_CARER_SUPERVISOR_ROLE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CARER ADDITIONAL</th>
+ 
+            <td><input type="text" name="{s_CARER_ADDITIONAL_Name}" value="{s_CARER_ADDITIONAL}" maxlength="100" size="50" id="STUDENT_PROFILESearchs_CARER_ADDITIONAL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ORGANISATION WHENWHERE</th>
+ 
+            <td><input type="text" name="{s_ORGANISATION_WHENWHERE_Name}" value="{s_ORGANISATION_WHENWHERE}" maxlength="200" size="50" id="STUDENT_PROFILESearchs_ORGANISATION_WHENWHERE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ORGANISATION TIMETABLE</th>
+ 
+            <td><input type="text" name="{s_ORGANISATION_TIMETABLE_Name}" value="{s_ORGANISATION_TIMETABLE}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_ORGANISATION_TIMETABLE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ORGANISATION HARDWARE</th>
+ 
+            <td><input type="text" name="{s_ORGANISATION_HARDWARE_Name}" value="{s_ORGANISATION_HARDWARE}" maxlength="20" size="20" id="STUDENT_PROFILESearchs_ORGANISATION_HARDWARE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ORGANISATION ACCESS INTERNET</th>
+ 
+            <td><input type="text" name="{s_ORGANISATION_ACCESS_INTERNET_Name}" value="{s_ORGANISATION_ACCESS_INTERNET}" maxlength="200" size="50" id="STUDENT_PROFILESearchs_ORGANISATION_ACCESS_INTERNET"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ORGANISATION PREVIOUS SCHOOL</th>
+ 
+            <td><input type="text" name="{s_ORGANISATION_PREVIOUS_SCHOOL_Name}" value="{s_ORGANISATION_PREVIOUS_SCHOOL}" maxlength="200" size="50" id="STUDENT_PROFILESearchs_ORGANISATION_PREVIOUS_SCHOOL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ORGANISATION ACADEMIC HISTORY</th>
+ 
+            <td><input type="text" name="{s_ORGANISATION_ACADEMIC_HISTORY_Name}" value="{s_ORGANISATION_ACADEMIC_HISTORY}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_ORGANISATION_ACADEMIC_HISTORY"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ORGANISATION RECENTREPORT FILED</th>
+ 
+            <td><input type="text" name="{s_ORGANISATION_RECENTREPORT_FILED_Name}" value="{s_ORGANISATION_RECENTREPORT_FILED}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_ORGANISATION_RECENTREPORT_FILED"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAUNCH PAD DONE</th>
+ 
+            <td><input type="text" name="{s_LAUNCH_PAD_DONE_Name}" value="{s_LAUNCH_PAD_DONE}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_LAUNCH_PAD_DONE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LAUNCH PAD DONE DATE</th>
+ 
+            <td><input type="text" name="{s_LAUNCH_PAD_DONE_DATE_Name}" value="{s_LAUNCH_PAD_DONE_DATE}" maxlength="20" size="20" id="STUDENT_PROFILESearchs_LAUNCH_PAD_DONE_DATE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LEARNING PROGRAM</th>
+ 
+            <td><input type="text" name="{s_LEARNING_PROGRAM_Name}" value="{s_LEARNING_PROGRAM}" maxlength="20" size="20" id="STUDENT_PROFILESearchs_LEARNING_PROGRAM"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LEARNING PROGRAM DETAILS</th>
+ 
+            <td><input type="text" name="{s_LEARNING_PROGRAM_DETAILS_Name}" value="{s_LEARNING_PROGRAM_DETAILS}" maxlength="200" size="50" id="STUDENT_PROFILESearchs_LEARNING_PROGRAM_DETAILS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LEARNING PROGRAM CONSULT</th>
+ 
+            <td><input type="text" name="{s_LEARNING_PROGRAM_CONSULT_Name}" value="{s_LEARNING_PROGRAM_CONSULT}" maxlength="150" size="50" id="STUDENT_PROFILESearchs_LEARNING_PROGRAM_CONSULT"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>LEARNING GOALS</th>
+ 
+            <td><input type="text" name="{s_LEARNING_GOALS_Name}" value="{s_LEARNING_GOALS}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_LEARNING_GOALS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SPECIAL PROVISION FLAG</th>
+ 
+            <td><input type="text" name="{s_SPECIAL_PROVISION_FLAG_Name}" value="{s_SPECIAL_PROVISION_FLAG}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_SPECIAL_PROVISION_FLAG"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SPECIAL PROVISION DETAILS</th>
+ 
+            <td><input type="text" name="{s_SPECIAL_PROVISION_DETAILS_Name}" value="{s_SPECIAL_PROVISION_DETAILS}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_SPECIAL_PROVISION_DETAILS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS CAREER PLAN FLAG</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_CAREER_PLAN_FLAG_Name}" value="{s_PATHWAYS_CAREER_PLAN_FLAG}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_PATHWAYS_CAREER_PLAN_FLAG"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS CAREER GOALS</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_CAREER_GOALS_Name}" value="{s_PATHWAYS_CAREER_GOALS}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_PATHWAYS_CAREER_GOALS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS CAREER GOALS MIDYEAR</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_CAREER_GOALS_MIDYEAR_Name}" value="{s_PATHWAYS_CAREER_GOALS_MIDYEAR}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_PATHWAYS_CAREER_GOALS_MIDYEAR"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS CAREER GOALS MIDYEAR DATE</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_CAREER_GOALS_MIDYEAR_DATE_Name}" value="{s_PATHWAYS_CAREER_GOALS_MIDYEAR_DATE}" maxlength="20" size="20" id="STUDENT_PROFILESearchs_PATHWAYS_CAREER_GOALS_MIDYEAR_DATE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS WORKEXP FLAG</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_WORKEXP_FLAG_Name}" value="{s_PATHWAYS_WORKEXP_FLAG}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_PATHWAYS_WORKEXP_FLAG"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS WORKEXP DETAILS</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_WORKEXP_DETAILS_Name}" value="{s_PATHWAYS_WORKEXP_DETAILS}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_PATHWAYS_WORKEXP_DETAILS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS PARTTIMEJOBS</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_PARTTIMEJOBS_Name}" value="{s_PATHWAYS_PARTTIMEJOBS}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_PATHWAYS_PARTTIMEJOBS"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS ENDYEAR INTENTIONS FLAG</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_ENDYEAR_INTENTIONS_FLAG_Name}" value="{s_PATHWAYS_ENDYEAR_INTENTIONS_FLAG}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_PATHWAYS_ENDYEAR_INTENTIONS_FLAG"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS ENDYEAR INTENTIONS DATE</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_ENDYEAR_INTENTIONS_DATE_Name}" value="{s_PATHWAYS_ENDYEAR_INTENTIONS_DATE}" maxlength="20" size="20" id="STUDENT_PROFILESearchs_PATHWAYS_ENDYEAR_INTENTIONS_DATE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS ENDYEAR INTENTIONS LOGGED FLAG</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG_Name}" value="{s_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>PATHWAYS ENDYEAR INTENTIONS LOGGED DATE</th>
+ 
+            <td><input type="text" name="{s_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE_Name}" value="{s_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE}" maxlength="20" size="20" id="STUDENT_PROFILESearchs_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>REVIEW PROGRESS END SEM1</th>
+ 
+            <td><input type="text" name="{s_REVIEW_PROGRESS_END_SEM1_Name}" value="{s_REVIEW_PROGRESS_END_SEM1}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_REVIEW_PROGRESS_END_SEM1"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>REVIEW PROGRESS END SEM2</th>
+ 
+            <td><input type="text" name="{s_REVIEW_PROGRESS_END_SEM2_Name}" value="{s_REVIEW_PROGRESS_END_SEM2}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_REVIEW_PROGRESS_END_SEM2"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ASSESS ENGLANG LP</th>
+ 
+            <td><input type="text" name="{s_ASSESS_ENGLANG_LP_Name}" value="{s_ASSESS_ENGLANG_LP}" maxlength="10" size="10" id="STUDENT_PROFILESearchs_ASSESS_ENGLANG_LP"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ASSESS ENGLIT LP</th>
+ 
+            <td><input type="text" name="{s_ASSESS_ENGLIT_LP_Name}" value="{s_ASSESS_ENGLIT_LP}" maxlength="10" size="10" id="STUDENT_PROFILESearchs_ASSESS_ENGLIT_LP"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ASSESS MATH LP</th>
+ 
+            <td><input type="text" name="{s_ASSESS_MATH_LP_Name}" value="{s_ASSESS_MATH_LP}" maxlength="10" size="10" id="STUDENT_PROFILESearchs_ASSESS_MATH_LP"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ASSESS PATSCIENCE LP</th>
+ 
+            <td><input type="text" name="{s_ASSESS_PATSCIENCE_LP_Name}" value="{s_ASSESS_PATSCIENCE_LP}" maxlength="10" size="10" id="STUDENT_PROFILESearchs_ASSESS_PATSCIENCE_LP"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ASSESS ENGLANG RL</th>
+ 
+            <td><input type="text" name="{s_ASSESS_ENGLANG_RL_Name}" value="{s_ASSESS_ENGLANG_RL}" maxlength="10" size="10" id="STUDENT_PROFILESearchs_ASSESS_ENGLANG_RL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ASSESS ENGLIT RL</th>
+ 
+            <td><input type="text" name="{s_ASSESS_ENGLIT_RL_Name}" value="{s_ASSESS_ENGLIT_RL}" maxlength="10" size="10" id="STUDENT_PROFILESearchs_ASSESS_ENGLIT_RL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ASSESS MATH RL</th>
+ 
+            <td><input type="text" name="{s_ASSESS_MATH_RL_Name}" value="{s_ASSESS_MATH_RL}" maxlength="10" size="10" id="STUDENT_PROFILESearchs_ASSESS_MATH_RL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ASSESS PATSCIENCE RL</th>
+ 
+            <td><input type="text" name="{s_ASSESS_PATSCIENCE_RL_Name}" value="{s_ASSESS_PATSCIENCE_RL}" maxlength="10" size="10" id="STUDENT_PROFILESearchs_ASSESS_PATSCIENCE_RL"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT KEY PROFESSIONAL NAME2</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_KEY_PROFESSIONAL_NAME2_Name}" value="{s_SUPPORT_KEY_PROFESSIONAL_NAME2}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_KEY_PROFESSIONAL_NAME2"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT KEY PROFESSIONAL CONTACT2</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_KEY_PROFESSIONAL_CONTACT2_Name}" value="{s_SUPPORT_KEY_PROFESSIONAL_CONTACT2}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_KEY_PROFESSIONAL_CONTACT2"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>ENROL FILE CHECKED</th>
+ 
+            <td><input type="text" name="{s_ENROL_FILE_CHECKED_Name}" value="{s_ENROL_FILE_CHECKED}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_ENROL_FILE_CHECKED"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMM CONTACT TYPE MULTI</th>
+ 
+            <td><input type="text" name="{s_COMM_CONTACT_TYPE_MULTI_Name}" value="{s_COMM_CONTACT_TYPE_MULTI}" maxlength="150" size="50" id="STUDENT_PROFILESearchs_COMM_CONTACT_TYPE_MULTI"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>CONFIDENTIAL DOCUMENTS CHECKED</th>
+ 
+            <td><input type="text" name="{s_CONFIDENTIAL_DOCUMENTS_CHECKED_Name}" value="{s_CONFIDENTIAL_DOCUMENTS_CHECKED}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_CONFIDENTIAL_DOCUMENTS_CHECKED"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>RISK FACTORS CHECKED</th>
+ 
+            <td><input type="text" name="{s_RISK_FACTORS_CHECKED_Name}" value="{s_RISK_FACTORS_CHECKED}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_RISK_FACTORS_CHECKED"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT DOCS SPORTS PERFORMANCE</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_DOCS_SPORTS_PERFORMANCE_Name}" value="{s_SUPPORT_DOCS_SPORTS_PERFORMANCE}" maxlength="2" size="2" id="STUDENT_PROFILESearchs_SUPPORT_DOCS_SPORTS_PERFORMANCE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT KEY PROFESSIONAL NAME3</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_KEY_PROFESSIONAL_NAME3_Name}" value="{s_SUPPORT_KEY_PROFESSIONAL_NAME3}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_KEY_PROFESSIONAL_NAME3"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT KEY PROFESSIONAL CONTACT3</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_KEY_PROFESSIONAL_CONTACT3_Name}" value="{s_SUPPORT_KEY_PROFESSIONAL_CONTACT3}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_KEY_PROFESSIONAL_CONTACT3"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT KEY PROFESSIONAL ROLE</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_KEY_PROFESSIONAL_ROLE_Name}" value="{s_SUPPORT_KEY_PROFESSIONAL_ROLE}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_KEY_PROFESSIONAL_ROLE"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT KEY PROFESSIONAL ROLE2</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_KEY_PROFESSIONAL_ROLE2_Name}" value="{s_SUPPORT_KEY_PROFESSIONAL_ROLE2}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_KEY_PROFESSIONAL_ROLE2"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SUPPORT KEY PROFESSIONAL ROLE3</th>
+ 
+            <td><input type="text" name="{s_SUPPORT_KEY_PROFESSIONAL_ROLE3_Name}" value="{s_SUPPORT_KEY_PROFESSIONAL_ROLE3}" maxlength="50" size="50" id="STUDENT_PROFILESearchs_SUPPORT_KEY_PROFESSIONAL_ROLE3"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>COMM INTAKE CONTACT TYPE MULTI</th>
+ 
+            <td><input type="text" name="{s_COMM_INTAKE_CONTACT_TYPE_MULTI_Name}" value="{s_COMM_INTAKE_CONTACT_TYPE_MULTI}" maxlength="150" size="50" id="STUDENT_PROFILESearchs_COMM_INTAKE_CONTACT_TYPE_MULTI"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>SCHOOL ENGAGEMENT DIFFICULTIES</th>
+ 
+            <td><input type="text" name="{s_SCHOOL_ENGAGEMENT_DIFFICULTIES_Name}" value="{s_SCHOOL_ENGAGEMENT_DIFFICULTIES}" maxlength="30" size="30" id="STUDENT_PROFILESearchs_SCHOOL_ENGAGEMENT_DIFFICULTIES"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>WHY ARE YOU ENROLLING AT VSV</th>
+ 
+            <td><input type="text" name="{s_WHY_ARE_YOU_ENROLLING_AT_VSV_Name}" value="{s_WHY_ARE_YOU_ENROLLING_AT_VSV}" maxlength="250" size="50" id="STUDENT_PROFILESearchs_WHY_ARE_YOU_ENROLLING_AT_VSV"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" style="text-align: right">
+              <!-- BEGIN Button Button_DoSearch --><input name="{Button_Name}" type="submit" value="Search" id="STUDENT_PROFILESearchButton_DoSearch" class="Button"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record STUDENT_PROFILESearch --><br>
+<!-- BEGIN Grid STUDENT_PROFILE -->
+<table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table cellspacing="0" cellpadding="0" border="0" class="Header">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+          <th>List of STUDENT PROFILE</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint/Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_STUDENT_PROFILE_ID --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_STUDENT_PROFILE_ID">STUDENT PROFILE ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_STUDENT_PROFILE_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_STUDENT_ID --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_STUDENT_ID">STUDENT ID</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_STUDENT_ID --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROLMENT_YEAR --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ENROLMENT_YEAR">ENROLMENT YEAR</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ENROLMENT_YEAR --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_BY --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_LAST_ALTERED_BY">LAST ALTERED BY</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_BY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAST_ALTERED_DATE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_LAST_ALTERED_DATE">LAST ALTERED DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAST_ALTERED_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_BACKGROUND_INFO --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_BACKGROUND_INFO">BACKGROUND INFO</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_BACKGROUND_INFO --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROL_REASONS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ENROL_REASONS">ENROL REASONS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ENROL_REASONS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_WELLBEING_INCLUSION_CONCERNS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_WELLBEING_INCLUSION_CONCERNS">WELLBEING INCLUSION CONCERNS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_WELLBEING_INCLUSION_CONCERNS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_EXPECT_RETURN_TO_SCHOOL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_EXPECT_RETURN_TO_SCHOOL">EXPECT RETURN TO SCHOOL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_EXPECT_RETURN_TO_SCHOOL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_RETURN_STUDENT --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_RETURN_STUDENT">RETURN STUDENT</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_RETURN_STUDENT --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_KNOWN_WELLBEING --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_KNOWN_WELLBEING">KNOWN WELLBEING</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_KNOWN_WELLBEING --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_KNOWN_INCLUSION --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_KNOWN_INCLUSION">KNOWN INCLUSION</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_KNOWN_INCLUSION --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_KNOWN_PATHWAYS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_KNOWN_PATHWAYS">KNOWN PATHWAYS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_KNOWN_PATHWAYS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_DOCS_AGENCY_REFERRAL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_DOCS_AGENCY_REFERRAL">SUPPORT DOCS AGENCY REFERRAL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_DOCS_AGENCY_REFERRAL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_DOCS_PRATITIONER_REFERRAL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_DOCS_PRATITIONER_REFERRAL">SUPPORT DOCS PRATITIONER REFERRAL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_DOCS_PRATITIONER_REFERRAL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_DOCS_SCHOOL_REFERRAL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_DOCS_SCHOOL_REFERRAL">SUPPORT DOCS SCHOOL REFERRAL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_DOCS_SCHOOL_REFERRAL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_DOCS_YOUNG_ADULT --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_DOCS_YOUNG_ADULT">SUPPORT DOCS YOUNG ADULT</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_DOCS_YOUNG_ADULT --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_DOCS_OTHER --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_DOCS_OTHER">SUPPORT DOCS OTHER</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_DOCS_OTHER --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_NAME --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_KEY_PROFESSIONAL_NAME">SUPPORT KEY PROFESSIONAL NAME</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_NAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_CONTACT --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_KEY_PROFESSIONAL_CONTACT">SUPPORT KEY PROFESSIONAL CONTACT</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_CONTACT --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENGAGEMENT_HOBBIES_INTERESTS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ENGAGEMENT_HOBBIES_INTERESTS">ENGAGEMENT HOBBIES INTERESTS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ENGAGEMENT_HOBBIES_INTERESTS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMM_VISIT_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_COMM_VISIT_FLAG">COMM VISIT FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMM_VISIT_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMM_VISIT_DATE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_COMM_VISIT_DATE">COMM VISIT DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMM_VISIT_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMM_CONTACT_TYPE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_COMM_CONTACT_TYPE">COMM CONTACT TYPE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMM_CONTACT_TYPE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMM_CONTACT_TYPE_OTHER --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_COMM_CONTACT_TYPE_OTHER">COMM CONTACT TYPE OTHER</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMM_CONTACT_TYPE_OTHER --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMM_PHONE_CONTACT --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_COMM_PHONE_CONTACT">COMM PHONE CONTACT</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMM_PHONE_CONTACT --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_CARER_CONTACT_METHOD --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_CARER_CONTACT_METHOD">CARER CONTACT METHOD</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_CARER_CONTACT_METHOD --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_CARER_SUPERVISOR_NAME --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_CARER_SUPERVISOR_NAME">CARER SUPERVISOR NAME</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_CARER_SUPERVISOR_NAME --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_CARER_SUPERVISOR_ROLE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_CARER_SUPERVISOR_ROLE">CARER SUPERVISOR ROLE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_CARER_SUPERVISOR_ROLE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_CARER_ADDITIONAL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_CARER_ADDITIONAL">CARER ADDITIONAL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_CARER_ADDITIONAL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ORGANISATION_WHENWHERE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ORGANISATION_WHENWHERE">ORGANISATION WHENWHERE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ORGANISATION_WHENWHERE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ORGANISATION_TIMETABLE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ORGANISATION_TIMETABLE">ORGANISATION TIMETABLE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ORGANISATION_TIMETABLE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ORGANISATION_HARDWARE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ORGANISATION_HARDWARE">ORGANISATION HARDWARE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ORGANISATION_HARDWARE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ORGANISATION_ACCESS_INTERNET --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ORGANISATION_ACCESS_INTERNET">ORGANISATION ACCESS INTERNET</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ORGANISATION_ACCESS_INTERNET --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ORGANISATION_PREVIOUS_SCHOOL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ORGANISATION_PREVIOUS_SCHOOL">ORGANISATION PREVIOUS SCHOOL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ORGANISATION_PREVIOUS_SCHOOL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ORGANISATION_ACADEMIC_HISTORY --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ORGANISATION_ACADEMIC_HISTORY">ORGANISATION ACADEMIC HISTORY</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ORGANISATION_ACADEMIC_HISTORY --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ORGANISATION_RECENTREPORT_FILED --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ORGANISATION_RECENTREPORT_FILED">ORGANISATION RECENTREPORT FILED</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ORGANISATION_RECENTREPORT_FILED --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAUNCH_PAD_DONE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_LAUNCH_PAD_DONE">LAUNCH PAD DONE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAUNCH_PAD_DONE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LAUNCH_PAD_DONE_DATE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_LAUNCH_PAD_DONE_DATE">LAUNCH PAD DONE DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LAUNCH_PAD_DONE_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LEARNING_PROGRAM --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_LEARNING_PROGRAM">LEARNING PROGRAM</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LEARNING_PROGRAM --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LEARNING_PROGRAM_DETAILS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_LEARNING_PROGRAM_DETAILS">LEARNING PROGRAM DETAILS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LEARNING_PROGRAM_DETAILS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LEARNING_PROGRAM_CONSULT --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_LEARNING_PROGRAM_CONSULT">LEARNING PROGRAM CONSULT</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LEARNING_PROGRAM_CONSULT --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_LEARNING_GOALS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_LEARNING_GOALS">LEARNING GOALS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_LEARNING_GOALS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SPECIAL_PROVISION_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SPECIAL_PROVISION_FLAG">SPECIAL PROVISION FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SPECIAL_PROVISION_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SPECIAL_PROVISION_DETAILS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SPECIAL_PROVISION_DETAILS">SPECIAL PROVISION DETAILS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SPECIAL_PROVISION_DETAILS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_CAREER_PLAN_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_CAREER_PLAN_FLAG">PATHWAYS CAREER PLAN FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_CAREER_PLAN_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_CAREER_GOALS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_CAREER_GOALS">PATHWAYS CAREER GOALS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_CAREER_GOALS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_CAREER_GOALS_MIDYEAR --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_CAREER_GOALS_MIDYEAR">PATHWAYS CAREER GOALS MIDYEAR</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_CAREER_GOALS_MIDYEAR --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_CAREER_GOALS_MIDYEAR_DATE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_CAREER_GOALS_MIDYEAR_DATE">PATHWAYS CAREER GOALS MIDYEAR DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_CAREER_GOALS_MIDYEAR_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_WORKEXP_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_WORKEXP_FLAG">PATHWAYS WORKEXP FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_WORKEXP_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_WORKEXP_DETAILS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_WORKEXP_DETAILS">PATHWAYS WORKEXP DETAILS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_WORKEXP_DETAILS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_PARTTIMEJOBS --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_PARTTIMEJOBS">PATHWAYS PARTTIMEJOBS</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_PARTTIMEJOBS --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_ENDYEAR_INTENTIONS_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_ENDYEAR_INTENTIONS_FLAG">PATHWAYS ENDYEAR INTENTIONS FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_ENDYEAR_INTENTIONS_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_ENDYEAR_INTENTIONS_DATE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_ENDYEAR_INTENTIONS_DATE">PATHWAYS ENDYEAR INTENTIONS DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_ENDYEAR_INTENTIONS_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG">PATHWAYS ENDYEAR INTENTIONS LOGGED FLAG</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE">PATHWAYS ENDYEAR INTENTIONS LOGGED DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_REVIEW_PROGRESS_END_SEM1 --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_REVIEW_PROGRESS_END_SEM1">REVIEW PROGRESS END SEM1</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_REVIEW_PROGRESS_END_SEM1 --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_REVIEW_PROGRESS_END_SEM2 --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_REVIEW_PROGRESS_END_SEM2">REVIEW PROGRESS END SEM2</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_REVIEW_PROGRESS_END_SEM2 --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ASSESS_ENGLANG_LP --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ASSESS_ENGLANG_LP">ASSESS ENGLANG LP</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ASSESS_ENGLANG_LP --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ASSESS_ENGLIT_LP --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ASSESS_ENGLIT_LP">ASSESS ENGLIT LP</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ASSESS_ENGLIT_LP --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ASSESS_MATH_LP --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ASSESS_MATH_LP">ASSESS MATH LP</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ASSESS_MATH_LP --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ASSESS_PATSCIENCE_LP --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ASSESS_PATSCIENCE_LP">ASSESS PATSCIENCE LP</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ASSESS_PATSCIENCE_LP --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ASSESS_ENGLANG_RL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ASSESS_ENGLANG_RL">ASSESS ENGLANG RL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ASSESS_ENGLANG_RL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ASSESS_ENGLIT_RL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ASSESS_ENGLIT_RL">ASSESS ENGLIT RL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ASSESS_ENGLIT_RL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ASSESS_MATH_RL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ASSESS_MATH_RL">ASSESS MATH RL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ASSESS_MATH_RL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ASSESS_PATSCIENCE_RL --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ASSESS_PATSCIENCE_RL">ASSESS PATSCIENCE RL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ASSESS_PATSCIENCE_RL --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_NAME2 --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_KEY_PROFESSIONAL_NAME2">SUPPORT KEY PROFESSIONAL NAME2</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_NAME2 --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_CONTACT2 --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_KEY_PROFESSIONAL_CONTACT2">SUPPORT KEY PROFESSIONAL CONTACT2</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_CONTACT2 --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ENROL_FILE_CHECKED --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_ENROL_FILE_CHECKED">ENROL FILE CHECKED</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_ENROL_FILE_CHECKED --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMM_CONTACT_TYPE_MULTI --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_COMM_CONTACT_TYPE_MULTI">COMM CONTACT TYPE MULTI</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMM_CONTACT_TYPE_MULTI --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_CONFIDENTIAL_DOCUMENTS_CHECKED --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_CONFIDENTIAL_DOCUMENTS_CHECKED">CONFIDENTIAL DOCUMENTS CHECKED</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_CONFIDENTIAL_DOCUMENTS_CHECKED --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_RISK_FACTORS_CHECKED --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_RISK_FACTORS_CHECKED">RISK FACTORS CHECKED</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_RISK_FACTORS_CHECKED --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_DOCS_SPORTS_PERFORMANCE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_DOCS_SPORTS_PERFORMANCE">SUPPORT DOCS SPORTS PERFORMANCE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_DOCS_SPORTS_PERFORMANCE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_NAME3 --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_KEY_PROFESSIONAL_NAME3">SUPPORT KEY PROFESSIONAL NAME3</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_NAME3 --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_CONTACT3 --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_KEY_PROFESSIONAL_CONTACT3">SUPPORT KEY PROFESSIONAL CONTACT3</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_CONTACT3 --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_ROLE --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_KEY_PROFESSIONAL_ROLE">SUPPORT KEY PROFESSIONAL ROLE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_ROLE --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_ROLE2 --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_KEY_PROFESSIONAL_ROLE2">SUPPORT KEY PROFESSIONAL ROLE2</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_ROLE2 --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_ROLE3 --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SUPPORT_KEY_PROFESSIONAL_ROLE3">SUPPORT KEY PROFESSIONAL ROLE3</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SUPPORT_KEY_PROFESSIONAL_ROLE3 --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_COMM_INTAKE_CONTACT_TYPE_MULTI --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_COMM_INTAKE_CONTACT_TYPE_MULTI">COMM INTAKE CONTACT TYPE MULTI</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_COMM_INTAKE_CONTACT_TYPE_MULTI --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SCHOOL_ENGAGEMENT_DIFFICULTIES --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_SCHOOL_ENGAGEMENT_DIFFICULTIES">SCHOOL ENGAGEMENT DIFFICULTIES</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_SCHOOL_ENGAGEMENT_DIFFICULTIES --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_WHY_ARE_YOU_ENROLLING_AT_VSV --><span class="Sorter"><a href="{Sort_URL}" id="STUDENT_PROFILESorter_WHY_ARE_YOU_ENROLLING_AT_VSV">WHY ARE YOU ENROLLING AT VSV</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint/Images/Asc.gif"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint/Images/Desc.gif"><!-- END Desc_On --></span><!-- END Sorter Sorter_WHY_ARE_YOU_ENROLLING_AT_VSV --></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="text-align:right;"><a href="{STUDENT_PROFILE_ID_Src}" id="STUDENT_PROFILESTUDENT_PROFILE_ID_{STUDENT_PROFILE:rowNumber}">{STUDENT_PROFILE_ID}</a>&nbsp;</td> 
+          <td style="text-align:right;">{STUDENT_ID}&nbsp;</td> 
+          <td style="text-align:right;">{ENROLMENT_YEAR}&nbsp;</td> 
+          <td>{LAST_ALTERED_BY}&nbsp;</td> 
+          <td>{LAST_ALTERED_DATE}&nbsp;</td> 
+          <td>{BACKGROUND_INFO}&nbsp;</td> 
+          <td>{ENROL_REASONS}&nbsp;</td> 
+          <td>{WELLBEING_INCLUSION_CONCERNS}&nbsp;</td> 
+          <td>{EXPECT_RETURN_TO_SCHOOL}&nbsp;</td> 
+          <td>{RETURN_STUDENT}&nbsp;</td> 
+          <td>{KNOWN_WELLBEING}&nbsp;</td> 
+          <td>{KNOWN_INCLUSION}&nbsp;</td> 
+          <td>{KNOWN_PATHWAYS}&nbsp;</td> 
+          <td>{SUPPORT_DOCS_AGENCY_REFERRAL}&nbsp;</td> 
+          <td>{SUPPORT_DOCS_PRATITIONER_REFERRAL}&nbsp;</td> 
+          <td>{SUPPORT_DOCS_SCHOOL_REFERRAL}&nbsp;</td> 
+          <td>{SUPPORT_DOCS_YOUNG_ADULT}&nbsp;</td> 
+          <td>{SUPPORT_DOCS_OTHER}&nbsp;</td> 
+          <td>{SUPPORT_KEY_PROFESSIONAL_NAME}&nbsp;</td> 
+          <td>{SUPPORT_KEY_PROFESSIONAL_CONTACT}&nbsp;</td> 
+          <td>{ENGAGEMENT_HOBBIES_INTERESTS}&nbsp;</td> 
+          <td>{COMM_VISIT_FLAG}&nbsp;</td> 
+          <td>{COMM_VISIT_DATE}&nbsp;</td> 
+          <td>{COMM_CONTACT_TYPE}&nbsp;</td> 
+          <td>{COMM_CONTACT_TYPE_OTHER}&nbsp;</td> 
+          <td>{COMM_PHONE_CONTACT}&nbsp;</td> 
+          <td>{CARER_CONTACT_METHOD}&nbsp;</td> 
+          <td>{CARER_SUPERVISOR_NAME}&nbsp;</td> 
+          <td>{CARER_SUPERVISOR_ROLE}&nbsp;</td> 
+          <td>{CARER_ADDITIONAL}&nbsp;</td> 
+          <td>{ORGANISATION_WHENWHERE}&nbsp;</td> 
+          <td>{ORGANISATION_TIMETABLE}&nbsp;</td> 
+          <td>{ORGANISATION_HARDWARE}&nbsp;</td> 
+          <td>{ORGANISATION_ACCESS_INTERNET}&nbsp;</td> 
+          <td>{ORGANISATION_PREVIOUS_SCHOOL}&nbsp;</td> 
+          <td>{ORGANISATION_ACADEMIC_HISTORY}&nbsp;</td> 
+          <td>{ORGANISATION_RECENTREPORT_FILED}&nbsp;</td> 
+          <td>{LAUNCH_PAD_DONE}&nbsp;</td> 
+          <td>{LAUNCH_PAD_DONE_DATE}&nbsp;</td> 
+          <td>{LEARNING_PROGRAM}&nbsp;</td> 
+          <td>{LEARNING_PROGRAM_DETAILS}&nbsp;</td> 
+          <td>{LEARNING_PROGRAM_CONSULT}&nbsp;</td> 
+          <td>{LEARNING_GOALS}&nbsp;</td> 
+          <td>{SPECIAL_PROVISION_FLAG}&nbsp;</td> 
+          <td>{SPECIAL_PROVISION_DETAILS}&nbsp;</td> 
+          <td>{PATHWAYS_CAREER_PLAN_FLAG}&nbsp;</td> 
+          <td>{PATHWAYS_CAREER_GOALS}&nbsp;</td> 
+          <td>{PATHWAYS_CAREER_GOALS_MIDYEAR}&nbsp;</td> 
+          <td>{PATHWAYS_CAREER_GOALS_MIDYEAR_DATE}&nbsp;</td> 
+          <td>{PATHWAYS_WORKEXP_FLAG}&nbsp;</td> 
+          <td>{PATHWAYS_WORKEXP_DETAILS}&nbsp;</td> 
+          <td>{PATHWAYS_PARTTIMEJOBS}&nbsp;</td> 
+          <td>{PATHWAYS_ENDYEAR_INTENTIONS_FLAG}&nbsp;</td> 
+          <td>{PATHWAYS_ENDYEAR_INTENTIONS_DATE}&nbsp;</td> 
+          <td>{PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_FLAG}&nbsp;</td> 
+          <td>{PATHWAYS_ENDYEAR_INTENTIONS_LOGGED_DATE}&nbsp;</td> 
+          <td>{REVIEW_PROGRESS_END_SEM1}&nbsp;</td> 
+          <td>{REVIEW_PROGRESS_END_SEM2}&nbsp;</td> 
+          <td>{ASSESS_ENGLANG_LP}&nbsp;</td> 
+          <td>{ASSESS_ENGLIT_LP}&nbsp;</td> 
+          <td>{ASSESS_MATH_LP}&nbsp;</td> 
+          <td>{ASSESS_PATSCIENCE_LP}&nbsp;</td> 
+          <td>{ASSESS_ENGLANG_RL}&nbsp;</td> 
+          <td>{ASSESS_ENGLIT_RL}&nbsp;</td> 
+          <td>{ASSESS_MATH_RL}&nbsp;</td> 
+          <td>{ASSESS_PATSCIENCE_RL}&nbsp;</td> 
+          <td>{SUPPORT_KEY_PROFESSIONAL_NAME2}&nbsp;</td> 
+          <td>{SUPPORT_KEY_PROFESSIONAL_CONTACT2}&nbsp;</td> 
+          <td>{ENROL_FILE_CHECKED}&nbsp;</td> 
+          <td>{COMM_CONTACT_TYPE_MULTI}&nbsp;</td> 
+          <td>{CONFIDENTIAL_DOCUMENTS_CHECKED}&nbsp;</td> 
+          <td>{RISK_FACTORS_CHECKED}&nbsp;</td> 
+          <td>{SUPPORT_DOCS_SPORTS_PERFORMANCE}&nbsp;</td> 
+          <td>{SUPPORT_KEY_PROFESSIONAL_NAME3}&nbsp;</td> 
+          <td>{SUPPORT_KEY_PROFESSIONAL_CONTACT3}&nbsp;</td> 
+          <td>{SUPPORT_KEY_PROFESSIONAL_ROLE}&nbsp;</td> 
+          <td>{SUPPORT_KEY_PROFESSIONAL_ROLE2}&nbsp;</td> 
+          <td>{SUPPORT_KEY_PROFESSIONAL_ROLE3}&nbsp;</td> 
+          <td>{COMM_INTAKE_CONTACT_TYPE_MULTI}&nbsp;</td> 
+          <td>{SCHOOL_ENGAGEMENT_DIFFICULTIES}&nbsp;</td> 
+          <td>{WHY_ARE_YOU_ENROLLING_AT_VSV}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="81">No Student Details found!</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="81"><a href="{STUDENT_PROFILE_Insert_Src}" id="STUDENT_PROFILESTUDENT_PROFILE_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select name="{FormName}PageSize" style="VERTICAL-ALIGN: middle;" onchange="CCChangeSize(this, '{FormName}')">
+              <option value="">-</option>
+ {PageSize_Options} 
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">|&lt; </a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->|&lt; <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt; </a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->&lt;&lt; <!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt; </a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->&gt;&gt; <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;| </a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->&gt;| <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid STUDENT_PROFILE --><br>
+</body>
+</html>
